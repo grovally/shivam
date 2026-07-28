@@ -15,7 +15,7 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#0F172A]/95 backdrop-blur-xl border-b border-white/10">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex h-20 items-center justify-between">
 
@@ -23,6 +23,8 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-400 to-yellow-600 text-2xl shadow-lg">
               🏠
+              
+
             </div>
 
             <div>
@@ -81,7 +83,7 @@ export default function Navbar() {
           open ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <div className="bg-[#111827] px-6 py-5">
+        <div className="bg-black/95 px-6 py-5">
 
           {links.map((item) => (
             <Link

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 export default function Contact() {
+  
   return (
     <section className="relative top-10 min-h-screen overflow-hidden bg-white text-black flex items-center justify-center px-6 py-20">
 

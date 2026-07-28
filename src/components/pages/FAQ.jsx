@@ -38,7 +38,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="mt-24">
+    <section className="mt-28">
       {/* Heading */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-red-600">
@@ -98,7 +98,7 @@ export default function FAQSection() {
       </div>
 
       {/* Bottom CTA */}
-      <div className="mt-12 text-center">
+      <div className="mt-12 pb-20 text-center">
         <p className="text-gray-600">
           Still have questions? Our real estate experts are ready to help.
         </p>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, ArrowUpRight } from 'lucide-react';
+import { Navigate, useNavigate, useNavigation } from 'react-router';
 
 const noidaImages = [
   'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1400&auto=format&fit=crop',
@@ -10,6 +11,7 @@ const noidaImages = [
 
 export default function Maps() {
   const [currentNoida, setCurrentNoida] = useState(0);
+  const navigate= useNavigate()
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -20,7 +22,7 @@ export default function Maps() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 px-6 text-white">
+  <section className="relative overflow-hidden bg-white py-16 md:py-24 px-4 sm:px-6 text-white">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute -left-32 top-10 h-96 w-96 rounded-full bg-red-500/20 blur-[140px] animate-pulse" />
@@ -77,10 +79,9 @@ export default function Maps() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[8px] -mt-10 text-black font-semibold">
-            Premium Real Estate
-          </p>
-
+          <p className="uppercase tracking-[4px] md:tracking-[8px] -mt-6 md:-mt-10 text-black font-semibold text-xs md:text-base">
+  Premium Real Estate
+</p>
           <h1 className="-mt-4 text-5xl md:text-7xl font-black leading-tight">
             Explore
             <span className="block bg-gradient-to-r from-red-600 to-yellow-300 bg-clip-text text-transparent">
@@ -132,7 +133,7 @@ export default function Maps() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button className="rounded-xl bg-gradient-to-r from-red-600 to-yellow-400 px-6 py-3 font-semibold text-white shadow-lg transition hover:scale-105">
+              <button onClick={() => navigate("/maps")} className="rounded-xl bg-gradient-to-r from-red-600 to-yellow-400 px-6 py-3 font-semibold text-white shadow-lg transition hover:scale-105">
                 Explore Noida
               </button>
 
@@ -147,7 +148,7 @@ export default function Maps() {
                 key={img}
                 src={img}
                 alt="Noida property"
-                className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover object-center"
                 initial={{ opacity: 0, scale: 1.08 }}
                 animate={{
                   opacity: currentNoida === index ? 1 : 0,

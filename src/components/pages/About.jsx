@@ -8,7 +8,13 @@ import {
   Users,
   Award,
   Home,
+   ShieldCheck, 
+   
+  Zap, 
+  Trophy 
 } from "lucide-react";
+
+
 
 
 export default function About() {
@@ -165,7 +171,355 @@ export default function About() {
         </div>
 
         {/* CTA */}
-       <div className="mt-24 rounded-[32px] bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-8 py-20 text-center shadow-2xl">
+       
+
+      </div>
+      <section className="py-24 bg-gray-50">
+
+  <div className="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+    {/* Heading */}
+
+    <div className="text-center mb-16">
+
+      <p className="
+      text-red-600 
+      font-bold 
+      uppercase 
+      tracking-widest
+      ">
+        What We Stand For
+      </p>
+
+
+      <h2 className="
+      text-4xl md:text-6xl
+      font-black
+      text-gray-900
+      mt-3
+      ">
+
+        Our 
+        <span className="text-red-600">
+          {" "}Core Values
+        </span>
+
+      </h2>
+
+    </div>
+
+
+
+
+    {/* Cards */}
+
+    <div className="
+    grid 
+    md:grid-cols-2 
+    lg:grid-cols-4 
+    gap-8
+    ">
+
+
+      {
+      [
+        {
+          icon:ShieldCheck,
+          title:"Honesty",
+          text:"We give you the real picture — market prices, property status, and legal clarity — with zero sugarcoating."
+        },
+
+
+        {
+          icon:Eye,
+          title:"Transparency",
+          text:"No hidden fees. No surprise charges. Every step of your property journey is completely open and clear."
+        },
+
+
+        {
+          icon:Zap,
+          title:"Speed",
+          text:"We respond within 1 hour and move quickly on opportunities, so you never miss the right property at the right price."
+        },
+
+
+        {
+          icon:Trophy,
+          title:"Excellence",
+          text:"From site visit to registry, every touchpoint is handled with care, professionalism, and attention to detail."
+        }
+
+      ].map((item,index)=>{
+
+
+      const Icon=item.icon;
+
+
+      return (
+
+      <div
+      key={index}
+      className="
+      bg-white
+      rounded-3xl
+      p-8
+      shadow-xl
+      border
+      border-black
+      hover:-translate-y-3
+      transition-all
+      duration-300
+      ">
+
+
+        {/* Icon */}
+
+        <div className="
+        w-16
+        h-16
+        rounded-2xl
+        bg-red-600
+        text-black
+        flex
+        items-center
+        justify-center
+        mb-6
+        ">
+
+          <Icon size={32}/>
+
+        </div>
+
+
+
+        <h3 className="
+        text-2xl
+        font-black
+        text-gray-900
+        mb-4
+        ">
+
+          {item.title}
+
+        </h3>
+
+
+
+        <p className="
+        text-gray-600
+        leading-7
+        ">
+
+          {item.text}
+
+        </p>
+
+
+      </div>
+
+      )
+
+      })
+
+      }
+
+
+    </div>
+
+
+  </div>
+
+</section>
+      <section className="py-24 bg-white">
+
+  <div className="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+    {/* Heading */}
+
+    <div className="text-center mb-16">
+
+      <p className="text-red-600 font-bold uppercase tracking-widest">
+        Our Journey
+      </p>
+
+      <h2 className="
+      text-4xl md:text-6xl 
+      font-black 
+      text-gray-900 
+      mt-3
+      ">
+        Milestones
+        <span className="text-red-600">
+          {" "}That Shaped Us
+        </span>
+      </h2>
+
+    </div>
+
+
+
+    {/* Timeline */}
+
+    <div className="relative">
+
+
+      {/* Line */}
+
+      <div className="
+      hidden md:block
+      absolute
+      left-1/2
+      top-0
+      bottom-0
+      w-1
+      bg-cyan-100
+      -translate-x-1/2
+      "></div>
+
+
+
+      {[
+        {
+          year:"01",
+          title:"Year 1 — Foundation",
+          text:"Shiva Associates established in Greater Noida",
+          desc:"It started with a vision to bring honest and transparent property dealing to the Greater Noida market. Began with residential plot consultancy and local property broking."
+        },
+
+        {
+          year:"02",
+          title:"Early Years — Growth",
+          text:"Expanded to Yamuna Expressway & YEIDA plots",
+          desc:"Recognised the growing demand for YEIDA authority plots and became one of the first dedicated Yamuna Expressway property dealers serving Greater Noida clients."
+        },
+
+
+        {
+          year:"03",
+          title:"Mid Journey — Recognition",
+          text:"Moved to Tradex Tower II, Alpha-I — Our Current Office",
+          desc:"Established a full-service office on the 9th Floor, Tradex Tower II — one of Greater Noida's premier commercial addresses — to better serve our growing client base."
+        },
+
+
+        {
+          year:"04",
+          title:"Recent — Digital Presence",
+          text:"Google Rating: 4.9/5",
+          desc:"Built one of the strongest digital presences among Greater Noida Property Dealers — with verified Google reviews, an active website, and a consistent social media presence."
+        },
+
+
+        {
+          year:"05",
+          title:"Now — The Mission Continues",
+          text:"Working towards being the #1 Property Dealer in Greater Noida",
+          desc:"Every day we serve new clients, build new relationships, and work toward becoming the undisputed first choice for property buyers and sellers across Greater Noida NCR."
+        }
+
+      ].map((item,index)=>(
+
+
+      <div 
+      key={index}
+      className={`
+      relative 
+      flex 
+      flex-col 
+      md:flex-row
+      items-center
+      mb-12
+      ${index%2===0 ? "md:flex-row" : "md:flex-row-reverse"}
+      `}>
+
+
+        {/* Content */}
+
+        <div className="
+        md:w-1/2
+        bg-gray-50
+        rounded-3xl
+        p-8
+        shadow-lg
+        hover:-translate-y-2
+        transition
+        ">
+
+
+          <h3 className="
+          text-2xl
+          font-black
+          text-gray-900
+          mb-3
+          ">
+            {item.title}
+          </h3>
+
+
+          <h4 className="
+          text-red-600
+          font-bold
+          mb-4
+          ">
+            {item.text}
+          </h4>
+
+
+          <p className="
+          text-gray-600
+          leading-7
+          ">
+            {item.desc}
+          </p>
+
+
+        </div>
+
+
+
+
+        {/* Number Circle */}
+
+        <div className="
+        z-10
+        my-6
+        md:mx-10
+        w-16
+        h-16
+        rounded-full
+        bg-red-600
+        text-white
+        flex
+        items-center
+        justify-center
+        text-xl
+        font-black
+        shadow-xl
+        ">
+
+          {item.year}
+
+        </div>
+
+
+
+        <div className="md:w-1/2"></div>
+
+
+      </div>
+
+
+      ))}
+
+
+    </div>
+
+
+  </div>
+  <div className="mt-24  rounded-[32px] bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-8 py-20 text-center shadow-2xl">
 
   <h2 className="text-5xl font-bold text-white">
     Let's Find Your Perfect Property
@@ -185,7 +539,11 @@ export default function About() {
 
 </div>
 
-      </div>
+</section>
+
+
+
     </section>
+    
   );
 }

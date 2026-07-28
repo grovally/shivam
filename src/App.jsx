@@ -9,10 +9,13 @@ import About from "./components/pages/About"
 import Footer from "./components/pages/Footer"
 import Chiose from "./components/pages/Chiose"
 import OK from "./components/pages/OK"
+
 import Noida from"./components/pages/Noida"
-import Grater  from "./components/pages/Grater";
+import GreateNoida from "./components/pages/GreateNoida";
 import Yemuna from "./components/pages/Yemuna";
 import FAQ from "./components/pages/FAQ"
+import Shivam from "./components/pages/Shivam";
+import Chhabra from "./components/pages/Chhabra"
 
 
 
@@ -29,13 +32,19 @@ function App() {
         <Route path="/services" element={<Services/>}/>
         <Route path="/maps" element={<Maps/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="noida" element={<Noida/>}/>
-        <Route path="grater" element={<Grater/>}/>
-        <Route path="yemuna" element={<Yemuna/>}/>
-        <Route path="faq" element={<FAQ/>}/>
+        <Route path="/noida" element={<Noida/>}/>
+        <Route path="/greater-noida" element={<GreateNoida/>}/>
+           <Route path="/yemunaexpress" element={<Yemuna/>}/>
+        <Route path="/faq" element={<FAQ/>}/>
+        
       </Routes>
      
       <OK/>
+
+      <Shivam/>
+      <Chhabra/>
+    
+
       <Chiose/>
        <FAQ/>
       <Footer/>

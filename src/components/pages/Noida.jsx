@@ -454,7 +454,7 @@ return (
                 alt={item.title}
                 loading="lazy"
                 decoding="async"
-                className="h-72 w-full object-cover transition duration-700 group-hover:scale-110"
+                className="h-56 w-auto object-cover transition duration-700 "
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -475,9 +475,9 @@ return (
             </div>
 
             {/* Bottom */}
-            <div className="flex items-center justify-between p-5">
+            <div className="flex items-center  bg-black/95 justify-between p-5">
               <div>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-white">
                   Explore Details
                 </p>
 
