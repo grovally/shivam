@@ -4,7 +4,7 @@ import Navbar from "./components/Navber";
 import Footer from "./components/pages/Footer";
 
 import Home from "./components/pages/Home";
-import Properties from "./components/pages/Properties";
+
 import Contact from "./components/pages/Contact";
 import Services from "./components/pages/Services";
 import Maps from "./components/pages/Maps";
@@ -28,6 +28,7 @@ import GreaterNoidaDetail from "./components/pages/GreaterNoidaDetail";
 
 import Yemuna from "./components/pages/Yemuna";
 import YemunaDetels from "./components/pages/YemunaDetail";
+import WOW from "./components/shivam/WOW";
 
 
 import ScrollToTop from "./components/pages/ScrollToTop";
@@ -56,6 +57,7 @@ element={
 <OK />
 <Shivam />
 <Chhabra />
+<WOW/>
 <Chiose />
 <FAQ />
 
@@ -64,11 +66,6 @@ element={
 />
 
 
-
-<Route 
-path="/properties"
-element={<Properties />}
-/>
 
 
 <Route 

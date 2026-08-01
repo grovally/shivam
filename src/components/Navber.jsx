@@ -7,12 +7,15 @@ export default function Navbar() {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Properties", path: "/properties" },
+     { name: "Maps", path: "/maps" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
-    { name: "Maps", path: "/maps" }
   ];
+    
+  
+   
+  
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
@@ -22,10 +25,10 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
            <div className="
-h-12
-w-12
+h-16
+w-18
 overflow-hidden
-rounded-xl
+rounded-lg
 bg-gradient-to-br
 from-red-400
 to-yellow-600

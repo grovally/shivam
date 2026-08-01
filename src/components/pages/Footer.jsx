@@ -33,8 +33,7 @@ export default function Footer() {
     "Greater Noida",
     "Noida",
     "Yamuna Expressway",
-    "Sector 150",
-    "Jewar Airport",
+   
   ];
 
   const socialLinks = [
@@ -258,46 +257,45 @@ export default function Footer() {
               Contact
             </h3>
 
-            <p className="text-gray-400 leading-7 mb-6">
-              Find your dream property with Chhabra Properties.
-            </p>
+            
 
-            <div className="space-y-5">
+           <div className="space-y-5">
 
-              <a
-                href="https://maps.google.com"
-                target="_blank"
-                rel="noreferrer"
-                className="flex gap-4 hover:text-cyan-400 transition"
-              >
-                <MapPin className="text-red-400" />
-                <span className="text-gray-300">
-                  204, S L Tower, Alpha-I Commercial Belt,
-                  Greater Noida, Uttar Pradesh
-                </span>
-              </a>
+  <a
+    href="https://maps.google.com/?q=204,+S+L+Tower,+Alpha+1+Commercial+Belt,+Greater+Noida,+Uttar+Pradesh"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-start gap-4 hover:text-cyan-400 transition"
+  >
+    <MapPin className="mt-1 text-red-400 flex-shrink-0" size={22} />
+    <span className="text-gray-300 hover:text-red-400 transition">
+      204, S L Tower, Alpha-I Commercial Belt,
+      <br />
+      Greater Noida, Uttar Pradesh
+    </span>
+  </a>
 
-              <a
-                href="mailto:Info@cpgroup.in"
-                className="flex gap-4 hover:text-cyan-400 transition"
-              >
-                <Mail className="text-red-400" />
-                <span className="text-gray-300">
-                  Info@cpgroup.in
-                </span>
-              </a>
+  <a
+    href="mailto:info@cpgroup.in"
+    className="flex items-center gap-4 hover:text-cyan-400 transition"
+  >
+    <Mail className="text-red-400 flex-shrink-0" size={22} />
+    <span className="text-gray-300">
+      info@cpgroup.in
+    </span>
+  </a>
 
-              <a
-                href="tel:+91 6262626462"
-                className="flex gap-4 hover:text-cyan-400 transition"
-              >
-                <FaPhone className="text-red-400 mt-3" />
-                <span className="text-gray-300">
-                  +91 6262626462
-                </span>
-              </a>
+  <a
+    href="tel:+916262626462"
+    className="flex items-center gap-4 hover:text-cyan-400 transition"
+  >
+    <FaPhone className="text-red-400 flex-shrink-0" size={20} />
+    <span className="text-gray-300">
+      +91 62626 26462
+    </span>
+  </a>
 
-            </div>
+</div>
 
             {/* Newsletter */}
 

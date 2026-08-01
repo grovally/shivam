@@ -385,7 +385,7 @@ export default function About() {
         {
           year:"01",
           title:"Year 1 — Foundation",
-          text:"Shiva Associates established in Greater Noida",
+          text:"Chhabra  Properties established in Greater Noida",
           desc:"It started with a vision to bring honest and transparent property dealing to the Greater Noida market. Began with residential plot consultancy and local property broking."
         },
 

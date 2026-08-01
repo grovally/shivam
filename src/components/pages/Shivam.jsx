@@ -28,7 +28,7 @@ export default function Shivam() {
         "Industrial plots, premium residential projects, and investment options near the upcoming Jewar Airport.",
       image:
         "https://res.cloudinary.com/bzbcmzrn/image/upload/v1784890794/SURAJPUR-SITE-C_INDUSTRIAL._yb3ljr.png",
-      path: "/yemunaexpress",
+      path: "/yamuna-expressway",
     },
   ];
 

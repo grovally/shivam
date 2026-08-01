@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import {
   Home,
   BadgeDollarSign,
@@ -33,6 +34,7 @@ const services = [
 ];
 
 export default function Services() {
+  const Navigate = useNavigate();
   return (
     <section className="relative overflow-hidden bg-white text-black py-24">
 
@@ -94,7 +96,7 @@ export default function Services() {
                 {service.description}
               </p>
 
-              <button className="mt-8 flex items-center gap-2 text-red-400 font-semibold group-hover:gap-4 transition-all">
+              <button onClick={() =>Navigate('/contact')} className="mt-8 flex items-center gap-2 text-red-400 font-semibold group-hover:gap-4 transition-all">
                 Learn More
                 <ArrowRight className="text-black" size={18} />
               </button>
