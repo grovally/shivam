@@ -15,7 +15,7 @@ export default function Footer() {
     { name: "Home", path: "/" },
     { name: "Maps", path: "/maps" },
     { name: "Services", path: "/services" },
-    { name: "Properties", path: "/properties" },
+   
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
   ];
@@ -327,7 +327,7 @@ export default function Footer() {
                   whileTap={{
                     scale: 0.9,
                   }}
-                  className="h-12 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-cyan-500 transition"
+                  className="h-8 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-red-600 transition"
                 >
                   <Icon className="text-white text-lg" />
                 </motion.a>

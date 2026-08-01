@@ -56,7 +56,7 @@ const visiblePartners = [
   return (
     <section className="bg-white py-16 px-6">
           <div className ="max-w-7xl mx-auto mb-10 text-center">
-            <h2 className="text-3xl font-bold text-gray-800">Working With The Top Development Authorities .</h2>
+            <h2 className="text-3xl font-bold text-gray-800">Working With The Top <span className="text-red-500">Development Authorities</span> .</h2>
 
         </div>
      
@@ -80,7 +80,7 @@ const visiblePartners = [
 </div>
 <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto mb-10 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+    <h2 className="text-3xl md:text-4xl font-bold text-red-600">
       Our Partners
     </h2>
     <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
