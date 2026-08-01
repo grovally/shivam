@@ -519,23 +519,32 @@ export default function About() {
 
 
   </div>
-  <div className="mt-24  rounded-[32px] bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-8 py-20 text-center shadow-2xl">
+  <div className="mx-auto mt-24 max-w-4xl overflow-hidden rounded-[28px] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 px-6 py-12 text-center shadow-xl">
 
-  <h2 className="text-5xl font-bold text-white">
+  <h2 className="text-3xl font-bold leading-tight text-white md:text-5xl">
     Let's Find Your Perfect Property
   </h2>
 
-  <p className="mx-auto mt-6 max-w-2xl text-lg text-red-100">
-    Whether you're buying, selling, or investing, our experts are here to
-    guide you every step of the way.
+  <p className="mx-auto mt-6 max-w-2xl text-base text-red-100 md:text-lg">
+    Whether you're buying, selling, or investing, our property experts are
+    here to guide you through every step with trust and transparency.
   </p>
 
-  <Link
-    to="/contact"
-    className="mt-10 inline-flex items-center rounded-full bg-white px-10 py-4 font-semibold text-red-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-  >
-    Contact Us →
-  </Link>
+  <div className="mt-10 flex justify-center gap-4">
+    <Link
+      to="/contact"
+      className="inline-flex items-center rounded-full bg-white px-8 py-4 font-semibold text-red-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl md:px-10"
+    >
+      Contact Us →
+    </Link>
+
+    <Link
+      to="/properties"
+      className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-red-600"
+    >
+      View Properties
+    </Link>
+  </div>
 
 </div>
 

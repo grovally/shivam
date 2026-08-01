@@ -82,7 +82,8 @@ export default function Maps() {
           <p className="uppercase tracking-[4px] md:tracking-[8px] -mt-6 md:-mt-10 text-black font-semibold text-xs md:text-base">
   Premium Real Estate
 </p>
-          <h1 className="-mt-4 text-5xl md:text-7xl font-black leading-tight">
+          
+          <h1 className=" text-5xl md:text-7xl font-bold text-red-600 leading-tight">
             Explore
             <span className="block bg-gradient-to-r from-red-600 to-yellow-300 bg-clip-text text-transparent">
               Noida Properties

@@ -40,7 +40,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: FaWhatsapp,
-      url: "https://wa.me/91",
+      url: "https://wa.me/91 6200072000",
     },
     {
       icon: FaFacebookF,
@@ -278,17 +278,17 @@ export default function Footer() {
               </a>
 
               <a
-                href="mailto:info@chhabra-properties.com"
+                href="mailto:Info@cpgroup.in"
                 className="flex gap-4 hover:text-cyan-400 transition"
               >
                 <Mail className="text-red-400" />
                 <span className="text-gray-300">
-                  info@chhabra-properties.com
+                  Info@cpgroup.in
                 </span>
               </a>
 
               <a
-                href="tel:+919999999999"
+                href="tel:+91 6262626462"
                 className="flex gap-4 hover:text-cyan-400 transition"
               >
                 <FaPhone className="text-red-400 mt-3" />

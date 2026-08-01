@@ -6,6 +6,7 @@ import {
   Square,
   ArrowRight,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const properties = [
   {
@@ -44,12 +45,13 @@ const properties = [
 ];
 
 export default function Properties() {
+  const navigate = useNavigate();
   return (
-    <section className="relative overflow-hidden bg-[#05070d] py-24">
+    <section className="relative overflow-hidden bg-white py-24">
 
       {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-cyan-500/20 blur-[140px]" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-blue-600/20 blur-[140px]" />
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-red-500/20 blur-[140px]" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-600/20 blur-[140px]" />
 
       <div className="relative max-w-7xl mx-auto px-6">
 
@@ -60,15 +62,15 @@ export default function Properties() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <p className="text-cyan-400 uppercase tracking-[4px] font-semibold">
+          <p className="text-red-400 uppercase tracking-[4px] font-semibold">
             Properties
           </p>
 
-          <h1 className="text-5xl md:text-6xl font-bold text-white mt-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-black mt-4">
             Find Your Dream Property
           </h1>
 
-          <p className="text-gray-400 mt-6 max-w-3xl mx-auto text-lg">
+          <p className="text-black/50 mt-6 max-w-3xl mx-auto text-lg">
             Explore premium residential, commercial, villas, apartments,
             industrial properties, and investment opportunities.
           </p>
@@ -80,10 +82,10 @@ export default function Properties() {
           <input
             type="text"
             placeholder="Location"
-            className="rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white outline-none"
+            className="rounded-xl bg-black/10 border border-red-500/10 px-4 py-3 text-black outline-none"
           />
 
-          <select className="rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white">
+          <select className="rounded-xl bg-black/10 border border-red-500/10 px-4 py-3 text-black">
             <option>Property Type</option>
             <option>House</option>
             <option>Apartment</option>
@@ -91,14 +93,14 @@ export default function Properties() {
             <option>Commercial</option>
           </select>
 
-          <select className="rounded-xl bg-white/10 border border-white/10 px-4 py-3 text-white">
+          <select className="rounded-xl bg-black/10 border border-red-500/10 px-4 py-3 text-black/50">
             <option>Budget</option>
             <option>₹50L - ₹1Cr</option>
             <option>₹1Cr - ₹2Cr</option>
             <option>₹2Cr+</option>
           </select>
 
-          <button className="rounded-xl bg-cyan-500 text-white font-semibold hover:bg-cyan-400 transition">
+          <button className="rounded-xl bg-red-500 text-white font-semibold hover:bg-red-400 transition">
             Search
           </button>
 
@@ -128,16 +130,16 @@ export default function Properties() {
                   {property.title}
                 </h3>
 
-                <div className="flex items-center gap-2 text-gray-400 mt-3">
-                  <MapPin size={18} />
+                <div className="flex items-center gap-2 text-black/50 mt-3">
+                  <MapPin className="text-red-500" size={18} />
                   {property.location}
                 </div>
 
-                <h4 className="text-cyan-400 text-3xl font-bold mt-5">
+                <h4 className="text-red-400 text-3xl font-bold mt-5">
                   {property.price}
                 </h4>
 
-                <div className="flex justify-between mt-6 text-gray-300">
+                <div className="flex justify-between mt-6 text-black/50">
 
                   <div className="flex items-center gap-2">
                     <BedDouble size={18} />
@@ -156,7 +158,7 @@ export default function Properties() {
 
                 </div>
 
-                <button className="mt-8 w-full rounded-xl bg-cyan-500 py-3 font-semibold text-white hover:bg-cyan-400 transition flex justify-center items-center gap-2">
+                <button className="mt-8 w-full rounded-xl bg-black/50 py-3 font-semibold text-white hover:bg-red-600/50 transition flex justify-center items-center gap-2">
                   View Details
                   <ArrowRight size={18} />
                 </button>
@@ -171,35 +173,35 @@ export default function Properties() {
         {/* Why Choose */}
         <div className="mt-24 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-10">
 
-          <h2 className="text-4xl text-white font-bold text-center">
+          <h2 className="text-4xl text-black font-bold text-center">
             Why Choose Our Properties?
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8 mt-10">
 
             <div className="text-center">
-              <h3 className="text-cyan-400 text-2xl font-bold">
+              <h3 className="text-red-400 text-2xl font-bold">
                 Prime Locations
               </h3>
-              <p className="text-gray-400 mt-3">
+              <p className="text-black/50 mt-3">
                 Carefully selected locations with high investment potential.
               </p>
             </div>
 
             <div className="text-center">
-              <h3 className="text-cyan-400 text-2xl font-bold">
+              <h3 className="text-red-400 text-2xl font-bold">
                 Verified Listings
               </h3>
-              <p className="text-gray-400 mt-3">
+              <p className="text-black/50 mt-3">
                 Every property is verified for legal and ownership documents.
               </p>
             </div>
 
             <div className="text-center">
-              <h3 className="text-cyan-400 text-2xl font-bold">
+              <h3 className="text-red-400 text-2xl font-bold">
                 Best Prices
               </h3>
-              <p className="text-gray-400 mt-3">
+              <p className="text-black/50 mt-3">
                 Competitive prices with complete transparency.
               </p>
             </div>
@@ -211,15 +213,15 @@ export default function Properties() {
         {/* CTA */}
         <div className="text-center mt-24">
 
-          <h2 className="text-5xl font-bold text-white">
+          <h2 className="text-5xl font-bold text-black">
             Ready to Buy Your Dream Property?
           </h2>
 
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <p className="text-black/50 mt-6 max-w-2xl mx-auto">
             Contact our experts today and discover the perfect property for your family or investment.
           </p>
 
-          <button className="mt-8 rounded-xl bg-red-500 px-8 py-4 text-white font-semibold hover:bg-cyan-400 transition">
+          <button   onClick={ ()=>navigate("/contact")} className="mt-8 rounded-xl bg-red-500 px-8 py-4 text-white font-semibold hover:bg-red-400 transition">
             Contact Now
           </button>
 

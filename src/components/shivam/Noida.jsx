@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { yemuna } from "../data/yemunaNoidaData";
+import { noidaData } from "../data/noidaData";
 
-export default function Yamuna() {
-  
-  const navigate = useNavigate();
+export default function Noida() {
   const [sortBy, setSortBy] = useState("  Sector Low → High");
+  const navigate = useNavigate();
+  
 
   const openDetail = (index) => {
-    navigate(`/yamuna-expressway/${index}`);
+    navigate(`/noida/${index}`);
   };
 
-  const sortedData = [...yemuna].sort((a, b) => {
-    const titleA = (a?.title || "").trim().toLowerCase();
-    const titleB = (b?.title || "").trim().toLowerCase();
+  const sortedData = [...noidaData].sort((a, b) => {
+    const titleA = a.title.trim().toLowerCase();
+    const titleB = b.title.trim().toLowerCase();
 
     switch (sortBy) {
       case "az":
@@ -41,42 +41,44 @@ export default function Yamuna() {
   });
 
   return (
-    <section className="bg-white py-16 px-6 text-black">
-      <div className="max-w-7xl mx-auto mt-10">
+    <section className="bg-white mt-10 py-16 px-6 text-black">
+      <div className="max-w-7xl mx-auto">
 
-        <h2 className="text-center text-4xl md:text-5xl font-bold mb-8">
-          Yamuna Expressway
-          <span className="text-red-500"> Sector Maps</span>
+        <h2 className="text-center text-5xl font-bold mb-12">
+           Noida <span className="text-red-500">Sector</span> Maps
         </h2>
 
-        {/* Filter */}
-        <div className="flex justify-end mb-10">
+        <div className="flex justify-end mb-8">
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border rounded-lg px-4 py-2 shadow-md outline-none"
+            className="border rounded-lg px-4 py-2"
           >
-          
+            <option value="number-low">Sector Low → High</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
-            <option value="number-low">Sector Low → High</option>
+            
             <option value="number-high">Sector High → Low</option>
           </select>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
           {sortedData.map((item) => {
-            const originalIndex = yemuna.indexOf(item);
+
+            const originalIndex = noidaData.indexOf(item);
 
             return (
               <motion.div
                 key={originalIndex}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 whileHover={{ y: -10 }}
-                transition={{ duration: 0.35 }}
-                className="overflow-hidden rounded-3xl bg-white shadow-xl hover:shadow-2xl"
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="overflow-hidden rounded-3xl bg-white border shadow-xl hover:shadow-2xl"
               >
-                {/* Image */}
+
                 <div
   onClick={() => openDetail(originalIndex)}
   className="relative h-64 overflow-hidden  cursor-pointer group"
@@ -109,9 +111,7 @@ export default function Yamuna() {
   </h3>
 </div>
 
-                {/* Footer */}
                 <div >
-                  
                  
 
                  
@@ -128,7 +128,6 @@ export default function Yamuna() {
           })}
 
         </div>
-
       </div>
     </section>
   );

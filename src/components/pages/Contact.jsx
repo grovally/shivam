@@ -67,7 +67,7 @@ export default function Contact() {
                 <Mail className="text-red-400" />
               </div>
               <span className="text-black/95 font-bold">
-                info@chhabra-properties.com
+                Info@cpgroup.in
               </span>
             </div>
 

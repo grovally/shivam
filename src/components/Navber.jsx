@@ -21,12 +21,28 @@ export default function Navbar() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-400 to-yellow-600 text-2xl shadow-lg">
-              🏠
-              
+           <div className="
+h-12
+w-12
+overflow-hidden
+rounded-xl
+bg-gradient-to-br
+from-red-400
+to-yellow-600
+shadow-lg
+">
 
-            </div>
+  <img
+    src="https://chhabra-properties.com/wp-content/uploads/2024/08/WhatsApp-Image-2025-12-15-at-11.35.11-AM-2-e1765779585870.jpeg"
+    alt="Chhabra Properties"
+    className="
+    h-full
+    w-full
+    object-cover
+    "
+  />
 
+</div>
             <div>
               <h2 className="text-xl font-bold tracking-wide text-white">
                 CHHABRA
