@@ -36,7 +36,7 @@ shadow-lg
 ">
 
   <img
-    src="https://chhabra-properties.com/wp-content/uploads/2024/08/WhatsApp-Image-2025-12-15-at-11.35.11-AM-2-e1765779585870.jpeg"
+    src="https://miro.medium.com/v2/resize:fit:2400/1*23Nr66eWMk_4WbsiVXcUuA.png"
     alt="Chhabra Properties"
     className="
     h-full
