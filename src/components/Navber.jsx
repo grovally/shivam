@@ -36,7 +36,7 @@ shadow-lg
 ">
 
   <img
-    src="https://miro.medium.com/v2/resize:fit:2400/1*23Nr66eWMk_4WbsiVXcUuA.png"
+    src="https://scontent.cdninstagram.com/v/t51.2885-19/96672954_558298924687707_8293590953906667520_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=103&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=VSDbD-wKrGkQ7kNvwFnbztA&_nc_oc=Adrmv2cd5lppbCSnv8os_y4ia20n_VEz1WdZOScqWcHtStEmhAIqBDU_G1zcs8KCXCc&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7ba8c&oh=00_AQEsgDJOytWOOBoGhgwopzsettAm0pcX21zes3LdKJEvBg&oe=6A73C567"
     alt="Chhabra Properties"
     className="
     h-full
