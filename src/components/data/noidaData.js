@@ -136,7 +136,7 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
   }
   ,
   {
-    title:"ABADI_AT_VILL._SULTANPUR",
+    title:"ABADI AT VILL. SULTANPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805560/5_ABADI_AT_VILL._SULTANPUR_qoko6v.jpg",
     
@@ -186,7 +186,7 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
     image :" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805536/5_ABADI_AT_SECTOR-117_GEZA_ntvfwi.jpg",
   },
   {
-    title:"SECTOR-63_VILL_HAZRAT_WAZIDPUR_notf97",
+    title:"SECTOR-63 VILL HAZRAT WAZIDPUR",
     description:"",
     image :" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805532/5_ABADI_AT_SECTOR-117_5_ABADI_AT_SECTOR-63_VILL_HAZRAT_WAZIDPUR_notf97.jpg",
   },
@@ -221,13 +221,13 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
   }
   ,
   {
-    title:" SECTOR- 151",
+    title:" SECTOR-151",
     description:"",
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890559/SECTOR-151_LATEST_o5qsi1.png",
   }
   ,
   {
-    title:" SECTOR- 150",
+    title:" SECTOR-150",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890557/SECTOR-150.NEW_biascf.png",
   }
@@ -376,7 +376,7 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890524/SECTOR_-_70_mnppvf.png"
   },
   {
-    title:" SECTOR- 67",
+    title:" SECTOR-67",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890524/SECTOR_-_67_SECTOR_-_68_mnpabq.png"
   },
@@ -471,28 +471,28 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890498/5_ABADI_SECTOR-104_VILL.HAZIPUR_5_ABADI_SHAHDARA_okjmqo.png"
   },
   {
-    title:"SECTOR-122_PARTHLA_KHANJARPUR",
+    title:"SECTOR-122 PARTHLA KHANJARPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890498/5_ABADI_AT_SECTOR-122_PARTHLA_KHANJARPUR_otbdbu.png"
   },
   {
-    title:"SECTOR-145_PART-1",
+    title:"SECTOR-145 PART-1",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890497/5_ABADI_AT_SECTOR-145_PART-1._j5bhps.png"
   },
   {
-    title:"SECTOR-45_BAROLA_5",
+    title:"SECTOR-45 BAROLA",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890497/5_ABADI_SECTOR-45_BAROLA_5_ABADI_SECTOR-45_SADARPUR_mzythp.png"
   },
   {
-    title:"SEC-71_OF_VILL._BASAI",
+    title:"SEC-71 VILL. BASAI",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890496/5_ABADI_AT_SEC-71_OF_VILL._BASAI_KONDALI_ROHILAPUR._ry1dzt.png"
   }
   ,
   {
-    title:"SECTOR-121_VILL_BADOLI",
+    title:"SECTOR-121 VILL BADOLI",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890494/5_ABADI_AT_SECTOR-121_VILL_BADOLI_5_ABADI_AT_SECTOR-121_PARTHLA_iluqb2.png"
   },
@@ -508,7 +508,7 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890494/5_ABADI_AT_SECTOR-63A_ovg4hl.png"
   },
   {
-    title:"SECTOR-71_ASUDULAPUR",
+    title:"SECTOR-71 ASUDULAPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890493/5_ABADI_AT_SECTOR-71_ASUDULAPUR_WAZIDPUR_mi6rt9.png"
   },

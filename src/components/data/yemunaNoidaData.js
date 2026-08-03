@@ -1,16 +1,16 @@
 const yemuna=[
    
     {
-      title:" Sector 28",
+      title:" SECTOR-28",
        description:``,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231994/SECTOR-28_mpanpy.png"
     },
     {
-      title:" Sector 25",
+      title:" SECTOR-25",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231994/SECTOR-25_vuknaw.png"
     },{
-      title:" SECTOR-20_POCKET-B_C_PART-II " ,
+      title:" SECTOR-20 POCKET-B-C PART-II " ,
        description:`🏡 Sector 20 Part B & C (Part-II), Yamuna Expressway — The Heart of Modern Investment
 
 ​
@@ -67,31 +67,31 @@ Sector 20 Part B & C (Part-II), Yamuna Expressway, stands out as one of the best
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231990/SECTOR-20_POCKET-B_C_PART-II_whtik4.png"
     },
     {
-      title:"SECTOR-20_POCKET-B_C_PART-I",
+      title:"SECTOR-20 POCKET-BCPART-I",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231989/SECTOR-20_POCKET-B_C_PART-I_prgbdm.png"
     },{
-      title:"SECTOR-20_POCKET-_T",
+      title:"SECTOR-20 POCKET-T",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231989/SECTOR-20_POCKET-_T_zatwtu.png"
     },
     {
-      title:"SECTOR-20_POCKET-_R_S",
+      title:"SECTOR-20 POCKET-RS",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231986/SECTOR-20_POCKET-_R_S._fuchnu.png"
     },
     {
-      title:"SECTOR-20_POCKET-P",
+      title:"SECTOR-20 POCKET-P",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231984/SECTOR-20_POCKET-_P_lswpse.png"
     },
     {
-      title:"SECTOR-20_POCKET_O",
+      title:"SECTOR-20 POCKET-O",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_O_wwnqjs.png",
     },
     {
-      title:"SECTOR-20_POCKET",
+      title:"SECTOR-20POCKET",
        description:`🌆 About Sector 20, Yamuna Expressway
 
 ​
@@ -142,32 +142,32 @@ Whether you’re a homebuyer or an investor, Sector 20 offers a golden opportuni
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_M_kchdte.png"
     },
     {
-      title:"SECTOR-20_POCKET",
+      title:"SECTOR-20 POCKET",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_N._pxfpci.png"
     },
     {
-      title:"SECTOR-20_POCKET_R_S",
+      title:"SECTOR-20 POCKET-RS",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231986/SECTOR-20_POCKET-_R_S._fuchnu.png"
     },
     {
-      title:"SECTOR-20_POCKET-P",
+      title:"SECTOR-20 POCKET-P",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231984/SECTOR-20_POCKET-_P_lswpse.png"
     },
     {
-      title:"SECTOR-20_POCKET-O",
+      title:"SECTOR-20 POCKET-O",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_O_wwnqjs.png"
     },
     {
-      title:"SECTOR-20_POCKET-M",
+      title:"SECTOR-20 POCKET-M",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_M_kchdte.png"
     },
     {
-      title:"SECTOR-20_POCKET-N.",
+      title:"SECTOR-20 POCKET-N.",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231983/SECTOR-20_POCKET-_N._pxfpci.png"
     },{
@@ -249,7 +249,7 @@ For verified information and guidance on Sector 33 Yamuna Expressway, connect wi
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231981/SECTOR-_33._ldboja.png"
     },
     {
-      title:"SECTOR-20_POCKET-H",
+      title:"SECTOR-20 POCKET-H",
        description:`
 About Sector 20 Part H, Yamuna Expressway.
 🌆 Sector 20 Part H, Yamuna Expressway – A Prime Address for Future Growth
@@ -307,7 +307,7 @@ For those looking to invest in Yamuna Expressway Authority plots for sale in Sec
 Sector 20 Part H Yamuna Expressway is a golden investment destination in Greater Noida, combining excellent connectivity, well-planned infrastructure, and proximity to Jewar Airport. Backed by the Yamuna Expressway Authority and YEIDA, this sector is ideal for residential, commercial, and long-term investors. With trusted partners like Chhabra Properties, your search for premium Yamuna Expressway Authority plots Sector 20 ends here — making your investment secure and future-ready.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231978/SECTOR-20_POCKET-_H_jznc0j.png"
     },{
-      title:"SECTOR-20_POCKET_F",
+      title:"SECTOR-20 POCKET-F",
        description:`About Sector 20 Part F, Yamuna Expressway.
 🌇 Sector 20 Part F, Yamuna Expressway — The Perfect Blend of Connectivity & Growth
 
@@ -365,7 +365,7 @@ Sector 20 Part F, Yamuna Expressway is a shining example of smart urban planning
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231977/SECTOR-20_POCKET-_F._fk7og8.png"
     }
     ,{
-      title:"SECTOR-20_POCKET-_E",
+      title:"SECTOR-20 POCKET-E",
        description:`
 About Sector 20 Part F, Yamuna Expressway.
 🌇 Sector 20 Part F, Yamuna Expressway — The Perfect Blend of Connectivity & Growth
@@ -424,7 +424,7 @@ Sector 20 Part F, Yamuna Expressway is a shining example of smart urban planning
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231975/SECTOR-20_POCKET-_E_zweeql.png"
     }
     ,{
-      title:"SECTOR-18_POCKET-6C",
+      title:"SECTOR-18 POCKET-6C",
        description:`About Sector 18 Part 6C, Yamuna Expressway.
 🏡 Sector 18 Part 6C, Yamuna Expressway – Prime Plots for Investment & Development
 
@@ -492,19 +492,19 @@ When looking for the most suitable deals always visit Chhabra Properties to get 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231973/SECTOR-18_POCKET-6C_ttuzkv.png"
     },
     {
-      title:"SECTOR-18_POCKET-J",
+      title:"SECTOR-18 POCKET-J",
        description:``,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231972/SECTOR-18_POCKET-J_nc0p0o.png"
     },{
-      title:"SECTOR-20_POCKET-_D",
+      title:"SECTOR-20 POCKET-D",
        description:``,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231972/SECTOR-20_POCKET-_D_efy8bi.png"
     },{
-      title:"SECTOR-18_POCKET-I",
+      title:"SECTOR-18 POCKET-I",
        description:``,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231971/SECTOR-18_POCKET-I_xowuky.png"
     },{
-        title:"SECTOR-18_POCKET-7C_7D",
+        title:"SECTOR-18 POCKET-7C 7D",
         description:`
 About Sector 18 Part 7B, Yamuna Expressway.
 🏙️ Sector 18 Part 7B, Yamuna Expressway – A Promising Address Near Jewar Airport
@@ -566,7 +566,7 @@ Sector 18 Part 7B, Yamuna Expressway is a fast-growing sector combining strategi
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231970/SECTOR-18_POCKET-7C_7D_zwhuvi.png",
       
     },{
-      title:"SECTOR-18_POCKET-7A",
+      title:"SECTOR-18 POCKET-7A",
       description:`About Sector 18 Part 6A, Yamuna Expressway.
 Sector 18 Part 6A, Yamuna Expressway – Premium YEIDA Residential Plots
 
@@ -693,7 +693,7 @@ On-site visits and personalized property recommendations
 Whether you’re looking for a Yamuna Expressway residential plot or a long-term investment near Jewar Airport, our experience ensures a smooth, reliable, and rewarding property transaction.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231966/SECTOR-18_POCKET-7A_fmirbf.png"
     },{
-      title:"SECTOR-18_POCKET-6D",
+      title:"SECTOR-18 POCKET-6D",
       description:`
 About Sector 18 Part 6D, Yamuna Expressway.
 🌇 Sector 18 Part 6D, Yamuna Expressway – The Smart Zone of Future Growth
@@ -750,7 +750,7 @@ In essence,
 Sector 18 Part 6D, Yamuna Expressway is not just a location — it’s a rapidly rising investment hub that combines smart planning, excellent connectivity, and tremendous potential near Jewar Airport.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231965/SECTOR-18_POCKET-6D_kypkwc.png"
     },{
-      title:"SECTOR-18_POCKET-6A",
+      title:"SECTOR-18 POCKET-6A",
       description:`
 About Sector 18 Part 6A, Yamuna Expressway.
 Sector 18 Part 6A, Yamuna Expressway – Premium YEIDA Residential Plots
@@ -878,7 +878,7 @@ On-site visits and personalized property recommendations
 Whether you’re looking for a Yamuna Expressway residential plot or a long-term investment near Jewar Airport, our experience ensures a smooth, reliable, and rewarding property transaction.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231965/SECTOR-18_POCKET-6A_xjlzqy.png"
     },{
-      title:"SECTOR-18_POCKET-6B",
+      title:"SECTOR-18 POCKET-6B",
       description:`
 About Sector 18 Part 6B, Yamuna Expressway.
  🏡Sector 18 Part 6B, Yamuna Expressway – Your Gateway to Modern Living Near Jewar Airport
@@ -1037,7 +1037,7 @@ Step-by-step support in documentation, transfer, and registry
 Our team is here to ensure you make a secure and profitable investment in the Yamuna Authority region.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231965/SECTOR-18_POCKET-6B_u6s1v6.png"
     },{
-      title:"SECTOR-18_POCKET-5D",
+      title:"SECTOR-18 POCKET-5D",
       description:`
 About Sector 18 Part 5D, Yamuna Expressway.
 The residential blocks in Sector 18, Pocket 5D on the Yamuna Expressway are the best positioned investment opportunity in the Yamuna Expressway Industrial Development Authority (YEIDA) master plan. Chhabra Properties, your trusted Yamuna Expressway Property Dealer, explains the highlights of the locality, particularly focusing on the preferred 300 sqm block size.
@@ -1117,7 +1117,7 @@ Market Insight: We provide the most accurate sector 18 yamuna expressway plots r
 For all your queries, including the precise Yamuna Expressway Authority Sector 18 map location and the relevant postal information the Sector 18, Part - 5D Yamuna Expressway pin code is 203201, trust the market leaders at Chhabra Properties.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231962/SECTOR-18_POCKET-5D_jfzkqg.png"
     },{
-      title:"SECTOR-18_POCKET-5C",
+      title:"SECTOR-18 POCKET-5C",
       description:`About Sector 18 Part 5C, Yamuna Expressway.
 Sector 18 Part 5C is one of the most promising pockets within the Yamuna Expressway Industrial Development Authority Sector 18 (YEIDA Sector 18), situated strategically along the Yamuna Expressway Greater Noida stretch. This area is highly sought after by investors looking for secure Yamuna expressway authority plots for sale in sector 18 under the government's Yamuna authority plot scheme.
 
@@ -1175,12 +1175,12 @@ For purchasing authentic Yeida plots and navigating the Yamuna authority plots r
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231960/SECTOR-18_POCKET-5C_dreduy.png"
     },
     {
-      title:"MP-GYC_PART-I",
+      title:"MP-GYC PART-I",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231960/MP-GYC_PART-I_f08out.png"
     },
     {
-      title:"SECTOR-18_POCKET-5B",
+      title:"SECTOR-18 POCKET-5B",
       description:`About Sector 18 Part 5B, Yamuna Expressway.
 Sector 18 is a flagship development of the Yamuna Expressway Industrial Development Authority (YEIDA), occupying a prime spot as a residential and an investment destination along with the Yamuna Expressway. It is within the larger area of Yamuna Expressway Greater Noida and offers connectivity and future potential as a result of nearby development. The official sector 18 yamuna expressway pin code is 203201.
 
@@ -1241,7 +1241,7 @@ As mentioned above, the sector 18 plot rates are rational, which depend on the e
 To get an accurate idea of current availability and plot rates in Area 18 Part 5B, consult your trustworthy Yamuna Expressway Property Dealer, such as Chhabra Properties. We have valuable local knowledge of Yamuna expressway authority area 18 map and the formation stuff that can help your secure investment in a Yamuna expressway authority plot scheme of plots. To assist you, we have included the Sector-18 Part-5B HD Map Yamuna Expressway property map, as a comprehensive visual.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231960/SECTOR-18_POCKET-5B_yonpq9.png"
     },{
-      title:"SECTOR-18_POCKET-5A",
+      title:"SECTOR-18 POCKET-5A",
       description:`About Sector 18 Part 5A, Yamuna Expressway.
 Sector 18 Part 5A is a gem within the Yamuna Expressway Industrial Development Authority (YEIDA) Sector 18 Greater Noida master plan. Serving as a trusted partner, Chhabra Properties ranks this highly to be the best investment option for safe land where you will find officially allotted Yamuna Authority Plots available for sale in Sector 18. Start the future - your legacy will start at these prime plots.
 Strategic Location & Connectivity
@@ -1284,34 +1284,34 @@ PIN Code: The active Sector 18 Yamuna Expressway PIN Code is 203201 (Dankaur).
 For securing a piece of land in this booming Yamuna Authority region, trust Chhabra Properties for verified listings, transparent dealing, and comprehensive understanding of the Yamuna map and plot schemes. We are your dedicated Yamuna Expressway Property Dealer, turning your investment foresight into tangible real estate success.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231959/SECTOR-18_POCKET-5A_srafbx.png"
     },{
-      title:"SECTOR-18_POCKET-4A",
+      title:"SECTOR-18 POCKET-4A",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231959/SECTOR-18_POCKET-4A_iaxoan.png"
     }
     ,{
-      title:"SECTOR-18_POCKET-3D",
+      title:"SECTOR-18 POCKET-3D",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231957/SECTOR-18_POCKET-3D_ien72k.png"
     },{
-      title:"SECTOR-18_POCKET-3C",
+      title:"SECTOR-18 POCKET-3C",
       description:"",
       image: "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231956/SECTOR-18_POCKET-3C_aydjko.png"
 
     },{
-      title:"SECTOR-18_POCKET-3A",
+      title:"SECTOR-18 POCKET-3A",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231955/SECTOR-18_POCKET-3A_hcphh5.png"
     },
     {
-      title:"SECTOR-18_POCKET-2B",
+      title:"SECTOR-18 POCKET-2B",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231955/SECTOR-18_POCKET-2B_wqavhp.png"
     },{
-      title:"SECTOR-18_POCKET-3B",
+      title:"SECTOR-18 POCKET-3B",
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231955/SECTOR-18_POCKET-3B_qkmtcx.png'
     },{
-      title:"SECTOR-18_POCKET-2A_2C",
+      title:"SECTOR-18 POCKET-2A-2C",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231953/SECTOR-18_POCKET-2A_2C_ubviat.png"
     },{
@@ -1320,19 +1320,19 @@ For securing a piece of land in this booming Yamuna Authority region, trust Chha
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231950/SECTOR-_29_dzjzhg.png"
     },
     {
-      title:"SECTOR-18_POCKET-1B",
+      title:"SECTOR-18 POCKET-1B",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231950/SECTOR-18_POCKET-1B_su4onv.png"
     },{
-      title:"SECTOR-18_POCKET-1A",
+      title:"SECTOR-18 POCKET-1A",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231948/SECTOR-18_POCKET-1A_ztumlc.png"
     },{
-      title:"SECTOR-_24A_RESIDENTIAL",
+      title:"SECTOR-24ARESIDENTIAL",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231947/SECTOR-_24A_RESIDENTIAL_lajxwk.png"
     },{
-      title:"SECTOR-_22D",
+      title:"SECTOR-22D",
       description:`
 About Sector 22D, Yamuna Expressway.
 🏙️ Sector 22D, Yamuna Expressway – A Future-Ready Residential & Investment Destination
@@ -1443,135 +1443,135 @@ Sector 22D, Yamuna Expressway stands out as a well-planned, authority-backed res
 For genuine guidance and verified properties in Yamuna Expressway Sector 22D, trust Chhabra Properties — your reliable partner in Yamuna Authority real estate.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231946/SECTOR-_22D_l2l6g6.png"
     },{
-      title:"SECTOR-_22D_C_D",
+      title:"SECTOR-22D-C-D",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231946/SECTOR-_22D_C_D_BLOCK_enbrkb.png"
     },
     {
-      title:'VILLAGE-_MIRJAPUR_SECTOR-18',
+      title:'VILLAGE- MIRJAPUR SECTOR-18',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231946/7_VILLAGE-_MIRJAPUR_SECTOR-18_PCKT-9_hlvjp8.png"
 
     },{
-      title:"SECTOR-_24A_RESIDENTIAL",
+      title:"SECTOR- 24A RESIDENTIAL",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231946/SECTOR-_24A_RESIDENTIAL_1_ekvxlr.png"
     },{
-      title:"SECTOR-_22D_A_B_BLOCK",
+      title:"SECTOR- 22D A B BLOCK",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231945/SECTOR-_22D_A_B_BLOCK_bw6jdr.png"
     },{
-      title:"SECTOR-_17_ZOMMED",
+      title:"SECTOR-17 ZOMMED",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231942/SECTOR-_17_ZOMMED_dmzm8w.png"
     },{
-      title:"SECTOR-_16_PART",
+      title:"SECTOR-16 PART",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231942/SECTOR-_16_PART_owe6vp.png"
     },{
-      title:"SECTOR-_17_FULL",
+      title:"SECTOR-17",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231942/SECTOR-_17_FULL._ypr67e.png"
     },
     {
-      title:"MP-GYC_PART-II_",
+      title:"MP-GYC PART-II",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231941/MP-GYC_PART-II_cy2ptg.png"
     },{
-      title:"MP_YAMUNA-2041_OLD",
+      title:"MP YAMUNA-2041-OLD",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231937/MP_YAMUNA-2041_OLD_g4nmqm.png"
     }
     ,{
-      title:"MP_YAMUNA-2041_LATEST",
+      title:"MP YAMUNA-2041-LATEST",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231935/MP_YAMUNA-2041_LATEST_daf9iv.png"
     },{
-      title:"MP_YAM-2041PROPOSED_SALIENT_FEATURES",
+      title:"MP YAM-2041PROPOSED SALIENT FEATURES",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231935/MP_YAM-2041PROPOSED_SALIENT_FEATURES_jre15g.png"
     },{
-      title:"GYC_3RD_PARKVIEW_VILLAS",
+      title:"GYC 3RD PARKVIEW VILLAS",
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231932/GYC_3RD_PARKVIEW_VILLAS._wl14ct.png'
     },{
-      title:"MP-_SECTOR-18-20",
+      title:"MP- SECTOR-18-20",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231930/MP-_SECTOR-18-20_1_rrfu1g.png"
     },{
-      title:"MP_JAYPEE_SPORTS_CITY",
+      title:"MP JAYPEE SPORTS CITY",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231929/MP_JAYPEE_SPORTS_CITY.jpg_ofgdat.png"
     },{
-      title:"MP_ACE_ACREVILLE",
+      title:"MP ACE ACREVILLE",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231928/MP_ACE_ACREVILLE_dnq0kr.png"
     },
     {
-      title:"MP_GYC",
+      title:"MP GYC",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231928/MP_GYC_wdy3xe.png"
     },
     {
-      title:"GYC_RUNWAY_SUITES",
+      title:"GYC RUNWAY SUITES",
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231924/GYC_RUNWAY_SUITES_jjyojc.png'
     },
-    {title:"GYC_GALLERIA_6TH_PARKVIEW",
+    {title:"GYC GALLERIA 6TH PARKVIEW",
         description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231923/GYC_GALLERIA_6TH_PARKVIEW_vrpfff.png"
     },{
-      title:"GYC_AEROCITY_PLOTS",
+      title:"GYC AEROCITY PLOTS",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231921/GYC_AEROCITY_PLOTS_hmaky2.png"
     },{
-      title:'GYC_2ND_PARKVIEW_GYC_1ST-B_PARKVIEW',
+      title:'GYC 2ND PARKVIEW GYC 1ST-B PArkVIEW',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/GYC_2ND_PARKVIEW_GYC_1ST-B_PARKVIEW_bbshpy.png"
     },{
-      title:"VILLAGE-_PARSAULBLOCK-W",
+      title:"VILLAGE-PARSAULBLOCK-W",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/7_VILLAGE-_PARSAULBLOCK-W_bbxmdw.png"
     },{
-      title:'VILLAGE-_RONIJA_BLOCK-A_SHAHPUR_',
+      title:'VILLAGE-RONIJA BLOCK-A SHAHPUR',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/7_VILLAGE-_RONIJA_BLOCK-A_SHAHPUR_BLOCK-B_y2fb5o.png"
     },{
-      title:"GYC_1ST-A_PARKVIEW_16TH_PARKVIEW",
+      title:"GYC 1ST-A PARKVIEW 16TH PArkVIEW",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/GYC_1ST-A_PARKVIEW_16TH_PARKVIEW_tcgdpi.png"
     },{
-      title:'VILLAGE-_MOHAMMADPUR_GURJAR',
+      title:'VILLAGE-MOHAMMADPUR GURJAR',
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231918/7_VILLAGE-_MOHAMMADPUR_GURJAR_wmbniv.png'
     },
     {
-      title:"VILLAGE-_NILONI_SHAHPUR_BLOCK-E_D_C_B",
+      title:"VILLAGE-NILONI SHAHPUR BLOCK-E ",
       description:"",
-      image:'https://res.cloudinary.com/bzbcmzrn/image//f_auto,q_auto,w_1200/v1785231914/7_VILLAGE-_NILONI_SHAHPUR_BLOCK-E_D_C_B_ghc87n.png'
+      image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231914/7_VILLAGE-_NILONI_SHAHPUR_BLOCK-E_D_C_B_ghc87n.png'
     },
     {
-      title:'VILLAGE-_KHERALI_BHAV',
+      title:'VILLAGE- KHERALI BHAV',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231912/7_VILLAGE-_KHERALI_BHAV_misoxz.png"
     },
     {
-      title:'VILLAGE-_DHANAURI_PART_SECTOR-17',
+      title:'VILLAGE- DHANAURI PART SECTOR-17',
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231911/7_VILLAGE-_DHANAURI_PART_SECTOR-17_xnpbxu.png'
     },
     {
-      title:'VILLAGE-_ACHEJA_BUJARG',
+      title:'VILLAGE- ACHEJA BUJARG',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231910/7_VILLAGE-_ACHEJA_BUJARG_vyd1y2.png"
     },
     {
-      title:'VILLAGE-_CHANDPUR',
+      title:'VILLAGE- CHANDPUR',
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231910/7_VILLAGE-_CHANDPUR_jhzam7.png'
     },
     {
-      title:"VILLAGE-_DUNGARPUR_REELKA",
+      title:"VILLAGE- DUNGARPURREELKA",
       description:"",
       image:'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231909/7_VILLAGE-_DUNGARPUR_REELKA_th58wt.png'
     }

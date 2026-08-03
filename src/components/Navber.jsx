@@ -25,8 +25,8 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
            <div className="
-h-16
-w-18
+h-12
+w-15
 overflow-hidden
 rounded-lg
 bg-gradient-to-br
@@ -36,7 +36,7 @@ shadow-lg
 ">
 
   <img
-    src="https://scontent.cdninstagram.com/v/t51.2885-19/96672954_558298924687707_8293590953906667520_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=103&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=VSDbD-wKrGkQ7kNvwFnbztA&_nc_oc=Adrmv2cd5lppbCSnv8os_y4ia20n_VEz1WdZOScqWcHtStEmhAIqBDU_G1zcs8KCXCc&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_ss=7ba8c&oh=00_AQEsgDJOytWOOBoGhgwopzsettAm0pcX21zes3LdKJEvBg&oe=6A73C567"
+    src="https://media.licdn.com/dms/image/v2/C4E0BAQGKkoxuHL4HGA/company-logo_200_200/company-logo_200_200/0/1630620425192?e=2147483647&v=beta&t=HygFAQdPRJS8y-bsqs8g_a3peCjiW0g3Z02pzKnCMGE"
     alt="Chhabra Properties"
     className="
     h-full
