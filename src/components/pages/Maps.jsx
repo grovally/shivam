@@ -44,7 +44,7 @@ export default function Maps() {
       <div className="absolute -left-20 top-32 h-72 w-72  bg-red-200 blur-[120px]" />
       <div className="absolute -right-20 bottom-20 h-72 w-72  bg-orange-200 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
 

@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(189, 68, 94, 0.05),transparent_70%)]" />
 
-      <div className="relative mx-auto max-w-7xl px-6">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
 

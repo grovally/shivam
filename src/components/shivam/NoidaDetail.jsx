@@ -46,11 +46,11 @@ export default function NoidaDetail() {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto px-6 pb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
 
         <button
           onClick={() => navigate(-1)}
-          className="mb-8 bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl"
+          className="mb-8 bg-red-600 hover:bg-red-700 text-white px-4 sm:px-6 py-3 rounded-xl"
         >
           ← Back
         </button>

@@ -11,6 +11,9 @@ export default function Navbar() {
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
+    {
+      name: "Gallery",path:"/gallery"
+    }
   ];
     
   
@@ -19,21 +22,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex h-20 items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="flex h-16 sm:h-20 items-center justify-between">
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-           <div className="
-h-12
-w-15
-overflow-hidden
-rounded-lg
-bg-gradient-to-br
-from-red-400
-to-yellow-600
-shadow-lg
-">
+           <div className="h-10 w-12 sm:h-15 sm:w-18 overflow-hidden rounded-lg bg-gradient-to-br from-red-400 to-yellow-600 shadow-lg">
 
   <img
     src="https://media.licdn.com/dms/image/v2/C4E0BAQGKkoxuHL4HGA/company-logo_200_200/company-logo_200_200/0/1630620425192?e=2147483647&v=beta&t=HygFAQdPRJS8y-bsqs8g_a3peCjiW0g3Z02pzKnCMGE"
@@ -46,7 +40,7 @@ shadow-lg
   />
 
 </div>
-            <div>
+            <div className="hidden sm:block">
               <h2 className="text-xl font-bold tracking-wide text-white">
                 CHHABRA
               </h2>
@@ -58,7 +52,7 @@ shadow-lg
           </Link>
 
           {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-8">
             {links.map((item) => (
               <Link
                 key={item.name}
@@ -71,16 +65,16 @@ shadow-lg
           </nav>
 
           {/* Right Side */}
-          <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-4">
 
             <div className="flex items-center gap-2 text-white">
               <Phone size={18} className="text-red-400" />
-              <span>+91  6262626462</span>
+              <span className="text-sm">+91 6262626462</span>
             </div>
 
             <Link
               to="/contact"
-              className="rounded-full bg-gradient-to-r from-red-600 to-yellow-400 px-6 py-3 font-semibold text-black transition hover:scale-105"
+              className="rounded-full bg-gradient-to-r from-red-600 to-yellow-400 px-4 sm:px-6 py-2 sm:py-3 font-semibold text-black transition hover:scale-105"
             >
               Get Quote
             </Link>

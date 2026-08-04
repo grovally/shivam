@@ -41,7 +41,7 @@ export default function Noida() {
   });
 
   return (
-    <section className="bg-white mt-10 py-16 px-6 text-black">
+    <section className="bg-white mt-10 py-16 px-4 sm:px-6 lg:px-8 text-black">
       <div className="max-w-7xl mx-auto">
 
         <h2 className="text-center text-5xl font-bold mb-12">

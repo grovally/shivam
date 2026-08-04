@@ -1,0 +1,20 @@
+/* Global small helpers for mobile friendliness */
+:root{
+  --site-max-width: 1120px;
+}
+
+body{
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Ensure main content not hidden under fixed header */
+header + main, header + section, header + div {
+  padding-top: 5rem; /* matches header height on small screens */
+}
+
+/* Make clickable areas slightly larger on touch devices */
+button, a{touch-action:manipulation}
+
+/* Ensure images with object-cover behave consistently */
+.img-cover{object-fit:cover; width:100%; height:100%;}

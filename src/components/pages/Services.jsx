@@ -44,7 +44,7 @@ export default function Services() {
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-500/20 blur-[140px]" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <motion.div

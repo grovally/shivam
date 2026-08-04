@@ -34,7 +34,7 @@ export default function About() {
       <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-red-500/20 blur-[140px]" />
       <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-600/20 blur-[140px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-24">
+      <div className="relative  -mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
         {/* Hero */}
         <motion.div
@@ -539,7 +539,7 @@ export default function About() {
     </Link>
 
     <Link
-      to="/properties"
+      to="/maps"
       className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-red-600"
     >
       View Properties

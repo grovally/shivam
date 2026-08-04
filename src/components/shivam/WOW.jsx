@@ -54,7 +54,7 @@ const visiblePartners = [
   ...shivam.slice(0, startIndex),
 ].slice(0, 5);
   return (
-    <section className="bg-white py-16 px-6">
+        <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
           <div className ="max-w-7xl mx-auto mb-10 text-center">
             <h2 className="text-3xl font-bold text-gray-800">Working With The Top <span className="text-red-500">Development Authorities</span> .</h2>
 

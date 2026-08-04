@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navber";
 import Footer from "./components/pages/Footer";
+import Gallery from "./components/shivam/Gallary"
 
 import Home from "./components/pages/Home";
 
@@ -32,6 +33,7 @@ import WOW from "./components/shivam/WOW";
 
 
 import ScrollToTop from "./components/pages/ScrollToTop";
+import Location from "./components/shivam/Location"
 
 
 
@@ -56,6 +58,7 @@ element={
 <Home />
 <OK />
 <Shivam />
+<Location/>
 <Chhabra />
 <WOW/>
 <Chiose />
@@ -107,6 +110,7 @@ element={<Noida />}
 path="/noida/:id"
 element={<NoidaDetels />}
 />
+<Route path= "/gallery" element ={<Gallery/>}/>
 
 
 

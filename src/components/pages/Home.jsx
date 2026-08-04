@@ -45,7 +45,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="absolute inset-0 z-10 flex items-end">
-        <div className="mx-auto w-full max-w-7xl px-5 pb-10 sm:px-8 sm:pb-14 lg:pb-20">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 lg:pb-20">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}

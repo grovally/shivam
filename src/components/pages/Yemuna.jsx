@@ -41,7 +41,7 @@ export default function Yamuna() {
   });
 
   return (
-    <section className="bg-white py-16 px-6 text-black">
+    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-black">
       <div className="max-w-7xl mx-auto mt-10">
 
         <h2 className="text-center text-4xl md:text-5xl font-bold mb-8">
@@ -56,10 +56,11 @@ export default function Yamuna() {
             onChange={(e) => setSortBy(e.target.value)}
             className="border rounded-lg px-4 py-2 shadow-md outline-none"
           >
+             <option value="number-low">Sector Low → High</option>
           
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
-            <option value="number-low">Sector Low → High</option>
+           
             <option value="number-high">Sector High → Low</option>
           </select>
         </div>

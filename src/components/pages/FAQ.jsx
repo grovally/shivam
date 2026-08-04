@@ -69,7 +69,7 @@ export default function FAQSection() {
               {/* Question */}
               <button
                 onClick={() => setOpenIndex(isOpen ? -1 : index)}
-                className="flex w-full items-center justify-between px-6 py-5 text-left"
+                className="flex w-full items-center justify-between px-4 sm:px-6 py-4 sm:py-5 text-left"
               >
                 <h3 className="text-lg font-semibold text-gray-900 pr-4">
                   {faq.question}
@@ -87,7 +87,7 @@ export default function FAQSection() {
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="border-t border-gray-100 px-6 pb-6 pt-4">
+                  <div className="border-t border-gray-100 px-4 sm:px-6 pb-6 pt-4">
                     <p className="leading-7 text-gray-600">{faq.answer}</p>
                   </div>
                 </div>
