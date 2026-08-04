@@ -234,7 +234,7 @@ export default function Footer() {
                 <motion.div
                   key={i}
                   whileHover={{ x: 8 }}
-                  className="flex items-center gap-3 cursor-pointer text-gray-300 hover:text-green-400"
+                  className="flex items-center gap-3 cursor-pointer text-gray-300 hover:text-red-400"
                 >
                   <MapPin size={18} />
                   {item}
