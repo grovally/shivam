@@ -41,11 +41,11 @@ export default function Navbar() {
 
 </div>
             <div className="hidden sm:block">
-              <h2 className="text-xl font-bold tracking-wide text-white">
+              <h2 className="text-xl font-bold tracking-wide text-red-700">
                 CHHABRA
               </h2>
 
-              <p className="-mt-1 text-xs tracking-[0.25em] text-red-600">
+              <p className="-mt-1 text-xs tracking-[0.25em] text-white">
                 PROPERTY
               </p>
             </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
 
             <Link
               to="/contact"
-              className="rounded-full bg-gradient-to-r from-red-600 to-yellow-400 px-4 sm:px-6 py-2 sm:py-3 font-semibold text-black transition hover:scale-105"
+              className="rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-4 sm:px-6 py-2 sm:py-3 font-semibold text-white transition hover:scale-105"
             >
               Get Quote
             </Link>
@@ -112,7 +112,7 @@ export default function Navbar() {
           <Link
             to="/contact"
             onClick={() => setOpen(false)}
-            className="mt-6 block rounded-full bg-gradient-to-r from-red-600 to-yellow-400 py-3 text-center font-semibold text-black"
+            className="mt-6 block rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] py-3 text-center font-semibold text-white"
           >
             Get Quote
           </Link>

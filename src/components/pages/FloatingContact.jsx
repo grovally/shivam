@@ -7,24 +7,27 @@ export default function FloatingContact() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/916200072000"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex items-center justify-center sm:justify-start gap-3
-                   rounded-full bg-[#25D366] text-white shadow-xl
-                   px-4 py-3 hover:scale-105 transition-all duration-300"
-      >
-        <FaWhatsapp className="text-2xl shrink-0" />
-        <span className="hidden sm:block font-medium whitespace-nowrap">
-          WhatsApp
-        </span>
-      </a>
+  href="https://wa.me/916200072000"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group flex items-center justify-center sm:justify-start gap-3 rounded-full shadow-xl px-4 py-3 hover:scale-105 transition-all duration-300"
+  style={{
+    background: "linear-gradient(90deg, #10b981, #06b6d4)",
+    color: "#fff",
+  }}
+>
+  <FaWhatsapp className="text-2xl shrink-0" />
+
+  <span className="hidden sm:block font-medium whitespace-nowrap">
+    WhatsApp
+  </span>
+</a>
 
       {/* Call */}
       <a
         href="tel:+916262626462"
         className="group flex items-center justify-center sm:justify-start gap-3
-                   rounded-full bg-blue-600 text-white shadow-xl
+                   rounded-full bg-red-700 text-white shadow-xl
                    px-4 py-3 hover:scale-105 transition-all duration-300"
       >
         <Phone size={22} className="shrink-0" />

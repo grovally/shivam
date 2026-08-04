@@ -82,7 +82,7 @@ export default function WhyChooseUs() {
 
           <h2 className="mt-6 text-5xl font-extrabold text-black md:text-6xl">
             Your Trusted
-            <span className="bg-gradient-to-r from-red-600 to-yellow-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r bg-red-700 bg-clip-text text-transparent">
               {" "}Real Estate Partner
             </span>
           </h2>
@@ -118,7 +118,7 @@ export default function WhyChooseUs() {
                 className="group relative overflow-hidden rounded-3xl border border-black bg-white p-8 backdrop-blur-xl"
               >
                 {/* Hover Glow */}
-                <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-red-600 to-yellow-400" />
+                <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-red-600 " />
 
                 {/* Icon */}
                 <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-red-500 to-black-600">

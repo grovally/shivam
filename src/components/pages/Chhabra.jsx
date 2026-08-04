@@ -134,7 +134,7 @@ mb-6
 w-12
 h-12
 rounded-xl
-bg-cyan-50
+bg-red-100
 text-red-600
 flex
 items-center

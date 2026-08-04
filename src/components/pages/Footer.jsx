@@ -327,7 +327,7 @@ export default function Footer() {
                   whileTap={{
                     scale: 0.9,
                   }}
-                  className="h-8 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-red-600 transition"
+                  className="h-8 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-[#DF1221] transition"
                 >
                   <Icon className="text-white text-lg" />
                 </motion.a>

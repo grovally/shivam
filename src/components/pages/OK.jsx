@@ -85,7 +85,7 @@ export default function Maps() {
           
           <h1 className=" text-5xl md:text-7xl font-bold text-red-600 leading-tight">
             Explore
-            <span className="block bg-gradient-to-r from-red-600 to-yellow-300 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r bg-black  bg-clip-text text-transparent">
               Noida Properties
             </span>
           </h1>
@@ -134,7 +134,7 @@ export default function Maps() {
             </div>
 
             <div className="mt-8 flex flex-wrap gap-4">
-              <button onClick={() => navigate("/maps")} className="rounded-xl bg-gradient-to-r from-red-600 to-yellow-400 px-6 py-3 font-semibold text-white shadow-lg transition hover:scale-105">
+              <button onClick={() => navigate("/maps")} className="rounded-xl bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-6 py-3 font-semibold text-white shadow-lg transition hover:scale-105">
                 Explore Noida
               </button>
 

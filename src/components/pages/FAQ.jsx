@@ -115,7 +115,7 @@ export default function FAQSection() {
             href="https://wa.me/916200072000"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-600 to-yellow-400 px-6 py-3 font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(251,191,36,0.45)]"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-6 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(251,191,36,0.45)]"
           >
             Chat on WhatsApp
           </a>

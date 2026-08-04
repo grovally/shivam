@@ -146,13 +146,13 @@ export default function Maps() {
                     items-center
                     gap-2
                     rounded-full
-                    bg-red-600
+                    bg-[#DF1221]
                     px-7
                     py-3
                     font-semibold
                     text-white
                     transition
-                    hover:bg-red-700
+                    hover:bg-[#BF101C]
                   "
                 >
                   Explore Maps

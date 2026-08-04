@@ -26,7 +26,6 @@ export default function Hero() {
 
   return (
     <section className="relative mt-16 h-[60vh] sm:h-[72vh] lg:mt-20 lg:h-[calc(100vh-80px)] overflow-hidden">
-      {/* Background Slider */}
       <AnimatePresence mode="wait">
         <motion.img
           key={current}
@@ -40,36 +39,32 @@ export default function Hero() {
         />
       </AnimatePresence>
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
+      {/* Light Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
 
-      {/* Content */}
       <div className="absolute inset-0 z-10 flex items-end">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 lg:pb-20">
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
-            {/* Badge */}
             <span className="inline-flex rounded-full bg-red-600 px-3 py-1.5 text-xs font-semibold tracking-wide text-white sm:px-4 sm:py-2 sm:text-sm">
               Premium Real Estate
             </span>
 
-            {/* Heading */}
             <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-              Find Your Dream 
-              Home in <span className="block text-red-500">Chhabra</span>
+              Find Your Dream
+              <br />
+              Home in <span className="text-red-500">Chhabra</span>
             </h1>
 
-            {/* Description */}
-            <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-200 sm:text-lg">
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-100 sm:text-lg">
               Luxury Apartments • Villas • Commercial Spaces • Investment
               Opportunities across Noida, Greater Noida & Yamuna Expressway.
             </p>
 
-            {/* Buttons */}
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => navigate("/maps")}
@@ -88,7 +83,6 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Dots */}
             <div className="mt-8 flex justify-center gap-2 sm:justify-start">
               {noidaImages.map((_, index) => (
                 <button
@@ -97,7 +91,7 @@ export default function Hero() {
                   className={`rounded-full transition-all duration-300 ${
                     current === index
                       ? "h-2.5 w-8 bg-red-500"
-                      : "h-2.5 w-2.5 bg-white/50 hover:bg-white"
+                      : "h-2.5 w-2.5 bg-white/60 hover:bg-white"
                   }`}
                 />
               ))}

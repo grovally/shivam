@@ -32,8 +32,7 @@ const offices = [
 
    
 
-    map:
-      "https://maps.google.com",
+    
 
     description:
       "Get expert guidance for residential, commercial and investment properties in Greater Noida.",
@@ -61,16 +60,41 @@ const offices = [
 
   
 
-    map:
-      "https://maps.google.com",
+   
 
     description:
       "Premium apartments, commercial spaces and luxury property solutions across Noida.",
   },
+   {
+    id: 3,
+    title: "Noida Extension Office",
+
+    images: [
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785827022/extent_1_imemth.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785827023/extention_2_lckyg9.jpg",
+      
+    ],
+    address:
+      "Office no.- 421 Tower - 3 Techzone - 4, Golden I, Tech Zone IV, Amrapali Leisure Valley, Greater Noida, Uttar Pradesh 201318",
+
+    phone:
+      "+91 6200063000",
+
+    whatsapp:
+      "916200063000",
+
+  
+
+   
+
+    description:
+      "Premium apartments, commercial spaces and luxury property solutions across Noida Extension.",
+  },
+
 
 
   {
-    id: 3,
+    id: 4,
     title: " Gaur Yamuna City Office",
     images: [
       "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823987/gaur_yamuna_1_wifqza.jpg",
@@ -84,22 +108,21 @@ const offices = [
       "Office Number:-32 Second floor Lord krishna Mart, Gaur Yamuna City, Greater Noida, Uttar Pradesh 203201",
 
     phone:
-      "+916262626962",
+      "+91 6262626962",
 
     whatsapp:
       "916262626962",
 
     
-    map:
-      "https://maps.google.com",
+    
 
     description:
-      "Affordable homes, luxury apartments and investment opportunities in Noida Extension.",
+      "Affordable homes, luxury apartments and investment opportunities in Gaur Yemuna City.",
   },
 
 
   {
-    id: 4,
+    id: 5,
     title:
       "Sikandrabad Office",
 
@@ -120,11 +143,10 @@ const offices = [
 
   
 
-    map:
-      "https://maps.google.com",
+   
 
     description:
-      "Plots, farmhouses and future investment projects near Yamuna Expressway.",
+      "Plots, farmhouses and future investment projects Sikandrabad.",
   },
 
 
@@ -575,16 +597,7 @@ export default function Location() {
 
 
 
-                  <a
-                    href={office.map}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-ghost btn-mobile-full"
-                    style={{ color: "#111" }}
-                  >
-                    <Navigation size={18} />
-                    Direction
-                  </a>
+                  
 
 
 

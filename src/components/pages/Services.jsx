@@ -150,7 +150,7 @@ export default function Services() {
           </p>
           <Link
     to="/contact"
-    className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-600 to-yellow-400 px-8 py-4 font-semibold text-black transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]"
+    className="mt-8 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-8 py-4 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(251,191,36,0.6)]"
   >
     Contact Us
   </Link>
