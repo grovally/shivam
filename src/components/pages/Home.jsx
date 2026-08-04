@@ -25,7 +25,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative mt-16 h-[75vh] sm:h-[82vh] lg:mt-20 lg:h-[calc(100vh-80px)] overflow-hidden">
+    <section className="relative mt-16 h-[60vh] sm:h-[72vh] lg:mt-20 lg:h-[calc(100vh-80px)] overflow-hidden">
       {/* Background Slider */}
       <AnimatePresence mode="wait">
         <motion.img
@@ -59,8 +59,8 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-              Find Your Dream Home in
-              <span className="block text-red-500">Chhabra</span>
+              Find Your Dream 
+              Home in <span className="block text-red-500">Chhabra</span>
             </h1>
 
             {/* Description */}
@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <button
                 onClick={() => navigate("/maps")}
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-red-700 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+                className="btn btn-primary btn-mobile-full ui-transition"
               >
                 Explore Properties
                 <ArrowRight size={18} />
@@ -81,7 +81,7 @@ export default function Hero() {
 
               <a
                 href="tel:6262626462"
-                className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/30 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white hover:text-black sm:w-auto sm:px-8 sm:py-4 sm:text-base"
+                className="btn btn-primary btn-mobile-full ui-transition"
               >
                 <Phone size={18} />
                 Book Consultation

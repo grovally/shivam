@@ -70,6 +70,7 @@ export default function About() {
             <img
               src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900"
               alt="Office"
+              loading="lazy"
               className="rounded-3xl shadow-2xl"
             />
           </motion.div>

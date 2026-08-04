@@ -1,10 +1,13 @@
 import React from "react";
 
 const images = [
-  "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR-_155_y0fowy.jpg",
-  "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890796/SURAJPUR-SITE-IV_y9axjx.png",
-  "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806917/SECTOR-_24A_gmxtfu.jpg",
-  // "https://your-image-4.jpg",
+  "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785823324/gn_alf_1_qzbrno.jpg",
+  "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785823324/gn_alf_2_svo00m.jpg",
+  "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785824655/Sikndrabad_1_unvugu.jpg",
+  "https://res.cloudinary.com/bzbcmzrn/image/upload/v1785823988/gaur_yamuna_3_xo7p2f.jpg"
+
+
+
 ];
 
 export default function Gallery() {
@@ -14,7 +17,7 @@ export default function Gallery() {
         {/* Heading */}
         <div className="text-center mb-10">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
-            Chhabra Property Gallery
+            Chhabra <span className="text-red-600">Property</span>  Gallery
           </h2>
 
           <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">

@@ -41,6 +41,7 @@ export default function NoidaDetail() {
         <img
           src={map.image}
           alt={map.title}
+          loading="lazy"
           className="w-full max-w-6xl h-[70vh] object-contain rounded-3xl "
         />
       </div>

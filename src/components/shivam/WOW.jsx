@@ -72,6 +72,7 @@ const visiblePartners = [
       <img
         src={item.image}
         alt=""
+        loading="lazy"
         className="max-w-full max-h-full object-contain"
       />
     </div>
@@ -97,6 +98,7 @@ const visiblePartners = [
         <img
           src={item.image}
           alt={`Partner ${index + 1}`}
+          loading="lazy"
           className="max-w-full max-h-full object-contain"
         />
       </div>

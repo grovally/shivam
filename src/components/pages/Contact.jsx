@@ -202,7 +202,7 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-red-500 px-8 py-4 font-semibold text-white transition hover:bg-red-600"
+              className="btn btn-primary btn-mobile-full"
             >
               <Send size={18} />
               Send Message

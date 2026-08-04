@@ -7,20 +7,25 @@ import {
 } from "lucide-react";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 
 const offices = [
   {
     id: 1,
     title: "Greater Noida Office",
-    image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+  images: [
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823324/gn_alf_1_qzbrno.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823324/gn_alf_2_svo00m.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823324/gn_alf_3_o7yi4r.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823325/gn_alf_4_vpmpil.jpg"
+    ],
 
     address:
-      "Alpha Commercial Belt, Greater Noida",
+      "2nd floor, Chhabra Properties Pvt.Ltd, SL Tower, 204, Alpha-I Commercial Belt, Greater Noida, Uttar Pradesh 201310",
 
     phone:
-      "+916262626462",
+      "+91 6262626462",
 
     whatsapp:
       "916262626462",
@@ -39,14 +44,17 @@ const offices = [
     id: 2,
     title: "Noida Office",
 
-    image:
-      "https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop",
-
+    images: [
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823576/noi_1_m3xroz.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823576/noi_2_cbdsc7.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823577/noi_3_paaupo.jpg",
+      'https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823577/noi_4_q6vig9.jpg'
+    ],
     address:
-      "Sector 18, Noida",
+      "Office No. 1434 & 1435, TOWER-B, Bhutani Alphathum, Sector 90, Noida, Uttar Pradesh 201304",
 
     phone:
-      "+916200063000",
+      "+91 6200063000",
 
     whatsapp:
       "916200063000",
@@ -63,13 +71,17 @@ const offices = [
 
   {
     id: 3,
-    title: "Noida Extension Office",
+    title: " Gaur Yamuna City Office",
+    images: [
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823987/gaur_yamuna_1_wifqza.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823988/gaur_yamuna_2_l9vepv.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785823988/gaur_yamuna_3_xo7p2f.jpg",
+    ],
 
-    image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200&auto=format&fit=crop",
+
 
     address:
-      "Gaur Chowk, Noida Extension",
+      "Office Number:-32 Second floor Lord krishna Mart, Gaur Yamuna City, Greater Noida, Uttar Pradesh 203201",
 
     phone:
       "+916262626962",
@@ -91,14 +103,17 @@ const offices = [
     title:
       "Sikandrabad Office",
 
-    image:
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop",
+    images: [
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785824655/Sikndrabad_1_unvugu.jpg",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785824655/Sikndrabad_2_thoxuv.jpg",
+    
+    ],
 
     address:
-      "Yamuna Expressway, Sikandrabad",
+      "A-19 Gopalpur, Sikandrabad, Uttar Pradesh 203206 ",
 
     phone:
-      "+916200072000",
+      "+91 6200072000",
 
     whatsapp:
       "916200072000",
@@ -113,36 +128,32 @@ const offices = [
   },
 
 
-  {
-    id: 5,
-    title:
-      "Gaur Yamuna City Office",
-
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
-
-    address:
-      "Gaur Yamuna City",
-
-    phone:
-      "+916262626962",
-
-    whatsapp:
-      "916262626962",
-
-   
-
-    map:
-      "https://maps.google.com",
-
-    description:
-      "Luxury villas, plots and township investment assistance.",
-  },
+  
 ];
-
-
-
 export default function Location() {
+  const [currentIndexes, setCurrentIndexes] = useState(() =>
+    offices.reduce((acc, o) => ({ ...acc, [o.id]: 0 }), {})
+  );
+
+  useEffect(() => {
+    const t = setInterval(() => {
+      setCurrentIndexes((prev) => {
+        const next = { ...prev };
+        offices.forEach((o) => {
+          const len = o.images?.length || 1;
+          next[o.id] = ((prev[o.id] || 0) + 1) % len;
+        });
+        return next;
+      });
+    }, 3000);
+
+    return () => clearInterval(t);
+  }, []);
+
+
+
+
+  
 
 
   return (
@@ -222,7 +233,7 @@ export default function Location() {
 
 
 
-        {/* OFFICE SECTIONS START */}
+      
 
         <div className="space-y-24">
 
@@ -267,8 +278,7 @@ export default function Location() {
             >
 
 
-              {/* PART 2 CONTINUE HERE */}
-                            {/* IMAGE SECTION */}
+              
 
               <div className="
                 relative
@@ -299,21 +309,9 @@ export default function Location() {
 
 
                   <img
-
-                    src={office.image}
-
+                    src={office.images?.[currentIndexes[office.id] ?? 0]}
                     alt={office.title}
-
-                    className="
-                      h-[350px]
-                      w-full
-                      object-cover
-                      transition
-                      duration-700
-                      group-hover:scale-110
-                      md:h-[450px]
-                    "
-
+                    className="h-[350px] w-full object-cover transition duration-700 group-hover:scale-110 md:h-[450px]"
                   />
 
 
@@ -551,29 +549,11 @@ export default function Location() {
 
 
                   <a
-
                     href={`tel:${office.phone}`}
-
-                    className="
-                      flex
-                      items-center
-                      gap-2
-                      rounded-xl
-                      bg-red-600
-                      px-6
-                      py-3
-                      font-semibold
-                      text-white
-                      transition
-                      hover:bg-red-700
-                    "
-
+                    className="btn btn-primary btn-mobile-full"
                   >
-
-                    <Phone size={18}/>
-
+                    <Phone size={18} />
                     Call Now
-
                   </a>
 
 
@@ -581,33 +561,14 @@ export default function Location() {
 
 
                   <a
-
                     href={`https://wa.me/${office.whatsapp}`}
-
                     target="_blank"
-
                     rel="noreferrer"
-
-                    className="
-                      flex
-                      items-center
-                      gap-2
-                      rounded-xl
-                      bg-green-500
-                      px-6
-                      py-3
-                      font-semibold
-                      text-white
-                      transition
-                      hover:bg-green-600
-                    "
-
+                    className="btn btn-ghost btn-mobile-full"
+                    style={{ background: "linear-gradient(90deg,#10b981,#06b6d4)", color: "#fff" }}
                   >
-
-                    <MessageCircle size={18}/>
-
+                    <MessageCircle size={18} />
                     WhatsApp
-
                   </a>
 
 
@@ -615,34 +576,14 @@ export default function Location() {
 
 
                   <a
-
                     href={office.map}
-
                     target="_blank"
-
                     rel="noreferrer"
-
-                    className="
-                      flex
-                      items-center
-                      gap-2
-                      rounded-xl
-                      border
-                      border-gray-300
-                      px-6
-                      py-3
-                      font-semibold
-                      text-gray-800
-                      transition
-                      hover:bg-gray-100
-                    "
-
+                    className="btn btn-ghost btn-mobile-full"
+                    style={{ color: "#111" }}
                   >
-
-                    <Navigation size={18}/>
-
+                    <Navigation size={18} />
                     Direction
-
                   </a>
 
 
