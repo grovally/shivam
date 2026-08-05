@@ -86,6 +86,8 @@ export default function Noida() {
   <img
     src={item.image}
     alt={item.title}
+    title="Alpha 1 Greater Noida Map"
+
     loading="lazy"
     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
   />
