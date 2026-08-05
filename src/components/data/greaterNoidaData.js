@@ -932,8 +932,8 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890761/INDUSTRIAL_AREA_SIKANDRABAD_lqvsci.png",
     },
     {
-      slug: "GROUP HOUSING AT SWARN NAGR",
-      title:"GROUP HOUSING AT SWARN NAGR",
+      slug: "GROUP HOUSING AT SWARN NAGRI",
+      title:"GROUP HOUSING AT SWARN NAGRI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890759/GROUP_HOUSING_AT_SWARN_NAGRI_bbibq4.png",
     },

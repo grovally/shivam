@@ -4,10 +4,14 @@ import { useEffect } from "react";
 import { greaterNoida } from "../data/greaterNoidaData";
 
 export default function GreaterNoidaDetail() {
-  const { slug } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
+  const parsedId = Number(id);
 
-  const map = greaterNoida.find((item) => item.slug === slug);
+  const map =
+    Number.isInteger(parsedId) && parsedId >= 0 && parsedId < greaterNoida.length
+      ? greaterNoida[parsedId]
+      : greaterNoida.find((item) => item.slug === id);
 
   useEffect(() => {
     if (!map) return;

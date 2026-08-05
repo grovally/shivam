@@ -4,10 +4,14 @@ import { useEffect } from "react";
 import { yemuna } from "../data/yemunaNoidaData";
 
 export default function YamunaDetail() {
-  const { slug } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
+  const parsedId = Number(id);
 
-  const map = yemuna.find((item) => item.slug === slug);
+  const map =
+    Number.isInteger(parsedId) && parsedId >= 0 && parsedId < yemuna.length
+      ? yemuna[parsedId]
+      : yemuna.find((item) => item.slug === id);
 
   useEffect(() => {
     if (!map) return;

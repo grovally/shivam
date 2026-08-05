@@ -5,6 +5,7 @@ import { greaterNoida } from "../data/greaterNoidaData";
 
 export default function GreateNoida() {
   const [sortBy, setSortBy] = useState("number-low");
+  const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
 
   const openDetail = (item) => {
@@ -52,11 +53,19 @@ export default function GreateNoida() {
           Greater Noida <span className="text-red-500">Sector</span> Maps
         </h2>
 
-        <div className="flex justify-end mb-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Greater Noida sectors..."
+            className="w-full md:w-1/2 border rounded-lg px-4 py-3 text-black outline-none"
+          />
+
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border rounded-lg px-4 py-2"
+            className="w-full md:w-auto border rounded-lg px-4 py-2"
           >
             <option value="number-low">Sector Low → High</option>
             <option value="az">A → Z</option>
@@ -67,7 +76,16 @@ export default function GreateNoida() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-          {sortedData.map((item) => (
+          {sortedData
+            .filter((item) => {
+              const query = searchQuery.trim().toLowerCase();
+              if (!query) return true;
+              return (
+                item.title?.toLowerCase().includes(query) ||
+                item.slug?.toLowerCase().includes(query)
+              );
+            })
+            .map((item) => (
             <motion.div
               key={item.slug}
               initial={{ opacity: 0, y: 40 }}

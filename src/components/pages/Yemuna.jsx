@@ -6,6 +6,7 @@ import { yemuna } from "../data/yemunaNoidaData";
 export default function Yamuna() {
   const navigate = useNavigate();
   const [sortBy, setSortBy] = useState("number-low");
+  const [searchQuery, setSearchQuery] = useState("");
 
   const openDetail = (item) => {
     navigate(`/yamuna-expressway/${item.slug}`);
@@ -49,11 +50,19 @@ export default function Yamuna() {
         </h2>
 
         {/* Filter */}
-        <div className="flex justify-end mb-10">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-10">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Yamuna sectors..."
+            className="w-full md:w-1/2 border rounded-lg px-4 py-3 shadow-md text-black outline-none"
+          />
+
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
-            className="border rounded-lg px-4 py-2 shadow-md outline-none"
+            className="w-full md:w-auto border rounded-lg px-4 py-2 shadow-md outline-none"
           >
             <option value="number-low">Sector Low → High</option>
             <option value="az">A → Z</option>
@@ -64,7 +73,16 @@ export default function Yamuna() {
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
-          {sortedData.map((item) => (
+          {sortedData
+            .filter((item) => {
+              const query = searchQuery.trim().toLowerCase();
+              if (!query) return true;
+              return (
+                item.title?.toLowerCase().includes(query) ||
+                item.slug?.toLowerCase().includes(query)
+              );
+            })
+            .map((item) => (
             <motion.div
               key={item.slug}
               whileHover={{ y: -10 }}
