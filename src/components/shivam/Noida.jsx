@@ -4,12 +4,11 @@ import { useNavigate } from "react-router-dom";
 import { noidaData } from "../data/noidaData";
 
 export default function Noida() {
-  const [sortBy, setSortBy] = useState("  Sector Low → High");
+  const [sortBy, setSortBy] = useState("number-low");
   const navigate = useNavigate();
-  
 
-  const openDetail = (index) => {
-    navigate(`/noida/${index}`);
+  const openDetail = (item) => {
+    navigate(`/noida/${item.slug}`);
   };
 
   const sortedData = [...noidaData].sort((a, b) => {
@@ -45,7 +44,7 @@ export default function Noida() {
       <div className="max-w-7xl mx-auto">
 
         <h2 className="text-center text-5xl font-bold mb-12">
-           Noida <span className="text-red-500">Sector</span> Maps
+          Noida <span className="text-red-500">Sector</span> Maps
         </h2>
 
         <div className="flex justify-end mb-8">
@@ -57,78 +56,57 @@ export default function Noida() {
             <option value="number-low">Sector Low → High</option>
             <option value="az">A → Z</option>
             <option value="za">Z → A</option>
-            
             <option value="number-high">Sector High → Low</option>
           </select>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-          {sortedData.map((item) => {
+          {sortedData.map((item) => (
+            <motion.div
+              key={item.slug}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -10 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              className="overflow-hidden rounded-3xl bg-white border shadow-xl hover:shadow-2xl"
+            >
 
-            const originalIndex = noidaData.indexOf(item);
-
-            return (
-              <motion.div
-                key={originalIndex}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ y: -10 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="overflow-hidden rounded-3xl bg-white border shadow-xl hover:shadow-2xl"
+              <div
+                onClick={() => openDetail(item)}
+                className="relative h-64 overflow-hidden cursor-pointer group"
               >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  title={item.title}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
 
-                <div
-  onClick={() => openDetail(originalIndex)}
-  className="relative h-64 overflow-hidden  cursor-pointer group"
->
-  <img
-    src={item.image}
-    alt={item.title}
-    title="Alpha 1 Greater Noida Map"
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
+              </div>
 
-    loading="lazy"
-    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-  />
+              <div className="flex justify-center mt-2">
+                <h3
+                  className="w-fit px-3 py-1 text-base font-semibold text-gray-900 hover:text-red-500 transition-colors rounded-md"
+                >
+                  {item.title}
+                </h3>
+              </div>
 
-  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
-</div>
-
-<div className="flex justify-center mt-2">
-  <h3
-    className="
-      w-fit
-      px-3
-      py-1
-      text-base
-      font-semibold
-      text-gray-900
-      hover:text-red-500
-      transition-colors
-      rounded-md
-    "
-    title={item.title}
-  >
-    {item.title}
-  </h3>
-</div>
-
-                <div >
+              <div className="p-4 -mt-10">
+                <button
+                  onClick={() => openDetail(item)}
                  
+                >
+                
+                </button>
+              </div>
 
-                 
-
-<button
-  onClick={() => openDetail(originalIndex)}
->
-
-</button>
-                </div>
-
-              </motion.div>
-            );
-          })}
+            </motion.div>
+          ))}
 
         </div>
       </div>

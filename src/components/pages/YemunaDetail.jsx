@@ -1,12 +1,33 @@
 import { useNavigate, useParams } from "react-router-dom";
 import { Download } from "lucide-react";
+import { useEffect } from "react";
 import { yemuna } from "../data/yemunaNoidaData";
 
-export default function GreaterNoidaDetail() {
-  const { id } = useParams();
+export default function YamunaDetail() {
+  const { slug } = useParams();
   const navigate = useNavigate();
 
-  const map = yemuna[Number(id)];
+  const map = yemuna.find((item) => item.slug === slug);
+
+  useEffect(() => {
+    if (!map) return;
+
+    document.title = `${map.title} | Chhabra Properties`;
+
+    const description =
+      map.description ||
+      `Download the latest ${map.title} map with complete location, planning and connectivity details.`;
+
+    let meta = document.querySelector('meta[name="description"]');
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", description);
+  }, [map]);
 
   const downloadImage = async () => {
     try {
@@ -30,7 +51,7 @@ export default function GreaterNoidaDetail() {
 
   if (!map) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-white text-2xl sm:text-3xl font-bold">
+      <div className="min-h-screen flex items-center justify-center bg-white text-3xl font-bold">
         Map Not Found
       </div>
     );
@@ -44,16 +65,9 @@ export default function GreaterNoidaDetail() {
         <img
           src={map.image}
           alt={map.title}
+          title={map.title}
           loading="lazy"
-          className="
-            w-full
-            max-w-6xl
-            h-auto
-            max-h-[75vh]
-            object-contain
-            rounded-2xl
-           
-          "
+          className="w-full max-w-6xl h-auto max-h-[75vh] object-contain rounded-2xl"
         />
       </div>
 
@@ -65,40 +79,14 @@ export default function GreaterNoidaDetail() {
 
           <button
             onClick={() => navigate(-1)}
-            className="
-              w-full
-              sm:w-auto
-              rounded-xl
-              bg-gray-900
-              px-6
-              py-3
-              text-white
-              font-semibold
-              hover:bg-black
-              transition
-            "
+            className="w-full sm:w-auto rounded-xl bg-gray-900 px-6 py-3 text-white font-semibold hover:bg-black transition"
           >
             ← Back
           </button>
 
           <button
             onClick={downloadImage}
-            className="
-              w-full
-              sm:w-auto
-              flex
-              items-center
-              justify-center
-              gap-2
-              rounded-xl
-              bg-[#DF1221]
-              px-6
-              py-3
-              text-white
-              font-semibold
-              hover:bg-[#BF101C]
-              transition
-            "
+            className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-white font-semibold hover:bg-red-700 transition"
           >
             <Download size={18} />
             Download Map
@@ -107,19 +95,19 @@ export default function GreaterNoidaDetail() {
         </div>
 
         {/* Title */}
-        <h1 className="mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+        <h1 className="mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold">
           {map.title}
         </h1>
 
         {/* Badge */}
         <div className="mt-5">
-          <span className="inline-flex rounded-full bg-red-600 px-5 py-2 text-sm sm:text-base font-medium text-white">
+          <span className="inline-flex rounded-full bg-red-600 px-5 py-2 text-white">
             📍 Yamuna Expressway
           </span>
         </div>
 
         {/* Description */}
-        <p className="mt-4 text-base sm:text-lg leading-8 text-gray-700 whitespace-pre-line">
+        <p className="mt-4 whitespace-pre-line text-lg leading-8 text-gray-700">
           {map.description}
 
           {"\n\n"}
@@ -127,30 +115,27 @@ export default function GreaterNoidaDetail() {
           {`Explore detailed map information of ${map.title}. This location map provides complete sector planning, connectivity details and area overview.`}
         </p>
 
-        {/* Map Details */}
+        {/* Details */}
         <div className="mt-12">
 
-          <h2 className="text-2xl sm:text-3xl font-bold">
+          <h2 className="text-3xl font-bold">
             Map Details
           </h2>
 
           <div className="mt-6 rounded-2xl border bg-gray-50 p-6">
 
-            <ul className="space-y-4 text-base sm:text-lg">
+            <ul className="space-y-4 text-lg">
 
               <li>
-                ✅ <span className="font-semibold">Location :</span> Yamuna
-                Expressway
+                ✅ <span className="font-semibold">Location :</span> Yamuna Expressway
               </li>
 
               <li>
-                ✅ <span className="font-semibold">Authority :</span> Yamuna
-                Expressway Industrial Development Authority (YEIDA)
+                ✅ <span className="font-semibold">Authority :</span> YEIDA
               </li>
 
               <li>
-                ✅ <span className="font-semibold">Category :</span> Residential
-                / Commercial Map
+                ✅ <span className="font-semibold">Category :</span> Residential / Commercial Map
               </li>
 
               <li>✅ Updated Planning Map</li>
