@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { noidaData } from "../data/noidaData";
 
 export default function Noida() {
-  const [category, setCategory] = useState("greater-noida");
+  const [category, setCategory] = useState("noida");
   const [sortBy, setSortBy] = useState("number-low");
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
@@ -86,14 +86,14 @@ export default function Noida() {
   </button>
 
   <button
-    onClick={() => setCategory("greater-noida")}
+    onClick={() => setCategory("noida")}
     className={`px-5 py-2 rounded-lg ${
       category === "greater-noida"
         ? "bg-red-600 text-white"
         : "bg-gray-200 text-black"
     }`}
   >
-    Greater Noida
+    Industrial Map
   </button>
 </div>
 

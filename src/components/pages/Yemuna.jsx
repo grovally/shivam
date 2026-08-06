@@ -12,7 +12,7 @@ const getSlugFromTitle = (title) =>
     .replace(/(^-|-$)/g, "");
 
 export default function Yamuna() {
-  const [category, setCategory] = useState("greater-noida");
+  const [category, setCategory] = useState("yemuna");
   const navigate = useNavigate();
   const [sortBy, setSortBy] = useState("number-low");
   const [searchQuery, setSearchQuery] = useState("");
@@ -98,14 +98,15 @@ export default function Yamuna() {
   </button>
 
   <button
-    onClick={() => setCategory("greater-noida")}
+    onClick={() => setCategory("yemuna")}
     className={`w-full sm:w-auto px-5 py-2 rounded-lg ${
       category === "greater-noida"
         ? "bg-red-600 text-white"
         : "bg-gray-200 text-black"
     }`}
   >
-    Greater Noida
+    Industrial Map
+    
   </button>
 </div>
           

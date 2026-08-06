@@ -108,7 +108,7 @@ export default function GreateNoida() {
         : "bg-gray-200 text-black"
     }`}
   >
-    Greater Noida
+    Industrial Map
   </button>
 </div>
 

@@ -68,8 +68,8 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
 
             <div className="flex items-center gap-2 text-white">
-              <Phone size={18} className="text-red-400" />
-              <span className="text-sm">+91 6262626462</span>
+              <Phone size={18} className=" text-2xl text-red-400" />
+              <span className=" font-bold text-sm">+91 6262626462</span>
             </div>
 
             <Link
