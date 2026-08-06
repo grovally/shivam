@@ -877,13 +877,7 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
     
     
    
-    
-    {
-      slug: "PHASE-II RESIDENTIAL ",
-      title:"PHASE-II RESIDENTIAL",
-      description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890776/PHASE-II_RESIDENTIAL_btgdqu.png",
-    },
+   
     
     
    

@@ -11,7 +11,7 @@ export default function Shivam() {
       description:
         "Premium residential apartments, commercial spaces, villas, and investment opportunities across Noida.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_fill,g_auto,w_800,h_600/v1785231975/SECTOR-20_POCKET-_E_zweeql.png",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_pad,w_800,h_600,b_white/v1785231975/SECTOR-20_POCKET-_E_zweeql.png",
       path: "/noida",
     },
     {
@@ -19,7 +19,7 @@ export default function Shivam() {
       description:
         "Discover modern townships, luxury homes, commercial projects, and high-growth investment locations.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_fill,g_auto,w_800,h_600/v1784890794/SURAJPUR-SITE-C_INDUSTRIAL._yb3ljr.png",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_pad,w_800,h_600,b_white/v1784890794/SURAJPUR-SITE-C_INDUSTRIAL._yb3ljr.png",
       path: "/greater-noida",
     },
     {
@@ -27,7 +27,7 @@ export default function Shivam() {
       description:
         "Industrial plots, premium residential projects, and investment options near the upcoming Jewar Airport.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_fill,g_auto,w_800,h_600/v1784806908/SECTOR-_21_becukh.jpg",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/c_pad,w_800,h_600,b_white/v1784806908/SECTOR-_21_becukh.jpg",
       path: "/yamuna-expressway",
     },
   ];
@@ -111,31 +111,26 @@ export default function Shivam() {
 
               {/* Image */}
               <div
-                onClick={() => navigate(card.path)}
-                className="relative aspect-[4/3] overflow-hidden cursor-pointer"
-              >
+  onClick={() => navigate(card.path)}
+  className="relative h-72 md:h-80 w-full overflow-hidden cursor-pointer rounded-t-[32px]"
+>
+  <img
+  src={card.image}
+  alt={card.title}
+  className="absolute inset-0 w-full h-full object-cover scale-95 transition duration-700 "
+/>
 
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-110"
-                />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"/>
-
-                <motion.div
-                  animate={{
-                    opacity:[0.2,.5,.2]
-                  }}
-                  transition={{
-                    repeat:Infinity,
-                    duration:2
-                  }}
-                  className="absolute top-4 right-4 h-3 w-3 rounded-full bg-green-400 shadow-[0_0_20px_#22c55e]"
-                />
-
-              </div>
+  <motion.div
+    animate={{ opacity: [0.2, 0.5, 0.2] }}
+    transition={{
+      repeat: Infinity,
+      duration: 2,
+    }}
+    className="absolute top-4 right-4 h-3 w-3 rounded-full bg-green-400 shadow-[0_0_20px_#22c55e]"
+  />
+</div>
 
               {/* Content */}
               <div className="relative p-6">

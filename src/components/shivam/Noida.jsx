@@ -125,12 +125,10 @@ export default function Noida() {
                 className="relative w-full aspect-[3/2] sm:aspect-[4/3] overflow-hidden cursor-pointer group rounded-t-3xl bg-gray-100"
               >
                 <img
-                  src={item.image}
-                  alt={item.title}
-                  title={item.title}
-                  loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
+  src={item.image}
+  alt={item.title}
+  className="w-full h-full object-cover border-4 border-red-500"
+/>
 
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
               </div>
