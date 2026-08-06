@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 export default function Shivam() {
@@ -32,60 +33,145 @@ export default function Shivam() {
   ];
 
   return (
-    <section className="bg-gray-50 py-14 md:py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-red-50 py-16 md:py-24">
+
+      {/* Animated Background */}
+      <motion.div
+        animate={{
+          x: [0, 120, -120, 0],
+          y: [0, -80, 80, 0],
+        }}
+        transition={{
+          duration: 18,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-red-400/20 blur-[120px]"
+      />
+
+      <motion.div
+        animate={{
+          x: [0, -100, 100, 0],
+          y: [0, 100, -100, 0],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+        className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-blue-400/20 blur-[130px]"
+      />
+
+      <div className="relative max-w-7xl mx-auto px-4">
+
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            Explore <span className="text-red-600">Property</span> Locations
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: .8 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900">
+            Explore{" "}
+            <span className="bg-gradient-to-r from-red-600 to-pink-500 bg-clip-text text-transparent">
+              Property
+            </span>{" "}
+            Locations
           </h2>
 
-          <p className="mt-4 max-w-2xl mx-auto text-gray-600 text-base md:text-lg leading-7">
-            Choose your preferred location to explore premium residential,
-            commercial and investment properties.
+          <p className="mt-5 max-w-3xl mx-auto text-gray-600 text-lg leading-8">
+            Find premium residential, commercial and investment properties in
+            Noida, Greater Noida and Yamuna Expressway.
           </p>
-        </div>
+        </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
           {cards.map((card, index) => (
-            <div
+
+            <motion.div
               key={index}
-              className="group overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                y: -12,
+                scale: 1.03,
+              }}
+              transition={{
+                duration: .5,
+              }}
+              viewport={{ once: true }}
+              className="group relative overflow-hidden rounded-[32px] border border-white/40 bg-white/70 backdrop-blur-xl shadow-xl hover:shadow-red-300/40"
             >
+
+              {/* Glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-gradient-to-br from-red-500/10 via-transparent to-blue-500/10"/>
+
               {/* Image */}
               <div
                 onClick={() => navigate(card.path)}
-                className="relative w-full aspect-[4/3] overflow-hidden cursor-pointer rounded-t-3xl"
+                className="relative aspect-[4/3] overflow-hidden cursor-pointer"
               >
+
                 <img
                   src={card.image}
                   alt={card.title}
                   loading="lazy"
-                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 h-full w-full object-cover object-center transition duration-700 group-hover:scale-110"
                 />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"/>
+
+                <motion.div
+                  animate={{
+                    opacity:[0.2,.5,.2]
+                  }}
+                  transition={{
+                    repeat:Infinity,
+                    duration:2
+                  }}
+                  className="absolute top-4 right-4 h-3 w-3 rounded-full bg-green-400 shadow-[0_0_20px_#22c55e]"
+                />
+
               </div>
 
               {/* Content */}
-              <div className="flex flex-col p-5 sm:p-6">
+              <div className="relative p-6">
+
                 <h3 className="text-2xl font-bold text-gray-900">
                   {card.title}
                 </h3>
 
-                <p className="mt-3 text-gray-600 leading-7 flex-1 text-sm sm:text-base">
+                <p className="mt-3 text-gray-600 leading-7">
                   {card.description}
                 </p>
 
                 <button
                   onClick={() => navigate(card.path)}
-                  className="mt-6 w-full sm:w-fit rounded-xl bg-[#DF1221] px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-[#BF101C] hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#DF1221]/20"
+                  className="mt-7 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-red-600 to-red-500 px-6 py-3 text-white font-semibold transition duration-300 hover:scale-105 hover:shadow-xl hover:shadow-red-500/40"
                 >
-                  Explore →
+                  Explore
+                  <motion.span
+                    animate={{ x: [0,6,0] }}
+                    transition={{
+                      repeat:Infinity,
+                      duration:1
+                    }}
+                  >
+                    →
+                  </motion.span>
                 </button>
+
               </div>
-            </div>
+
+            </motion.div>
+
           ))}
+
         </div>
+
       </div>
     </section>
   );

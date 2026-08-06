@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { noidaData } from "../data/noidaData";
 
 export default function Noida() {
+  const [category, setCategory] = useState("greater-noida");
   const [sortBy, setSortBy] = useState("number-low");
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
@@ -39,6 +40,24 @@ export default function Noida() {
       }
     });
 
+  const filteredData = sortedData.filter((item) => {
+    const query = searchQuery.trim().toLowerCase();
+
+    const matchesSearch =
+      !query ||
+      item.title?.toLowerCase().includes(query) ||
+      item.slug?.toLowerCase().includes(query) ||
+      item.description?.toLowerCase().includes(query);
+
+    const matchesCategory =
+      category === "residential"
+        ? item.title?.toLowerCase().includes("residential") ||
+          item.description?.toLowerCase().includes("residential")
+        : true;
+
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <section className="bg-white mt-10 py-16 px-4 sm:px-6 lg:px-8 text-black">
       <div className="max-w-7xl mx-auto">
@@ -52,8 +71,31 @@ export default function Noida() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search Noida sectors..."
-            className="w-full md:w-1/2 border rounded-lg px-4 py-3 text-black outline-none"
+            className="w-full md:w-1/4 border rounded-lg px-4 py-3 text-black outline-none"
           />
+          <div className="flex gap-3">
+  <button
+    onClick={() => setCategory("residential")}
+    className={`px-5 py-2 rounded-lg ${
+      category === "residential"
+        ? "bg-red-600 text-white"
+        : "bg-gray-200 text-black"
+    }`}
+  >
+    Residential Map
+  </button>
+
+  <button
+    onClick={() => setCategory("greater-noida")}
+    className={`px-5 py-2 rounded-lg ${
+      category === "greater-noida"
+        ? "bg-red-600 text-white"
+        : "bg-gray-200 text-black"
+    }`}
+  >
+    Greater Noida
+  </button>
+</div>
 
           <select
             value={sortBy}
@@ -68,16 +110,7 @@ export default function Noida() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {sortedData
-            .filter((item) => {
-              const query = searchQuery.trim().toLowerCase();
-              if (!query) return true;
-              return (
-                item.title?.toLowerCase().includes(query) ||
-                item.slug?.toLowerCase().includes(query)
-              );
-            })
-            .map((item) => (
+          {filteredData.map((item) => (
             <motion.div
               key={`noida-${item.id}`}
               initial={{ opacity: 0, y: 40 }}
@@ -89,15 +122,16 @@ export default function Noida() {
             >
               <div
                 onClick={() => openDetail(item)}
-                className="relative h-64 overflow-hidden cursor-pointer group"
+                className="relative w-full aspect-[3/2] sm:aspect-[4/3] overflow-hidden cursor-pointer group rounded-t-3xl bg-gray-100"
               >
                 <img
                   src={item.image}
-                  alt={`${item.title} Noida Map`}
+                  alt={item.title}
                   title={item.title}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                 />
+
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition" />
               </div>
 

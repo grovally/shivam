@@ -3,15 +3,26 @@ import { Download } from "lucide-react";
 import { useEffect } from "react";
 import { greaterNoida } from "../data/greaterNoidaData";
 
+const getSlugFromTitle = (title) =>
+  (title || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 export default function GreaterNoidaDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const parsedId = Number(id);
+  const normalizedId = id ? decodeURIComponent(id) : "";
+  const parsedId = Number(normalizedId);
 
   const map =
     Number.isInteger(parsedId) && parsedId >= 0 && parsedId < greaterNoida.length
       ? greaterNoida[parsedId]
-      : greaterNoida.find((item) => item.slug === id);
+      : greaterNoida.find((item) => {
+          const itemSlug = item?.slug || getSlugFromTitle(item?.title);
+          return itemSlug === normalizedId;
+        });
 
   useEffect(() => {
     if (!map) return;

@@ -324,6 +324,7 @@ For those looking to invest in Yamuna Expressway Authority plots for sale in Sec
 Sector 20 Part H Yamuna Expressway is a golden investment destination in Greater Noida, combining excellent connectivity, well-planned infrastructure, and proximity to Jewar Airport. Backed by the Yamuna Expressway Authority and YEIDA, this sector is ideal for residential, commercial, and long-term investors. With trusted partners like Chhabra Properties, your search for premium Yamuna Expressway Authority plots Sector 20 ends here — making your investment secure and future-ready.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231978/SECTOR-20_POCKET-_H_jznc0j.png"
     },{
+      slug:"sector-20-pocket-f-map",
       title:"SECTOR-20 POCKET-F",
        description:`About Sector 20 Part F, Yamuna Expressway.
 🌇 Sector 20 Part F, Yamuna Expressway — The Perfect Blend of Connectivity & Growth

@@ -3,15 +3,26 @@ import { Download } from "lucide-react";
 import { useEffect } from "react";
 import { yemuna } from "../data/yemunaNoidaData";
 
+const getSlugFromTitle = (title) =>
+  (title || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 export default function YamunaDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const parsedId = Number(id);
+  const normalizedId = id ? decodeURIComponent(id) : "";
+  const parsedId = Number(normalizedId);
 
   const map =
     Number.isInteger(parsedId) && parsedId >= 0 && parsedId < yemuna.length
       ? yemuna[parsedId]
-      : yemuna.find((item) => item.slug === id);
+      : yemuna.find((item) => {
+          const itemSlug = item?.slug || getSlugFromTitle(item?.title);
+          return itemSlug === normalizedId;
+        });
 
   useEffect(() => {
     if (!map) return;
