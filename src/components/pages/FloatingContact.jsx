@@ -11,8 +11,8 @@ export default function FloatingContact() {
   target="_blank"
   rel="noopener noreferrer"
   className="group flex items-center justify-center sm:justify-start gap-3 rounded-full shadow-xl px-4 py-3 hover:scale-105 transition-all duration-300"
-  style={{
-    background: "linear-gradient(90deg, #10b981, #06b6d4)",
+   style={{
+    background: "#25D366", // Official WhatsApp Green
     color: "#fff",
   }}
 >

@@ -78,10 +78,10 @@ const offices = [
       "Office no.- 421 Tower - 3 Techzone - 4, Golden I, Tech Zone IV, Amrapali Leisure Valley, Greater Noida, Uttar Pradesh 201318",
 
     phone:
-      "+91 6200063000",
+      "+91 6200072000",
 
     whatsapp:
-      "916200063000",
+      "916200072000",
 
   
 
@@ -136,10 +136,10 @@ const offices = [
       "A-19 Gopalpur, Sikandrabad, Uttar Pradesh 203206 ",
 
     phone:
-      "+91 6200072000",
+      "+91 6200067000",
 
     whatsapp:
-      "916200072000",
+      "916200067000",
 
   
 
@@ -582,16 +582,19 @@ export default function Location() {
 
 
 
-                  <a
-                    href={`https://wa.me/${office.whatsapp}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-ghost btn-mobile-full"
-                    style={{ background: "linear-gradient(90deg,#10b981,#06b6d4)", color: "#fff" }}
-                  >
-                    <MessageCircle size={18} />
-                    WhatsApp
-                  </a>
+                 <a
+  href={`https://wa.me/${office.whatsapp}`}
+  target="_blank"
+  rel="noreferrer"
+  className="btn btn-ghost btn-mobile-full"
+  style={{
+    background: "#25D366", // Official WhatsApp Green
+    color: "#fff",
+  }}
+>
+  <MessageCircle size={18} />
+  WhatsApp
+</a>
 
 
 

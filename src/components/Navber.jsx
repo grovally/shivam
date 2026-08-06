@@ -67,11 +67,15 @@ export default function Navbar() {
           {/* Right Side */}
           <div className="hidden lg:flex items-center gap-4">
 
-            <div className="flex items-center gap-2 text-white">
-              <Phone size={18} className=" text-2xl text-red-400" />
-              <span className=" font-bold text-sm">+91 6262626462</span>
-            </div>
-
+            <div className="flex items-center gap-2">
+  <Phone size={30} className="text-red-400" />
+  <a
+    href="tel:+916262626462"
+    className="font-bold text-xl text-white hover:text-green-400 transition-colors"
+  >
+    +91 6262626462
+  </a>
+</div>
             <Link
               to="/contact"
               className="rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-4 sm:px-6 py-2 sm:py-3 font-semibold text-white transition hover:scale-105"
