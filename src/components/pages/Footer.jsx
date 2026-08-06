@@ -39,7 +39,7 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: FaWhatsapp,
-      url: "https://wa.me/91 6200072000",
+      url: "https://wa.me/916200072000", 
     },
     {
       icon: FaFacebookF,
@@ -55,7 +55,7 @@ export default function Footer() {
     },
     {
       icon: FaPhone,
-      url: "tel:+91 6262626462",
+      url: "tel:+916262626462",
     },
   ];
 
