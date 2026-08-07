@@ -1,5 +1,5 @@
-User-agent: *
 
+User-agent: *
 Allow: /
 
 Sitemap: https://chhabra-properties.com/sitemap.xml
