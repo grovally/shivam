@@ -46,7 +46,8 @@ export default function Navbar() {
               </h2>
 
               <p className="-mt-1 text-xs tracking-[0.25em] text-white">
-                PROPERTY
+                
+                PROPERTIES
               </p>
             </div>
           </Link>
