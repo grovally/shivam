@@ -57,7 +57,7 @@ export default function Hero() {
             <h1 className="mt-4 text-3xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
               Find Your Dream
               
-              Home in <span className="text-red-500">Chhabra</span>
+              Home in <span className="text-red-500">Chhabra Properties</span>
             </h1>
 
             <p className="mt-4 max-w-2xl text-sm leading-7 text-gray-100 sm:text-lg">
