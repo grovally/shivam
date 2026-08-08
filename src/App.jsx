@@ -34,6 +34,7 @@ import WOW from "./components/shivam/WOW";
 
 import ScrollToTop from "./components/pages/ScrollToTop";
 import Location from "./components/shivam/Location"
+import Reels from "./components/shivam/Reels";
 
 
 
@@ -61,7 +62,9 @@ element={
 <Location/>
 <Chhabra />
 <WOW/>
+
 <Chiose />
+<Reels/>
 <FAQ />
 
 </>

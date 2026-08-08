@@ -66,3 +66,1270 @@ html,body{overflow-x:hidden}
 
 /* Smooth common transitions */
 .ui-transition{transition:all .32s cubic-bezier(.2,.8,.2,1)}
+
+/* =========================================================
+   WHITE / SILVER GLASS CRYSTALS
+========================================================= */
+
+.crystal {
+  position: absolute;
+
+  width: 320px;
+  height: 420px;
+
+  transform-style: preserve-3d;
+
+  clip-path: polygon(
+    50% 0%,
+    82% 15%,
+    100% 58%,
+    70% 100%,
+    30% 92%,
+    0% 55%,
+    18% 17%
+  );
+
+  /* WHITE GLASS */
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.28),
+      rgba(255,255,255,0.08) 30%,
+      rgba(255,255,255,0.03) 55%,
+      rgba(255,255,255,0.14) 75%,
+      rgba(255,255,255,0.04)
+    );
+
+  border: 1px solid rgba(255,255,255,0.35);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    inset 0 0 35px rgba(255,255,255,0.15),
+    inset 15px 15px 50px rgba(255,255,255,0.10),
+    inset -20px -20px 50px rgba(255,255,255,0.08),
+    0 0 70px rgba(255,255,255,0.12);
+
+  opacity: 0.9;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   LEFT CRYSTAL
+========================================================= */
+
+.crystal-left {
+
+  top: -100px;
+  left: 3%;
+
+  animation:
+    crystalLeftFloat 14s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   RIGHT CRYSTAL
+========================================================= */
+
+.crystal-right {
+
+  top: 10%;
+  right: -80px;
+
+  width: 390px;
+  height: 500px;
+
+  opacity: 0.78;
+
+  animation:
+    crystalRightFloat 17s ease-in-out infinite;
+
+  animation-delay: -4s;
+
+}
+
+
+/* =========================================================
+   CENTER CRYSTAL
+========================================================= */
+
+.crystal-center {
+
+  bottom: -180px;
+  left: 40%;
+
+  width: 250px;
+  height: 330px;
+
+  opacity: 0.65;
+
+  animation:
+    crystalCenterFloat 15s ease-in-out infinite;
+
+  animation-delay: -7s;
+
+}
+
+
+/* =========================================================
+   WHITE GLASS LEFT FACE
+========================================================= */
+
+.crystal-face-left {
+
+  position: absolute;
+
+  inset: 0;
+
+  clip-path: polygon(
+    50% 0%,
+    18% 17%,
+    0% 55%,
+    30% 92%,
+    50% 46%
+  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.38),
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.02)
+    );
+
+  border-right: 1px solid rgba(255,255,255,0.25);
+
+}
+
+
+/* =========================================================
+   WHITE GLASS RIGHT FACE
+========================================================= */
+
+.crystal-face-right {
+
+  position: absolute;
+
+  inset: 0;
+
+  clip-path: polygon(
+    50% 0%,
+    82% 15%,
+    100% 58%,
+    70% 100%,
+    50% 46%
+  );
+
+  background:
+    linear-gradient(
+      220deg,
+      rgba(255,255,255,0.30),
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.02)
+    );
+
+}
+
+
+/* =========================================================
+   BOTTOM GLASS FACE
+========================================================= */
+
+.crystal-face-bottom {
+
+  position: absolute;
+
+  inset: 0;
+
+  clip-path: polygon(
+    30% 92%,
+    50% 46%,
+    70% 100%
+  );
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(255,255,255,0.20),
+      rgba(255,255,255,0.04)
+    );
+
+}
+
+
+/* =========================================================
+   BRIGHT WHITE GLASS REFLECTION
+========================================================= */
+
+.crystal-light {
+
+  position: absolute;
+
+  top: -40%;
+  left: -90%;
+
+  width: 45%;
+  height: 180%;
+
+  transform: rotate(28deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,255,255,0.05) 20%,
+      rgba(255,255,255,0.75) 50%,
+      rgba(255,255,255,0.12) 70%,
+      transparent 100%
+    );
+
+  filter: blur(4px);
+
+  opacity: 0.8;
+
+  animation:
+    crystalReflection 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   CRYSTAL FLOAT
+========================================================= */
+
+@keyframes crystalLeftFloat {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(14deg)
+      scale(1);
+  }
+
+  25% {
+    transform:
+      translate3d(40px,-30px,0)
+      rotate(21deg)
+      scale(1.03);
+  }
+
+  50% {
+    transform:
+      translate3d(-20px,-65px,0)
+      rotate(8deg)
+      scale(1.06);
+  }
+
+  75% {
+    transform:
+      translate3d(-45px,-20px,0)
+      rotate(25deg)
+      scale(1.02);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(14deg)
+      scale(1);
+  }
+
+}
+
+
+@keyframes crystalRightFloat {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(-18deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-70px,-50px,0)
+      rotate(-5deg)
+      scale(1.07);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(-18deg)
+      scale(1);
+  }
+
+}
+
+
+@keyframes crystalCenterFloat {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(10deg);
+  }
+
+  50% {
+    transform:
+      translate3d(50px,-55px,0)
+      rotate(-12deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(10deg);
+  }
+
+}
+
+
+/* =========================================================
+   WHITE LIGHT SWEEP
+========================================================= */
+
+@keyframes crystalReflection {
+
+  0% {
+    left: -90%;
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.5;
+  }
+
+  50% {
+    left: 130%;
+    opacity: 0.9;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL WHITE CRYSTALS
+========================================================= */
+
+.small-crystal {
+
+  position: absolute;
+
+  width: 70px;
+  height: 95px;
+
+  clip-path: polygon(
+    50% 0%,
+    90% 22%,
+    100% 70%,
+    60% 100%,
+    12% 84%,
+    0% 40%
+  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.30),
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.02)
+    );
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.15),
+    0 0 35px rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(8px);
+
+  animation:
+    smallCrystalFloat 9s ease-in-out infinite;
+
+}
+
+
+@keyframes smallCrystalFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-40px)
+      rotate(25deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+}
+/* =========================================================
+   REELS WHITE GLASS CRYSTALS
+========================================================= */
+
+.reel-crystal {
+  position: absolute;
+
+  width: 260px;
+  height: 340px;
+
+  clip-path: polygon(
+    50% 0%,
+    82% 16%,
+    100% 58%,
+    70% 100%,
+    30% 92%,
+    0% 55%,
+    18% 17%
+  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.75),
+      rgba(255,255,255,0.28) 35%,
+      rgba(255,255,255,0.10) 60%,
+      rgba(255,255,255,0.50)
+    );
+
+  border: 1px solid rgba(255,255,255,0.8);
+
+  box-shadow:
+    inset 0 0 35px rgba(255,255,255,0.7),
+    inset 10px 10px 40px rgba(255,255,255,0.5),
+    0 15px 70px rgba(0,0,0,0.08),
+    0 0 50px rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(12px);
+
+  opacity: 0.65;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CRYSTAL POSITIONS
+========================================================= */
+
+.reel-crystal-one {
+
+  top: 2%;
+  left: -80px;
+
+  animation: reelCrystalOne 14s ease-in-out infinite;
+
+}
+
+
+.reel-crystal-two {
+
+  top: 25%;
+  right: -100px;
+
+  width: 320px;
+  height: 410px;
+
+  opacity: 0.5;
+
+  animation: reelCrystalTwo 17s ease-in-out infinite;
+
+  animation-delay: -4s;
+
+}
+
+
+.reel-crystal-three {
+
+  bottom: -130px;
+  left: 40%;
+
+  width: 220px;
+  height: 290px;
+
+  opacity: 0.4;
+
+  animation: reelCrystalThree 15s ease-in-out infinite;
+
+  animation-delay: -7s;
+
+}
+
+
+/* =========================================================
+   CRYSTAL FACETS
+========================================================= */
+
+.reel-crystal-face {
+
+  position: absolute;
+
+  inset: 0;
+
+}
+
+
+.reel-face-left {
+
+  clip-path: polygon(
+    50% 0%,
+    18% 17%,
+    0% 55%,
+    30% 92%,
+    50% 46%
+  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.9),
+      rgba(255,255,255,0.15)
+    );
+
+}
+
+
+.reel-face-right {
+
+  clip-path: polygon(
+    50% 0%,
+    82% 16%,
+    100% 58%,
+    70% 100%,
+    50% 46%
+  );
+
+  background:
+    linear-gradient(
+      225deg,
+      rgba(255,255,255,0.75),
+      rgba(255,255,255,0.10)
+    );
+
+}
+
+
+.reel-face-bottom {
+
+  clip-path: polygon(
+    30% 92%,
+    50% 46%,
+    70% 100%
+  );
+
+  background:
+    linear-gradient(
+      45deg,
+      rgba(255,255,255,0.8),
+      rgba(255,255,255,0.15)
+    );
+
+}
+
+
+/* =========================================================
+   MOVING WHITE REFLECTION
+========================================================= */
+
+.reel-crystal-shine {
+
+  position: absolute;
+
+  top: -40%;
+  left: -100%;
+
+  width: 45%;
+  height: 180%;
+
+  transform: rotate(28deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.25),
+      rgba(255,255,255,0.95),
+      rgba(255,255,255,0.25),
+      transparent
+    );
+
+  filter: blur(5px);
+
+  animation: reelCrystalShine 5s ease-in-out infinite;
+
+}
+
+
+/* =========================================================
+   FLOATING
+========================================================= */
+
+@keyframes reelCrystalOne {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(12deg);
+  }
+
+  50% {
+    transform:
+      translate3d(40px,-45px,0)
+      rotate(25deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(12deg);
+  }
+
+}
+
+
+@keyframes reelCrystalTwo {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(-15deg);
+  }
+
+  50% {
+    transform:
+      translate3d(-50px,-40px,0)
+      rotate(-3deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(-15deg);
+  }
+
+}
+
+
+@keyframes reelCrystalThree {
+
+  0% {
+    transform:
+      translate3d(0,0,0)
+      rotate(10deg);
+  }
+
+  50% {
+    transform:
+      translate3d(40px,-50px,0)
+      rotate(-12deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0,0,0)
+      rotate(10deg);
+  }
+
+}
+
+
+/* =========================================================
+   REFLECTION
+========================================================= */
+
+@keyframes reelCrystalShine {
+
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+  }
+
+  50% {
+    left: 130%;
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL CRYSTALS
+========================================================= */
+
+.reel-mini-crystal {
+
+  position: absolute;
+
+  width: 60px;
+  height: 80px;
+
+  clip-path: polygon(
+    50% 0%,
+    90% 25%,
+    100% 70%,
+    60% 100%,
+    10% 85%,
+    0% 40%
+  );
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.8),
+      rgba(255,255,255,0.15)
+    );
+
+  border: 1px solid rgba(255,255,255,0.7);
+
+  box-shadow:
+    0 0 35px rgba(255,255,255,0.5);
+
+  animation: reelMiniFloat 9s ease-in-out infinite;
+
+}
+
+
+.reel-mini-one {
+
+  top: 30%;
+  left: 30%;
+
+}
+
+
+.reel-mini-two {
+
+  top: 65%;
+  right: 30%;
+
+  width: 45px;
+  height: 65px;
+
+  animation-delay: -3s;
+
+}
+
+
+.reel-mini-three {
+
+  bottom: 15%;
+  left: 15%;
+
+  width: 40px;
+  height: 55px;
+
+  animation-delay: -6s;
+
+}
+
+
+@keyframes reelMiniFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-35px)
+      rotate(20deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .reel-crystal-one {
+
+    width: 170px;
+    height: 230px;
+
+    left: -70px;
+
+  }
+
+  .reel-crystal-two {
+
+    width: 200px;
+    height: 270px;
+
+    right: -80px;
+
+  }
+
+  .reel-crystal-three {
+
+    width: 150px;
+    height: 200px;
+
+  }
+
+  .reel-mini-crystal {
+
+    opacity: 0.45;
+
+  }
+
+}
+/* =====================================================
+   FOOTER CRYSTAL SYSTEM
+===================================================== */
+
+.footer-crystal {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  pointer-events: none;
+  z-index: 1;
+
+  transform-style: preserve-3d;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.13),
+      rgba(255,255,255,0.025),
+      rgba(255,140,40,0.06)
+    );
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    inset 0 0 40px rgba(255,255,255,0.05),
+    0 0 80px rgba(255,140,40,0.06);
+
+  clip-path: polygon(
+    50% 0%,
+    88% 18%,
+    100% 55%,
+    72% 100%,
+    28% 100%,
+    0% 55%,
+    12% 18%
+  );
+
+  animation:
+    crystalFloat 12s ease-in-out infinite,
+    crystalRotate 18s linear infinite;
+}
+
+
+/* Crystal faces */
+
+.footer-crystal-face {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+/* Left glass face */
+
+.footer-crystal .face-one {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.18),
+    rgba(255,255,255,0.02)
+  );
+
+  clip-path: polygon(
+    50% 0%,
+    50% 100%,
+    28% 100%,
+    0% 55%,
+    12% 18%
+  );
+}
+
+
+/* Right glass face */
+
+.footer-crystal .face-two {
+  background: linear-gradient(
+    225deg,
+    rgba(255,255,255,0.13),
+    rgba(255,140,40,0.03)
+  );
+
+  clip-path: polygon(
+    50% 0%,
+    100% 55%,
+    72% 100%,
+    50% 100%
+  );
+}
+
+
+/* Bottom face */
+
+.footer-crystal .face-three {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0)
+  );
+
+  clip-path: polygon(
+    28% 100%,
+    50% 55%,
+    72% 100%
+  );
+}
+
+
+/* Crystal light reflection */
+
+.footer-crystal-shine {
+  position: absolute;
+
+  width: 35%;
+  height: 130%;
+
+  top: -20%;
+  left: -60%;
+
+  transform: rotate(25deg);
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  filter: blur(8px);
+
+  animation: crystalShine 6s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   CRYSTAL POSITIONS
+===================================================== */
+
+.footer-crystal-one {
+  top: 8%;
+  left: 4%;
+  transform: rotate(18deg);
+  animation-delay: 0s;
+}
+
+.footer-crystal-two {
+  top: 20%;
+  right: 5%;
+  width: 280px;
+  height: 280px;
+  transform: rotate(-20deg);
+  animation-delay: -4s;
+}
+
+.footer-crystal-three {
+  bottom: -100px;
+  left: 42%;
+  width: 210px;
+  height: 210px;
+  transform: rotate(35deg);
+  animation-delay: -7s;
+}
+
+
+/* =====================================================
+   SMALL CRYSTALS
+===================================================== */
+
+.footer-mini-crystal {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.14),
+    rgba(255,140,40,0.04)
+  );
+
+  backdrop-filter: blur(5px);
+
+  clip-path: polygon(
+    50% 0%,
+    100% 35%,
+    80% 100%,
+    20% 100%,
+    0% 35%
+  );
+
+  animation: miniCrystalFloat 8s ease-in-out infinite;
+}
+
+
+.mini-one {
+  top: 30%;
+  left: 25%;
+}
+
+.mini-two {
+  top: 12%;
+  right: 30%;
+  width: 45px;
+  height: 45px;
+  animation-delay: -3s;
+}
+
+.mini-three {
+  bottom: 15%;
+  right: 18%;
+  width: 80px;
+  height: 80px;
+  animation-delay: -5s;
+}
+
+
+/* =====================================================
+   FLOATING ANIMATION
+===================================================== */
+
+@keyframes crystalFloat {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  25% {
+    transform:
+      translate3d(30px, -25px, 20px)
+      rotate(8deg)
+      scale(1.03);
+  }
+
+  50% {
+    transform:
+      translate3d(-20px, -45px, 35px)
+      rotate(-5deg)
+      scale(1.06);
+  }
+
+  75% {
+    transform:
+      translate3d(-35px, 15px, 15px)
+      rotate(10deg)
+      scale(1.02);
+  }
+
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+}
+
+
+/* =====================================================
+   ROTATION
+===================================================== */
+
+@keyframes crystalRotate {
+
+  0% {
+    filter:
+      brightness(1)
+      drop-shadow(0 0 15px rgba(255,255,255,0.05));
+  }
+
+  50% {
+    filter:
+      brightness(1.25)
+      drop-shadow(0 0 30px rgba(255,140,40,0.10));
+  }
+
+  100% {
+    filter:
+      brightness(1)
+      drop-shadow(0 0 15px rgba(255,255,255,0.05));
+  }
+
+}
+
+
+/* =====================================================
+   GLASS SHINE
+===================================================== */
+
+@keyframes crystalShine {
+
+  0% {
+    left: -70%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    left: 130%;
+    opacity: 0.8;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+
+}
+
+
+/* =====================================================
+   MINI CRYSTAL ANIMATION
+===================================================== */
+
+@keyframes miniCrystalFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+    opacity: 0.35;
+  }
+
+  50% {
+    transform:
+      translateY(-35px)
+      rotate(25deg);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+    opacity: 0.35;
+  }
+
+}
+
+
+/* =====================================================
+   GLOW ANIMATION
+===================================================== */
+
+@keyframes footerGlow {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 0.9;
+  }
+
+}
+
+.animate-footer-glow {
+  animation: footerGlow 10s ease-in-out infinite;
+}
+
+.animate-footer-glow-reverse {
+  animation: footerGlow 12s ease-in-out infinite reverse;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .footer-crystal {
+    opacity: 0.55;
+  }
+
+  .footer-crystal-one {
+    width: 150px;
+    height: 150px;
+    left: -50px;
+  }
+
+  .footer-crystal-two {
+    width: 180px;
+    height: 180px;
+    right: -60px;
+  }
+
+  .footer-crystal-three {
+    width: 140px;
+    height: 140px;
+    left: 35%;
+  }
+
+  .footer-mini-crystal {
+    opacity: 0.3;
+  }
+
+}

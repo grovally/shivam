@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -57,118 +58,646 @@ export default function WhyChooseUs() {
   return (
     <section className="relative overflow-hidden bg-white py-24">
 
-      {/* Background Glow */}
+      {/* =====================================================
+          PREMIUM BACKGROUND
+      ===================================================== */}
 
-      <div className="absolute left-0 top-20 h-96 w-96 rounded-full bg-cyan-500/20 blur-[160px]" />
+      <div className="absolute inset-0 pointer-events-none">
 
-      <div className="absolute right-0 bottom-20 h-96 w-96 rounded-full bg-blue-500/20 blur-[160px]" />
+        {/* Red ambient glow */}
+        <div
+          className="
+            absolute
+            -top-40
+            left-[-100px]
+            w-[500px]
+            h-[500px]
+            rounded-full
+            bg-red-100/50
+            blur-[150px]
+          "
+        />
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(189, 68, 94, 0.05),transparent_70%)]" />
+        {/* Gray ambient glow */}
+        <div
+          className="
+            absolute
+            bottom-[-200px]
+            right-[-100px]
+            w-[600px]
+            h-[600px]
+            rounded-full
+            bg-gray-100
+            blur-[160px]
+          "
+        />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Center glow */}
+        <div
+          className="
+            absolute
+            top-1/2
+            left-1/2
+            -translate-x-1/2
+            -translate-y-1/2
+            w-[500px]
+            h-[500px]
+            rounded-full
+            bg-red-50/50
+            blur-[140px]
+          "
+        />
 
-        {/* Heading */}
+
+        {/* =================================================
+            FLOATING CRYSTALS
+        ================================================= */}
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .7 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <span className="rounded-full border border-cyan-400/30 bg-black px-5 py-2 text-sm font-semibold uppercase tracking-[4px] text-red-600">
-            Why Choose Us
-          </span>
+          animate={{
+            y: [0, -30, 0],
+            rotate: [20, 35, 20],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            top-[15%]
+            right-[4%]
+            w-36
+            h-36
+            rotate-45
+            rounded-[35px]
+            border
+            border-white
+            bg-gradient-to-br
+            from-white
+            via-gray-100/60
+            to-red-50/40
+            shadow-[0_25px_80px_rgba(0,0,0,0.08)]
+            backdrop-blur-xl
+          "
+        />
 
-          <h2 className="mt-6 text-5xl font-extrabold text-black md:text-6xl">
+
+        <motion.div
+          animate={{
+            y: [0, 25, 0],
+            rotate: [-15, -25, -15],
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="
+            absolute
+            bottom-[18%]
+            left-[3%]
+            w-28
+            h-28
+            rounded-[30px]
+            border
+            border-gray-100
+            bg-white/70
+            shadow-[0_20px_60px_rgba(0,0,0,0.07)]
+            backdrop-blur-xl
+          "
+        />
+
+      </div>
+
+
+      {/* =====================================================
+          MAIN CONTENT
+      ===================================================== */}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+        {/* =====================================================
+            HEADING
+        ===================================================== */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="text-center max-w-3xl mx-auto"
+        >
+
+          {/* Badge */}
+
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-red-100
+              bg-white
+              px-5
+              py-2.5
+              shadow-sm
+            "
+          >
+
+            <span className="h-2 w-2 rounded-full bg-red-600 animate-pulse" />
+
+            <span
+              className="
+                text-xs
+                font-bold
+                uppercase
+                tracking-[0.25em]
+                text-red-600
+              "
+            >
+              Why Choose Us
+            </span>
+
+          </div>
+
+
+          {/* Heading */}
+
+          <h2
+            className="
+              mt-7
+              text-4xl
+              sm:text-5xl
+              lg:text-6xl
+              font-black
+              tracking-tight
+              text-gray-900
+            "
+          >
             Your Trusted
-            <span className="bg-gradient-to-r bg-red-700 bg-clip-text text-transparent">
-              {" "}Real Estate Partner
+
+            <span className="block text-red-600">
+              Real Estate Partner
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-black/95">
-            We make buying and investing in real estate simple, transparent,
-            and rewarding. From verified properties to trusted developers,
-            our experts guide you at every step.
+
+          <p
+            className="
+              mt-6
+              text-sm
+              sm:text-base
+              lg:text-lg
+              leading-7
+              text-gray-500
+            "
+          >
+            We make buying and investing in real estate simple,
+            transparent and rewarding. From verified properties
+            to trusted developers, our experts guide you at
+            every step.
           </p>
+
         </motion.div>
 
-        {/* Cards */}
 
-        <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {/* =====================================================
+            FEATURE GRID
+        ===================================================== */}
+
+        <div
+          className="
+            mt-20
+            grid
+            grid-cols-1
+            sm:grid-cols-2
+            lg:grid-cols-4
+            gap-6
+          "
+        >
 
           {features.map((item, index) => {
+
             const Icon = item.icon;
 
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{
+                  opacity: 0,
+                  y: 50,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.15,
+                }}
                 transition={{
-                  duration: .6,
-                  delay: index * .1,
+                  duration: 0.6,
+                  delay: index * 0.08,
                 }}
                 whileHover={{
                   y: -12,
-                  scale: 1.03,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-black bg-white p-8 backdrop-blur-xl"
+                className="
+                  group
+                  relative
+                  min-h-[290px]
+                  overflow-hidden
+                  rounded-[30px]
+                  border
+                  border-gray-200
+                  bg-white/80
+                  p-7
+                  backdrop-blur-xl
+                  shadow-[0_15px_50px_rgba(0,0,0,0.06)]
+                  hover:border-red-200
+                  hover:shadow-[0_25px_70px_rgba(0,0,0,0.12)]
+                  transition-all
+                  duration-500
+                "
               >
-                {/* Hover Glow */}
-                <div className="absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100 bg-gradient-to-r from-red-600 " />
 
-                {/* Icon */}
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-r from-red-500 to-black-600">
-                  <Icon className="h-8 w-8 text-white" />
+                {/* =================================================
+                    CARD GLASS
+                ================================================= */}
+
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-gradient-to-br
+                    from-white
+                    via-transparent
+                    to-red-50/40
+                    opacity-70
+                  "
+                />
+
+
+                {/* =================================================
+                    TOP SHINE
+                ================================================= */}
+
+                <div
+                  className="
+                    absolute
+                    top-0
+                    left-0
+                    right-0
+                    h-px
+                    bg-gradient-to-r
+                    from-transparent
+                    via-red-400
+                    to-transparent
+                    opacity-0
+                    group-hover:opacity-100
+                    transition
+                  "
+                />
+
+
+                {/* =================================================
+                    NUMBER
+                ================================================= */}
+
+                <span
+                  className="
+                    absolute
+                    top-6
+                    right-7
+                    text-xs
+                    font-bold
+                    tracking-widest
+                    text-gray-200
+                    group-hover:text-red-200
+                    transition-colors
+                  "
+                >
+                  0{index + 1}
+                </span>
+
+
+                {/* =================================================
+                    ICON
+                ================================================= */}
+
+                <div
+                  className="
+                    relative
+                    z-10
+                    flex
+                    h-16
+                    w-16
+                    items-center
+                    justify-center
+                    rounded-2xl
+                    border
+                    border-red-100
+                    bg-gradient-to-br
+                    from-red-600
+                    to-red-500
+                    shadow-lg
+                    shadow-red-500/20
+                    group-hover:scale-110
+                    group-hover:rotate-3
+                    transition-all
+                    duration-500
+                  "
+                >
+
+                  <Icon
+                    className="
+                      h-7
+                      w-7
+                      text-white
+                    "
+                    strokeWidth={1.8}
+                  />
+
                 </div>
 
-                <h3 className="relative mt-6 text-2xl font-bold text-black">
+
+                {/* =================================================
+                    TITLE
+                ================================================= */}
+
+                <h3
+                  className="
+                    relative
+                    z-10
+                    mt-7
+                    text-xl
+                    font-bold
+                    text-gray-900
+                    group-hover:text-red-600
+                    transition-colors
+                  "
+                >
                   {item.title}
                 </h3>
 
-                <p className="relative mt-4 leading-7 text-black-400">
+
+                {/* =================================================
+                    DESCRIPTION
+                ================================================= */}
+
+                <p
+                  className="
+                    relative
+                    z-10
+                    mt-4
+                    text-sm
+                    leading-6
+                    text-gray-500
+                  "
+                >
                   {item.desc}
                 </p>
+
+
+                {/* =================================================
+                    BOTTOM GLOW
+                ================================================= */}
+
+                <div
+                  className="
+                    absolute
+                    -bottom-16
+                    -right-16
+                    h-36
+                    w-36
+                    rounded-full
+                    bg-red-100
+                    blur-3xl
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-opacity
+                    duration-500
+                  "
+                />
+
+
+                {/* =================================================
+                    MOVING GLASS SHINE
+                ================================================= */}
+
+                <div
+                  className="
+                    absolute
+                    top-0
+                    -left-[120%]
+                    h-full
+                    w-[50%]
+                    skew-x-[-20deg]
+                    bg-gradient-to-r
+                    from-transparent
+                    via-white/70
+                    to-transparent
+                    group-hover:left-[150%]
+                    transition-all
+                    duration-[1200ms]
+                    pointer-events-none
+                  "
+                />
+
               </motion.div>
             );
           })}
 
         </div>
 
-        {/* Stats */}
 
-        <div className="mt-24 grid grid-cols-2 gap-8 rounded-3xl border border-white/10 bg-white/5 p-10 backdrop-blur-xl md:grid-cols-4">
+        {/* =====================================================
+            STATS
+        ===================================================== */}
 
-          {[
-            ["1000+", "Happy Clients"],
-            ["500+", "Verified Properties"],
-            ["50+", "Trusted Developers"],
-            ["10+", "Years Experience"],
-          ].map(([number, text], index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: .8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * .1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h3 className="text-4xl font-extrabold text-red-500">
-                {number}
-              </h3>
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="
+            relative
+            mt-20
+            overflow-hidden
+            rounded-[35px]
+            border
+            border-gray-200
+            bg-white/70
+            backdrop-blur-2xl
+            shadow-[0_20px_70px_rgba(0,0,0,0.07)]
+          "
+        >
 
-              <p className="mt-2 text-black-400">
-                {text}
-              </p>
-            </motion.div>
-          ))}
+          {/* Red glass line */}
 
-        </div>
+          <div
+            className="
+              absolute
+              top-0
+              left-0
+              right-0
+              h-1
+              bg-gradient-to-r
+              from-transparent
+              via-red-600
+              to-transparent
+            "
+          />
+
+
+          <div
+            className="
+              grid
+              grid-cols-2
+              md:grid-cols-4
+            "
+          >
+
+            {[
+              ["1000+", "Happy Clients"],
+              ["500+", "Verified Properties"],
+              ["50+", "Trusted Developers"],
+              ["10+", "Years Experience"],
+            ].map(([number, text], index) => (
+
+              <motion.div
+                key={index}
+                initial={{
+                  opacity: 0,
+                  scale: 0.8,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  scale: 1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  delay: index * 0.12,
+                }}
+                className="
+                  relative
+                  p-8
+                  sm:p-10
+                  text-center
+                  border-b
+                  md:border-b-0
+                  border-gray-100
+                  last:border-0
+                "
+              >
+
+                <h3
+                  className="
+                    text-3xl
+                    sm:text-4xl
+                    lg:text-5xl
+                    font-black
+                    text-red-600
+                  "
+                >
+                  {number}
+                </h3>
+
+                <p
+                  className="
+                    mt-2
+                    text-xs
+                    sm:text-sm
+                    font-medium
+                    text-gray-500
+                  "
+                >
+                  {text}
+                </p>
+
+              </motion.div>
+
+            ))}
+
+          </div>
+
+        </motion.div>
+
+
+        {/* =====================================================
+            TRUST MESSAGE
+        ===================================================== */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="
+            flex
+            justify-center
+            mt-10
+          "
+        >
+
+          <div
+            className="
+              inline-flex
+              items-center
+              gap-3
+              rounded-full
+              border
+              border-gray-200
+              bg-white
+              px-5
+              py-3
+              shadow-sm
+            "
+          >
+
+            <ShieldCheck
+              size={18}
+              className="text-red-600"
+            />
+
+            <span className="text-sm text-gray-500">
+              Trusted guidance from property search to possession
+            </span>
+
+          </div>
+
+        </motion.div>
 
       </div>
+
     </section>
   );
 }
+
