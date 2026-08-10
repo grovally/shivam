@@ -145,235 +145,38 @@ export default function Location() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-white py-24 px-4 sm:px-6 lg:px-8">
+    <section className="relative mt-10 overflow-hidden bg-transparent px-4 py-16 text-white sm:px-6 lg:px-8">
+      
 
       {/* =========================================================
           BACKGROUND
       ========================================================= */}
 
       {/* Soft red ambient glow */}
-      <motion.div
-        animate={{
-          x: [0, 80, -50, 0],
-          y: [0, -50, 60, 0],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          -left-40
-          top-20
-          h-[500px]
-          w-[500px]
-          rounded-full
-          bg-red-200/30
-          blur-[140px]
-        "
-      />
+      
 
       {/* Soft orange glow */}
-      <motion.div
-        animate={{
-          x: [0, -70, 50, 0],
-          y: [0, 60, -50, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          -right-40
-          bottom-20
-          h-[500px]
-          w-[500px]
-          rounded-full
-          bg-orange-200/30
-          blur-[150px]
-        "
-      />
+      
 
       {/* =========================================================
           FLOATING CRYSTAL 1
       ========================================================= */}
 
-      <motion.div
-        animate={{
-          y: [0, -35, 0],
-          rotate: [12, 18, 12],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          left-[5%]
-          top-[8%]
-          hidden
-          h-40
-          w-40
-          rotate-12
-          rounded-[35px]
-          border
-          border-white/80
-          bg-gradient-to-br
-          from-white/90
-          via-red-50/50
-          to-red-100/30
-          shadow-[0_20px_80px_rgba(220,38,38,0.12)]
-          backdrop-blur-xl
-          md:block
-        "
-      >
-        <div className="
-          absolute
-          inset-0
-          rounded-[35px]
-          bg-gradient-to-br
-          from-white/80
-          via-transparent
-          to-red-100/40
-        " />
-
-        <div className="
-          absolute
-          left-5
-          top-4
-          h-20
-          w-8
-          rotate-12
-          rounded-full
-          bg-white/80
-          blur-xl
-        " />
-      </motion.div>
+     
 
       {/* =========================================================
           FLOATING CRYSTAL 2
       ========================================================= */}
 
-      <motion.div
-        animate={{
-          y: [0, 40, 0],
-          rotate: [-15, -8, -15],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          right-[5%]
-          top-[28%]
-          hidden
-          h-52
-          w-52
-          -rotate-12
-          rounded-[45px]
-          border
-          border-white/90
-          bg-gradient-to-tr
-          from-red-50/60
-          via-white/80
-          to-orange-50/50
-          shadow-[0_20px_100px_rgba(239,68,68,0.14)]
-          backdrop-blur-xl
-          lg:block
-        "
-      >
-        <div className="
-          absolute
-          inset-0
-          rounded-[45px]
-          bg-gradient-to-br
-          from-white/80
-          via-transparent
-          to-red-100/30
-        " />
-
-        <div className="
-          absolute
-          right-8
-          top-5
-          h-24
-          w-10
-          -rotate-12
-          rounded-full
-          bg-white
-          opacity-70
-          blur-xl
-        " />
-      </motion.div>
+     
 
       {/* =========================================================
           SMALL FLOATING CRYSTALS
       ========================================================= */}
 
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 180, 360],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          right-[18%]
-          top-[10%]
-          h-10
-          w-10
-          rotate-45
-          rounded-xl
-          border
-          border-red-200/70
-          bg-white/70
-          shadow-[0_0_30px_rgba(239,68,68,0.15)]
-          backdrop-blur-md
-        "
-      />
+      
 
-      <motion.div
-        animate={{
-          y: [0, 25, 0],
-          x: [0, 15, 0],
-          rotate: [45, 135, 45],
-        }}
-        transition={{
-          duration: 9,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          bottom-[10%]
-          left-[12%]
-          h-12
-          w-12
-          rotate-45
-          rounded-xl
-          border
-          border-orange-200/70
-          bg-white/60
-          shadow-[0_0_40px_rgba(249,115,22,0.12)]
-          backdrop-blur-md
-        "
-      />
+     
 
       {/* =========================================================
           CONTENT
@@ -435,7 +238,7 @@ export default function Location() {
               text-4xl
               font-black
               tracking-tight
-              text-gray-900
+              text-white
               sm:text-5xl
               md:text-6xl
             "
@@ -461,7 +264,7 @@ export default function Location() {
               max-w-3xl
               text-base
               leading-8
-              text-gray-500
+              text-white/75
               sm:text-lg
             "
           >
@@ -525,7 +328,7 @@ export default function Location() {
                     rounded-[45px]
                     bg-gradient-to-r
                     from-red-400/20
-                    via-orange-300/10
+                    via--300/1red0
                     to-red-400/20
                     opacity-0
                     blur-2xl
@@ -599,10 +402,8 @@ export default function Location() {
                         pointer-events-none
                         absolute
                         inset-0
-                        bg-gradient-to-t
-                        from-black/55
-                        via-transparent
-                        to-white/10
+                       
+                        
                       "
                     />
 
@@ -623,33 +424,13 @@ export default function Location() {
                         absolute
                         inset-y-0
                         w-24
-                        rotate-12
-                        bg-white/20
-                        blur-xl
+                        
                       "
                     />
 
                     {/* Image label */}
 
-                    <div
-                      className="
-                        absolute
-                        bottom-5
-                        left-5
-                        rounded-full
-                        border
-                        border-white/30
-                        bg-black/30
-                        px-4
-                        py-2
-                        text-sm
-                        font-semibold
-                        text-white
-                        backdrop-blur-xl
-                      "
-                    >
-                      Chhabra Properties
-                    </div>
+                   
 
                     {/* Image dots */}
 
@@ -676,7 +457,7 @@ export default function Location() {
                               imageIndex ===
                               (currentIndexes[office.id] ?? 0)
                                 ? "w-6 bg-white"
-                                : "w-1.5 bg-white/50"
+                                : "w-1.5 bg-white/5"
                             }
                           `}
                         />
@@ -721,7 +502,7 @@ export default function Location() {
                     text-3xl
                     font-black
                     tracking-tight
-                    text-gray-900
+                    text-red-600
                     sm:text-4xl
                     md:text-5xl
                   "
@@ -735,7 +516,7 @@ export default function Location() {
                     max-w-xl
                     text-base
                     leading-8
-                    text-gray-500
+                    text-white/80
                     sm:text-lg
                   "
                 >
@@ -807,11 +588,11 @@ export default function Location() {
 
                       <div>
 
-                        <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
+                        <p className="text-xs font-medium uppercase tracking-wider text-red-400">
                           Office Address
                         </p>
 
-                        <h4 className="mt-1 text-sm font-semibold leading-6 text-gray-800 sm:text-base">
+                        <h4 className="mt-1 text-sm font-semibold leading-6 text-red-800 sm:text-base">
                           {office.address}
                         </h4>
 
@@ -848,7 +629,7 @@ export default function Location() {
                         absolute
                         inset-0
                         bg-gradient-to-r
-                        from-green-50/60
+                        from-red-500
                         to-transparent
                         opacity-0
                         transition
@@ -970,7 +751,7 @@ export default function Location() {
                       font-bold
                       text-white
                       shadow-lg
-                      shadow-green-200
+                      shadow-red-200
                       transition
                       hover:bg-[#20bd5a]
                     "
@@ -995,6 +776,41 @@ export default function Location() {
         </div>
 
       </div>
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
 
     </section>
   );

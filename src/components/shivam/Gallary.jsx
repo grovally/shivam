@@ -12,15 +12,15 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="bg-gray-100 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Chhabra <span className="text-red-600">Property</span>  Gallery
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base lg:text-lg text-white/80 max-w-3xl mx-auto">
             Explore our premium collection of apartments, villas, commercial
             spaces, and investment properties.
           </p>

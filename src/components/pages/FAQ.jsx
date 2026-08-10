@@ -38,7 +38,42 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="mt-28">
+    <section className="relative overflow-hidden bg-transparent py-24">
+       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
       {/* Heading */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-2 text-red-600">
@@ -46,11 +81,11 @@ export default function FAQSection() {
           <span className="font-medium">Frequently Asked Questions</span>
         </div>
 
-        <h2 className="mt-5 text-4xl lg:text-5xl font-bold text-gray-900">
-          Got Questions? We Have Answers
+        <h2 className="mt-5 text-4xl lg:text-5xl font-bold text-white">
+          Got Questions ?  <span className='text-red-600'> Have Answers</span>     
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80 ">
           Find quick answers about property buying, selling, investment, loans,
           legal documentation, and our real estate services.
         </p>
@@ -99,9 +134,7 @@ export default function FAQSection() {
 
       {/* Bottom CTA */}
       <div className="mt-12 pb-20 text-center">
-        <p className="text-gray-600">
-          Still have questions? Our real estate experts are ready to help.
-        </p>
+        
 
         <div className="mt-5 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a

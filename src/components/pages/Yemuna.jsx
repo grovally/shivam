@@ -68,84 +68,12 @@ export default function Yamuna() {
   });
 
   return (
-   <section className="relative mt-10 overflow-hidden bg-black/50 py-16 px-4 sm:px-6 lg:px-8 text-white">
+  <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
    
      {/* =====================================================
          PREMIUM CRYSTAL BACKGROUND
      ===================================================== */}
-     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-   
-       {/* Dark background */}
-       <div className="absolute inset-0 bg-black/50" />
-   
-       {/* Ambient orange light */}
-       <div className="absolute top-[15%] left-[20%] w-[500px] h-[500px] rounded-full bg-orange-500/[0.07] blur-[150px]" />
-   
-       <div className="absolute bottom-[5%] right-[15%] w-[450px] h-[450px] rounded-full bg-amber-400/[0.05] blur-[150px]" />
-   
-   
-       {/* =====================================================
-           LARGE CRYSTAL - LEFT
-       ===================================================== */}
-       <div className="crystal crystal-left">
-   
-         <div className="crystal-face crystal-face-left" />
-   
-         <div className="crystal-face crystal-face-right" />
-   
-         <div className="crystal-face crystal-face-bottom" />
-   
-         <div className="crystal-light" />
-   
-       </div>
-   
-   
-       {/* =====================================================
-           LARGE CRYSTAL - RIGHT
-       ===================================================== */}
-       <div className="crystal crystal-right">
-   
-         <div className="crystal-face crystal-face-left" />
-   
-         <div className="crystal-face crystal-face-right" />
-   
-         <div className="crystal-face crystal-face-bottom" />
-   
-         <div className="crystal-light" />
-   
-       </div>
-   
-   
-       {/* =====================================================
-           CENTER CRYSTAL
-       ===================================================== */}
-       <div className="crystal crystal-center">
-   
-         <div className="crystal-face crystal-face-left" />
-   
-         <div className="crystal-face crystal-face-right" />
-   
-         <div className="crystal-face crystal-face-bottom" />
-   
-         <div className="crystal-light" />
-   
-       </div>
-   
-   
-       {/* =====================================================
-           SMALL FLOATING CRYSTALS
-       ===================================================== */}
-       <div className="small-crystal small-crystal-one" />
-   
-       <div className="small-crystal small-crystal-two" />
-   
-       <div className="small-crystal small-crystal-three" />
-   
-   
-       {/* Dark overlay */}
-       <div className="absolute inset-0 bg-black/35" />
-   
-     </div>
+     
    
    
      {/* =====================================================
@@ -299,129 +227,145 @@ export default function Yamuna() {
        {/* =====================================================
            MAP CARDS
        ===================================================== */}
-       <div
-         className="
-           grid
-           grid-cols-1
-           sm:grid-cols-2
-           lg:grid-cols-3
-           xl:grid-cols-4
-           gap-6
-         "
-       >
-   
-         {filteredData.map((item) => (
-   
-           <motion.div
-             key={`noida-${item.id}`}
-             initial={{
-               opacity: 0,
-               y: 40
-             }}
-             whileInView={{
-               opacity: 1,
-               y: 0
-             }}
-             whileHover={{
-               y: -10
-             }}
-             viewport={{
-               once: true
-             }}
-             transition={{
-               duration: 0.4
-             }}
-             className="
-               group
-               overflow-hidden
-               rounded-3xl
-               bg-white/[0.06]
-               backdrop-blur-xl
-               border
-               border-white/10
-               shadow-2xl
-               hover:border-orange-500/30
-               hover:shadow-orange-500/10
-               transition-all
-             "
-           >
-   
-             {/* Image */}
-             <div
-               onClick={() => openDetail(item)}
-               className="
-                 relative
-                 w-full
-                 aspect-[3/2]
-                 sm:aspect-[4/3]
-                 overflow-hidden
-                 cursor-pointer
-                 rounded-t-3xl
-                 bg-gray-900
-               "
-             >
-   
-               <img
-     src={item.image}
-     alt={item.title}
-     className="w-full h-full object-cover border-4 border-red-500"
-   />
-   
-               <div
-                 className="
-                   absolute
-                   inset-0
-                   bg-gradient-to-t
-                   from-black/60
-                   via-transparent
-                   to-white/5
-                 "
-               />
-   
-               <div
-                 className="
-                   absolute
-                   -bottom-10
-                   left-1/2
-                   -translate-x-1/2
-                   w-32
-                   h-20
-                   rounded-full
-                   bg-red-500/20
-                   blur-3xl
-                   opacity-0
-                   group-hover:opacity-100
-                   transition-opacity
-                 "
-               />
-   
-             </div>
-   
-   
-             {/* Title */}
-             <div className="flex justify-center py-4">
-   
-               <h3
-                 className="
-                   px-3
-                   text-base
-                   sm:text-lg
-                   font-semibold
-                   text-white
-                   group-hover:text-red-600
-                   transition-colors
-                 "
-               >
-                 {item.title}
-               </h3>
-   
-             </div>
-   
-           </motion.div>
-   
-         ))}
-   
-       </div>
+      <div
+  className="
+    grid
+    grid-cols-2
+    sm:grid-cols-3
+    lg:grid-cols-4
+    xl:grid-cols-4
+    gap-6
+  "
+>
+  {filteredData
+    .filter(Boolean)
+    .map((item) => (
+      <motion.div
+        key={`noida-${item.id}`}
+        initial={{
+          opacity: 0,
+          y: 40,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        whileHover={{
+          y: -10,
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 0.4,
+        }}
+        className="
+          group
+          w-full
+          overflow-hidden
+          
+          bg-white/[0.06]
+          backdrop-blur-xl
+          border
+          border-white/10
+         
+          hover:border-red-500/30
+          hover:shadow-red-500/10
+          transition-all
+        "
+      >
+        {/* Image */}
+        <div
+          onClick={() => openDetail(item)}
+          className="
+            relative
+            w-full
+            aspect-[4/3]
+            overflow-hidden
+            cursor-pointer
+            
+            bg-gray-900
+          "
+        >
+          {item?.image ? (
+            <img
+              src={item.image}
+              alt={item?.title || "Noida Sector Map"}
+              className="
+                w-full
+                h-full
+                object-cover
+                border-4
+                border-red-500
+                transition-transform
+                duration-500
+                group-hover:scale-105
+              "
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-gray-400">
+              Image unavailable
+            </div>
+          )}
+
+          {/* Overlay */}
+          <div
+            className="
+              absolute
+              inset-0
+              bg-gradient-to-t
+              from-black/60
+              via-transparent
+              to-white/5
+              pointer-events-none
+            "
+          />
+
+          {/* Glow */}
+          <div
+            className="
+              absolute
+              -bottom-10
+              left-1/2
+              -translate-x-1/2
+              w-32
+              h-12
+              rounded-full
+              bg-red-500/20
+              blur-3xl
+              opacity-0
+              group-hover:opacity-100
+              transition-opacity
+              pointer-events-none
+            "
+          />
+        </div>
+
+        {/* Title */}
+        <div className="flex items-center justify-center min-h-[64px] px-3 py-3">
+          <h3
+            className="
+              w-full
+              text-center
+              text-md
+              sm:text-base
+              font-semibold
+              leading-tight
+              text-white
+              group-hover:text-red-500
+              transition-colors
+              line-clamp-2
+            "
+          >
+            {item?.title || "Untitled Sector"}
+          </h3>
+        </div>
+      </motion.div>
+    ))}
+</div>
    
      </div>
    

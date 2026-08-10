@@ -65,52 +65,46 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative overflow-hidden bg-[#061321] text-white"
+      className="relative overflow-hidden bg-transparent py-16"
     >
       {/* Top Gradient Line */}
-      <div className="h-[3px] w-full bg-gradient-to-r from-cyan-400 via-red-500 to-blue-500 animate-pulse" />
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-28"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
 
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
 
-        <motion.div
-          animate={{
-            x: [0, 120, -80, 0],
-            y: [0, -70, 80, 0],
-          }}
-          transition={{
-            duration: 14,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-cyan-500/20 blur-[120px]"
-        />
-
-        <motion.div
-          animate={{
-            x: [0, -80, 100, 0],
-            y: [0, 80, -50, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-blue-600/20 blur-[140px]"
-        />
-
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            rotate: [0, 20, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-          }}
-          className="absolute top-1/2 left-1/2 h-72 w-72 rounded-full bg-red-500/10 blur-[120px]"
-        />
-      </div>
+      
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
 
@@ -124,14 +118,18 @@ export default function Footer() {
           className="text-center mb-16"
         >
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Let's Find Your
-            <span className="block bg-gradient-to-r from-red-400 to-blue-500 bg-clip-text text-transparent mt-2">
-              Dream Property
-            </span>
-          </h2>
+          
+<h2 className="text-4xl md:text-5xl font-bold">
+  Let's Find Your{" "}
+  <span className="text-red-600 ml-3">
+    Dream Property
+  </span>
+</h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto mt-6 leading-8">
+
+          
+
+          <p className="text-white/80 max-w-2xl mx-auto mt-6 leading-8">
             Chhabra Properties offers premium residential,
             commercial and industrial properties across
             Noida, Greater Noida and Yamuna Expressway.
@@ -151,10 +149,10 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: .1 }}
             whileHover={{ y: -10 }}
-            className=" p-8 hover:border-cyan-400 transition"
+            className=" p-8 hover:border-red-400 transition"
           >
 
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="text-2xl text-red-600 font-bold mb-8">
               Company
             </h3>
 
@@ -165,7 +163,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   to={item.path}
-                  className="group flex items-center justify-between text-gray-300 hover:text-cyan-400 transition"
+                  className="group flex items-center justify-between text-gray-300 hover:text-red-400 transition"
                 >
 
                   <span>{item.name}</span>
@@ -194,7 +192,7 @@ export default function Footer() {
             className=" p-8 hover:border-red-400 transition"
           >
 
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="text-2xl  text-red-600  font-bold mb-8">
               Property Deals
             </h3>
 
@@ -223,9 +221,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
             whileHover={{ y: -10 }}
-            className=" p-8 hover:border-green-400 transition"
+            className=" p-8 hover:border-red-400 transition"
           >
-            <h3 className="text-2xl font-bold mb-8">
+            <h3 className="text-2xl text-red-600 font-bold mb-8">
               Locations
             </h3>
 
@@ -251,9 +249,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
             whileHover={{ y: -10 }}
-            className="p-8 hover:border-cyan-400 transition"
+            className="p-8 hover:border-red-400 transition"
           >
-            <h3 className="text-2xl font-bold mb-6">
+            <h3 className="text-2xl text-red-600 font-bold mb-6">
               Contact
             </h3>
 
@@ -265,10 +263,10 @@ export default function Footer() {
     href="https://maps.google.com/?q=204,+S+L+Tower,+Alpha+1+Commercial+Belt,+Greater+Noida,+Uttar+Pradesh"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-start gap-4 hover:text-cyan-400 transition"
+    className="flex items-start gap-4 hover:text-red-400 transition"
   >
     <MapPin className="mt-1 text-red-400 flex-shrink-0" size={22} />
-    <span className="text-gray-300 hover:text-red-400 transition">
+    <span className=" hover:text-red-400 transition">
       204, S L Tower, Alpha-I Commercial Belt,
       <br />
       Greater Noida, Uttar Pradesh
@@ -280,17 +278,17 @@ export default function Footer() {
     className="flex items-center gap-4 hover:text-cyan-400 transition"
   >
     <Mail className="text-red-400 flex-shrink-0" size={22} />
-    <span className="text-gray-300">
+    <span className="">
       info@cpgroup.in
     </span>
   </a>
 
   <a
     href="tel:+916262626462"
-    className="flex items-center gap-4 hover:text-cyan-400 transition"
+    className="flex items-center gap-4 hover:text-red-400 transition"
   >
     <FaPhone className="text-red-400 flex-shrink-0" size={20} />
-    <span className="text-gray-300">
+    <span className="">
       +91 62626 26462
     </span>
   </a>

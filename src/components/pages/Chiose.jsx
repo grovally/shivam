@@ -56,119 +56,13 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-white py-24">
+    <section className="relative overflow-hidden bg-transparent py-24">
 
       {/* =====================================================
           PREMIUM BACKGROUND
       ===================================================== */}
 
-      <div className="absolute inset-0 pointer-events-none">
-
-        {/* Red ambient glow */}
-        <div
-          className="
-            absolute
-            -top-40
-            left-[-100px]
-            w-[500px]
-            h-[500px]
-            rounded-full
-            bg-red-100/50
-            blur-[150px]
-          "
-        />
-
-        {/* Gray ambient glow */}
-        <div
-          className="
-            absolute
-            bottom-[-200px]
-            right-[-100px]
-            w-[600px]
-            h-[600px]
-            rounded-full
-            bg-gray-100
-            blur-[160px]
-          "
-        />
-
-        {/* Center glow */}
-        <div
-          className="
-            absolute
-            top-1/2
-            left-1/2
-            -translate-x-1/2
-            -translate-y-1/2
-            w-[500px]
-            h-[500px]
-            rounded-full
-            bg-red-50/50
-            blur-[140px]
-          "
-        />
-
-
-        {/* =================================================
-            FLOATING CRYSTALS
-        ================================================= */}
-
-        <motion.div
-          animate={{
-            y: [0, -30, 0],
-            rotate: [20, 35, 20],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            top-[15%]
-            right-[4%]
-            w-36
-            h-36
-            rotate-45
-            rounded-[35px]
-            border
-            border-white
-            bg-gradient-to-br
-            from-white
-            via-gray-100/60
-            to-red-50/40
-            shadow-[0_25px_80px_rgba(0,0,0,0.08)]
-            backdrop-blur-xl
-          "
-        />
-
-
-        <motion.div
-          animate={{
-            y: [0, 25, 0],
-            rotate: [-15, -25, -15],
-          }}
-          transition={{
-            duration: 11,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            bottom-[18%]
-            left-[3%]
-            w-28
-            h-28
-            rounded-[30px]
-            border
-            border-gray-100
-            bg-white/70
-            shadow-[0_20px_60px_rgba(0,0,0,0.07)]
-            backdrop-blur-xl
-          "
-        />
-
-      </div>
+      
 
 
       {/* =====================================================
@@ -176,6 +70,7 @@ export default function WhyChooseUs() {
       ===================================================== */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
 
 
         {/* =====================================================
@@ -210,7 +105,7 @@ export default function WhyChooseUs() {
               rounded-full
               border
               border-red-100
-              bg-white
+              
               px-5
               py-2.5
               shadow-sm
@@ -244,7 +139,7 @@ export default function WhyChooseUs() {
               lg:text-6xl
               font-black
               tracking-tight
-              text-gray-900
+              text-white
             "
           >
             Your Trusted
@@ -262,7 +157,7 @@ export default function WhyChooseUs() {
               sm:text-base
               lg:text-lg
               leading-7
-              text-gray-500
+              text-white/80
             "
           >
             We make buying and investing in real estate simple,
@@ -323,7 +218,7 @@ export default function WhyChooseUs() {
                   rounded-[30px]
                   border
                   border-gray-200
-                  bg-white/80
+                  bg-white/5
                   p-7
                   backdrop-blur-xl
                   shadow-[0_15px_50px_rgba(0,0,0,0.06)]
@@ -445,7 +340,7 @@ export default function WhyChooseUs() {
                     mt-7
                     text-xl
                     font-bold
-                    text-gray-900
+                    text-white/80
                     group-hover:text-red-600
                     transition-colors
                   "
@@ -465,7 +360,7 @@ export default function WhyChooseUs() {
                     mt-4
                     text-sm
                     leading-6
-                    text-gray-500
+                    text-white
                   "
                 >
                   {item.desc}
@@ -484,7 +379,7 @@ export default function WhyChooseUs() {
                     h-36
                     w-36
                     rounded-full
-                    bg-red-100
+                    bg-white/20
                     blur-3xl
                     opacity-0
                     group-hover:opacity-100
@@ -546,8 +441,8 @@ export default function WhyChooseUs() {
             overflow-hidden
             rounded-[35px]
             border
-            border-gray-200
-            bg-white/70
+            border-red-200
+            bg-white/5
             backdrop-blur-2xl
             shadow-[0_20px_70px_rgba(0,0,0,0.07)]
           "
@@ -618,7 +513,7 @@ export default function WhyChooseUs() {
                     text-3xl
                     sm:text-4xl
                     lg:text-5xl
-                    font-black
+                    font-bold
                     text-red-600
                   "
                 >
@@ -631,7 +526,7 @@ export default function WhyChooseUs() {
                     text-xs
                     sm:text-sm
                     font-medium
-                    text-gray-500
+                    text-white
                   "
                 >
                   {text}
@@ -674,8 +569,8 @@ export default function WhyChooseUs() {
               gap-3
               rounded-full
               border
-              border-gray-200
-              bg-white
+              border-red-200
+              bg-white/5
               px-5
               py-3
               shadow-sm
@@ -687,7 +582,7 @@ export default function WhyChooseUs() {
               className="text-red-600"
             />
 
-            <span className="text-sm text-gray-500">
+            <span className="text-sm text-white">
               Trusted guidance from property search to possession
             </span>
 

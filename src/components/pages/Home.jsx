@@ -40,7 +40,7 @@ export default function Hero() {
       </AnimatePresence>
 
       {/* Light Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t fr to-transparent" />
 
       <div className="absolute inset-0 z-10 flex items-end">
         <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pb-10 sm:pb-14 lg:pb-20">

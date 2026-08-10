@@ -33,209 +33,70 @@ export default function Shivam() {
   ];
 
   return (
-    <section className="relative mt-10 overflow-hidden bg-white py-20 px-4 sm:px-6 lg:px-8">
+   <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
 
       {/* =====================================================
           PREMIUM BACKGROUND
       ===================================================== */}
 
       {/* Soft red glow */}
-      <motion.div
-        animate={{
-          x: [0, 100, -80, 0],
-          y: [0, -60, 70, 0],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          -top-32
-          -left-32
-          h-[420px]
-          w-[420px]
-          rounded-full
-          bg-red-400/15
-          blur-[130px]
-        "
-      />
+      
 
       {/* Blue glow */}
-      <motion.div
-        animate={{
-          x: [0, -100, 80, 0],
-          y: [0, 70, -60, 0],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          -bottom-32
-          -right-32
-          h-[450px]
-          w-[450px]
-          rounded-full
-          bg-blue-400/10
-          blur-[140px]
-        "
-      />
+      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
 
       {/* =====================================================
           CRYSTAL GLASS 1
       ===================================================== */}
 
-      <motion.div
-        animate={{
-          y: [0, -25, 0, 25, 0],
-          rotate: [12, 18, 12, 6, 12],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          top-20
-          left-[4%]
-          h-44
-          w-44
-          rotate-12
-          rounded-[40px]
-          border
-          border-white/80
-          bg-gradient-to-br
-          from-white/80
-          via-white/20
-          to-red-100/30
-          shadow-[0_20px_80px_rgba(255,255,255,0.45)]
-          backdrop-blur-sm
-          opacity-80
-        "
-      >
-        <div className="absolute inset-3 rounded-[30px] border border-white/50" />
-
-        <div
-          className="
-            absolute
-            -left-10
-            top-1/2
-            h-20
-            w-32
-            -translate-y-1/2
-            rotate-45
-            bg-white/40
-            blur-2xl
-          "
-        />
-      </motion.div>
+      +
 
       {/* =====================================================
           CRYSTAL GLASS 2
       ===================================================== */}
 
-      <motion.div
-        animate={{
-          y: [0, 30, 0, -30, 0],
-          rotate: [-15, -8, -15, -20, -15],
-        }}
-        transition={{
-          duration: 15,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          top-[35%]
-          right-[3%]
-          h-56
-          w-56
-          rounded-[50px]
-          border
-          border-white/90
-          bg-gradient-to-br
-          from-white/90
-          via-white/30
-          to-blue-100/20
-          shadow-[0_25px_100px_rgba(255,255,255,0.5)]
-          backdrop-blur-sm
-          opacity-70
-        "
-      >
-        <div className="absolute inset-4 rounded-[40px] border border-white/50" />
-
-        <div
-          className="
-            absolute
-            right-0
-            top-10
-            h-32
-            w-20
-            rotate-45
-            bg-white/40
-            blur-2xl
-          "
-        />
-      </motion.div>
+    
 
       {/* =====================================================
           SMALL CRYSTAL
       ===================================================== */}
 
-      <motion.div
-        animate={{
-          y: [0, -20, 0],
-          rotate: [35, 45, 35],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="
-          pointer-events-none
-          absolute
-          bottom-10
-          left-[35%]
-          h-28
-          w-28
-          rounded-[28px]
-          border
-          border-white/70
-          bg-gradient-to-br
-          from-white/70
-          to-red-100/20
-          shadow-[0_15px_60px_rgba(255,255,255,0.4)]
-          backdrop-blur-sm
-          opacity-70
-        "
-      />
+     
 
-      {/* Center glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-1/2
-          h-[500px]
-          w-[500px]
-          -translate-x-1/2
-          -translate-y-1/2
-          rounded-full
-          bg-red-100/20
-          blur-[150px]
-        "
-      />
 
       {/* =====================================================
           CONTENT
@@ -256,15 +117,15 @@ export default function Shivam() {
             Explore Locations
           </p>
 
-          <h2 className="text-4xl font-black tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
             Explore{" "}
-            <span className="bg-gradient-to-r from-red-600 via-red-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-500 bg-clip-text text-transparent">
               Property
             </span>{" "}
             Locations
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">
             Find premium residential, commercial and investment properties
             across Noida, Greater Noida and Yamuna Expressway.
           </p>
@@ -365,8 +226,6 @@ export default function Shivam() {
                   className="
                     absolute
                     inset-0
-                    bg-gradient-to-t
-                    from-black/50
                     via-transparent
                     to-white/10
                   "

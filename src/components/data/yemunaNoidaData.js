@@ -1354,6 +1354,106 @@ For securing a piece of land in this booming Yamuna Authority region, trust Chha
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231950/SECTOR-_29_dzjzhg.png"
     },
+    
+    {
+       slug: "sector 18",
+        title:" Sector 18",
+        description:`
+About Sector 18, Noida
+Sector 18 Noida - the commercial and lifestyle center of Noida, Uttar Pradesh. The Noida Sector 18 Pin Code is 201301. This vibrant locality is frequently known simply as Noida Sec 18. Sector 18 is easily the best area in Noida to conduct business; to experience entertainment; and to reside luxuriously. As leading Greater Noida Property Dealers, we here at Chhabra Properties know Sector 18 is a veritable powerhouse area of investment and city life. The attendants at Chhabra Properties have prepared a neighbourhood map of the streets of Sector 18, Noida, to help you navigate the activity and appreciate everything that has to offer. The Layout Map of Sector 18, Noida will be a tool for students in this renowned sector.
+ 
+
+What is really special about Sector 18 Noida, and also a feature that is frequently cited by the best Real Estate Agents In Noida, is its truly world class connectivity. A standout asset is the presence of the Noida Sector 18 Metro Station right in the heart of the locality. This busy Metro Station Sector 18 Noida on the Blue Line assures many commuters, residents and visitors that they will very quickly and seamlessly travel to Delhi and the rest of the city. Beyond the immediate metro advantage, Noida Sector 18 also has better roads, than its nearby counterparts, as it is directly connected to the major arteries such as the DND Flyway and the Noida-Greater Noida Expressway. The position is clearly visible from the Noida Map and also the larger Greater Noida Map further illustrating is connectivity. Also it has easy access to villages, that connect directly towards the Yamuna Expressway, with easy access to Greater Noida and key location points.
+ 
+
+Living in Sector 18 Noida Uttar Pradesh offers a glimpse into a 5-star lifestyle experience, with no shortage of world-class facilities available. In this sector, you will find the legendary Sector 18 Market (Atta Market); this market is a goldmine for everything from groceries to fashion. With a phenomenal retail presence in Noida Sector 18 Mall, including the familiar names of DLF Mall of India and The Great India Place, shopping, dining, and entertainment opportunities abound. The sector has a vibrant commercial ecosystem, with plenty of options like the SBI Sector 18 Noida location being a clear indication of the sector's corporate presence and financial options. When compared to numerous surrounding areas, the social infrastructure is vast, as all your educational purposes and healthcare options are serviced very well in the sector. For established Property Dealers In Noida like Chhabra Properties, Sector 18 Noida is the most attractive area for a real estate investment opportunity. There is an absolutely continuous range of attractiveness. With such a great central site, large accessibility and connectivity to plenty of employment districts, high numbers of people using this area, and internationally/celestially what is could be called some of the newest and allow urban environment in Greater Noida; it is a fabulous locality to run your dynamic business and live with end results that will maintain value of the property.`,
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806932/SECTOR-18_POCKET-9B_yydym4.jpg"
+    }
+    
+    ,
+    {
+       slug: "SECTOR-18 POCKET-8",
+        title:"SECTOR-18 POCKET-8",
+        description:``,
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806927/SECTOR-18_POCKET-8_mbuubx.jpg"
+    }
+    ,
+    {
+       slug: "SECTOR-18  POCKET7E",
+        title:"SECTOR-18  POCKET7E",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806927/SECTOR-18_POCKET-7E_s1p6zm.jpg"
+    }
+    ,
+    {
+      slug: " Sector-18 Pocket-7b",
+        title:" Sector-18 Pocket-7b",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806924/SECTOR-18_POCKET-7B_7F_psxopn.jpg"
+    }
+    ,
+    {
+      
+      slug: " Sector-24",
+        title:"Sector 24",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806920/SECTOR-_24_mb58i7.jpg"
+    }
+    ,
+    {
+      slug: " Sector-18b",
+        title:" Sector 18B",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806917/SECTOR-18_POCKET-1B_hhrcci.jpg"
+    }
+    ,
+    {
+      slug: " Sector-24a",
+        title:" Sector 24A",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806917/SECTOR-_24A_gmxtfu.jpg"
+    }
+    ,
+    {
+      slug: " Sector-22e",
+        title:" Sector 22E",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806910/SECTOR-_22E_hfnasq.jpg"
+    }
+    ,
+    {
+      slug: "NILONI-SHAHPUR-BLOCK ",
+        title:"NILONI-SHAHPUR-BLOCK",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806890/7_VILLAGE-_NILONI_SHAHPUR_BLOCK-B_s56mvq.jpg"
+    }
+    ,
+    {
+      slug: "RAMPUR-BANGAR SADAR ",
+        title:"RAMPUR-BANGAR SADAR",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806890/7_VILLAGE-_RAMPUR_BANGAR_SADAR_jwrmbr.jpg"
+    }
+    ,
+    {
+       slug: "MIRJAPUR-SECTOR-18 ",
+        title:"MIRJAPUR-SECTOR-18",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806880/7_VILLAGE-_MIRJAPUR_SECTOR-18_PCKT-9_hgjb00.jpg"
+    },
+    {
+      slug: " Sector-21",
+        title:" Sector -21",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806908/SECTOR-_21_becukh.jpg"
+    }
+    ,
+    {
+      slug: " Sector-17a",
+        title:" Sector-17A",
+        description:"",
+        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806906/SECTOR-_17A_vej65j.jpg"
+    },
     {
       slug:"sector-18 pocket-1B-map",
       title:"SECTOR-18 POCKET-1B",

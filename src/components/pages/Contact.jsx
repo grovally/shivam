@@ -1,8 +1,16 @@
+
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+} from "lucide-react";
 import { useState } from "react";
 
+
 export default function Contact() {
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -11,37 +19,60 @@ export default function Contact() {
     message: "",
   });
 
-  // Handle Input Change
+
+  /* =========================================
+     HANDLE INPUT CHANGE
+  ========================================= */
+
   const handleChange = (e) => {
+
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
+
   };
 
-  // Handle Submit
+
+  /* =========================================
+     HANDLE FORM SUBMIT
+  ========================================= */
+
   const handleSubmit = async (e) => {
+
     e.preventDefault();
 
     console.log("Submit Clicked");
     console.log(formData);
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+
+      const res = await fetch(
+        "http://127.0.0.1:8000/api/contact",
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(formData),
+        }
+      );
+
 
       console.log("Status:", res.status);
 
+
       const data = await res.json();
+
       console.log(data);
 
+
       if (res.ok) {
+
         alert("Message Sent Successfully");
+
 
         setFormData({
           name: "",
@@ -50,103 +81,348 @@ export default function Contact() {
           subject: "",
           message: "",
         });
+
       } else {
-        alert(data.detail || "Something went wrong");
+
+        alert(
+          data.detail ||
+          "Something went wrong"
+        );
+
       }
+
     } catch (err) {
+
       console.error(err);
+
       alert("Server Error");
+
     }
+
   };
 
+
   return (
-    <section className="relative top-10 min-h-screen overflow-hidden bg-white text-black flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 120, -80, 0],
-            y: [0, -80, 80, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-red-500/20 blur-[120px]"
-        />
+    <section
+      className="
+        relative
+        top-20
+        min-h-screen
+        flex
+        items-center
+        justify-center
+        py-20
+        px-4
+        overflow-hidden
+      "
+    >
 
-        <motion.div
-          animate={{
-            x: [0, -100, 100, 0],
-            y: [0, 100, -50, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-blue-600/20 blur-[120px]"
-        />
-      </div>
+
+      {/* =========================================
+          BACKGROUND GLOW
+      ========================================= */}
+
+      <div
+        className="
+          absolute
+          top-20
+          left-1/2
+          -translate-x-1/2
+          w-[500px]
+          h-[300px]
+          bg-red-500/10
+          blur-[120px]
+          rounded-full
+          pointer-events-none
+        "
+      />
+
+
+      {/* =========================================
+          CONTACT CONTAINER
+      ========================================= */}
 
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="relative z-10 w-full max-w-6xl grid lg:grid-cols-2 overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl"
+
+        initial={{
+          opacity: 0,
+          y: 80,
+        }}
+
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+
+        viewport={{
+          once: true,
+        }}
+
+        transition={{
+          duration: 0.8,
+        }}
+
+        className="
+          relative
+          z-10
+          w-full
+          max-w-6xl
+          grid
+          lg:grid-cols-2
+          overflow-hidden
+          rounded-3xl
+
+          border
+          border-red-200/40
+
+          bg-black/40
+
+          backdrop-blur-xl
+
+          shadow-[0_0_40px_rgba(239,68,68,0.08)]
+        "
       >
 
-        {/* Left Side */}
-        <div className="p-6 sm:p-10 flex flex-col justify-center">
-          <h2 className="text-5xl font-bold text-red-600">
+
+        {/* =========================================
+            LEFT SIDE
+        ========================================= */}
+
+        <div
+          className="
+            p-6
+            sm:p-10
+            lg:p-12
+            flex
+            flex-col
+            justify-center
+          "
+        >
+
+          {/* TITLE */}
+
+          <h2
+            className="
+              text-4xl
+              sm:text-5xl
+              font-bold
+              text-red-500
+            "
+          >
             Let's Talk
           </h2>
 
-          <p className="mt-5 text-black/95 font-bold">
-            Have a question or properties? Fill out the form and our team will
-            contact you shortly.
+
+          {/* DESCRIPTION */}
+
+          <p
+            className="
+              mt-5
+              text-white/75
+              text-lg
+              leading-8
+            "
+          >
+            Have a question or looking for properties?
+            Fill out the form and our team will contact
+            you shortly.
           </p>
 
-          <div className="mt-10 space-y-6">
 
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-red-500/20 p-3">
-                <Phone className="text-red-500" />
+          {/* =========================================
+              CONTACT DETAILS
+          ========================================= */}
+
+          <div
+            className="
+              mt-10
+              space-y-6
+            "
+          >
+
+
+            {/* PHONE */}
+
+            <motion.div
+              whileHover={{
+                x: 8,
+              }}
+
+              className="
+                flex
+                items-center
+                gap-4
+                group
+              "
+            >
+
+              <div
+                className="
+                  rounded-full
+                  bg-red-500/10
+                  border
+                  border-red-400/30
+                  p-3
+                  group-hover:bg-red-500/20
+                  transition
+                "
+              >
+
+                <Phone
+                  className="text-red-500"
+                  size={22}
+                />
+
               </div>
-              <span className="font-bold">
+
+
+              <span
+                className="
+                  text-white/90
+                  font-semibold
+                "
+              >
                 +91 6262626462
               </span>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-red-500/20 p-3">
-                <Mail className="text-red-500" />
+            </motion.div>
+
+
+
+            {/* EMAIL */}
+
+            <motion.div
+              whileHover={{
+                x: 8,
+              }}
+
+              className="
+                flex
+                items-center
+                gap-4
+                group
+              "
+            >
+
+              <div
+                className="
+                  rounded-full
+                  bg-red-500/10
+                  border
+                  border-red-400/30
+                  p-3
+                  group-hover:bg-red-500/20
+                  transition
+                "
+              >
+
+                <Mail
+                  className="text-red-500"
+                  size={22}
+                />
+
               </div>
-              <span className="font-bold">
+
+
+              <span
+                className="
+                  text-white/90
+                  font-semibold
+                "
+              >
                 info@cpgroup.in
               </span>
-            </div>
 
-            <div className="flex items-center gap-4">
-              <div className="rounded-full bg-red-500/20 p-3">
-                <MapPin className="text-red-500" />
+            </motion.div>
+
+
+
+            {/* ADDRESS */}
+
+            <motion.div
+              whileHover={{
+                x: 8,
+              }}
+
+              className="
+                flex
+                items-start
+                gap-4
+                group
+              "
+            >
+
+              <div
+                className="
+                  rounded-full
+                  bg-red-500/10
+                  border
+                  border-red-400/30
+                  p-3
+                  shrink-0
+                  group-hover:bg-red-500/20
+                  transition
+                "
+              >
+
+                <MapPin
+                  className="text-red-500"
+                  size={22}
+                />
+
               </div>
-              <span className="font-bold">
-                204, S L Tower, Alpha-I Commercial Belt,
-                Greater Noida, Uttar Pradesh 201308
+
+
+              <span
+                className="
+                  text-white/90
+                  font-semibold
+                  leading-7
+                "
+              >
+                204, S L Tower, Alpha-I Commercial
+                Belt, Greater Noida, Uttar Pradesh
+                201308
               </span>
-            </div>
+
+            </motion.div>
+
 
           </div>
+
         </div>
 
-        {/* Right Side */}
-        <div className="p-6 sm:p-10 bg-white/5">
 
-          <form onSubmit={handleSubmit} className="space-y-5">
+
+        {/* =========================================
+            RIGHT SIDE — FORM
+        ========================================= */}
+
+        <div
+          className="
+            p-6
+            sm:p-10
+            lg:p-12
+
+            bg-white/[0.03]
+
+            border-t
+            lg:border-t-0
+
+            lg:border-l
+
+            border-red-200/20
+          "
+        >
+
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-5"
+          >
+
+
+            {/* NAME */}
 
             <input
               type="text"
@@ -154,9 +430,39 @@ export default function Contact() {
               value={formData.name}
               onChange={handleChange}
               placeholder="Full Name"
-              className="w-full rounded-xl border border-black/10  px-5 py-4 text-black placeholder-gray-400 outline-none focus:border-red-500"
+
+              className="
+                w-full
+                rounded-xl
+
+                border
+                border-red-200/30
+
+                bg-black/40
+
+                px-5
+                py-4
+
+                text-white
+
+                placeholder-white/40
+
+                outline-none
+
+                transition
+
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+
+                hover:border-red-300/50
+              "
+
               required
             />
+
+
+            {/* PHONE */}
 
             <input
               type="tel"
@@ -164,9 +470,39 @@ export default function Contact() {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="w-full rounded-xl border border-black/10  px-5 py-4 text-black placeholder-gray-400 outline-none focus:border-red-500"
+
+              className="
+                w-full
+                rounded-xl
+
+                border
+                border-red-200/30
+
+                bg-black/40
+
+                px-5
+                py-4
+
+                text-white
+
+                placeholder-white/40
+
+                outline-none
+
+                transition
+
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+
+                hover:border-red-300/50
+              "
+
               required
             />
+
+
+            {/* EMAIL */}
 
             <input
               type="email"
@@ -174,9 +510,39 @@ export default function Contact() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="w-full rounded-xl border border-black/10  px-5 py-4 text-black placeholder-gray-400 outline-none focus:border-red-500"
+
+              className="
+                w-full
+                rounded-xl
+
+                border
+                border-red-200/30
+
+                bg-black/40
+
+                px-5
+                py-4
+
+                text-white
+
+                placeholder-white/40
+
+                outline-none
+
+                transition
+
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+
+                hover:border-red-300/50
+              "
+
               required
             />
+
+
+            {/* SUBJECT */}
 
             <input
               type="text"
@@ -184,9 +550,39 @@ export default function Contact() {
               value={formData.subject}
               onChange={handleChange}
               placeholder="Subject"
-              className="w-full rounded-xl border border-black/10  px-5 py-4 text-black placeholder-gray-400 outline-none focus:border-red-500"
+
+              className="
+                w-full
+                rounded-xl
+
+                border
+                border-red-200/30
+
+                bg-black/40
+
+                px-5
+                py-4
+
+                text-white
+
+                placeholder-white/40
+
+                outline-none
+
+                transition
+
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+
+                hover:border-red-300/50
+              "
+
               required
             />
+
+
+            {/* MESSAGE */}
 
             <textarea
               name="message"
@@ -194,24 +590,98 @@ export default function Contact() {
               onChange={handleChange}
               rows={5}
               placeholder="Write your message..."
-              className="w-full rounded-xl border border-black/10  px-5 py-4 text-black placeholder-gray-400 outline-none focus:border-red-500 resize-none"
+
+              className="
+                w-full
+                rounded-xl
+
+                border
+                border-red-200/30
+
+                bg-black/40
+
+                px-5
+                py-4
+
+                text-white
+
+                placeholder-white/40
+
+                outline-none
+
+                resize-none
+
+                transition
+
+                focus:border-red-500
+                focus:ring-1
+                focus:ring-red-500
+
+                hover:border-red-300/50
+              "
+
               required
             />
 
+
+            {/* =========================================
+                SEND BUTTON
+            ========================================= */}
+
             <motion.button
+
               type="submit"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn-primary btn-mobile-full"
+
+              whileHover={{
+                scale: 1.03,
+              }}
+
+              whileTap={{
+                scale: 0.96,
+              }}
+
+              className="
+                w-full
+
+                flex
+                items-center
+                justify-center
+                gap-2
+
+                rounded-xl
+
+                bg-gradient-to-r
+                from-[#DF1221]
+                to-[#BF101C]
+
+                px-6
+                py-4
+
+                font-semibold
+                text-white
+
+                shadow-[0_0_20px_rgba(239,68,68,0.2)]
+
+                transition-all
+                duration-300
+
+                hover:shadow-[0_0_30px_rgba(239,68,68,0.5)]
+              "
             >
+
               <Send size={18} />
+
               Send Message
+
             </motion.button>
+
 
           </form>
 
         </div>
+
       </motion.div>
+
     </section>
   );
 }

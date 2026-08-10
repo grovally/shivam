@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Reels() {
   return (
-    <section className="relative overflow-hidden bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
 
       {/* =====================================================
           CRYSTAL BACKGROUND

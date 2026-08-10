@@ -22,54 +22,46 @@ export default function Maps() {
   }, []);
 
   return (
-  <section className="relative overflow-hidden bg-white py-16 md:py-24 px-4 sm:px-6 text-white">
+    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
+ 
       {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute -left-32 top-10 h-96 w-96 rounded-full bg-red-500/20 blur-[140px] animate-pulse" />
-        <div className="absolute -right-32 bottom-10 h-96 w-96 rounded-full bg-red-500/20 blur-[140px] animate-pulse" />
-        <div className="absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-indigo-500/10 blur-[180px]" />
+           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
 
-        {/* Grid */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(205, 3, 16, 0.18) 1px, transparent 1px), linear-gradient(90deg, rgba(189, 19, 19, 0.18) 1px, transparent 1px)',
-            backgroundSize: '60px 60px',
-          }}
-        />
-
-        {/* Floating particles */}
-        {Array.from({ length: 24 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full bg-red-400/50"
-            style={{
-              width: Math.random() * 6 + 2,
-              height: Math.random() * 6 + 2,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [-20, 20, -20],
-              opacity: [0.2, 1, 0.2],
-            }}
-            transition={{
-              duration: Math.random() * 5 + 4,
-              repeat: Infinity,
-              delay: Math.random() * 3,
-            }}
-          />
-        ))}
-
-        {/* Moving light line */}
-        <motion.div
-          className="absolute left-0 top-1/3 h-[2px] w-full bg-gradient-to-r from-transparent via-red-400 to-transparent opacity-40"
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
-        />
-      </div>
-
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
+      
+      
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
         <motion.div
@@ -79,18 +71,18 @@ export default function Maps() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <p className="uppercase tracking-[4px] md:tracking-[8px] -mt-6 md:-mt-10 text-black font-semibold text-xs md:text-base">
+          <p className="uppercase tracking-[4px] md:tracking-[8px] -mt-6 md:-mt-10 text-white font-semibold text-xs md:text-base">
   Premium Real Estate
 </p>
           
-          <h1 className=" text-5xl md:text-7xl font-bold text-red-600 leading-tight">
+          <h1 className=" text-5xl md:text-7xl font-bold text-white leading-tight">
             Explore
-            <span className="block bg-gradient-to-r bg-black  bg-clip-text text-transparent">
+            <span className=" text-red-600">
               Noida Properties
             </span>
           </h1>
 
-          <p className="mt-6 mx-auto max-w-3xl text-lg text-black/40 leading-8">
+          <p className="mt-6 mx-auto max-w-3xl text-lg text-white/80 leading-8">
             Verified premium residential and commercial projects with excellent
             connectivity, top developers, and high investment potential.
           </p>
@@ -105,31 +97,31 @@ export default function Maps() {
           className="grid gap-10 lg:grid-cols-2 items-center mb-14"
         >
           {/* Text */}
-          <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-2xl">
-            <div className="flex items-center gap-3 text-red-600 font-semibold uppercase tracking-[4px]">
-              <MapPin size={18} />
+          <div className="rounded-3xl border border-red-200 bg-white/20  backdrop-blur-xl p-8 shadow-2xl">
+            <div className="flex items-center gap-3 text-white font-semibold uppercase tracking-[4px]">
+              <MapPin className='text-red-600' size={18} />
               Noida
             </div>
 
-            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-black leading-tight">
+            <h2 className="mt-5 text-4xl md:text-5xl font-bold text-red-600 leading-tight">
               Luxury Living in Noida
             </h2>
 
-            <p className="mt-6 text-black/50 leading-8 text-lg">
+            <p className="mt-6 text-white/80 leading-8 text-lg">
               Explore 850+ verified premium projects, metro-connected sectors,
               luxury apartments, commercial towers, and high-ROI investment
               opportunities across Noida.
             </p>
 
             <div className="mt-8 grid grid-cols-2 gap-4">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="rounded-2xl border border-red-100 bg-white/5 p-4">
                 <p className="text-3xl font-black text-red-400">850+</p>
-                <p className="text-sm text-gray-400">Verified Projects</p>
+                <p className="text-sm text-white">Verified Projects</p>
               </div>
 
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+              <div className="rounded-2xl border border-red-100 bg-white/5 p-4">
                 <p className="text-3xl font-black text-red-400">4.9★</p>
-                <p className="text-sm text-gray-400">Client Rating</p>
+                <p className="text-sm text-white">Client Rating</p>
               </div>
             </div>
 
@@ -143,7 +135,7 @@ export default function Maps() {
           </div>
 
           {/* Image Slider */}
-          <div className="relative h-[420px] overflow-hidden rounded-[32px] border border-white/10 bg-white/5 shadow-2xl">
+          <div className="relative h-[420px] overflow-hidden rounded-[32px] border border-red-200 bg-white/20 shadow-2xl">
             {noidaImages.map((img, index) => (
               <motion.img
                 key={img}
@@ -163,10 +155,10 @@ export default function Maps() {
 
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[3px] text-cyan-300">
+                <p className="text-sm uppercase tracking-[3px] text-red-300">
                   Featured
                 </p>
-                <h3 className="mt-1 text-2xl font-black">
+                <h3 className="mt-1 text-2xl font-white">
                   Noida Luxury Residences
                 </h3>
               </div>
@@ -177,7 +169,7 @@ export default function Maps() {
                     key={i}
                     onClick={() => setCurrentNoida(i)}
                     className={`h-2.5 rounded-full transition-all ${
-                      currentNoida === i ? 'w-8 bg-cyan-400' : 'w-2.5 bg-white/40'
+                      currentNoida === i ? 'w-8 bg-red-400' : 'w-2.5 bg-white/40'
                     }`}
                   />
                 ))}
@@ -185,6 +177,7 @@ export default function Maps() {
             </div>
           </div>
         </motion.div>
+      
 
         {/* Divider for Part 2 */}
        

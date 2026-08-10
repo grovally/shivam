@@ -28,11 +28,10 @@ export default function About() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white text-black">
+    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
 
       {/* Background Glow */}
-      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-red-500/20 blur-[140px]" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-yellow-600/20 blur-[140px]" />
+     
 
       <div className="relative  -mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
 
@@ -47,13 +46,13 @@ export default function About() {
             About Us
           </p>
 
-          <h1 className="text-5xl md:text-6xl  text-red-500 font-bold mt-5">
-            Your Trusted <span className="block  bg-gradient-to-r from-red-600 to-yellow-300 bg-clip-text text-transparent ">Real Estate Partner
+          <h1 className="text-5xl md:text-6xl  text-white font-bold mt-5">
+            Your Trusted <span className="text-red-600  ">Real Estate Partner
               </span> 
           </h1>
 
-          <p className="max-w-3xl mx-auto mt-6 text-black/45 text-lg leading-8">
-            At <span className="text-black font-semibold">Chhabra Properties</span>,
+          <p className="max-w-3xl mx-auto mt-6 text-white/80 text-lg leading-8">
+            At <span className="text-red-600 font-semibold">Chhabra Properties</span>,
             we help people buy, sell, and invest in real estate with confidence,
             transparency, and professional guidance.
           </p>
@@ -62,59 +61,71 @@ export default function About() {
         {/* Story */}
         <div className="grid lg:grid-cols-2 gap-12 mt-20 items-center">
 
-          <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <img
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900"
-              alt="Office"
-              loading="lazy"
-              className="rounded-3xl shadow-2xl"
-            />
-          </motion.div>
+          
+<motion.div
+  initial={{ opacity: 0, x: -60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  className="rounded-3xl border border-red-200 p-1 shadow-2xl"
+>
+  <img
+    src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900"
+    alt="Office"
+    loading="lazy"
+    className="w-full rounded-[22px] object-cover"
+  />
+</motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            
 
-            <p className="text-black/95  leading-8">
-              Chhabra Properties simplifies property buying, 
-              
-              selling, and investing with transparent
-               and trusted services across Delhi-NCR.
-               Our mission is to redefine the real estate
-                experience in Delhi-NCR by delivering honest
-                 guidance, reliable expertise, and a commitment
-                  to complete client satisfaction. With a skilled
-                   team that understands the local market deeply,
-                    we bring clarity and confidence to every property
-                     transaction. For us, real estate is not just about
-                      deals—it’s about trust, relationships, and helping
-                       our clients make the right decisions for their future
-                       Whether you’re buying your first home, selling a property, 
-                       or exploring investment opportunities, our services are designed
-                        to match your unique needs. We take pride in our transparency,
-                         integrity, and personalized support at every step. From the first 
-                         conversation to the final paperwork, Chhabra Properties ensures a
-                          smooth, stress-free, and genuinely helpful real-estate experience.
-            </p>
-          </motion.div>
+
+         
+<motion.div
+  initial={{ opacity: 0, x: 60 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+>
+  <p
+    className="
+      text-white/80
+      rounded-3xl
+      border
+      border-red-200
+      p-6
+      shadow-2xl
+      leading-8
+    "
+  >
+    Chhabra Properties simplifies property buying, selling, and
+    investing with transparent and trusted services across Delhi-NCR.
+    Our mission is to redefine the real estate experience in Delhi-NCR
+    by delivering honest guidance, reliable expertise, and a commitment
+    to complete client satisfaction. With a skilled team that understands
+    the local market deeply, we bring clarity and confidence to every
+    property transaction. For us, real estate is not just about deals—
+    it’s about trust, relationships, and helping our clients make the
+    right decisions for their future.
+
+    Whether you’re buying your first home, selling a property, or
+    exploring investment opportunities, our services are designed to
+    match your unique needs. We take pride in our transparency,
+    integrity, and personalized support at every step. From the first
+    conversation to the final paperwork, Chhabra Properties ensures a
+    smooth, stress-free, and genuinely helpful real-estate experience.
+  </p>
+</motion.div>
+
+
 
         </div>
 
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2  gap-8 mt-24">
-          <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-red-200">
+          <div className="rounded-3xl border border-red-200 bg-white/20 p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-red-200">
   <Target className="mb-5 text-red-500" size={42} />
-  <h3 className="text-2xl font-bold text-gray-900">
+  <h3 className="text-2xl font-bold text-red-600">
     Our Mission
   </h3>
-  <p className="mt-4 leading-7 text-gray-600">
+  <p className="mt-4 leading-7 text-white/80">
     To provide trustworthy, transparent, and customer-focused real estate
     services that create long-term value.
   </p>
@@ -123,12 +134,12 @@ export default function About() {
         
         
            
-          <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-red-200">
+          <div className="rounded-3xl border border-red-200 bg-white/20 p-8 shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-red-200">
    <Eye className="text-red-400 mb-5" size={42} />
-  <h3 className="text-2xl font-bold text-gray-900">
+  <h3 className="text-2xl font-bold text-red-600">
     Our Vision
   </h3>
-  <p className="mt-4 leading-7 text-gray-600">
+  <p className="mt-4 leading-7 text-white/80">
     To become one of India's most trusted real estate companies by
               delivering exceptional service and innovative solutions.
   </p>
@@ -147,7 +158,7 @@ export default function About() {
             <div className="rounded-3xl bg-white/5  rounded-3xl shadow-2xl border border-white/10 p-8">
               <Users className="text-red-400 mb-5" size={40} />
               <h3 className="text-2xl font-bold">Expert Team</h3>
-              <p className="text-black/90 mt-4">
+              <p className="text-white mt-4">
                 Experienced professionals who understand the market and your needs.
               </p>
             </div>
@@ -155,7 +166,7 @@ export default function About() {
             <div className="rounded-3xl bg-white/5 rounded-3xl shadow-2xl border border-white/10 p-8">
               <Award className="text-red-400 mb-5" size={40} />
               <h3 className="text-2xl font-bold">Trusted Service</h3>
-              <p className="text-black/90 mt-4">
+              <p className="text-white/80 mt-4">
                 Honest advice, transparent deals, and long-lasting client relationships.
               </p>
             </div>
@@ -175,7 +186,7 @@ export default function About() {
        
 
       </div>
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 ">
 
   <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
@@ -196,8 +207,8 @@ export default function About() {
 
       <h2 className="
       text-4xl md:text-6xl
-      font-black
-      text-gray-900
+      font-white
+      text-white
       mt-3
       ">
 
@@ -263,12 +274,12 @@ export default function About() {
       <div
       key={index}
       className="
-      bg-white
+     
       rounded-3xl
       p-8
       shadow-xl
       border
-      border-black
+      border-red-200
       hover:-translate-y-3
       transition-all
       duration-300
@@ -281,8 +292,8 @@ export default function About() {
         w-16
         h-16
         rounded-2xl
-        bg-red-600
-        text-black
+        
+        text-red-500
         flex
         items-center
         justify-center
@@ -297,8 +308,8 @@ export default function About() {
 
         <h3 className="
         text-2xl
-        font-black
-        text-gray-900
+        font-bold
+        text-red-600
         mb-4
         ">
 
@@ -309,7 +320,7 @@ export default function About() {
 
 
         <p className="
-        text-gray-600
+        text-white/80
         leading-7
         ">
 
@@ -333,7 +344,7 @@ export default function About() {
   </div>
 
 </section>
-      <section className="py-24 bg-white">
+      <section className="py-24 ">
 
   <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
@@ -348,8 +359,8 @@ export default function About() {
 
       <h2 className="
       text-4xl md:text-6xl 
-      font-black 
-      text-gray-900 
+      font-bold
+      text-white
       mt-3
       ">
         Milestones
@@ -376,7 +387,7 @@ export default function About() {
       top-0
       bottom-0
       w-1
-      bg-cyan-100
+      bg-red-500
       -translate-x-1/2
       "></div>
 
@@ -441,7 +452,7 @@ export default function About() {
 
         <div className="
         md:w-1/2
-        bg-gray-50
+        bg-white/20
         rounded-3xl
         p-8
         shadow-lg
@@ -452,8 +463,8 @@ export default function About() {
 
           <h3 className="
           text-2xl
-          font-black
-          text-gray-900
+          font-bold
+          text-white
           mb-3
           ">
             {item.title}
@@ -470,7 +481,7 @@ export default function About() {
 
 
           <p className="
-          text-gray-600
+          text-white/80
           leading-7
           ">
             {item.desc}
@@ -491,13 +502,13 @@ export default function About() {
         w-16
         h-16
         rounded-full
-        bg-red-600
-        text-white
+        bg-white/50
+        text-whte
         flex
         items-center
         justify-center
         text-xl
-        font-black
+        font-bold
         shadow-xl
         ">
 
@@ -520,34 +531,7 @@ export default function About() {
 
 
   </div>
-  <div className="mx-auto mt-24 max-w-4xl overflow-hidden rounded-[28px] bg-gradient-to-r from-red-700 via-red-600 to-orange-500 px-6 py-12 text-center shadow-xl">
 
-  <h2 className="text-3xl font-bold leading-tight text-white md:text-5xl">
-    Let's Find Your Perfect Property
-  </h2>
-
-  <p className="mx-auto mt-6 max-w-2xl text-base text-red-100 md:text-lg">
-    Whether you're buying, selling, or investing, our property experts are
-    here to guide you through every step with trust and transparency.
-  </p>
-
-  <div className="mt-10 flex justify-center gap-4">
-    <Link
-      to="/contact"
-      className="inline-flex items-center rounded-full bg-white px-8 py-4 font-semibold text-red-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl md:px-10"
-    >
-      Contact Us →
-    </Link>
-
-    <Link
-      to="/maps"
-      className="inline-flex items-center rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white hover:text-red-600"
-    >
-      View Properties
-    </Link>
-  </div>
-
-</div>
 
 </section>
 

@@ -586,20 +586,7 @@ Sigma 4 Greater Noida offers a variety of contemporary residential complexes, su
 Sigma IV provides emerging road connectivity linking it to other prominent sectors of Greater Noida (its position can be seen on the Greater Noida Map) and has proximity to emerging social and commercial facilities, offering a life of ease to prospective residents. The sector also has scope for appreciation in property value as it keeps expanding and growing up. Although the Yamuna Expressway offers wider regional connectivity (as indicated on the Yamuna Expressway Map), Sigma IV is attractive due to its contemporary aspects and future potential. As top and sincere Property Dealers In Greater Noida, Chhabra Properties is dedicated to assisting you in finding the perfect property in Sigma IV, Greater Noida, with an expanding portfolio of sigma properties, professional advice, precise sector details, and individualized support. Make Chhabra Properties your go-to guide for discovering the contemporary living and upcoming sigma properties in Sigma 4, Greater Noida. Call us now!`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890793/SIGMA-IV_h1nyfp.png",
     },
-    ,
-    {
-       slug: "surajpur site-c",
-      title:" Surajpur Site-C",
-      description:`About Surajpur Site-C, Greater Noida, Uttar Pradesh
-Surajpur Site C, Greater Noida, is a developing residential sector within the larger Surajpur Greater Noida area. While the Surajpur Industrial Area Greater Noida is a prominent feature, Surajpur Site C is emerging as a promising residential hub in Greater Noida Uttar Pradesh. Often associated with the broader industrial landscape including Surajpur Site C Industrial Area, this location is increasingly becoming a destination for modern residential developments. You might also encounter references to UPSIDC Site C Surajpur and UPSIDC Site C Surajpur Greater Noida Uttar Pradesh, primarily linked to the industrial zone, but at Chhabra Properties, your reliable and professional Real Estate Agents In Greater Noida, we're here to scout out the residential opportunities this pocket has in store.
- 
-
-For individuals looking for postal details in this emerging residential pocket, the Surajpur Greater Noida Pin Code is 201306, and our professionals at Chhabra Properties can furnish the correct details, such as the pin code of Surajpur Site C greater Noida and sector details. To give you a clearer understanding of the residential layout, Chhabra Properties, your trusted Greater Noida Property Dealers, also provides our exclusive Layout Map of Surajpur Site C, by Chhabra Properties. This upcoming residential destination enjoys the proximity to the matured infrastructure of Surajpur Greater Noida and working opportunities in Surajpur Industrial Area. On the Greater Noida Map, you are able to judge the location as well as the connectivity of this region.
- 
-
-Surajpur Site C presents a growing road network connecting it with other areas of Greater Noida and enjoys a location near the employment centers of Surajpur Industrial Area, becoming a very comfortable place to reside for employees who work there, as well as being well-connected with amenities and facilities growing up around the larger area of Surajpur Greater Noida. Though the Yamuna Expressway provides wider regional connectivity (as indicated on the Greater Noida Map), the initial attraction for locals is the emerging residential setting and ease of access to work. As top and professional Property Dealers In Greater Noida, Chhabra Properties is dedicated to assisting you in acquiring the correct residential property in Surajpur Site C, Greater Noida. We provide information on the increasing residential developments and choices, expert advice, precise sector information, and customized support. Make Chhabra Properties your trusted partner for exploring the upcoming residential opportunities in Surajpur Site C, Greater Noida. Call us now!`,
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890801/Untitled_design_24_sitvau.png",
-    },
+    
     
     {
        slug: "Sector XU1",
@@ -658,106 +645,8 @@ Emerging road networks are developing improved connectivity with other areas of 
    
     
    
-    {
-       slug: "sector 18",
-        title:" Sector 18",
-        description:`
-About Sector 18, Noida
-Sector 18 Noida - the commercial and lifestyle center of Noida, Uttar Pradesh. The Noida Sector 18 Pin Code is 201301. This vibrant locality is frequently known simply as Noida Sec 18. Sector 18 is easily the best area in Noida to conduct business; to experience entertainment; and to reside luxuriously. As leading Greater Noida Property Dealers, we here at Chhabra Properties know Sector 18 is a veritable powerhouse area of investment and city life. The attendants at Chhabra Properties have prepared a neighbourhood map of the streets of Sector 18, Noida, to help you navigate the activity and appreciate everything that has to offer. The Layout Map of Sector 18, Noida will be a tool for students in this renowned sector.
- 
-
-What is really special about Sector 18 Noida, and also a feature that is frequently cited by the best Real Estate Agents In Noida, is its truly world class connectivity. A standout asset is the presence of the Noida Sector 18 Metro Station right in the heart of the locality. This busy Metro Station Sector 18 Noida on the Blue Line assures many commuters, residents and visitors that they will very quickly and seamlessly travel to Delhi and the rest of the city. Beyond the immediate metro advantage, Noida Sector 18 also has better roads, than its nearby counterparts, as it is directly connected to the major arteries such as the DND Flyway and the Noida-Greater Noida Expressway. The position is clearly visible from the Noida Map and also the larger Greater Noida Map further illustrating is connectivity. Also it has easy access to villages, that connect directly towards the Yamuna Expressway, with easy access to Greater Noida and key location points.
- 
-
-Living in Sector 18 Noida Uttar Pradesh offers a glimpse into a 5-star lifestyle experience, with no shortage of world-class facilities available. In this sector, you will find the legendary Sector 18 Market (Atta Market); this market is a goldmine for everything from groceries to fashion. With a phenomenal retail presence in Noida Sector 18 Mall, including the familiar names of DLF Mall of India and The Great India Place, shopping, dining, and entertainment opportunities abound. The sector has a vibrant commercial ecosystem, with plenty of options like the SBI Sector 18 Noida location being a clear indication of the sector's corporate presence and financial options. When compared to numerous surrounding areas, the social infrastructure is vast, as all your educational purposes and healthcare options are serviced very well in the sector. For established Property Dealers In Noida like Chhabra Properties, Sector 18 Noida is the most attractive area for a real estate investment opportunity. There is an absolutely continuous range of attractiveness. With such a great central site, large accessibility and connectivity to plenty of employment districts, high numbers of people using this area, and internationally/celestially what is could be called some of the newest and allow urban environment in Greater Noida; it is a fabulous locality to run your dynamic business and live with end results that will maintain value of the property.`,
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806932/SECTOR-18_POCKET-9B_yydym4.jpg"
-    }
+    ,
     
-    ,
-    {
-       slug: "SECTOR-18 POCKET-8",
-        title:"SECTOR-18 POCKET-8",
-        description:``,
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806927/SECTOR-18_POCKET-8_mbuubx.jpg"
-    }
-    ,
-    {
-       slug: "SECTOR-18  POCKET7E",
-        title:"SECTOR-18  POCKET7E",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806927/SECTOR-18_POCKET-7E_s1p6zm.jpg"
-    }
-    ,
-    {
-      slug: " Sector-18 Pocket-7b",
-        title:" Sector-18 Pocket-7b",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806924/SECTOR-18_POCKET-7B_7F_psxopn.jpg"
-    }
-    ,
-    {
-      
-      slug: " Sector-24",
-        title:"Sector 24",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806920/SECTOR-_24_mb58i7.jpg"
-    }
-    ,
-    {
-      slug: " Sector-18b",
-        title:" Sector 18B",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806917/SECTOR-18_POCKET-1B_hhrcci.jpg"
-    }
-    ,
-    {
-      slug: " Sector-24a",
-        title:" Sector 24A",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806917/SECTOR-_24A_gmxtfu.jpg"
-    }
-    ,
-    {
-      slug: " Sector-22e",
-        title:" Sector 22E",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806910/SECTOR-_22E_hfnasq.jpg"
-    }
-    ,
-    {
-      slug: " Sector-21",
-        title:" Sector -21",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806908/SECTOR-_21_becukh.jpg"
-    }
-    ,
-    {
-      slug: " Sector-17a",
-        title:" Sector-17A",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806906/SECTOR-_17A_vej65j.jpg"
-    }
-    ,
-    {
-      slug: "NILONI-SHAHPUR-BLOCK ",
-        title:"NILONI-SHAHPUR-BLOCK",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806890/7_VILLAGE-_NILONI_SHAHPUR_BLOCK-B_s56mvq.jpg"
-    }
-    ,
-    {
-      slug: "RAMPUR-BANGAR SADAR ",
-        title:"RAMPUR-BANGAR SADAR",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806890/7_VILLAGE-_RAMPUR_BANGAR_SADAR_jwrmbr.jpg"
-    }
-    ,
-    {
-       slug: "MIRJAPUR-SECTOR-18 ",
-        title:"MIRJAPUR-SECTOR-18",
-        description:"",
-        image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806880/7_VILLAGE-_MIRJAPUR_SECTOR-18_PCKT-9_hgjb00.jpg"
-    }
     ,
     {
        slug: "SECTOR-127 ",
@@ -829,13 +718,7 @@ Techzone 4 Greater Noida is also an attractive option for institutional, IT and 
 Chhabra Properties, being the leading Property Dealers In Greater Noida, allows you to tap into the many opportunities in the classified real estate market in, Tech Zone IV, Greater Noida. We strive to provide you with the best information on available commercial office space, retail outlets and institutional plots, as we specialize in this sector and possess the relevant knowledge. With the geography of Techzone 4 acting in its favor and good connectivity, such as the Yamuna Expressway (as shown on the Yamuna Expressway Map), there will also be a positive implications towards carrying out business operations and investment for long term; with proficiencies of logistics, a positive rise in capital appreciation, and rental yields. Contact us at Chhabra Properties, to make use of the promising commercial and institutional opportunities available within Tech Zone 4, Greater Noida.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890797/TECH_ZONE_4_v51fso.png",
     },
-    {
-      
-      slug: "SURAJPUR-SITE-IV ",
-      title:"SURAJPUR-SITE-IV",
-      description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890796/SURAJPUR-SITE-IV_y9axjx.png",
-    },
+   
     {
        slug: "SURAJPUR-SITE-C RESIDENTIAL ",
       title:"SURAJPUR-SITE-C RESIDENTIAL",
@@ -865,7 +748,7 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
     },
     {
       slug: "SURAJPUR-SITE-V A-2 ",
-      title:"SITE-V A-2",
+      title:" SURAJPUR SITE-V (A-2)",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890792/SITE-V_A-2_nj6gzo.png",
     },
@@ -954,7 +837,7 @@ The sector enjoys steadily improving road infrastructure, ensuring seamless conn
     },
      {
       slug: "ECOTECH-2",
-      title:"ECOTECH-II.",
+      title:"ECOTECH-II UDYOG VIHAR",
       description:`About Ecotech II, Greater Noida, Uttar Pradesh*
 
 *Ecotech II, Greater Noida, also known as **Ecotech II Udyog Vihar* or simply *Ecotech 2, is one of the most prominent industrial hubs in Greater Noida. This well-established industrial sector plays a vital role in the region's manufacturing, logistics, and commercial growth. At **Chhabra Properties, your trusted and experienced **Greater Noida Property Dealers*, we specialize in industrial real estate and help businesses, manufacturers, and investors find the best industrial and commercial properties in this thriving location.
@@ -966,7 +849,7 @@ Ecotech II is supported by robust infrastructure, including uninterrupted power 
     },
     {
       slug: "ECOTECH-3",
-      title:"ECOTECH-III",
+      title:"ECOTECH-III UDYOG KENDRA",
       description:`About Ecotech III, Greater Noida, Uttar Pradesh
 
 Ecotech III, Greater Noida, also known as Ecotech 3, is one of the leading industrial and commercial hubs within the rapidly expanding Ecotech Greater Noida region. This well-planned industrial sector plays a significant role in the economic growth of Greater Noida and offers excellent opportunities for manufacturing, warehousing, logistics, and commercial businesses. Distinct from nearby industrial sectors such as Ecotech II, Ecotech III has established itself as a preferred destination for industrial investment. The Ecotech III Greater Noida Pin Code is 201306, ensuring smooth postal and logistics operations. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we specialize in industrial and commercial real estate and help businesses find the most suitable investment opportunities in this thriving sector.
@@ -1011,7 +894,7 @@ Constant development of the road network is boosting connectivity with well-esta
     
     {
       slug: "ECOTECH-1 EXTENSION",
-      title:"ECOTECH-I EXTENSION.",
+      title:"ECOTECH-I EXTENSION",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890740/ECOTECH-I_EXTENSION._xtjktd.png",
     },
@@ -1113,8 +996,8 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890713/ABADI_AT_VILL._RITHORE.jpg_zh5tar.png"
     },
     {
-      slug:"ABADI AT VILL RASULPUR RA",
-      title:"ABADI AT VILL RASULPUR RA",
+      slug:"ABADI AT VILL RASULPUR RAI",
+      title:"ABADI AT VILL RASULPUR RAI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890712/ABADI_AT_VILL._RASULPUR_RAI_AT_ZETA-I.jpg_aknday.png"
     },
@@ -1193,8 +1076,8 @@ Constant development of the road network is boosting connectivity with well-esta
    ,
    {
     
-       slug:"ABADI AT VILL. HABIBATPUR ",
-    title:"ABADI AT VILL. HABIBATPUR",
+       slug:"ABADI AT VILL. HAIBATPUR ",
+    title:"ABADI AT VILL. HAIBATPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890698/ABADI_AT_VILL._HABIBATPUR_vlqk8w.png"
    },
@@ -1227,8 +1110,8 @@ Constant development of the road network is boosting connectivity with well-esta
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890695/ABADI_AT_VILL._DABRA_b6gzix.png"
    },{
     
-       slug:"ABADI AT VILL. CHUHARPUR ",
-    title:"ABADI AT VILL. CHUHARPUR",
+       slug:"ABADI AT VILL. CHUHADPUR ",
+    title:"ABADI AT VILL. CHUHADPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890694/ABADI_AT_VILL._CHUHAR_PUR_GHARBHARA_cyntxd.png"
    }
