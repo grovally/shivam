@@ -67,6 +67,7 @@ export default function Noida() {
         className="
           text-center
           text-4xl
+          text-black
           sm:text-5xl
           lg:text-6xl
           font-bold
@@ -101,24 +102,24 @@ export default function Noida() {
             md:w-1/4
             rounded-xl
             border
-            border-white/10
-            bg-white/[0.06]
+            border-red-500/10
+            bg-black/[0.06]
             backdrop-blur-xl
             px-4
             py-3
-            text-white
-            placeholder:text-gray-400
+            text-black
+            placeholder:text-black-400
             outline-none
             transition
-            focus:border-orange-500/50
+            focus:border-red-500/50
             focus:ring-2
-            focus:ring-orange-500/20
+            focus:ring-red-500/20
           "
         />
 
         <div className="flex flex-wrap gap-3">
           <button
-            onClick={() => setCategory("residential")}
+           
             className={`
               px-5
               py-2.5
@@ -127,8 +128,8 @@ export default function Noida() {
               transition-all
               ${
                 category === "residential"
-                  ? "bg-orange-500 text-white shadow-lg shadow-orange-500/30"
-                  : "bg-white/[0.07] text-gray-300 border border-white/10 hover:bg-white/10"
+                  ? " text-white shadow-lg shadow-orange-500/30"
+                  : "bg-black text-gray-300 border border-white/10 hover:bg-white/10"
               }
             `}
           >
@@ -136,7 +137,7 @@ export default function Noida() {
           </button>
 
           <button
-            onClick={() => setCategory("noida")}
+            
             className={`
               px-5
               py-2.5
@@ -145,8 +146,8 @@ export default function Noida() {
               transition-all
               ${
                 category === "noida"
-                  ? "bg-red-500 text-white shadow-lg shadow-red-500/30"
-                  : "bg-white/[0.07] text-gray-300 border border-white/10 hover:bg-white/10"
+                  ? "bg-red-500 text-black shadow-lg shadow-red-500/30"
+                  : "bg-black text-gray-300 border border-white/10 hover:bg-white/10"
               }
             `}
           >
@@ -206,7 +207,7 @@ export default function Noida() {
                 bg-white/[0.06]
                 backdrop-blur-xl
                 border
-                border-white/10
+                border-black/10
                 hover:border-red-500/30
                 hover:shadow-red-500/10
                 transition-all
@@ -220,7 +221,7 @@ export default function Noida() {
                   aspect-[4/3]
                   overflow-hidden
                   cursor-pointer
-                  bg-gray-900
+                  bg-black
                 "
               >
                 {item?.image ? (

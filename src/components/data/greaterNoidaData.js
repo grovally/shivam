@@ -1,5 +1,6 @@
 export const greaterNoida =[
-   { slug: "Alpha-1",
+   {
+      id: 1, slug: "Alpha-1",
       title:"ALPHA-I",
       description:`
 About Alpha 1, Greater Noida
@@ -14,6 +15,7 @@ As one of the top property dealers in greater noida, Chhabra Properties provides
     },
    
      {
+      id: 2,
        slug: "Alpha-2",
       title:"ALPHA-II",
       description:`Discover the energetic atmosphere of Sector Alpha II (Alpha 2) in Greater Noida, a well-connected area known for its blend of residential and commercial spaces and its proximity to Metro Station Alpha 1. This dynamic sector offers a unique lifestyle within Greater Noida, seamlessly integrating residential comfort with bustling commercial activity. Explore the diverse offerings of the Alpha 2 Market Greater Noida, a central hub for shopping, dining, and local interactions. Key landmarks like Satyam Complex 2 further enhance the sector's appeal.
@@ -27,8 +29,17 @@ Navigate Sector Alpha II effortlessly with the detailed Layout Map of Alpha 2, p
 Sector Alpha II's connectivity is a major advantage, with convenient access not only to Metro Station Alpha 1 but also to the wider Greater Noida region and the Yamuna Expressway, facilitating easy commutes and travel. The official Alpha 2 Greater Noida Pin Code and Alpha 2 Pin Code is 201310, ensuring efficient navigation and services within Greater Noida, as clearly indicated on the Greater Noida Map. Let Chhabra Properties be your partner in exploring the vibrant opportunities that Sector Alpha II has to offer.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890726/ALPHA-II_sn21lr.png"
     },
+    {
+      slug:"30 MTR FLATS AT BETA-I",
+      title: "30 MTR FLATS AT BETA-I",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload /f_auto,q_auto,w_1200/v1784803240/30_MTR_FLATS_AT_BETA-I_tgdofy.jpg"
+
+    },
+
 
     {
+      id: 3,
        slug: "Bata-1",
       title:"BETA-I",
       description:`Beta I, Greater Noida is an emerging sector in Greater Noida, providing a mix of residential and commercial opportunities. Imagine the plan and potential of the emerging sector with the Beta 1 Layout Map, typically provided by Greater Noida Property Dealers such as Chhabra Properties. Although still emerging, Beta 1 provides potential and growing connectivity in the Greater Noida environment. The beta 1 greater noida sector is slowly emerging as a desired destination. You will experience commercial activity around beta plaza greater noida also sometimes spelled beta plaza, catering to the needs of the residents.
@@ -46,6 +57,7 @@ As one of the trusted Property Dealers In Greater Noida, at Chhabra Properties, 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890729/BETA-I_vvkp8x.png"
     },
      {
+      id: 4,
        slug: "Beta-2",
       title:"BETA-II",
       description:`Beta 2, Greater Noida or Beta II, is a sector in Uttar Pradesh's Greater Noida that presents new business and residential opportunities. You can visualize the plan and possibilities of the area with the Beta 2 Layout Map, which is typically provided by Greater Noida Property Dealers such as Chhabra Properties | Greater Noida. The map provides the future infrastructure and planned region in Beta II in Greater Noida, Uttar Pradesh. Once the area develops, the Beta 2 Greater Noida Pin Code and Beta 2 Pin Code is 201308, provides essential location details for the area. There is future development transforming the infrastructure and facilities of Greater Noida's Beta 2.
@@ -57,6 +69,7 @@ The Beta 2 Layout Map indicates proposed residential blocks, commercial zones, a
     },
 
      {
+      id: 5,
        slug: "Chi-phi Extension",
       title:"CHI-PHI EXTENSION",
       description:`Okay, so let's discuss the Chi Phi, Greater Noida as if we are seriously discussing neighbourhood. You understand how Greater Noida is divided into all these sectors? Well, "Chi Phi" isn't one specific sector, but rather a term by which folks refer to a couple of exceedingly crucial residential areas down in the southwest sector – namely Chi V (or you may see it as Sector Chi 5 Greater Noida) and Chi IV (or Sector Chi 4 Greater Noida). You'll also find that the neighbouring areas like Phi 3 Greater Noida and Chi 3 Greater Noida contribute to the overall residential feel of this part of the city.
@@ -75,6 +88,7 @@ Walking around or glancing at the plans of Chi V Greater Noida Uttar Pradesh, yo
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890739/CHI-PHI_EXTENSION_hzuz2n.png",
     },
      {
+      id: 6,
        slug: "Delta-1",
       title:" DELTA-I",
       description:`This is a solidly established area of the city that is just right – a healthy balance of houses, stores, and even some schools and institutions. To truly understand how all the different parts of it are laid out, you can usually get a Layout Map Of Delta 1. Presented by Chhabra Properties one of trusted name in Property Dealers in Greater Noida. The visual guide shows you how the residential sections feed into the commercial areas, the parks, and where the important landmarks such as the Delta 1 Metro Station are. Talking of which, this metro station delta 1 (you may also refer to it as delta metro station) makes commuting to other areas of Noida and the NCR an ease.
@@ -89,6 +103,7 @@ If you're looking for property here in Delta 1 or elsewhere in Greater Noida, fo
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-I_nu1rg6.png",
     },
     {
+      id: 7,
        slug: "Delta-2",
       title:"DELTA-II",
       description:`Delta 2 Greater Noida is a well-planned sector that promotes a relaxed and hassle-free lifestyle. To really understand its layout, make sure to visit the Layout Map Of Delta 2, Greater Noida. This detailed layout map of Delta 2, Greater Noida, is provided by Chhabra Properties – recognized as one of the best property dealers in greater noida. The pictorial guide is crystal clear and shows how the residential areas, commercial centers, parks and gardens, and other major amenities. While Delta 2 in Greater Noida doesn't have its own dedicated 'Delta 2 Metro Station', residents and visitors can conveniently access the metro network via nearby stations such as the Delta 1 Metro Station., are placed in the sector. If you are browsing around Greater Noida Delta 2, the layout map will provide you with a clear idea of the planning of the community.
@@ -105,6 +120,7 @@ Briefly speaking, Delta 2 is a developed and networked sector in Greater Noida t
     }
     ,
     {
+      id: 8,
        slug: "Delta-3",
       title:"DELTA-III",
       description:`Dreaming of new starts in Greater Noida? Let's see what Delta III has to offer. This is a growing sector, also referred to as Delta 3 or even Delta III, which is taking shape with a combination of homes and shops. To get a true sense of how it's all shaping up, be sure to see the Layout Map Of Delta 3, Greater Noida, which we offer at Chhabra Properties | Greater Noida. This visual map will give you a sense of the existing layout and future development. If you see "O Block Delta III Greater Noida Uttar Pradesh," well, that is perhaps a individual segment or undertaking in this rising zone of Greater Noida, Uttar Pradesh, India.
@@ -128,6 +144,7 @@ Travel to other areas of the NCR from Delta III is also easy, with its location 
     }
     ,
     {
+      id: 9,
        slug: "Eta-1",
       title:"ETA-I",
       description:`Eta 1 Greater Noida is a reputed and emerging sector that is well known for housing residential and commercial areas. While frequently mentioned along with its sister sector, Eta II, Eta 1 has its own set of benefits and sense of community as part of the Greater Noida ecosystem. To commute conveniently with metro connectivity, dwellers in the Eta 1 neighbourhood habitually take support from the Delta 1 Metro Station belonging to the Aqua Line and are conveniently connected with the other main hubs of Noida as well as the NCR. If you wish to know about the planning and area layout of the sector, kindly refer to the Layout Map Of Eta 1, Greater Noida. Presented By Chhabra Properties, one of the best property dealers in greater noida
@@ -149,7 +166,28 @@ Though Eta II is an independent and also growing sector in Greater Noida, both E
 Transportation in Greater Noida, including Eta 1, is made easy by major roads and its accessibility to the Yamuna Expressway. You can see the connectivity through Greater Noida Map and Yamuna Expressway Map. They point out how easily Eta 1 connects to other prominent areas and broader NCR. As one of the experienced Property Dealers In Greater Noida, Chhabra Properties provides you with guidance on the area's real estate market. We can give advice regarding options available and assist you with how to enter the property market within this busy sector of Greater Noida, Uttar Pradesh, India.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ETA-I_rm1sxl.png",
     },
+    {
+      slug:"30 MTR. FLAT AT ZETA-I",
+      title:" 30 MTR. FLAT AT ZETA-I",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784803248/30_MTR._FLAT_AT_ZETA-I_exlk2s.jpg"
+    },
+
+    {
+      slug:"ZETA-II",
+      title:" ZETA-II",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784804217/ZETA-II_vbrpmn.jpg"
+    },
+    {
+      slug:"30 MTR. FLAT AT ZETA-I",
+      title:" 30 MTR. FLAT AT ZETA-I",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784803248/30_MTR._FLAT_AT_ZETA-I_exlk2s.jpg"
+    },
+    
      {
+      id: 10,
        slug: "Gamma-1",
       title:"GAMMA-I",
       description:`Want to consider exploring a very vibrant area of Greater Noida? Let's discuss Gamma 1. It's an old established area with a wonderful mix of houses, stores, and even some serious institutions. Perhaps one of the largest attractions here is certainly Jagat Farm. It's essentially a hub spot with a wonderfully vibrant market that draws people in from all directions of Greater Noida. You'll frequently simply hear locals refer to the area as Gamma 1. There's also a Gamma II Greater Noida Uttar Pradesh close by, but Gamma 1 has its own unique vibe and some wonderful benefits. If you're considering gamma properties, this is certainly an area to investigate. To actually get a feel for how it's all planned out, you should take a look at the Layout Map Of Gamma 1, Greater Noida, you can usually get the layout map from Property Dealers in Greater Noida like us at Chhabra Properties – we know the area well. And, traveling is relatively easy since Gamma 1 is also near the Alpha 1 Metro Station on the Aqua Line so it's not difficult to travel to other areas in Noida and Greater Noida.
@@ -164,8 +202,15 @@ If you're considering searching for property in this cosmopolitan region, contac
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890755/GAMMA-1_zywl0l.png",
     },
     {
+      slug:"ABADI AT VILL. GAMMA-I",
+      title:" ABADI AT VILL. GAMMA-I",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803250/ABADI_AT_VILL._GAMMA-I_vsicji.jpg"
+    },
+    {
+      id: 11,
        slug: "Gamma-2",
-      title:"GAMMA-II.",
+      title:"GAMMA-II",
       description:`Gamma II in Greater Noida, Uttar Pradesh is an evolving sector providing a blend of residential and commercial options, usually in the limelight because of its vicinity to the well-established Gamma 1 Greater Noida. Whereas Jagat Farm Market is a large commercial center famously situated in Gamma I, people staying in Gamma 2 Greater Noida enjoy its closeness and convenient accessibility to diverse provisions there. You'll frequently hear the region simply called Gamma II. Though separate from Gamma I, the two regions are bound together economically and geographically. To explore gamma properties within this region, reach out to Chhabra Properties, your trusted Greater Noida Property Dealers. It's important to note the ins and outs of both regions.   While Jagat Farm Greater Noida does not lie exactly in Gamma II, proximity delivers a big luxury for inhabitants to enjoy a diversity of shopping, eating, and entertainment facilities. When exploring gamma properties options, consult the Layout Map Of Gamma 2 Greater Noida, a helpful resource from Chhabra Properties.
 
 ​
@@ -178,7 +223,8 @@ Gamma II's placement in Greater Noida, as indicated on the Greater Noida Map, pr
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890756/GAMMA-II._ylwojl.png",
     },
     {
-       slug: "golf Link",
+      id: 12,
+       slug: "GOLF LINK ",
       title:"GOLF LINK",
       description:`Ansal Golf Link 1 Greater Noida is a popular residential complex, commonly known by the name Ansal Golf Link or Ansal Golf Links Greater Noida. Located in a central part of Greater Noida, at Ansal Golf Links 1 Greater Noida Uttar Pradesh, the place features a mix of residential plots and built-up properties. Its very name implies association with golf facilities, adding to its attraction for those who want a well-designed and perhaps environmentally friendly space. It is also referred to as Ansal Golf Link Greater Noida Uttar Pradesh in real estate listings. For all those interested in owning property here, interaction with skilled Greater Noida Property Dealers such as Chhabra Properties is imperative.
  
@@ -193,8 +239,9 @@ For one planning to shop around for property options in Ansal Golf Link 1, acces
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890758/GOLF_LINK-II_cqglnw.png",
     },
     {
-       slug: "Golf LInk-IP-8",
-      title:"GOLF LINK-IP-8",
+      id: 13,
+       slug: "GOLF LINK-(IP-8)",
+      title:"GOLF LINK-(IP-8)",
       description:`Ansal Golf Link 2 in Greater Noida is a developing residential and commercial hub, usually taken as an extension of the reputed Ansal Golf Link. It is situated at UPSIDC Site C, Surajpur, Greater Noida, Uttar Pradesh 201306, and provides its own unique range of opportunities. You can look for it under Ansal Golf Link 2 Greater Noida, drawing in residents in search of houses in a rising area of the city with prospects for expansion and up-to-date facilities. Looking into ansal golf link properties here may prove to be a rewarding investment.
 
 
@@ -210,14 +257,22 @@ Rely on us, your Greater Noida Property Dealers, for comprehensive insights into
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890757/GOLF_LINK-I_P-8_cnqn4b.png",
     },
     {
-       slug: "MU-1",
+      slug:"30 MTR. FLAT_AT MU-I",
+      title:"30 MTR. FLAT AT MU-I",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803241/30_MTR._FLAT_AT_MU-I_cst604.jpg"
+    },
+    {
+      id: 14,
+       slug: "MUP-1",
       title:"MUP-I",
       description:`Explore Chhabra Properties’ Sector MUP-1 Layout Map, which shows the layout of the community and renowned educational institutions like S.S. Memorial Public School, GNIOT Group of Institutions, Kendriya Vidyalaya and Delhi Public School are well connected. Sharada Hospital and Medisys Diagnostics are nearby healthcare facilities that cater to the welfare of the community. Sector MUP-1, with good road connectivity, metro access and proximity to commercial hubs like Alpha 1 is an ideal location for Residential and Industrial  Projects in Greater Noida. Chhabra Properties, your trusted Real Estate Agency in Greater Noida, offers you are going to be the best prospect in this growing industry .`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890774/MUP-I._weol02.png",
     },
     {
+      id: 15,
        slug: "MU",
-      title:"MU.",
+      title:"MU",
       description:`About Sector - Mu, Greater Noida, Uttar Pradesh
 ​Discover Sector Mu in Greater Noida, an established and thoughtfully planned hub for both residential and commercial activity., Commonly abbreviated as Sector Mu or Sector Mu Greater Noida. You may also find Sector Mu 1 or Sector Mu 1 greater noida, sometimes used synonymously to indicate portions of this developed sector. Its proper planning and infrastructure make it a favourable spot in Greater Noida. For a full perspective of its planning, see the Layout Map Of Sector Mu, Greater Noida, commonly supplied by professional Greater Noida Property Dealers such as Chhabra Properties. Tools such as OneMap Greater Noida can also provide useful information.
 
@@ -231,6 +286,7 @@ If you are investigating property choices in Sector Mu, it is strongly advised t
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890769/MU._mlbmly.png",
     },
     {
+      id: 16,
        slug: "MU-1",
       title:"MU-I",
       description:`
@@ -251,6 +307,7 @@ As one of the committed Property Dealers In Greater Noida, we are well placed to
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890768/MU-I_pb9efp.png",
     },
      {
+      id: 17,
        slug: "MU-2",
       title:"MU-II",
       description:`
@@ -271,8 +328,9 @@ Being experienced Property Dealers In Greater Noida, we are able to provide info
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890770/MU-II_t2v4a1.png",
     },
     {
+      id: 18,
        slug: "Mu-2 40 mtr",
-      title:"MU-II 40MTR",
+      title:"MU-II 40 MTR",
       description:`MU 2 Layout Map: Expertly Crafted by Chhabra Properties | Greater Noida Property Dealers.
 Discover Sector MU 2, Greater Noida with Chhabra Properties' Detailed MU 2 Map. Chhabra Properties has meticulously created a layout map for Sector MU-II 40 MTR, Greater Noida offering a clear view of this rapidly developing area. This sector boasts perfect access to major highways and is conveniently located near essential services like SS Memorial Public School, Medisys Diagnostics, and Sharda Hospital. The proximity to the commercial hub of Alpha 1 ensures seamless access to dining, shopping, and travel. Use our MU 2 Map to easily locate Sector MU 2 Greater Noida and understand the planning by the Greater Noida Authority Sector MU 2.
 
@@ -286,13 +344,29 @@ Understand the Mu 2 Greater Noida Pin Code 201310 for easy transactions and cont
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890769/MU-II_40MTR_d2kz9z.png",
     },
     {
+      id: 19,
 
-       slug: "MRI- City",
-      title:"NRI -CITY",
+       slug: "NRI-City",
+      title:"NRI-CITY",
       description:`Unlock the possibilities within Omaxe NRI City. View the NRI City Map and let the expertise of Chhabra Properties | Greater Noida lead you home. Situated in a prime location within Greater Noida, Omaxe NRI City enjoys excellent connectivity near Pari Chowk. For your convenience, the Pin Code for NRI City, Pari Chowk, Omega II, Greater Noida, Uttar Pradesh is 201310. This well-connected community offers a lifestyle of distinction and a diverse range of properties, from thoughtfully designed NRI City Greater Noida Plots to elegant Omaxe NRI City Villas. Whether you're seeking a brand-new residence or a valuable resale opportunity within Omaxe NRI City Greater Noida, the experienced team at Chhabra Properties | Greater Noida, your trusted greater Noida property dealers, are here to guide you through every step in NRI City Omega II, Greater Noida, Uttar Pradesh. Discover your dream property with the local knowledge and dedicated service of Chhabra Properties | Greater Noida.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890772/NRI_CITY_v8jbss.png",
     },
     {
+      slug:"OMICRON-III_A_BLOCK",
+      title:"OMICRON-III_A_BLOCK",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784804454/OMICRON-III_A_BLOCK_eqzmcu.jpg"
+
+    },
+     {
+      slug:"OMICRON-III-C BLOCK",
+      title:"OMICRON-III-C BLOCK",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784804458/OMICRON-III_C_BLOCK_awtu7s.jpg"
+
+    },
+    {
+      id: 20,
       title:"OMICRON-I",
       description:`Omicron I, Greater Noida is an upscale and in-demand residential as well as commercial area. It's a well-known area of the Greater Noida region. You can even encounter the nomenclature Omicron I or Omicron I, Greater Noida, denoting its placement quite clearly. This sector comes under a group of planned sectors, with ongoing neighbours such as Omicron 1A, Omicron II and Omicron 3 Greater Noida, that together form part of the whole urban landscape of Greater Noida. They are separate sectors in the overall Greater Noida area. Interestingly, Gaur Atulyam is one of the popular residential complexes situated in Omicron 1. For better understanding of the layout and infrastructure of Omicron I, Greater Noida, refer to the Layout Map Of Omicron I, Greater Noida. The map is presented by Chhabra Properties one of the best Greater Noida Property Dealers. This map gives good insights about the planning of residential plots, commercial areas, roads, and amenities within the sector.
  
@@ -307,6 +381,7 @@ If you're thinking of investing in Omicron I property options, our professional 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890773/OMICRON-I_gv3txl.png",
     },
     {
+      id: 21,
        slug: "Omicron-2",
       title:"OMICRON-II",
       description:`About - Omicron II,  Greater Noida, Uttar Pradesh
@@ -320,6 +395,7 @@ For those searching for property prospects in Omicron 1A Greater Noida, Greater 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890773/OMICRON-II_ph45og.png",
     },
     {
+      id: 22,
        slug: "Omicron-3",
       title:"OMICRON-III",
       description:`About - Omicron 3,  Greater Noida, Uttar Pradesh
@@ -335,6 +411,7 @@ Ready to discover the promising opportunities of Omicron 3 Greater Noida? Get in
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890776/OMICRON-III_casmju.png",
     },
     {
+      id: 23,
        slug: "Omicron-3 32 mtr",
       title:"OMICRON-III 32MTR",
       description:  ``,
@@ -344,12 +421,14 @@ Ready to discover the promising opportunities of Omicron 3 Greater Noida? Get in
     
     
     {
+      id: 24,
        slug: "omicron-1 udyog kendra",
       title:"OMICRON-I UDYOG KENDRA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890772/OMICRON-I_UDYOG_KENDRA_vek06j.png",
     },
     {
+      id: 25,
        slug: "PI-1 PI-2",
       title:"PI-I PI-II",
       description:`About Sector Pi 1 Greater Noida, Uttar Pradesh
@@ -363,6 +442,7 @@ Whether you are looking for a residential property or a good commercial property
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890779/PI-I_PI-II_xkp6b6.png",
     },
     {
+      id: 26,
        slug: "Pocket-p4",
       title:"POCKET-P4",
       description:`Explore the Detailed Layout and Key Features of Pocket P-4, Greater Noida with Chhabra Properties
@@ -370,6 +450,7 @@ Find the Layout Plan of Pocket P-4, Greater Noida HD Map by Chhabra Properties, 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890779/POCKET-P4_livjdq.png",
     },
     {
+      id: 27,
        slug: "Residential area sikandrabad",
       title:"RESIDENTIAL AREA SIKANDRABAD",
       description:`Discover the Residential Layout Plan of Sikandrabad, Greater Noida.
@@ -379,9 +460,17 @@ At Chhabra Properties | Property Dealer In Greater Noida, we provide detailed in
 `,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890779/RESIDENTIAL_AREA_SIKANDRABAD_ofgqvx.png",
     },
+    {
+      slug:"30 MTR. FLAT AT SECTOR-03",
+      title:'30 MTR. FLAT AT SECTOR-03',
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803243/30_MTR._FLAT_AT_SECTOR-03_lwjw6t.jpg"
+
+    },
      {
-       slug: "sector p-3",
-      title:"Sector P-3",
+      id: 28,
+       slug: "SECTOR p-3",
+      title:"SECTOR P-3",
       description:`
 About Sector P 3, Greater Noida, Uttar Pradesh
 Uncover the emerging prospects in Sector P 3, Greater Noida! This strategically developing sector is all set to become an important residential and commercial hub in the growing terrain of Greater Noida. Although yet to develop, Sector P 3 presents optimistic prospects for upcoming residents and entrepreneurs alike, with such landmarks as Pari Chowk Greater Noida already making its mark. Adjoining regions, such as Pari Chowk Greater Noida, add to the increasing connectivity and infrastructure of the area.
@@ -398,8 +487,9 @@ As seasoned Real Estate Agents In Greater Noida, Chhabra Properties provides unm
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890781/POCKET-P-3_cakh2c.png",
     },
     {
-       slug: "sector 1",
-      title:" Sector 1",
+      id: 29,
+       slug: "SECTOR 1",
+      title:" SECTOR 1",
       description:  `
 About Sector 1, Greater Noida, Uttar Pradesh
 Sector 1, nestled in the heart of what many know as Noida Extension or Greater Noida West, is buzzing with potential as a top pick for both homeowners and investors. Its brilliant location ensures you're never far from the action in Sector 1 Noida Extension and the wider Delhi NCR, thanks to smooth connections via the Noida - Greater Noida Expressway and Yamuna Expressway – think easy commutes and weekend getaways. You can even get a good sense of the area's layout and connectivity by taking a look at the Greater Noida Map, which clearly highlights Sector 1's strategic positioning. You'll find a fantastic mix of modern apartments here, offering that sweet spot of affordability now with the promise of your investment growing as the area matures – something smart buyers in Sector 1 Greater Noida Uttar Pradesh are already clued into. The buzz around the upcoming metro only adds fuel to this fire. As Greater Noida continues its rapid climb, Sector 1 Greater Noida is a key player, drawing in serious interest and a wave of new developments.
@@ -421,8 +511,9 @@ Let the dedicated team at Chhabra Properties, your local real estate agents in G
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890783/SECTOR-1_ecyqgy.png",
     },
      {
-       slug: "sector 2",
-      title:" Sector-2",
+      id: 30,
+       slug: "SECTOR 2",
+      title:" SECTOR-2",
       description:`About Sector 2, Greater Noida, Uttar Pradesh
 Sector 2, Greater Noida's vibrant heart, isn't just another pin on the Greater Noida Map; it's a dynamic hub where modern living meets smart investment. While many consider areas like Sector 1, this is prime Sector 2 Noida Uttar Pradesh, strategically placed for easy city connections via the FNG Expressway and a straight shot to the Yamuna Expressway. Imagine a lifestyle where contemporary apartments offer not just a home, but a stepping stone to significant appreciation in a rapidly evolving locale. While the Greater Noida Sector 2 Pin Code 203207 grounds it, its spirit extends beyond mere boundaries.
 
@@ -436,8 +527,9 @@ Ready to unlock the true potential of Sector 2? As your dedicated Property Deale
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/f_auto,q_auto,w_1200/v1784890786/SECTOR-2._lmvmax.png",
     },
     {
-       slug: "sector-3",
-      title:"Sector-3",
+      id: 31,
+       slug: "SECTOR-3",
+      title:"SECTOR-3",
       description:`
 About Sector 3, Greater Noida, Uttar Pradesh
 Sector 3, strategically placed in Greater Noida, is fast emerging as the address of choice among homeowners and investors alike. Its thoughtful planning infrastructure and connectivity are making it a destination prime in Sector 3 Greater Noida Uttar Pradesh. While sometimes confused with the larger Noida location, Sector 3 Greater Noida has its own strengths and its own thriving community. Its proximity to main thoroughfares makes it more accessible so it is convenient to travel to Delhi NCR. Though not located exactly in Sector 3 Noida Extension and Sector 3 Noida Uttar Pradesh., its proximity to central locations makes it an attractive option for most.
@@ -451,9 +543,24 @@ The sector provides a mixed scale of residential spaces, from apartments and sta
 For professional counsel on how to approach the real estate market of Greater Noida, particularly in Sector 3 Greater Noida West, Real Estate Agents In Greater Noida like Chhabra Properties are irreplaceable advisors. We have complete information on the area with the help of our precise maps of the plan and will be happy to help you locate ideal property if you are looking for a family home or a potential investment. Some may search for "Sector 3 Noida," but recognizing its location squarely in Sector 3 Greater Noida Uttar Pradesh is the key. Allow our seasoned team to be your guide in unlocking the potential that awaits in this thriving Sector 3 of Greater Noida.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890787/SECTOR-3_guaacf.png",
     },
+     {
+      slug:"30 MTR. FLAT AT SECTOR-03",
+      title:'30 MTR. FLAT AT SECTOR-03',
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803243/30_MTR._FLAT_AT_SECTOR-03_lwjw6t.jpg"
+
+    },
     {
-       slug: "sector-16b",
-      title:" Sector-16B",
+      slug:" SECTOR-16",
+      title:" SECTOR-16",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784804470/SECTOR-16_RESIDENTIAL_sakgsr.jpg"
+
+    },
+    {
+      id: 32,
+       slug: "SECTOR-16b",
+      title:"SECTOR -16B",
       description:`
 About Sector 16B, Greater Noida, Uttar Pradesh
 Sector 16B, Greater Noida, commonly known as Greater Noida West Sector 16B and sometimes abbreviated as Sector 16B Noida Extension, is a lively and fast-growing residential zone. This in-demand locality, located in Greater Noida West, presents an attractive blend of contemporary comforts and superior connectivity, making it a top choice for homebuyers and investors alike. Sector 16b Greater Noida zone is defined by tremendous expansion with a rich combination of newer high-rise contemporary apartments and flourishing social infrastructure complemented by carefully executed planning. To further assist your property search, explore our proprietary Layout Map of Sector 16B, Greater Noida, created by Chhabra Properties.
@@ -468,8 +575,9 @@ Being top seasoned Real Estate Agents In Greater Noida, Chhabra Properties is co
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890787/SECTOR-16B_aab1cz.png",
     },
     {
-       slug: "sector 16c",
-      title:"Sector-16C",
+      id: 33,
+       slug: "SECTOR 16c",
+      title:"SECTOR-16C",
       description:`About Sector 16C, Greater Noida, Uttar Pradesh
 Explore Sector 16C, Greater Noida a developing and promising sector in the wider Greater Noida area. A sector frequently placed in the locale of Sector 16 Greater Noida, Sector 16C is now popular due to its contemporary residential areas and prime location. At Chhabra Properties, top Real Estate Agents In Greater Noida, we are here to assist you through the thrilling property opportunities this sector presents.
 
@@ -483,8 +591,9 @@ As seasoned Property Dealers In Greater Noida, Chhabra Properties is dedicated t
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890788/SECTOR-16C_d54djv.png",
     },
      {
-       slug: "sector 20",
-        title:"Sector 20",
+      id: 34,
+       slug: "SECTOR 20",
+        title:"SECTOR 20",
          description: `
 About Sector 20, Noida
 ​Sector 20 Noida, a calm and organised area located in Noida, Uttar Pradesh. Although primarily a residential area, its convening location is one compelling feature, mechanically identified by the Noida Sector 20 pin code is 201301. We are established Greater Noida Property Dealer and Chhabra Properties feel Noida Sector 20 is tranquil and well connected option within the surrounding vast Noida urban settlement. For those interested in learning about its layout and discovering its pleasant characters, we at Chhabra Properties have prepared a comprehensive Layout Map of Sector 20, Noida, as your complete guide.
@@ -499,8 +608,9 @@ Sector 20 Noida provides a good and comfortable lifestyle with other amenities a
         image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806936/SECTOR-20_POCKET-A_k6rxaz.jpg"
     },
     {
-       slug: "sector 36",
-      title:" Sector 36",
+      id: 35,
+       slug: "SECTOR 36",
+      title:" SECTOR 36",
       description:`About Sector 36, Greater Noida, Uttar Pradesh
 Sector 36 Greater Noida, a well-placed sector famous for its connectivity and emerging infrastructure in the Greater Noida region, offers pleasing opportunities for residents and businesses alike. Your seasoned Greater Noida Property Dealers, we are happy to show you the potential this sector has, which is generally preferred for its connectivity and vicinity to major amenities.
 
@@ -514,8 +624,9 @@ Sector 36 has great road connectivity to other areas of Greater Noida and surrou
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890788/SECTOR-36_irkzw2.png",
     },
     {
-       slug: "sector 37",
-      title:" Sector 37",
+      id: 36,
+       slug: "SECTOR 37",
+      title:" SECTOR 37",
       description:`
 About Sector 37, Greater Noida, Uttar Pradesh
 Sector 37, Greater Noida, a notable and well-linked sector in the Greater Noida urban landscape. At times noted for being strategically located and accessible, Sector 37 Greater Noida provides a mix of residential and commercial ventures. Whereas at times it tends to be misunderstood with Sector 37 Noida (which is a separate locality), our concern remains with the exciting Sector 37 Greater Noida. At Chhabra Properties, your reliable and professional Greater Noida Property Dealers, we are your navigators to the properties within this important sector.
@@ -528,6 +639,7 @@ Sector 37 provides direct connectivity to the nearest Sector 37 Metro Station is
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890789/SECTOR-37._nhrjpw.png",
     },
     {
+      id: 37,
        slug: "Sigha-1",
       title:"SIGMA-1",
       description:`About Sigma 1, Greater Noida, Uttar Pradesh
@@ -543,6 +655,7 @@ Sigma 1 presents with good quality internal road amenities and connectivity with
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890790/SIGMA-1_SECTOR-42_qzbrr0.png",
     },
     {
+      id: 38,
        slug: "Sigma-11",
       title:" SIGMA-II",
       description:`
@@ -559,6 +672,7 @@ As top and professional Property Dealers In Greater Noida, Chhabra Properties ai
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890790/SIGMA-II_xpvejc.png",
     },
      {
+      id: 39,
        slug: "Sigma-3",
       title:"SIGMA-III",
       description:  `About Sigma 3, Greater Noida, Uttar Pradesh
@@ -572,6 +686,7 @@ Sigma 3 offers emerging road connectivity to other prominent sectors of Greater 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890793/SIGMA-III_mrbljs.png",
     },
     {
+      id: 40,
 
        slug: "Sigma-4",
       title:"SIGMA-IV",
@@ -589,6 +704,7 @@ Sigma IV provides emerging road connectivity linking it to other prominent secto
     
     
     {
+      id: 41,
        slug: "Sector XU1",
       title:"SECTOR-XU1",
       description:`
@@ -603,6 +719,7 @@ Sector Xu I provides developing road connectivity to the rest of Greater Noida (
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890782/SECTOR_XU1_i6jgvb.png",
     },
     {
+      id: 42,
        slug: "Sector XU-2",
       title:"Sector XU-2",
       description:`
@@ -618,6 +735,7 @@ Although the Yamuna Expressway offers wider regional connectivity (depicted on t
     },
    
     {
+      id: 43,
        slug: " Sector Xu3",
       title:"SECTOR XU3",
       description:`About - Sector Xu 3, Greater Noida, Uttar Pradesh
@@ -630,25 +748,8 @@ Xu 3 Greater Noida is defined by the fact that it is still developing, offering 
 Emerging road networks are developing improved connectivity with other areas of Greater Noida (its position can be seen on the Greater Noida Map), and the proposed development of necessary social and commercial infrastructure will provide for future dwellers and entrepreneurs. The sector is also poised for property value appreciation as it ages and development occurs in Greater Noida. While the Yamuna Expressway provides wider regional connectivity (as illustrated on the Greater Noida Map), Sector Xu 3 priority is its own internal growth and connectivity within the city. Being the top and committed Property Dealers In Greater Noida, Chhabra Properties is your guide to the changing dynamics of Sector Xu - III, Greater Noida, providing latest news, professional advice, current details about the pin code and development scheme, and individualized guidance. Let Chhabra Properties, your trusted Real Estate Agents In Greater Noida, be your guide to navigating the emerging landscape and future prospects of Sector Xu 3, Greater Noida. Call us today to uncover the possibilities!`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890781/SECTOR_XU_3_a1302k.png",
     },
-
-   
-    
-    
-   
-    
-
-    
-    
-
-    
-    
-   
-    
-   
-    ,
-    
-    ,
     {
+      id: 44,
        slug: "SECTOR-127 ",
         title:" Sector-127",
         description:"",
@@ -656,12 +757,14 @@ Emerging road networks are developing improved connectivity with other areas of 
     }
     ,
     {
+      id: 45,
        slug: "SECTOR-155 ",
         title:" Sector 155",
         description:"",
         image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR-_155_y0fowy.jpg"
     },
     {
+      id: 46,
        slug: "Zeta-1 ",
       title:" Zeta-1",
       description:  `Zeta I Greater Noida, a developed and strategically placed sector of the Greater Noida terrain, is a prime hub boasting an equanimous mix of residential, commercial, and institutional constructions. Chhabra Properties, your reliable and skilled Greater Noida Property Dealers, proudly introduces the varied property options in this dynamic sector, including renowned residential projects such as ATS Dolce and AVJ Heights. Also known as Zeta I or more precisely as AVJ Heights Zeta 1, this well-planned locality offers a premium lifestyle with excellent infrastructure and connectivity.
@@ -671,9 +774,9 @@ For all postal requirements, the Zeta 1 Pin Code is 201310, an important detail 
 With excellent connectivity to the Yamuna Expressway, Zeta-1 provides convenient access to the wider NCR region while maintaining a vibrant and well-connected local community. As one of the trusted Property Dealers in Greater Noida, Chhabra Properties is committed to helping you find the ideal residential or commercial property in Zeta-1. We offer a comprehensive property portfolio, expert guidance, accurate location details, and personalized assistance to make your property journey smooth and hassle-free. Let Chhabra Properties be your trusted partner in exploring the best real estate opportunities in Zeta-1, Greater Noida.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890802/ZETA_1_qnhy1d.png",
     }
-    
     ,
     {
+      id: 47,
       slug: "toy city ",
       title:"Toy City",
       description:`
@@ -698,12 +801,21 @@ Chhabra Properties, your trusted Property Dealers in Toy City Greater Noida, are
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890798/TOY_CITY_M.U.P_2_yv1prp.png",
     },
     {
+      slug:"TECH ZONE-II",
+      title:"TECH ZONE-II",
+      description:" ",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803332/TECH_ZONE-II_sbscoh.jpg"
+    },
+    {
+      id: 48,
       slug: "TECH ZONE AT GREATER NOIDA ",
       title:"TECH ZONE AT GREATER NOIDA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890797/TECH_ZONE_AT_GREATER_NOIDA_q4pibf.png",
     },
+    
     {
+      id: 49,
        slug: "TECH ZONE 4 ",
       
       title:"TECH ZONE 4",
@@ -718,14 +830,18 @@ Techzone 4 Greater Noida is also an attractive option for institutional, IT and 
 Chhabra Properties, being the leading Property Dealers In Greater Noida, allows you to tap into the many opportunities in the classified real estate market in, Tech Zone IV, Greater Noida. We strive to provide you with the best information on available commercial office space, retail outlets and institutional plots, as we specialize in this sector and possess the relevant knowledge. With the geography of Techzone 4 acting in its favor and good connectivity, such as the Yamuna Expressway (as shown on the Yamuna Expressway Map), there will also be a positive implications towards carrying out business operations and investment for long term; with proficiencies of logistics, a positive rise in capital appreciation, and rental yields. Contact us at Chhabra Properties, to make use of the promising commercial and institutional opportunities available within Tech Zone 4, Greater Noida.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890797/TECH_ZONE_4_v51fso.png",
     },
+    
+   
    
     {
+      id: 50,
        slug: "SURAJPUR-SITE-C RESIDENTIAL ",
       title:"SURAJPUR-SITE-C RESIDENTIAL",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890795/SURAJPUR-SITE-C_RESIDENTIAL_owf47t.png",
     },
     {
+      id: 51,
        slug: "SURAJPUR-SITE-C INDUSTRIAL ",
       title:"SURAJPUR-SITE-C INDUSTRIAL",
       description:"",
@@ -733,6 +849,7 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890794/SURAJPUR-SITE-C_INDUSTRIAL._yb3ljr.png",
     },
     {
+      id: 52,
       
       slug: "SURAJPUR-SITE-B ",
       title:"SURAJPUR-SITE-B",
@@ -741,61 +858,68 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
     },
     
     {
+      id: 53,
       slug: "SURAJPUR-SITE-5 ",
       title:"SURAJPUR SITE-5",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890793/SURAJPUR_SITE_5_exxs8s.png",
     },
     {
+      id: 54,
       slug: "SURAJPUR-SITE-V A-2 ",
       title:" SURAJPUR SITE-V (A-2)",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890792/SITE-V_A-2_nj6gzo.png",
     },
-    
-    
-   
-    
-    
-    
-    
-   
-   
-    
-    
-   
-    
+     {
+      slug:"SURAJPUR-SITE-V A-3",
+      title:"SURAJPUR-SITE-V (A-3)",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803338/SURAJPUR-SITE-V_A-3_lzyb5o.jpg"
+    },
     {
+      id: 55,
       slug: "MP NOIDA EXTENSION ",
       title:"MP NOIDA EXTENSION",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890767/MP_NOIDA_EXTENSION_fkdpyi.png",
     },
     {
-       slug: "MPGREATER NOIDA ",
-      title:"MPGREATER NOIDA",
+      id: 56,
+       slug: "MP GREATER NOIDA ",
+      title:"MP GREATER NOIDA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890765/MP_GREATER_NOIDA_na15fy.png",
     },
     {
+      id: 57,
       slug: "MASOORI GULAWATI. ",
-      title:"MASOORI GULAWATI.",
+      title:"MASOORI GULAWATI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890765/MASOORI_GULAWATI._dw28vl.png",
     },
     {
+      id: 58,
       slug: "KP-III ",
       title:"KP-III",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890764/KP-III._gu95m4.png",
     },
     {
+      slug:"KP-IV",
+      title:"KP-IV",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784804448/KP-IV_simsq7.jpg"
+    },
+    {
+      id: 59,
       slug: "KP-V ",
       title:"KP-V",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890764/KP-V._edwx06.png",
     },
     {
+      id: 60,
         slug: "K.p-2 ",
       
       title:"K.P-II",
@@ -803,78 +927,29 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890763/K.P-II._qjof4r.png",
     },
     {
+      id: 61,
       slug: " INDUSTRIAL AREA SIKANDRABAD",
       title:"INDUSTRIAL AREA SIKANDRABAD",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890761/INDUSTRIAL_AREA_SIKANDRABAD_lqvsci.png",
     },
     {
+      id: 62,
       slug: "GROUP HOUSING AT SWARN NAGRI",
       title:"GROUP HOUSING AT SWARN NAGRI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890759/GROUP_HOUSING_AT_SWARN_NAGRI_bbibq4.png",
     },
-   
-    ,
     {
-        slug: "GREATER30 MTR. FLAT AT CHI-PH",
+      id: 63,
+        slug: "GREATER 30 MTR. FLAT AT CHI-PH",
       
-      title:"GREATER30 MTR. FLAT AT CHI-PH",
+      title:"GREATER 30 MTR. FLAT AT CHI-PH",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890758/GREATER30_MTR._FLAT_AT_CHI-PHI_epr5zs.png",
     },
-    {
-      slug: "ECOTECH-1",
-      title:"ECOTECH-I",
-      description:`About Ecotech 1 Extension, Greater Noida, Uttar Pradesh
-
-Ecotech 1 Extension, Greater Noida is a rapidly developing industrial sector that builds upon the success of Ecotech 1 and forms an important part of the expanding Ecotech Greater Noida industrial corridor. This emerging location offers excellent opportunities for industrial, commercial, and warehouse developments, making it an ideal destination for businesses looking to establish or expand their operations. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we specialize in industrial real estate and are committed to helping businesses and investors explore the immense potential of this strategically located sector.
-
-Ecotech 1 Extension, Greater Noida, Uttar Pradesh is witnessing continuous industrial growth with the development of modern factories, warehouses, logistics parks, and commercial establishments. To help investors and businesses better understand the sector's planning, Chhabra Properties, your trusted Real Estate Agents in Greater Noida, provides an exclusive Layout Map of Ecotech 1 Extension, Greater Noida. While the sector generally falls under the 201310 postal region, our experienced team can provide the most accurate and up-to-date location details for specific industrial plots and commercial properties. The area's proximity to established industrial zones such as Ecotech 1, Ecotech III, Ecotech 11, and Ecotech 12 further enhances its business potential, creating excellent opportunities for manufacturing, logistics, and industrial investments.
-
-The sector enjoys steadily improving road infrastructure, ensuring seamless connectivity with major industrial hubs across Greater Noida and the National Capital Region. Businesses operating in Ecotech 1 Extension benefit from close access to skilled manpower, established commercial ecosystems, transportation facilities, and supporting infrastructure. Its strategic location near the Yamuna Expressway and other major road networks provides excellent regional connectivity while maintaining close proximity to the well-established Ecotech industrial belt. As one of the trusted Property Dealers in Greater Noida, Chhabra Properties is dedicated to helping you identify the best industrial and commercial investment opportunities in Ecotech 1 Extension. We offer verified property listings, expert market insights, accurate infrastructure updates, and personalized guidance to ensure you make informed investment decisions. Let Chhabra Properties be your trusted real estate partner in exploring the growing opportunities of Ecotech 1 Extension, Greater Noida, and help your business thrive in one of the region's fastest-growing industrial destinations.`,
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890741/ECOTECH-I._hbgek1.png",
-    },
      {
-      slug: "ECOTECH-2",
-      title:"ECOTECH-II UDYOG VIHAR",
-      description:`About Ecotech II, Greater Noida, Uttar Pradesh*
-
-*Ecotech II, Greater Noida, also known as **Ecotech II Udyog Vihar* or simply *Ecotech 2, is one of the most prominent industrial hubs in Greater Noida. This well-established industrial sector plays a vital role in the region's manufacturing, logistics, and commercial growth. At **Chhabra Properties, your trusted and experienced **Greater Noida Property Dealers*, we specialize in industrial real estate and help businesses, manufacturers, and investors find the best industrial and commercial properties in this thriving location.
-
-*Ecotech II Greater Noida features well-developed infrastructure, modern industrial facilities, and a strategic location that makes it an ideal destination for manufacturing units, warehouses, factories, and commercial establishments. As an integral part of Greater Noida's industrial corridor, Ecotech II offers reliable utilities, excellent road connectivity, and easy access to major transportation routes. To help investors and businesses better understand the sector's planning, *Chhabra Properties, your trusted **Real Estate Agents in Greater Noida, provides an exclusive **Layout Map of Ecotech II, Greater Noida. The **Ecotech II Greater Noida Pin Code* is *201306*, and our experienced team can provide accurate information regarding industrial plots, commercial units, and investment opportunities throughout the sector.
-
-Ecotech II is supported by robust infrastructure, including uninterrupted power supply, water facilities, waste management systems, and excellent transportation connectivity. The sector enjoys seamless road access to other major industrial and commercial hubs across Greater Noida and the National Capital Region while remaining close to skilled manpower and well-developed residential areas. Its proximity to the *Yamuna Expressway* further enhances regional connectivity, making it an attractive destination for industries and businesses seeking efficient logistics and long-term growth. As one of the trusted *Property Dealers in Greater Noida, **Chhabra Properties* is committed to helping you identify the ideal industrial or commercial property in Ecotech II through verified property listings, expert market insights, accurate location details, and personalized guidance. Let *Chhabra Properties* be your trusted real estate partner in exploring the outstanding industrial investment opportunities available in *Ecotech II, Greater Noida*. Contact us today to discuss your industrial real estate requirements and discover the best opportunities for your business.`,
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890741/ECOTECH-II._yy9nur.png",
-    },
-    {
-      slug: "ECOTECH-3",
-      title:"ECOTECH-III UDYOG KENDRA",
-      description:`About Ecotech III, Greater Noida, Uttar Pradesh
-
-Ecotech III, Greater Noida, also known as Ecotech 3, is one of the leading industrial and commercial hubs within the rapidly expanding Ecotech Greater Noida region. This well-planned industrial sector plays a significant role in the economic growth of Greater Noida and offers excellent opportunities for manufacturing, warehousing, logistics, and commercial businesses. Distinct from nearby industrial sectors such as Ecotech II, Ecotech III has established itself as a preferred destination for industrial investment. The Ecotech III Greater Noida Pin Code is 201306, ensuring smooth postal and logistics operations. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we specialize in industrial and commercial real estate and help businesses find the most suitable investment opportunities in this thriving sector.
-
-Ecotech III, Greater Noida features well-developed infrastructure, organized industrial planning, and excellent connectivity, making it an ideal location for factories, warehouses, industrial units, and commercial establishments. The sector enjoys seamless access to major transportation corridors and is conveniently located near residential neighborhoods, educational institutions, healthcare facilities, and shopping centers, providing added convenience for businesses and their workforce. To help investors and business owners better understand the area's planning and available properties, Chhabra Properties, your trusted Real Estate Agents in Greater Noida, offers an exclusive Layout Map of Ecotech III, Greater Noida. Our experienced team also provides accurate information on industrial plots, commercial properties, and investment opportunities throughout the sector.
-
-Ecotech III benefits from excellent road connectivity to other major industrial hubs across Greater Noida and the National Capital Region. The area is supported by reliable infrastructure, including uninterrupted power supply, water facilities, efficient waste management systems, and modern transportation networks essential for industrial operations. Its strategic location also ensures easy access to skilled manpower and established residential communities. In addition, connectivity through the Yamuna Expressway further enhances regional accessibility, making Ecotech III an attractive destination for long-term industrial and commercial investments. As one of the trusted Property Dealers in Greater Noida, Chhabra Properties is committed to helping you find the ideal industrial or commercial property through verified listings, expert market insights, accurate location guidance, and personalized support. Let Chhabra Properties be your trusted real estate partner in exploring the outstanding opportunities available in Ecotech III, Greater Noida and help your business grow in one of the region's most established industrial corridors.`,
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890748/ECOTECH-III_hyxw9u.png",
-    },
-    
-    {
-      slug: "ECOTECH-4",
-      title:"ECOTECH-XII",
-      description:``,
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ECOTECH-XII_jj6pb0.png",
-    },
-    {
-      slug: "ECOTECH-5",
-      title:"ECOTECH-XI",
-      description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ECOTECH-XI._fehkjc.png",
-    },
-    
-    
-    {
+      id: 69,
       slug: "ECOTECH-1 EXTENSION-I",
       title:"ECOTECH-I EXTENSION-I",
       description:`
@@ -890,105 +965,156 @@ As Ecotech 1 Greater Noida Uttar Pradesh expands further with Ecotech 1 Extensio
 Constant development of the road network is boosting connectivity with well-established industrial estates, such as Ecotech 1 and neighbouring Ecotech III, Ecotech 11 Greater Noida, and Ecotech 12 Greater Noida, all part of the larger Greater Noida region. This new emerging stage holds the prospect for contemporary facilities and infrastructure, together with linkage to the available pool of labour and commercial system of Ecotech 1 and the broader Greater Noida community, developing a synergistic relationship with the neighbourhood industrial bases. While broader regional connectivity is offered by the Yamuna Expressway, the localized appeal of Ecotech 1 Extension 1 rests in its intrinsic growth value and its placement in a well-connected industrial grid. Being top and dedicated Property Dealers In Greater Noida for industrial and residential properties, Chhabra Properties is your go-to ally in discovering the upcoming possibilities in Ecotech 1 Extension 1, Greater Noida, with latest information on available land and developments, professional advice, current knowledge on infrastructure and connectivity across the whole Ecotech area, and individual guidance. Let Chhabra Properties, your trusted Real Estate Agents In Greater Noida for industrial properties, be your guide for making sense of the new possibilities in Ecotech 1 Extension 1, Greater Noida, and the synergistic benefits of its position between Ecotech III, Ecotech 11 Greater Noida, and Ecotech 12 Greater Noida. Call us today to discuss the possibilities for your business growth!`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890742/ECOTECH-I_EXTENSION-I_c5z3em.png",
     },
-   
-    
     {
+      id: 70,
       slug: "ECOTECH-1 EXTENSION",
       title:"ECOTECH-I EXTENSION",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890740/ECOTECH-I_EXTENSION._xtjktd.png",
     },
-   
-    
-
-    ,
     {
+      id: 64,
+      slug: "ECOTECH-1",
+      title:"ECOTECH-I",
+      description:`About Ecotech 1 Extension, Greater Noida, Uttar Pradesh
+
+Ecotech 1 Extension, Greater Noida is a rapidly developing industrial sector that builds upon the success of Ecotech 1 and forms an important part of the expanding Ecotech Greater Noida industrial corridor. This emerging location offers excellent opportunities for industrial, commercial, and warehouse developments, making it an ideal destination for businesses looking to establish or expand their operations. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we specialize in industrial real estate and are committed to helping businesses and investors explore the immense potential of this strategically located sector.
+
+Ecotech 1 Extension, Greater Noida, Uttar Pradesh is witnessing continuous industrial growth with the development of modern factories, warehouses, logistics parks, and commercial establishments. To help investors and businesses better understand the sector's planning, Chhabra Properties, your trusted Real Estate Agents in Greater Noida, provides an exclusive Layout Map of Ecotech 1 Extension, Greater Noida. While the sector generally falls under the 201310 postal region, our experienced team can provide the most accurate and up-to-date location details for specific industrial plots and commercial properties. The area's proximity to established industrial zones such as Ecotech 1, Ecotech III, Ecotech 11, and Ecotech 12 further enhances its business potential, creating excellent opportunities for manufacturing, logistics, and industrial investments.
+
+The sector enjoys steadily improving road infrastructure, ensuring seamless connectivity with major industrial hubs across Greater Noida and the National Capital Region. Businesses operating in Ecotech 1 Extension benefit from close access to skilled manpower, established commercial ecosystems, transportation facilities, and supporting infrastructure. Its strategic location near the Yamuna Expressway and other major road networks provides excellent regional connectivity while maintaining close proximity to the well-established Ecotech industrial belt. As one of the trusted Property Dealers in Greater Noida, Chhabra Properties is dedicated to helping you identify the best industrial and commercial investment opportunities in Ecotech 1 Extension. We offer verified property listings, expert market insights, accurate infrastructure updates, and personalized guidance to ensure you make informed investment decisions. Let Chhabra Properties be your trusted real estate partner in exploring the growing opportunities of Ecotech 1 Extension, Greater Noida, and help your business thrive in one of the region's fastest-growing industrial destinations.`,
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890741/ECOTECH-I._hbgek1.png",
+    },
+     {
+      id: 65,
+      slug: "ECOTECH-2",
+      title:"ECOTECH-II UDYOG VIHAR",
+      description:`About Ecotech II, Greater Noida, Uttar Pradesh*
+
+*Ecotech II, Greater Noida, also known as **Ecotech II Udyog Vihar* or simply *Ecotech 2, is one of the most prominent industrial hubs in Greater Noida. This well-established industrial sector plays a vital role in the region's manufacturing, logistics, and commercial growth. At **Chhabra Properties, your trusted and experienced **Greater Noida Property Dealers*, we specialize in industrial real estate and help businesses, manufacturers, and investors find the best industrial and commercial properties in this thriving location.
+
+*Ecotech II Greater Noida features well-developed infrastructure, modern industrial facilities, and a strategic location that makes it an ideal destination for manufacturing units, warehouses, factories, and commercial establishments. As an integral part of Greater Noida's industrial corridor, Ecotech II offers reliable utilities, excellent road connectivity, and easy access to major transportation routes. To help investors and businesses better understand the sector's planning, *Chhabra Properties, your trusted **Real Estate Agents in Greater Noida, provides an exclusive **Layout Map of Ecotech II, Greater Noida. The **Ecotech II Greater Noida Pin Code* is *201306*, and our experienced team can provide accurate information regarding industrial plots, commercial units, and investment opportunities throughout the sector.
+
+Ecotech II is supported by robust infrastructure, including uninterrupted power supply, water facilities, waste management systems, and excellent transportation connectivity. The sector enjoys seamless road access to other major industrial and commercial hubs across Greater Noida and the National Capital Region while remaining close to skilled manpower and well-developed residential areas. Its proximity to the *Yamuna Expressway* further enhances regional connectivity, making it an attractive destination for industries and businesses seeking efficient logistics and long-term growth. As one of the trusted *Property Dealers in Greater Noida, **Chhabra Properties* is committed to helping you identify the ideal industrial or commercial property in Ecotech II through verified property listings, expert market insights, accurate location details, and personalized guidance. Let *Chhabra Properties* be your trusted real estate partner in exploring the outstanding industrial investment opportunities available in *Ecotech II, Greater Noida*. Contact us today to discuss your industrial real estate requirements and discover the best opportunities for your business.`,
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890741/ECOTECH-II._yy9nur.png",
+    },
+    {
+      id: 66,
+      slug: "ECOTECH-3",
+      title:"ECOTECH-III UDYOG KENDRA",
+      description:`About Ecotech III, Greater Noida, Uttar Pradesh
+
+Ecotech III, Greater Noida, also known as Ecotech 3, is one of the leading industrial and commercial hubs within the rapidly expanding Ecotech Greater Noida region. This well-planned industrial sector plays a significant role in the economic growth of Greater Noida and offers excellent opportunities for manufacturing, warehousing, logistics, and commercial businesses. Distinct from nearby industrial sectors such as Ecotech II, Ecotech III has established itself as a preferred destination for industrial investment. The Ecotech III Greater Noida Pin Code is 201306, ensuring smooth postal and logistics operations. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we specialize in industrial and commercial real estate and help businesses find the most suitable investment opportunities in this thriving sector.
+
+Ecotech III, Greater Noida features well-developed infrastructure, organized industrial planning, and excellent connectivity, making it an ideal location for factories, warehouses, industrial units, and commercial establishments. The sector enjoys seamless access to major transportation corridors and is conveniently located near residential neighborhoods, educational institutions, healthcare facilities, and shopping centers, providing added convenience for businesses and their workforce. To help investors and business owners better understand the area's planning and available properties, Chhabra Properties, your trusted Real Estate Agents in Greater Noida, offers an exclusive Layout Map of Ecotech III, Greater Noida. Our experienced team also provides accurate information on industrial plots, commercial properties, and investment opportunities throughout the sector.
+
+Ecotech III benefits from excellent road connectivity to other major industrial hubs across Greater Noida and the National Capital Region. The area is supported by reliable infrastructure, including uninterrupted power supply, water facilities, efficient waste management systems, and modern transportation networks essential for industrial operations. Its strategic location also ensures easy access to skilled manpower and established residential communities. In addition, connectivity through the Yamuna Expressway further enhances regional accessibility, making Ecotech III an attractive destination for long-term industrial and commercial investments. As one of the trusted Property Dealers in Greater Noida, Chhabra Properties is committed to helping you find the ideal industrial or commercial property through verified listings, expert market insights, accurate location guidance, and personalized support. Let Chhabra Properties be your trusted real estate partner in exploring the outstanding opportunities available in Ecotech III, Greater Noida and help your business grow in one of the region's most established industrial corridors.`,
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890748/ECOTECH-III_hyxw9u.png",
+    },
+    {
+      id: 67,
+      slug: "ECOTECH-4",
+      title:"ECOTECH-XII",
+      description:``,
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ECOTECH-XII_jj6pb0.png",
+    },
+    {
+      id: 68,
+      slug: "ECOTECH-5",
+      title:"ECOTECH-XI",
+      description:"",
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ECOTECH-XI._fehkjc.png",
+    },
+   
+
+    {
+      id: 71,
       slug: "ECOTECH-16",
-      title:"ECOTECH-16.",
+      title:"ECOTECH-16",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/ECOTECH-16._rh0r6z.png",
     }
     ,
     {
+      id: 72,
       slug: "BUILDER SCHEME",
       title:"BUILDER SCHEME",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890733/BUILDER_SCHEME_j3sq3t.png",
     },
     {
+      id: 73,
       slug: "BZP",
       title:"BZP AREA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890731/BZP_AREA_poukoy.png"
-    }
-    ,
-    
-    
-   
-   
+    },
     {
+      id: 74,
       slug: "ABAdi VILL. BIRONDI",
       title:"ABADI VILL. BIRONDI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890724/ABADI_VILL._BIRONDI_xba7on.png"
     },
     {
+      id: 75,
       slug: "ABAdi VILL. AMINABAD JALPURA",
       title:"ABADI VILL. AMINABAD JALPURA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890722/ABADI_VILL._AMINABAD_JALPURA._latibq.png"
-    }
-    ,
+    },
     {
+      id: 76,
       slug: "ABADI AT VILL. YAKUBPUR",
       title:"ABADI AT VILL. YAKUBPUR",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890721/ABADI_AT_VILL._YAKUBPUR.jpg_oc5wev.png"
-    }
-    
-    
-     ,
+    },
     {
+      id: 77,
       slug: "ABADI AT VILL. TUSIYANA",
       
       title:"ABADI AT VILL. TUSIYANA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890720/ABADI_AT_VILL._TUSIYANA._doo6bs.png"
-    }
-     ,
+    },
     {
+      id: 78,
        slug:"ABADI AT VILL. TUGALPUR-HOLDON",
       title:"ABADI AT VILL. TUGALPUR-HOLDON",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890719/ABADI_AT_VILL._TUGALPUR-HOLDONA_h4mh1m.png"
-    }
-     ,
+    },
     {
+      id: 79,
        slug:"ABADI AT VILL. SIRSA",
       title:"ABADI AT VILL. SIRSA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890718/ABADI_AT_VILL._SIRSA_lf9m8x.png"
-    }
-    ,
+    },
     {
+      id: 80,
        slug:"ABADI AT VILL. SIRSA",
       title:"ABADI AT VILL. SIRSA",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890717/ABADI_AT_VILL._SIRSA...jpg_tzrfxf.png"
     },
     {
+      id: 81,
        slug:"ABADI AT VILL. SAKIPUR-47",
       title:"ABADI AT VILL. SAKIPUR-47",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890716/ABADI_AT_VILL._SAKIPUR-47_1_oi5fhw.png"
     },
     {
+      id: 82,
        slug:"ABADI AT VILL. SAINI",
       title:"ABADI AT VILL. SAINI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890714/ABADI_AT_VILL._SAINI_t3xnrk.png"
     },
     {
+      id: 83,
        slug:"ABADI AT VILL. RITHORE",
       
       title:"ABADI AT VILL. RITHORE",
@@ -996,18 +1122,21 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890713/ABADI_AT_VILL._RITHORE.jpg_zh5tar.png"
     },
     {
+      id: 84,
       slug:"ABADI AT VILL RASULPUR RAI",
       title:"ABADI AT VILL RASULPUR RAI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890712/ABADI_AT_VILL._RASULPUR_RAI_AT_ZETA-I.jpg_aknday.png"
     },
     {
+      id: 85,
        slug:"ABADI AT VILL. RAMPUR",
       title:"ABADI AT VILL. RAMPUR",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890711/ABADI_AT_VILL._RAMPUR_eniwwd.png"
     },
     {
+      id: 86,
        slug:"ABADI AT VILL.PATWARI ",
       
       title:"ABADI AT VILL. PATWARI",
@@ -1015,6 +1144,7 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890710/ABADI_AT_VILL._PATWARI.jpg_tg5woz.png"
     },
     {
+      id: 87,
       
        slug:"ABADI AT VILL. MYCHA ",
       title:"ABADI AT VILL. MYCHA",
@@ -1022,13 +1152,15 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890709/ABADI_AT_VILL._MYCHA_f8p5bg.png"
     },
     {
+      id: 88,
       
        slug:"ABADI AT VILL. Pali ",
-      title:"ABADI AT VILL Pali",
+      title:"ABADI AT VILL. Pali",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890709/ABADI_AT_VILL._PALI.jpg_bv67a2.png"
     },
     {
+      id: 89,
       
        slug:"ABADI AT VILL. LUKSAR ",
       title:"ABADI AT VILL LUKSAR",
@@ -1036,6 +1168,7 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890709/ABADI_AT_VILL._LUKSAR._jg6vq4.png"
     },
     {
+      id: 90,
       
        slug:"ABADI AT VILL. KHODNA ",
       title:"ABADI AT VILL. KHODNA",
@@ -1044,14 +1177,15 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890708/ABADI_AT_VILL._KHODNA_KHURD_unsu1c.png"
     },
     {
+      id: 91,
       
        slug:"ABADI AT VILL. KHERPUR  ",
       title:"ABADI AT VILL KHERPUR",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890707/ABADI_AT_VILL._KHERPUR_phueaw.png"
     },
-    
     {
+      id: 92,
       
        slug:"ABADI AT VILL. KASNA ",
       title:"ABADI AT VILL. KASNA",
@@ -1059,22 +1193,23 @@ Constant development of the road network is boosting connectivity with well-esta
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890706/ABADI_AT_VILL._KASNA_uzzsn1.png"
     },
    {
+      id: 93,
     
        slug:"ABADI AT VILL. JUNPAT ",
     title:"ABADI AT VILL. JUNPAT",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890700/ABADI_AT_VILL._JUNPAT_imtjrm.png"
-   }
-   ,
+   },
    {
+      id: 94,
     
        slug:"ABADI AT VILL. JAITPUR" ,
     title:"ABADI AT VILL. JAITPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890699/ABADI_AT_VILL._JAITPUR-VAISHPUR_of24ij.png"
-   }
-   ,
+   },
    {
+      id: 95,
     
        slug:"ABADI AT VILL. HAIBATPUR ",
     title:"ABADI AT VILL. HAIBATPUR",
@@ -1082,6 +1217,7 @@ Constant development of the road network is boosting connectivity with well-esta
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890698/ABADI_AT_VILL._HABIBATPUR_vlqk8w.png"
    },
    {
+      id: 96,
     
        slug:"ABADI AT VILL. GHARBHARA ",
     title:"ABADI AT VILL. GHARBHARA",
@@ -1089,6 +1225,7 @@ Constant development of the road network is boosting connectivity with well-esta
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890697/ABADI_AT_VILL._GHARBHARA_NIT_edcppu.png"
    },
    {
+      id: 97,
     
        slug:"ABADI AT VILL. GAMMA-I ",
     title:"ABADI AT VILL. GAMMA-I",
@@ -1096,6 +1233,7 @@ Constant development of the road network is boosting connectivity with well-esta
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890697/ABADI_AT_VILL._GAMMA-I_cdygmx.png"
    },
    {
+      id: 98,
     
        slug:"ABADI AT VILL. DHADA ",
     title:"ABADI AT VILL. DHADA",
@@ -1103,19 +1241,23 @@ Constant development of the road network is boosting connectivity with well-esta
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890696/ABADI_AT_VILL._DHADA_uco5xy.png"
    },
    {
+      id: 99,
     
        slug:"ABADI AT VILL. DABRA ",
     title:"ABADI AT VILL. DABRA",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890695/ABADI_AT_VILL._DABRA_b6gzix.png"
-   },{
+   },
+   {
+      id: 100,
     
        slug:"ABADI AT VILL. CHUHADPUR ",
     title:"ABADI AT VILL. CHUHADPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890694/ABADI_AT_VILL._CHUHAR_PUR_GHARBHARA_cyntxd.png"
-   }
-   ,{
+   },
+   {
+      id: 101,
     
        slug:"ABADI AT VILL.  SAINI ",
     title:"ABADI AT VILL SAINI",
@@ -1123,7 +1265,4 @@ Constant development of the road network is boosting connectivity with well-esta
     
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890693/6_ABADI_AT_VILL._SAINI_ullrdf.png"
    }
-
-
-
  ]

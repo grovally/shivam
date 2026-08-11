@@ -78,7 +78,7 @@ export default function Footer() {
     <source
       media="(max-width: 640px)"
       srcSet="
-        https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto:eco,w_300/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png
+        https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_300/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png
       "
     />
 
@@ -99,7 +99,7 @@ export default function Footer() {
 
     {/* FALLBACK */}
     <img
-      src="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto:eco,w_30/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png"
+      src="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_300/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png"
       alt="Chhabra Properties"
 
       loading="lazy"
@@ -569,48 +569,59 @@ export default function Footer() {
 
             {/* SOCIAL ICONS */}
 
-            <div className="mt-7 flex flex-wrap gap-3">
-              {socialLinks.map(({ icon: Icon, url }, index) => (
-                <motion.a
-                  key={index}
-                  href={url}
-                  target={
-                    url.startsWith("tel:")
-                      ? undefined
-                      : "_blank"
-                  }
-                  rel={
-                    url.startsWith("tel:")
-                      ? undefined
-                      : "noopener noreferrer"
-                  }
-                  whileHover={{
-                    scale: 1.08,
-                    y: -3,
-                  }}
-                  whileTap={{
-                    scale: 0.95,
-                  }}
-                  className="
-                    flex
-                    h-10
-                    w-10
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-white/15
-                    text-white/70
-                    transition-all
-                    duration-300
-                    hover:border-red-500/50
-                    hover:text-white
-                  "
-                >
-                  <Icon className="text-base" />
-                </motion.a>
-              ))}
-            </div>
+            
+<div className="mt-5 flex flex-wrap gap-2">
+  {socialLinks.map(({ icon: Icon, url }, index) => {
+    const iconColor =
+      url.includes("wa.me")
+        ? "text-[#25D366] hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
+        : url.includes("facebook")
+        ? "text-[#1877F2] hover:border-[#1877F2]/50 hover:bg-[#1877F2]/10"
+        : url.includes("instagram")
+        ? "text-[#E4405F] hover:border-[#E4405F]/50 hover:bg-[#E4405F]/10"
+        : url.includes("youtube")
+        ? "text-[#FF0000] hover:border-[#FF0000]/50 hover:bg-[#FF0000]/10"
+        : "text-[#22C55E] hover:border-[#22C55E]/50 hover:bg-[#22C55E]/10";
+
+    return (
+      <motion.a
+        key={index}
+        href={url}
+        target={url.startsWith("tel:") ? undefined : "_blank"}
+        rel={
+          url.startsWith("tel:")
+            ? undefined
+            : "noopener noreferrer"
+        }
+        whileHover={{
+          scale: 1.08,
+          y: -3,
+        }}
+        whileTap={{
+          scale: 0.95,
+        }}
+        className={`
+          flex
+          h-10
+          w-10
+          items-center
+          justify-center
+          rounded-xl
+          border
+          border-white/10
+          bg-white/5
+          ${iconColor}
+          transition-all
+          duration-300
+        `}
+      >
+        <Icon className="text-base" />
+      </motion.a>
+    );
+  })}
+</div>
+
+
           </motion.div>
         </div>
 
@@ -633,7 +644,7 @@ export default function Footer() {
           >
             {/* COPYRIGHT */}
 
-            <p className="text-xs text-white/60 sm:text-sm">
+            <p className="text-xs text-black/60 sm:text-sm">
               © 2026 Chhabra Properties.
               <br className="sm:hidden" /> All Rights Reserved.
             </p>
@@ -656,21 +667,21 @@ export default function Footer() {
             >
               <Link
                 to="/privacy"
-                className="transition hover:text-red-400"
+                className="transition text-cyan-600"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/terms"
-                className="transition hover:text-red-400"
+                className="transition text-cyan-600"
               >
                 Terms
               </Link>
 
               <Link
                 to="/refund"
-                className="transition hover:text-red-400"
+                className="transition text-cyan-600"
               >
                 Refund Policy
               </Link>
@@ -686,9 +697,9 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="
                   font-semibold
-                  text-red-500
+                  text-cyan-600
                   transition
-                  hover:text-red-400
+                  hover:text-cyan-400
                 "
               >
                 Grovally

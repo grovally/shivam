@@ -90,6 +90,7 @@ export default function GreateNoida() {
       className="
         text-center
         text-4xl
+        text-black
         sm:text-5xl
         lg:text-6xl
         font-bold
@@ -131,18 +132,18 @@ export default function GreateNoida() {
           md:w-1/4
           rounded-xl
           border
-          border-white/10
-          bg-white/[0.06]
+          border-red-500/10
+          bg-red/[0.06]
           backdrop-blur-xl
           px-4
           py-3
-          text-white
+          text-black
           placeholder:text-gray-400
           outline-none
           transition
-          focus:border-orange-500/50
+          border-red-500/50
           focus:ring-2
-          focus:ring-orange-500/20
+          ring-red-500/20
         "
       />
 
@@ -160,8 +161,8 @@ export default function GreateNoida() {
             transition-all
             ${
               category === "residential"
-                ? "bg-orange-500 text-white shadow-lg shadow-red-500/30"
-                : "bg-white/[0.07] text-gray-300 border border-white/10 hover:bg-white/10"
+                ? "bg-orange-500 text-black shadow-lg shadow-red-500/30"
+                : "bg-black text-gray-300 border border-white/10 hover:bg-red-600/10"
             }
           `}
         >
@@ -170,7 +171,7 @@ export default function GreateNoida() {
 
 
         <button
-          onClick={() => setCategory("noida")}
+          onClick={() => setCategory("greater-noida")}
           className={`
             px-5
             py-2.5
@@ -178,9 +179,9 @@ export default function GreateNoida() {
             font-medium
             transition-all
             ${
-              category === "noida"
-                ? "bg-red-500 text-white shadow-lg shadow-red-500/30"
-                : "bg-white/[0.07] text-gray-300 border border-white/10 hover:bg-white/10"
+              category === " greater-noida"
+                ? "bg-red-500 text-black shadow-lg shadow-red-500/30"
+                : "bg-red-600 text-gray-300 border border-white/10 hover:bg-red-/10"
             }
           `}
         >
@@ -271,7 +272,7 @@ export default function GreateNoida() {
           bg-white/[0.06]
           backdrop-blur-xl
           border
-          border-white/10
+          border-black/10
          
           hover:border-red-500/30
           hover:shadow-red-500/10
