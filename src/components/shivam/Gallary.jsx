@@ -16,11 +16,11 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black">
             Chhabra <span className="text-red-600">Property</span>  Gallery
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base lg:text-lg text-white/80 max-w-3xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base lg:text-lg text-black/80 max-w-3xl mx-auto">
             Explore our premium collection of apartments, villas, commercial
             spaces, and investment properties.
           </p>
@@ -46,7 +46,7 @@ export default function Gallery() {
         {/* Empty State */}
         {images.length === 0 && (
           <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-white py-20 text-center">
-            <p className="text-lg font-semibold text-gray-700">
+            <p className="text-lg font-semibold text-black/40">
               Gallery images will appear here.
             </p>
 

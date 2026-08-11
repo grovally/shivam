@@ -81,11 +81,11 @@ export default function FAQSection() {
           <span className="font-medium">Frequently Asked Questions</span>
         </div>
 
-        <h2 className="mt-5 text-4xl lg:text-5xl font-bold text-white">
+        <h2 className="mt-5 text-4xl lg:text-5xl font-bold text-black">
           Got Questions ?  <span className='text-red-600'> Have Answers</span>     
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80 ">
+        <p className="mx-auto mt-4 max-w-2xl text-lg text-black/80 ">
           Find quick answers about property buying, selling, investment, loans,
           legal documentation, and our real estate services.
         </p>

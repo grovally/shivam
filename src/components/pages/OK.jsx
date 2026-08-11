@@ -22,7 +22,7 @@ export default function Maps() {
   }, []);
 
   return (
-    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
+    <section className="relative  overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
  
       {/* Animated Background */}
            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
@@ -64,29 +64,29 @@ export default function Maps() {
       
       <div className="relative mx-auto max-w-7xl">
         {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <p className="uppercase tracking-[4px] md:tracking-[8px] -mt-6 md:-mt-10 text-white font-semibold text-xs md:text-base">
-  Premium Real Estate
-</p>
-          
-          <h1 className=" text-5xl md:text-7xl font-bold text-white leading-tight">
-            Explore
-            <span className=" text-red-600">
-              Noida Properties
-            </span>
-          </h1>
+       <motion.div
+  initial={{ opacity: 0, y: 40 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8 }}
+  className="text-center mb-16"
+>
+  <p className="uppercase tracking-[4px] md:tracking-[8px] text-black font-semibold text-xs md:text-base mb-4">
+    Premium Real Estate
+  </p>
 
-          <p className="mt-6 mx-auto max-w-3xl text-lg text-white/80 leading-8">
-            Verified premium residential and commercial projects with excellent
-            connectivity, top developers, and high investment potential.
-          </p>
-        </motion.div>
+  <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-black leading-tight">
+    Explore{" "}
+    <span className="text-red-600">
+      Noida Properties
+    </span>
+  </h1>
+
+  <p className="mt-6 mx-auto max-w-3xl px-4 text-base md:text-lg text-black/80 leading-7 md:leading-8">
+    Verified premium residential and commercial projects with excellent
+    connectivity, top developers, and high investment potential.
+  </p>
+</motion.div>
 
         {/* Noida Content */}
         <motion.div
@@ -97,8 +97,8 @@ export default function Maps() {
           className="grid gap-10 lg:grid-cols-2 items-center mb-14"
         >
           {/* Text */}
-          <div className="rounded-3xl border border-red-200 bg-white/20  backdrop-blur-xl p-8 shadow-2xl">
-            <div className="flex items-center gap-3 text-white font-semibold uppercase tracking-[4px]">
+          <div className="rounded-3xl border border-red-200   backdrop-blur-xl p-8 shadow-2xl">
+            <div className="flex items-center gap-3 text-black font-semibold uppercase tracking-[4px]">
               <MapPin className='text-red-600' size={18} />
               Noida
             </div>
@@ -107,7 +107,7 @@ export default function Maps() {
               Luxury Living in Noida
             </h2>
 
-            <p className="mt-6 text-white/80 leading-8 text-lg">
+            <p className="mt-6 text-black/80 leading-8 text-lg">
               Explore 850+ verified premium projects, metro-connected sectors,
               luxury apartments, commercial towers, and high-ROI investment
               opportunities across Noida.
@@ -116,12 +116,12 @@ export default function Maps() {
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-red-100 bg-white/5 p-4">
                 <p className="text-3xl font-black text-red-400">850+</p>
-                <p className="text-sm text-white">Verified Projects</p>
+                <p className="text-sm text-black">Verified Projects</p>
               </div>
 
               <div className="rounded-2xl border border-red-100 bg-white/5 p-4">
                 <p className="text-3xl font-black text-red-400">4.9★</p>
-                <p className="text-sm text-white">Client Rating</p>
+                <p className="text-sm text-black">Client Rating</p>
               </div>
             </div>
 
@@ -156,11 +156,12 @@ export default function Maps() {
             <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between">
               <div>
                 <p className="text-sm uppercase tracking-[3px] text-red-300">
-                  Featured
-                </p>
-                <h3 className="mt-1 text-2xl font-white">
-                  Noida Luxury Residences
-                </h3>
+  Featured
+</p>
+
+<h3 className="mt-1 text-2xl font-bold text-white">
+  Noida Luxury Residences
+</h3>
               </div>
 
               <div className="flex gap-2">

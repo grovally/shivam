@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -15,7 +16,6 @@ export default function Footer() {
     { name: "Home", path: "/" },
     { name: "Maps", path: "/maps" },
     { name: "Services", path: "/services" },
-   
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
   ];
@@ -33,13 +33,12 @@ export default function Footer() {
     "Greater Noida",
     "Noida",
     "Yamuna Expressway",
-   
   ];
 
   const socialLinks = [
     {
       icon: FaWhatsapp,
-      url: "https://wa.me/916200072000", 
+      url: "https://wa.me/916200072000",
     },
     {
       icon: FaFacebookF,
@@ -51,7 +50,7 @@ export default function Footer() {
     },
     {
       icon: FaYoutube,
-      url: "https://youtube.com/@chhabrapropertiesofficial?si=10NcQlbbLOAtna_b",
+      url: "https://youtube.com/@chhabrapropertiesofficial",
     },
     {
       icon: FaPhone,
@@ -64,331 +63,805 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="relative overflow-hidden bg-transparent py-16"
-    >
-      {/* Top Gradient Line */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-  <svg
-    className="relative block w-full h-20 md:h-28"
-    viewBox="0 0 1200 160"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient
-        id="redWaveGradient"
-        x1="0%"
-        y1="0%"
-        x2="100%"
-        y2="0%"
-      >
-        <stop offset="0%" stopColor="#450000" />
-        <stop offset="35%" stopColor="#b91c1c" />
-        <stop offset="65%" stopColor="#ef4444" />
-        <stop offset="100%" stopColor="#991b1b" />
-      </linearGradient>
-    </defs>
-
-    <path
-      d="
-        M0,0
-        C120,35 240,45 360,55
-        C500,65 620,75 760,90
-        C900,105 1040,125 1200,155
-        L1200,0
-        L0,0
-        Z
+      transition={{ duration: 0.8 }}
+      className="
+        relative
+        overflow-hidden
+        bg-black
+        text-white
       "
-      fill="url(#redWaveGradient)"
-    />
-  </svg>
-</div>
+    >
+      {/* =====================================================
+          BACKGROUND IMAGE
+      ===================================================== */}
 
-      
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png"
+          srcSet="
+            https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_000/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png 300w,
+            https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_768/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png 768w,
+            https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png 1200w
+          "
+          sizes="
+            (max-width: 640px) 100vw,
+            (max-width: 1024px) 100vw,
+            1200px
+          "
+          alt="Chhabra Properties"
+          loading="lazy"
+          decoding="async"
+          className="
+            h-full
+            w-full
+            object-cover
+            object-center
+            sm:object-center
+          "
+        />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+        {/* Main dark overlay */}
+        <div className="absolute inset-0 " />
 
-        {/* Heading */}
+        {/* Bottom gradient */}
+        <div
+          className="
+            
+            
+          "
+        />
+      </div>
+
+      {/* =====================================================
+          RED AMBIENT GLOW
+      ===================================================== */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -left-32
+          top-32
+          z-[2]
+          h-64
+          w-64
+          rounded-full
+          bg-red-600/10
+          blur-[100px]
+          sm:-left-40
+          sm:h-[400px]
+          sm:w-[400px]
+          sm:blur-[130px]
+        "
+      />
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          -right-32
+          bottom-20
+          z-[2]
+          h-64
+          w-64
+          rounded-full
+          bg-red-500/10
+          blur-[100px]
+          sm:-right-40
+          sm:h-[450px]
+          sm:w-[450px]
+          sm:blur-[140px]
+        "
+      />
+
+      {/* =====================================================
+          TOP RED WAVE
+      ===================================================== */}
+
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-0
+          top-0
+          z-[4]
+          w-full
+          overflow-hidden
+          leading-none
+        "
+      >
+        <svg
+          className="
+            block
+            h-12
+            w-full
+            sm:h-20
+            md:h-28
+          "
+          viewBox="0 0 1200 160"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient
+              id="footerRedWave"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" stopColor="#450000" />
+              <stop offset="35%" stopColor="#b91c1c" />
+              <stop offset="65%" stopColor="#ef4444" />
+              <stop offset="100%" stopColor="#7f1d1d" />
+            </linearGradient>
+          </defs>
+
+          <path
+            d="
+              M0,0
+              C120,35 240,45 360,55
+              C500,65 620,75 760,90
+              C900,105 1040,125 1200,155
+              L1200,0
+              L0,0
+              Z
+            "
+            fill="url(#footerRedWave)"
+          />
+        </svg>
+      </div>
+
+      {/* =====================================================
+          FLOATING LIGHTS
+      ===================================================== */}
+
+      <motion.div
+        animate={{
+          y: [0, -15, 0],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          left-[8%]
+          top-[35%]
+          z-[5]
+          h-2
+          w-2
+          rounded-full
+          bg-red-500
+          shadow-[0_0_15px_rgba(239,68,68,0.7)]
+        "
+      />
+
+      <motion.div
+        animate={{
+          y: [0, 20, 0],
+          opacity: [0.2, 0.5, 0.2],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="
+          pointer-events-none
+          absolute
+          right-[12%]
+          top-[25%]
+          z-[5]
+          h-2
+          w-2
+          rounded-full
+          bg-red-400
+          shadow-[0_0_20px_rgba(239,68,68,0.7)]
+        "
+      />
+
+      {/* =====================================================
+          MAIN CONTAINER
+      ===================================================== */}
+
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          w-full
+          max-w-7xl
+          px-4
+          pb-6
+          pt-24
+          sm:px-6
+          sm:pb-8
+          sm:pt-32
+          lg:px-8
+        "
+      >
+        {/* =====================================================
+            HERO HEADING
+        ===================================================== */}
 
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: .8 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.7 }}
+          className="
+            mx-auto
+            mb-10
+            max-w-3xl
+            text-center
+            sm:mb-16
+          "
         >
+          {/* Badge */}
 
-          
-<h2 className="text-4xl md:text-5xl font-bold">
-  Let's Find Your{" "}
-  <span className="text-red-600 ml-3">
-    Dream Property
-  </span>
-</h2>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="
+              mb-4
+              inline-flex
+              max-w-full
+              items-center
+              gap-2
+              rounded-full
+              border
+              border-red-500/30
+              bg-red-500/10
+              px-3
+              py-1.5
+              text-[9px]
+              font-bold
+              uppercase
+              tracking-[0.18em]
+              text-red-400
+              backdrop-blur-md
+              sm:px-4
+              sm:py-2
+              sm:text-xs
+              sm:tracking-[0.25em]
+            "
+          >
+            <span
+              className="
+                h-1.5
+                w-1.5
+                shrink-0
+                animate-pulse
+                rounded-full
+                bg-red-500
+              "
+            />
 
+            Premium Real Estate
+          </motion.div>
 
-          
+          {/* Heading */}
 
-          <p className="text-white/80 max-w-2xl mx-auto mt-6 leading-8">
+          <h2
+            className="
+              px-1
+              text-2xl
+              font-black
+              leading-tight
+              tracking-tight
+              text-white
+              sm:text-4xl
+              md:text-5xl
+              lg:text-6xl
+            "
+          >
+            Let's Find Your{" "}
+            <span className="text-red-500">
+              Dream Property
+            </span>
+          </h2>
+
+          {/* Description */}
+
+          <p
+            className="
+              mx-auto
+              mt-4
+              max-w-2xl
+              px-2
+              text-xs
+              leading-6
+              text-white/75
+              sm:mt-5
+              sm:text-base
+              sm:leading-8
+            "
+          >
             Chhabra Properties offers premium residential,
             commercial and industrial properties across
             Noida, Greater Noida and Yamuna Expressway.
           </p>
-
         </motion.div>
 
-        {/* Grid */}
+        {/* =====================================================
+            CONTENT GRID
+        ===================================================== */}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-
-          {/* Company */}
+        <div
+          className="
+            grid
+            grid-cols-2
+            gap-x-6
+            gap-y-10
+            sm:grid-cols-2
+            sm:gap-8
+            lg:grid-cols-4
+            lg:gap-10
+          "
+        >
+          {/* ===================================================
+              COMPANY
+          =================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: .1 }}
-            whileHover={{ y: -10 }}
-            className=" p-8 hover:border-red-400 transition"
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="min-w-0"
           >
-
-            <h3 className="text-2xl text-red-600 font-bold mb-8">
+            <h3
+              className="
+                mb-5
+                text-lg
+                font-bold
+                text-red-500
+                sm:text-xl
+              "
+            >
               Company
             </h3>
 
-            <div className="space-y-5">
-
-              {companyLinks.map((item, i) => (
-
+            <div className="space-y-3.5 sm:space-y-4">
+              {companyLinks.map((item) => (
                 <Link
-                  key={i}
+                  key={item.name}
                   to={item.path}
-                  className="group flex items-center justify-between text-gray-300 hover:text-red-400 transition"
+                  className="
+                    group
+                    flex
+                    min-w-0
+                    items-center
+                    justify-between
+                    gap-2
+                    text-xs
+                    text-white/70
+                    transition-colors
+                    hover:text-red-400
+                    sm:text-sm
+                  "
                 >
-
-                  <span>{item.name}</span>
+                  <span className="truncate">
+                    {item.name}
+                  </span>
 
                   <ArrowRight
-                    size={18}
-                    className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition"
+                    size={15}
+                    className="
+                      hidden
+                      shrink-0
+                      -translate-x-2
+                      opacity-0
+                      transition-all
+                      duration-300
+                      sm:block
+                      group-hover:translate-x-0
+                      group-hover:opacity-100
+                    "
                   />
-
                 </Link>
-
               ))}
-
             </div>
-
           </motion.div>
 
-          {/* Deals */}
+          {/* ===================================================
+              PROPERTY DEALS
+          =================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: .2 }}
-            whileHover={{ y: -10 }}
-            className=" p-8 hover:border-red-400 transition"
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="min-w-0"
           >
-
-            <h3 className="text-2xl  text-red-600  font-bold mb-8">
+            <h3
+              className="
+                mb-5
+                text-lg
+                font-bold
+                text-red-500
+                sm:text-xl
+              "
+            >
               Property Deals
             </h3>
 
-            <div className="space-y-5">
-
-              {deals.map((item, i) => (
-
-                <motion.div
-                  key={i}
-                  whileHover={{ x: 8 }}
-                  className="text-gray-300 cursor-pointer hover:text-red-400"
+            <div className="space-y-3.5 sm:space-y-4">
+              {deals.map((item) => (
+                <div
+                  key={item}
+                  className="
+                    flex
+                    min-w-0
+                    items-start
+                    gap-2
+                    text-xs
+                    text-white/70
+                    transition-colors
+                    hover:text-red-400
+                    sm:text-sm
+                  "
                 >
-                  • {item}
-                </motion.div>
+                  <span className="shrink-0 text-red-500">
+                    •
+                  </span>
 
+                  <span className="leading-5">
+                    {item}
+                  </span>
+                </div>
               ))}
-
             </div>
-
           </motion.div>
-                    {/* Locations */}
+
+          {/* ===================================================
+              LOCATIONS
+          =================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            whileHover={{ y: -10 }}
-            className=" p-8 hover:border-red-400 transition"
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="min-w-0"
           >
-            <h3 className="text-2xl text-red-600 font-bold mb-8">
+            <h3
+              className="
+                mb-5
+                text-lg
+                font-bold
+                text-red-500
+                sm:text-xl
+              "
+            >
               Locations
             </h3>
 
-            <div className="space-y-5">
-              {locations.map((item, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ x: 8 }}
-                  className="flex items-center gap-3 cursor-pointer text-gray-300 hover:text-red-400"
+            <div className="space-y-3.5 sm:space-y-4">
+              {locations.map((item) => (
+                <div
+                  key={item}
+                  className="
+                    flex
+                    min-w-0
+                    items-start
+                    gap-2.5
+                    text-xs
+                    text-white/70
+                    transition-colors
+                    hover:text-red-400
+                    sm:gap-3
+                    sm:text-sm
+                  "
                 >
-                  <MapPin size={18} />
-                  {item}
-                </motion.div>
+                  <MapPin
+                    size={16}
+                    className="
+                      mt-0.5
+                      shrink-0
+                      text-red-500
+                    "
+                  />
+
+                  <span className="leading-5">
+                    {item}
+                  </span>
+                </div>
               ))}
             </div>
           </motion.div>
 
-          {/* Contact */}
+          {/* ===================================================
+              CONTACT
+          =================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            whileHover={{ y: -10 }}
-            className="p-8 hover:border-red-400 transition"
+            transition={{ delay: 0.4, duration: 0.5 }}
+            className="min-w-0"
           >
-            <h3 className="text-2xl text-red-600 font-bold mb-6">
+            <h3
+              className="
+                mb-5
+                text-lg
+                font-bold
+                text-red-500
+                sm:text-xl
+              "
+            >
               Contact
             </h3>
 
-            
+            <div className="space-y-4 sm:space-y-5">
+              {/* ADDRESS */}
 
-           <div className="space-y-5">
+              <a
+                href="https://maps.google.com/?q=204,+S+L+Tower,+Alpha+1+Commercial+Belt,+Greater+Noida,+Uttar+Pradesh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  group
+                  flex
+                  min-w-0
+                  items-start
+                  gap-2.5
+                  text-xs
+                  text-white/70
+                  transition-colors
+                  hover:text-red-400
+                  sm:gap-3
+                  sm:text-sm
+                "
+              >
+                <MapPin
+                  size={18}
+                  className="
+                    mt-0.5
+                    shrink-0
+                    text-red-500
+                    transition
+                    group-hover:scale-110
+                  "
+                />
 
-  <a
-    href="https://maps.google.com/?q=204,+S+L+Tower,+Alpha+1+Commercial+Belt,+Greater+Noida,+Uttar+Pradesh"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-start gap-4 hover:text-red-400 transition"
-  >
-    <MapPin className="mt-1 text-red-400 flex-shrink-0" size={22} />
-    <span className=" hover:text-red-400 transition">
-      204, S L Tower, Alpha-I Commercial Belt,
-      <br />
-      Greater Noida, Uttar Pradesh
-    </span>
-  </a>
+                <span className="break-words leading-5">
+                  204, S L Tower, Alpha-I Commercial Belt,
+                  <br />
+                  Greater Noida, Uttar Pradesh
+                </span>
+              </a>
 
-  <a
-    href="mailto:info@cpgroup.in"
-    className="flex items-center gap-4 hover:text-cyan-400 transition"
-  >
-    <Mail className="text-red-400 flex-shrink-0" size={22} />
-    <span className="">
-      info@cpgroup.in
-    </span>
-  </a>
+              {/* EMAIL */}
 
-  <a
-    href="tel:+916262626462"
-    className="flex items-center gap-4 hover:text-red-400 transition"
-  >
-    <FaPhone className="text-red-400 flex-shrink-0" size={20} />
-    <span className="">
-      +91 62626 26462
-    </span>
-  </a>
+              <a
+                href="mailto:info@cpgroup.in"
+                className="
+                  group
+                  flex
+                  min-w-0
+                  items-center
+                  gap-2.5
+                  text-xs
+                  text-white/70
+                  transition-colors
+                  hover:text-red-400
+                  sm:gap-3
+                  sm:text-sm
+                "
+              >
+                <Mail
+                  size={18}
+                  className="
+                    shrink-0
+                    text-red-500
+                  "
+                />
 
-</div>
+                <span className="break-all">
+                  info@cpgroup.in
+                </span>
+              </a>
 
-            {/* Newsletter */}
+              {/* PHONE */}
 
-            <div className="mt-8">
+              <a
+                href="tel:+916262626462"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-2.5
+                  text-xs
+                  text-white/70
+                  transition-colors
+                  hover:text-red-400
+                  sm:gap-3
+                  sm:text-sm
+                "
+              >
+                <FaPhone
+                  className="shrink-0 text-red-500"
+                  size={16}
+                />
 
-              <h4 className="font-semibold mb-4">
-                Subscribe Newsletter
-              </h4>
-
-              
-
+                <span>
+                  +91 62626 26462
+                </span>
+              </a>
             </div>
 
-            {/* Social */}
+            {/* SOCIAL ICONS */}
 
-            <div className="flex gap-4 mt-8">
-
-              {socialLinks.map(({ icon: Icon, url }, index) => (
-                <motion.a
-                  key={index}
-                  href={url}
-                  target="_blank"
-                  rel="noreferrer"
-                  whileHover={{
-                    scale: 1.2,
-                    rotate: 12,
-                    y: -6,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                  className="h-8 w-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:bg-[#DF1221] transition"
-                >
-                  <Icon className="text-white text-lg" />
-                </motion.a>
-              ))}
-
+            <div className="mt-6 flex flex-wrap gap-2.5 sm:mt-7 sm:gap-3">
+              {socialLinks.map(
+                ({ icon: Icon, url }, index) => (
+                  <motion.a
+                    key={index}
+                    href={url}
+                    target={
+                      url.startsWith("tel:")
+                        ? undefined
+                        : "_blank"
+                    }
+                    rel={
+                      url.startsWith("tel:")
+                        ? undefined
+                        : "noopener noreferrer"
+                    }
+                    whileHover={{
+                      scale: 1.08,
+                      y: -3,
+                    }}
+                    whileTap={{
+                      scale: 0.95,
+                    }}
+                    className="
+                      flex
+                      h-9
+                      w-9
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-lg
+                      border
+                      border-white/15
+                      bg-black/30
+                      text-white/70
+                      backdrop-blur-md
+                      transition-all
+                      duration-300
+                      hover:border-red-500/50
+                      hover:bg-red-600
+                      hover:text-white
+                      hover:shadow-[0_0_15px_rgba(239,68,68,0.3)]
+                      sm:h-10
+                      sm:w-10
+                      sm:rounded-xl
+                    "
+                  >
+                    <Icon className="text-sm sm:text-base" />
+                  </motion.a>
+                )
+              )}
             </div>
-
           </motion.div>
-
         </div>
 
-        {/* Divider */}
+        {/* =====================================================
+            BOTTOM DIVIDER
+        ===================================================== */}
 
-        <div className="mt-20 border-t border-white/10 pt-8">
+        <div
+          className="
+            mt-10
+            border-t
+            border-white/15
+            pt-6
+            sm:mt-14
+            sm:pt-7
+          "
+        >
+          <div
+            className="
+              flex
+              flex-col
+              gap-5
+              text-center
+              md:flex-row
+              md:items-center
+              md:justify-between
+              md:text-left
+            "
+          >
+            {/* COPYRIGHT */}
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-5">
-
-            <p className="text-gray-400 text-center md:text-left">
-              © 2026 Chhabra Properties. All Rights Reserved.
+            <p
+              className="
+                text-[11px]
+                leading-5
+                text-white/60
+                sm:text-sm
+              "
+            >
+              © 2026 Chhabra Properties.
+              <br className="sm:hidden" />{" "}
+              All Rights Reserved.
             </p>
 
-            <div className="flex gap-6 text-sm">
+            {/* POLICIES */}
 
+            <div
+              className="
+                flex
+                flex-wrap
+                items-center
+                justify-center
+                gap-x-4
+                gap-y-2
+                text-[11px]
+                text-white/60
+                sm:gap-6
+                sm:text-sm
+              "
+            >
               <Link
                 to="/privacy"
-                className="hover:text-cyan-400 transition"
+                className="transition hover:text-red-400"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/terms"
-                className="hover:text-cyan-400 transition"
+                className="transition hover:text-red-400"
               >
-                Terms & Conditions
+                Terms
               </Link>
 
               <Link
                 to="/refund"
-                className="hover:text-cyan-400 transition"
+                className="transition hover:text-red-400"
               >
                 Refund Policy
               </Link>
-
             </div>
 
-            <p className="text-gray-500 text-sm">
+            {/* DESIGNED BY */}
+
+            <p
+              className="
+                text-[11px]
+                text-white/60
+                sm:text-sm
+              "
+            >
               Designed by{" "}
               <a
                 href="https://grovally.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-red-400 transition"
+                className="
+                  font-semibold
+                  text-red-500
+                  transition
+                  hover:text-red-400
+                "
               >
                 Grovally
               </a>
             </p>
-
           </div>
-
         </div>
-
       </div>
     </motion.footer>
   );
 }
+

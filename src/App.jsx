@@ -32,19 +32,18 @@ import ScrollToTop from "./components/pages/ScrollToTop";
 import Location from "./components/shivam/Location";
 
 
-import CrystalBackground from "./components/pages/CrystalBackground";
 
 import "./App.css";
 
 
 function MainLayout() {
   return (
-    <main className="relative min-h-screen bg-black">
+    <main className="relative min-h-screen bg-white text-black">
 
       {/* =====================================
           GLOBAL CRYSTAL BACKGROUND
       ====================================== */}
-      <CrystalBackground />
+     
 
 
       {/* =====================================

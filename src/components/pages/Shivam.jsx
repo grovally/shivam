@@ -11,7 +11,7 @@ export default function Shivam() {
       description:
         "Premium residential apartments, commercial spaces, villas, and investment opportunities across Noida.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890796/SURAJPUR-SITE-IV_y9axjx.png",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890507/SECTOR_-_49_eohwnd.png",
       path: "/noida",
     },
     {
@@ -33,313 +33,385 @@ export default function Shivam() {
   ];
 
   return (
-   <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
+   
+<section className="relative  overflow-hidden bg-white px-4 py-16 text-white sm:px-6 lg:px-8">
 
-      {/* =====================================================
-          PREMIUM BACKGROUND
-      ===================================================== */}
+  {/* =====================================================
+      PREMIUM RED WAVE BACKGROUND
+  ===================================================== */}
 
-      {/* Soft red glow */}
-      
-
-      {/* Blue glow */}
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-  <svg
-    className="relative block w-full h-20 md:h-32"
-    viewBox="0 0 1200 160"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient
-        id="redWaveGradient"
-        x1="0%"
-        y1="0%"
-        x2="100%"
-        y2="0%"
-      >
-        <stop offset="0%" stopColor="#450000" />
-        <stop offset="35%" stopColor="#b91c1c" />
-        <stop offset="65%" stopColor="#ef4444" />
-        <stop offset="100%" stopColor="#991b1b" />
-      </linearGradient>
-    </defs>
-
-    <path
-      d="
-        M0,0
-        C120,35 240,45 360,55
-        C500,65 620,75 760,90
-        C900,105 1040,125 1200,155
-        L1200,0
-        L0,0
-        Z
-      "
-      fill="url(#redWaveGradient)"
-    />
-  </svg>
-</div>
-
-      {/* =====================================================
-          CRYSTAL GLASS 1
-      ===================================================== */}
-
-      +
-
-      {/* =====================================================
-          CRYSTAL GLASS 2
-      ===================================================== */}
-
-    
-
-      {/* =====================================================
-          SMALL CRYSTAL
-      ===================================================== */}
-
-     
-
-
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
-
-      <div className="relative z-10 mx-auto max-w-7xl">
-
-        {/* Heading */}
-
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-14 text-center"
+  <div className="pointer-events-none absolute left-0 top-0 w-full overflow-hidden leading-none">
+    <svg
+      className="relative block h-20 w-full md:h-32"
+      viewBox="0 0 1200 160"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient
+          id="redWaveGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="0%"
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
-            Explore Locations
-          </p>
+          <stop offset="0%" stopColor="#450000" />
+          <stop offset="35%" stopColor="#b91c1c" />
+          <stop offset="65%" stopColor="#ef4444" />
+          <stop offset="100%" stopColor="#991b1b" />
+        </linearGradient>
+      </defs>
 
-          <h2 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Explore{" "}
-            <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-500 bg-clip-text text-transparent">
-              Property
-            </span>{" "}
-            Locations
-          </h2>
+      <path
+        d="
+          M0,0
+          C120,35 240,45 360,55
+          C500,65 620,75 760,90
+          C900,105 1040,125 1200,155
+          L1200,0
+          L0,0
+          Z
+        "
+        fill="url(#redWaveGradient)"
+      />
+    </svg>
+  </div>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-white/80 sm:text-lg">
-            Find premium residential, commercial and investment properties
-            across Noida, Greater Noida and Yamuna Expressway.
-          </p>
-        </motion.div>
+  {/* =====================================================
+      PREMIUM SOFT GLOWS
+  ===================================================== */}
 
-        {/* =====================================================
-            CARDS
-        ===================================================== */}
+  <div className="pointer-events-none absolute left-[-120px] top-40 h-72 w-72 rounded-full bg-red-500/10 blur-[100px]" />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  <div className="pointer-events-none absolute right-[-120px] top-72 h-72 w-72 rounded-full bg-blue-500/10 blur-[100px]" />
 
-          {cards.map((card, index) => (
-            <motion.div
-              key={index}
-              initial={{
-                opacity: 0,
-                y: 60,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              whileHover={{
-                y: -12,
-              }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.12,
-              }}
-              viewport={{
-                once: true,
-              }}
+  {/* =====================================================
+      CRYSTAL GLASS ELEMENTS
+  ===================================================== */}
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      left-[8%]
+      top-[30%]
+      h-20
+      w-20
+      rotate-45
+      rounded-2xl
+      border
+      border-white/40
+      bg-white/20
+      backdrop-blur-md
+      shadow-[0_10px_40px_rgba(255,255,255,0.15)]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      right-[8%]
+      top-[48%]
+      h-28
+      w-28
+      rotate-12
+      rounded-3xl
+      border
+      border-white/30
+      bg-white/10
+      backdrop-blur-lg
+      shadow-[0_15px_50px_rgba(255,255,255,0.12)]
+    "
+  />
+
+  <div
+    className="
+      pointer-events-none
+      absolute
+      bottom-[12%]
+      left-[45%]
+      h-12
+      w-12
+      rotate-45
+      rounded-xl
+      border
+      border-white/30
+      bg-white/10
+      backdrop-blur-md
+    "
+  />
+
+  {/* =====================================================
+      MAIN CONTENT
+  ===================================================== */}
+
+  <div className="relative z-10 mx-auto max-w-7xl">
+
+    {/* =====================================================
+        HEADING
+    ===================================================== */}
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="mb-14 text-center"
+    >
+      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-red-600">
+        Explore Locations
+      </p>
+
+      <h2 className="text-4xl font-black tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        Explore{" "}
+        <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-500 bg-clip-text text-transparent">
+          Property
+        </span>{" "}
+        Locations
+      </h2>
+
+      <p className="mx-auto mt-5 max-w-5xl px-2 text-base leading-8 text-gray-600 sm:text-lg">
+        Find premium residential, commercial and investment properties
+        across Noida, Greater Noida and Yamuna Expressway.
+      </p>
+    </motion.div>
+
+    {/* =====================================================
+        CARDS
+    ===================================================== */}
+
+    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      {cards.map((card, index) => (
+        <motion.div
+          key={index}
+          initial={{
+            opacity: 0,
+            y: 60,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          whileHover={{
+            y: -12,
+          }}
+          transition={{
+            duration: 0.6,
+            delay: index * 0.12,
+          }}
+          viewport={{
+            once: true,
+          }}
+          className="
+            group
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-gray-200
+            bg-white
+            shadow-[0_20px_60px_rgba(0,0,0,0.08)]
+            transition-all
+            duration-500
+            hover:border-red-200
+            hover:shadow-[0_30px_80px_rgba(220,38,38,0.18)]
+          "
+        >
+
+          {/* =====================================================
+              CARD HOVER GLOW
+          ===================================================== */}
+
+          <div
+            className="
+              pointer-events-none
+              absolute
+              inset-0
+              z-10
+              bg-gradient-to-br
+              from-red-500/10
+              via-transparent
+              to-blue-500/10
+              opacity-0
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+          />
+
+          {/* =====================================================
+              IMAGE
+          ===================================================== */}
+
+          <div className="relative overflow-hidden">
+
+            <div
+              onClick={() => navigate(card.path)}
               className="
-                group
                 relative
+                h-[260px]
+                w-full
+                cursor-pointer
                 overflow-hidden
-                rounded-[32px]
-                border
-                border-white/80
-                bg-white/75
-                shadow-[0_20px_60px_rgba(0,0,0,0.08)]
-                backdrop-blur-xl
-                transition-all
-                duration-500
-                hover:border-red-200
-                hover:shadow-[0_30px_80px_rgba(220,38,38,0.18)]
+                md:h-[320px]
+                lg:h-[300px]
               "
             >
 
-              {/* Card glow */}
+              <img
+                src={card.image}
+                alt={card.title}
+                className="
+                  h-full
+                  w-full
+                  object-contain
+                  object-center
+                  transition-transform
+                  duration-700
+                  group-hover:scale-105
+                "
+              />
+
+              {/* =====================================================
+                  IMAGE OVERLAY
+              ===================================================== */}
 
               <div
                 className="
                   pointer-events-none
                   absolute
                   inset-0
-                  z-10
-                  opacity-0
-                  transition-opacity
-                  duration-500
-                  group-hover:opacity-100
-                  bg-gradient-to-br
-                  from-red-500/10
+                  bg-gradient-to-t
+                  from-black/20
                   via-transparent
-                  to-blue-500/10
+                  to-white/10
                 "
               />
 
               {/* =====================================================
-                  IMAGE
+                  GLASS SHINE
+              ===================================================== */}
+
+              <motion.div
+                animate={{
+                  x: ["-120%", "120%"],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: "easeInOut",
+                }}
+                className="
+                  pointer-events-none
+                  absolute
+                  inset-y-0
+                  left-0
+                  w-1/3
+                  skew-x-[-20deg]
+                  bg-gradient-to-r
+                  from-transparent
+                  via-white/25
+                  to-transparent
+                  blur-sm
+                "
+              />
+
+              {/* =====================================================
+                  LOCATION BADGE
               ===================================================== */}
 
               <div
-                
+                className="
+                  absolute
+                  left-4
+                  top-4
+                  rounded-full
+                  border
+                  border-white/30
+                  bg-black/40
+                  px-4
+                  py-2
+                  text-xs
+                  font-semibold
+                  text-white
+                  backdrop-blur-md
+                "
               >
-                <div  
-                onClick={() => navigate(card.path)} className="relative w-full h-[260px] md:h-[320px] lg:h-[300px] flex items-center justify-center overflow-hidden">
-  <img
-    src={card.image}
-    alt={card.title}
-    className="
-      w-full
-      h-full
-      object-contain
-      object-center
-      transition-transform
-      duration-700
-      group-hover:scale-105
-    "
-  />
-</div>
-
-                
-
-                {/* Image overlay */}
-
-                <div
-                  className="
-                    absolute
-                    inset-0
-                    via-transparent
-                    to-white/10
-                  "
-                />
-
-                {/* Glass shine */}
-
-                <motion.div
-                  animate={{
-                    x: ["-120%", "120%"],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    repeatDelay: 3,
-                    ease: "easeInOut",
-                  }}
-                  className="
-                    absolute
-                    inset-y-0
-                    w-1/3
-                    skew-x-[-20deg]
-                    bg-gradient-to-r
-                    from-transparent
-                    via-white/25
-                    to-transparent
-                    blur-sm
-                  "
-                />
-
-                {/* Location badge */}
-
-                <div
-                  className="
-                    absolute
-                    left-4
-                    top-4
-                    rounded-full
-                    border
-                    border-white/30
-                    bg-black/40
-                    px-4
-                    py-2
-                    text-xs
-                    font-semibold
-                    text-white
-                    backdrop-blur-md
-                  "
-                >
-                  {card.title}
-                </div>
-
+                {card.title}
               </div>
 
-              {/* =====================================================
-                  CONTENT
-              ===================================================== */}
+            </div>
+          </div>
 
-              <div className="relative z-20 p-6">
+          {/* =====================================================
+              CARD CONTENT
+          ===================================================== */}
 
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {card.title}
-                </h3>
+          <div className="relative z-20 p-6">
 
-                <p className="mt-3 leading-7 text-gray-600">
-                  {card.description}
-                </p>
+            <h3 className="text-2xl font-bold text-gray-900">
+              {card.title}
+            </h3>
 
-                <button
-                  onClick={() => navigate(card.path)}
-                  className="
-                    mt-7
-                    inline-flex
-                    items-center
-                    gap-2
-                    rounded-xl
-                    bg-gradient-to-r
-                    from-red-600
-                    to-red-500
-                    px-6
-                    py-3
-                    font-semibold
-                    text-white
-                    shadow-lg
-                    shadow-red-500/20
-                    transition-all
-                    duration-300
-                    hover:scale-105
-                    hover:shadow-xl
-                    hover:shadow-red-500/30
-                  "
-                >
-                  Explore
+            <p className="mt-3 leading-7 text-gray-600">
+              {card.description}
+            </p>
 
-                  <motion.span
-                    animate={{
-                      x: [0, 5, 0],
-                    }}
-                    transition={{
-                      repeat: Infinity,
-                      duration: 1.2,
-                    }}
-                  >
-                    →
-                  </motion.span>
-                </button>
+            {/* =====================================================
+                EXPLORE BUTTON
+            ===================================================== */}
 
-              </div>
+            <button
+              onClick={() => navigate(card.path)}
+              className="
+                mt-7
+                inline-flex
+                items-center
+                gap-2
+                rounded-xl
+                bg-gradient-to-r
+                from-red-600
+                to-red-500
+                px-6
+                py-3
+                font-semibold
+                text-white
+                shadow-lg
+                shadow-red-500/20
+                transition-all
+                duration-300
+                hover:scale-105
+                hover:shadow-xl
+                hover:shadow-red-500/30
+              "
+            >
+              Explore
 
-            </motion.div>
-          ))}
+              <motion.span
+                animate={{
+                  x: [0, 5, 0],
+                }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 1.2,
+                }}
+              >
+                →
+              </motion.span>
+            </button>
 
-        </div>
-      </div>
-    </section>
+          </div>
+
+        </motion.div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+
   );
 }

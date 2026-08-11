@@ -1,129 +1,379 @@
+
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Phone, ArrowRight } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   const links = [
     { name: "Home", path: "/" },
-     { name: "Maps", path: "/maps" },
+    { name: "Maps", path: "/maps" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
-    {
-      name: "Gallery",path:"/gallery"
-    }
+    { name: "Gallery", path: "/gallery" },
   ];
-    
-  
-   
-  
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex h-16 sm:h-20 items-center justify-between">
-
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-           <div className="h-10 w-12 sm:h-15 sm:w-18 overflow-hidden rounded-lg bg-gradient-to-br from-red-400 to-yellow-600 shadow-lg">
-
-  <img
-    src="https://media.licdn.com/dms/image/v2/C4E0BAQGKkoxuHL4HGA/company-logo_200_200/company-logo_200_200/0/1630620425192?e=2147483647&v=beta&t=HygFAQdPRJS8y-bsqs8g_a3peCjiW0g3Z02pzKnCMGE"
-    alt="Chhabra Properties"
-    className="
-    h-full
-    w-full
-    object-cover
-    "
-  />
-
-</div>
-            <div className="hidden sm:block">
-              <h2 className="text-xl font-bold tracking-wide text-red-700">
-                CHHABRA
-              </h2>
-
-              <p className="-mt-1 text-xs tracking-[0.25em] text-white">
-                
-                PROPERTIES
-              </p>
-            </div>
-          </Link>
-
-          {/* Desktop Menu */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {links.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className="relative text-white font-medium transition duration-300 hover:text-red-400 after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-red-400 after:transition-all after:duration-300 hover:after:w-full"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right Side */}
-          <div className="hidden lg:flex items-center gap-4">
-
-            <div className="flex items-center gap-2">
-  <Phone size={30} className="text-red-400" />
-  <a
-    href="tel:+916262626462"
-    className="font-bold text-xl text-white hover:text-green-400 transition-colors"
-  >
-    +91 6262626462
-  </a>
-</div>
+    <header className="fixed left-0 top-0 z-50 w-full">
+      {/* Main Navbar */}
+      <div className="mx-auto mt-3 max-w-7xl px-3 sm:px-5 lg:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="
+            relative
+            rounded-2xl
+            border
+            border-white/10
+            bg-black/90
+            px-3
+            shadow-[0_10px_40px_rgba(0,0,0,0.25)]
+            backdrop-blur-2xl
+            sm:rounded-3xl
+            sm:px-5
+          "
+        >
+          <div className="flex h-[64px] items-center justify-between sm:h-[76px]">
+            
+            {/* ================= LOGO ================= */}
             <Link
-              to="/contact"
-              className="rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] px-4 sm:px-6 py-2 sm:py-3 font-semibold text-white transition hover:scale-105"
+              to="/"
+              onClick={closeMenu}
+              className="group flex items-center gap-2.5"
             >
-              Get Quote
+              <motion.div
+                whileHover={{ scale: 1.05, rotate: 1 }}
+                transition={{ duration: 0.2 }}
+                className="
+                  relative
+                  h-10
+                  w-10
+                  overflow-hidden
+                  rounded-xl
+                  bg-white
+                  shadow-lg
+                  shadow-red-500/10
+                  sm:h-12
+                  sm:w-12
+                "
+              >
+                <img
+                  src="https://media.licdn.com/dms/image/v2/C4E0BAQGKkoxuHL4HGA/company-logo_200_200/company-logo_200_200/0/1630620425192?e=2147483647&v=beta&t=HygFAQdPRJS8y-bsqs8g_a3peCjiW0g3Z02pzKnCMGE"
+                  alt="Chhabra Properties"
+                  className="h-full w-full object-cover"
+                />
+              </motion.div>
+
+              <div className="hidden xs:block sm:block">
+                <h2 className="text-base font-black tracking-wide text-red-500 sm:text-xl">
+                  CHHABRA
+                </h2>
+
+                <p className="-mt-1 text-[8px] font-medium tracking-[0.22em] text-white/80 sm:text-[10px]">
+                  PROPERTIES
+                </p>
+              </div>
             </Link>
+
+            {/* ================= DESKTOP NAV ================= */}
+            <nav className="hidden items-center gap-1 lg:flex">
+              {links.map((item) => {
+                const active = isActive(item.path);
+
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    className={`
+                      relative
+                      rounded-xl
+                      px-4
+                      py-2.5
+                      text-sm
+                      font-semibold
+                      transition-all
+                      duration-300
+                      ${
+                        active
+                          ? "bg-red-500/10 text-red-500"
+                          : "text-white/80 hover:bg-white/5 hover:text-white"
+                      }
+                    `}
+                  >
+                    {item.name}
+
+                    {active && (
+                      <motion.span
+                        layoutId="activeNav"
+                        className="
+                          absolute
+                          bottom-1
+                          left-1/2
+                          h-[2px]
+                          w-5
+                          -translate-x-1/2
+                          rounded-full
+                          bg-red-500
+                        "
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* ================= DESKTOP RIGHT ================= */}
+            <div className="hidden items-center gap-4 lg:flex">
+              
+              {/* Phone */}
+              <a
+                href="tel:+916262626462"
+                className="
+                  group
+                  flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  px-2
+                  py-2
+                  transition
+                  hover:bg-white/5
+                "
+              >
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/10">
+                  <Phone
+                    size={17}
+                    className="text-red-500 transition-transform duration-300 group-hover:rotate-12"
+                  />
+                </div>
+
+                <span className="text-sm font-bold text-white">
+                  +91 6262626462
+                </span>
+              </a>
+
+              {/* CTA */}
+              <Link
+                to="/contact"
+                className="
+                  group
+                  inline-flex
+                  items-center
+                  gap-2
+                  rounded-xl
+                  bg-gradient-to-r
+                  from-red-600
+                  to-red-700
+                  px-5
+                  py-3
+                  text-sm
+                  font-bold
+                  text-white
+                  shadow-lg
+                  shadow-red-600/20
+                  transition-all
+                  duration-300
+                  hover:-translate-y-0.5
+                  hover:shadow-xl
+                  hover:shadow-red-600/30
+                "
+              >
+                Get Quote
+
+                <ArrowRight
+                  size={16}
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                />
+              </Link>
+            </div>
+
+            {/* ================= MOBILE BUTTON ================= */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setOpen(!open)}
+              aria-label={open ? "Close menu" : "Open menu"}
+              className="
+                flex
+                h-10
+                w-10
+                items-center
+                justify-center
+                rounded-xl
+                border
+                border-white/10
+                bg-white/5
+                text-white
+                transition
+                hover:bg-red-500/10
+                hover:text-red-500
+                lg:hidden
+              "
+            >
+              <AnimatePresence mode="wait">
+                {open ? (
+                  <motion.div
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                  >
+                    <X size={23} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="menu"
+                    initial={{ rotate: 90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: -90, opacity: 0 }}
+                  >
+                    <Menu size={23} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
 
-          {/* Mobile Button */}
-          <button
-            onClick={() => setOpen(!open)}
-            className="lg:hidden text-white"
-          >
-            {open ? <X size={30} /> : <Menu size={30} />}
-          </button>
-        </div>
-      </div>
+          {/* ================= MOBILE MENU ================= */}
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{
+                  duration: 0.3,
+                  ease: "easeInOut",
+                }}
+                className="overflow-hidden lg:hidden"
+              >
+                <div className="border-t border-white/10 py-3">
+                  
+                  {/* Mobile Links */}
+                  <div className="space-y-1">
+                    {links.map((item, index) => {
+                      const active = isActive(item.path);
 
-      {/* Mobile Menu */}
-      <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-[500px]" : "max-h-0"
-        }`}
-      >
-        <div className="bg-black/95 px-6 py-5">
+                      return (
+                        <motion.div
+                          key={item.name}
+                          initial={{ opacity: 0, x: -15 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{
+                            duration: 0.25,
+                            delay: index * 0.04,
+                          }}
+                        >
+                          <Link
+                            to={item.path}
+                            onClick={closeMenu}
+                            className={`
+                              flex
+                              items-center
+                              justify-between
+                              rounded-xl
+                              px-4
+                              py-3.5
+                              text-sm
+                              font-semibold
+                              transition-all
+                              duration-300
+                              ${
+                                active
+                                  ? "bg-red-500/10 text-red-500"
+                                  : "text-white/80 hover:bg-white/5 hover:text-white"
+                              }
+                            `}
+                          >
+                            <span>{item.name}</span>
 
-          {links.map((item) => (
-            <Link
-              key={item.name}
-              to={item.path}
-              onClick={() => setOpen(false)}
-              className="block border-b border-white/10 py-4 text-white transition hover:text-red-400"
-            >
-              {item.name}
-            </Link>
-          ))}
+                            {active && (
+                              <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+                            )}
+                          </Link>
+                        </motion.div>
+                      );
+                    })}
+                  </div>
 
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="mt-6 block rounded-full bg-gradient-to-r from-[#DF1221] to-[#BF101C] py-3 text-center font-semibold text-white"
-          >
-            Get Quote
-          </Link>
+                  {/* Mobile Phone */}
+                  <a
+                    href="tel:+916262626462"
+                    onClick={closeMenu}
+                    className="
+                      mt-3
+                      flex
+                      items-center
+                      gap-3
+                      rounded-xl
+                      border
+                      border-white/10
+                      bg-white/5
+                      px-4
+                      py-3.5
+                    "
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-500/10">
+                      <Phone size={17} className="text-red-500" />
+                    </div>
 
-        </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-wider text-white/40">
+                        Call Us
+                      </p>
+
+                      <p className="text-sm font-bold text-white">
+                        +91 6262626462
+                      </p>
+                    </div>
+                  </a>
+
+                  {/* Mobile CTA */}
+                  <Link
+                    to="/contact"
+                    onClick={closeMenu}
+                    className="
+                      mt-3
+                      flex
+                      w-full
+                      items-center
+                      justify-center
+                      gap-2
+                      rounded-xl
+                      bg-gradient-to-r
+                      from-red-600
+                      to-red-700
+                      px-5
+                      py-3.5
+                      text-sm
+                      font-bold
+                      text-white
+                      shadow-lg
+                      shadow-red-600/20
+                    "
+                  >
+                    Get Quote
+                    <ArrowRight size={17} />
+                  </Link>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
       </div>
     </header>
   );
 }
+

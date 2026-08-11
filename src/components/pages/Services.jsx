@@ -76,7 +76,7 @@ export default function Services() {
           </p>
 
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mt-4">
 
             Complete{" "}
 
@@ -87,7 +87,7 @@ export default function Services() {
           </h2>
 
 
-          <p className="text-white/70 mt-6 max-w-3xl mx-auto text-lg leading-8">
+          <p className="text-black/70 mt-6 max-w-3xl mx-auto text-lg leading-8">
 
             Whether you're buying, selling, or investing, we provide expert
             real estate services designed to help you make confident decisions.
@@ -137,7 +137,7 @@ export default function Services() {
                 rounded-3xl
                 border
                 border-red-200/40
-                bg-black/30
+                bg-black/5
                 backdrop-blur-xl
                 p-8
                 transition-all
@@ -166,7 +166,7 @@ export default function Services() {
                   bg-gradient-to-r
                   ${service.color}
                   p-5
-                  text-white
+                  text-black
                   shadow-lg
                 `}
               >
@@ -195,7 +195,7 @@ export default function Services() {
               {/* DESCRIPTION */}
 
               <p className="
-                text-white/70
+                text-black/70
                 mt-4
                 leading-7
               ">
@@ -268,7 +268,7 @@ export default function Services() {
             rounded-3xl
             border
             border-red-200/40
-            bg-black/30
+            
             backdrop-blur-xl
             p-10
             hover:border-red-400/60
@@ -280,7 +280,7 @@ export default function Services() {
             text-3xl
             md:text-4xl
             font-bold
-            text-white
+            text-black
             mb-8
             text-center
           ">
@@ -334,7 +334,7 @@ export default function Services() {
                   flex
                   items-center
                   gap-3
-                  text-white/80
+                  text-black/80
                 "
               >
 
@@ -387,7 +387,7 @@ export default function Services() {
             text-4xl
             md:text-5xl
             font-bold
-            text-white
+            text-black
           ">
 
             Ready to Find Your{" "}
@@ -401,7 +401,7 @@ export default function Services() {
 
 
           <p className="
-            text-white/70
+            text-black/70
             mt-6
             text-lg
             max-w-2xl
@@ -431,7 +431,7 @@ export default function Services() {
               px-8
               py-4
               font-semibold
-              text-white
+              text-black
               transition-all
               duration-300
               hover:scale-105

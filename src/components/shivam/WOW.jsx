@@ -189,9 +189,7 @@ export default function WOW() {
 
       {/* SMALL CRYSTALS */}
 
-      <div className="partner-mini partner-mini-one" />
 
-      <div className="partner-mini partner-mini-two" />
 
 
 
@@ -238,7 +236,7 @@ export default function WOW() {
               sm:text-4xl
               lg:text-5xl
               font-bold
-              text-white
+              text-black
             "
           >
             Working With The{" "}
@@ -247,25 +245,23 @@ export default function WOW() {
               Top Development
             </span>{" "}
 
-            Real Estate Companies
+            Real Estate Developer
           </h2>
 
 
-          <p
-            className="
-              mt-4
-              max-w-2xl
-              mx-auto
-              text-white/60
-              text-sm
-              sm:text-base
-              leading-7
-            "
-          >
-            We collaborate with leading developers and
-            development authorities to bring trusted real
-            estate opportunities.
-          </p>
+         <p
+  className="
+    mt-4
+    mx-auto
+    text-black/60
+    text-sm
+    sm:text-base
+    leading-7
+    whitespace-nowrap
+  "
+>
+  We collaborate with leading developers and development authorities to bring trusted real estate opportunities.
+</p>
 
         </div>
 

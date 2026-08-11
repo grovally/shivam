@@ -1,7 +1,8 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import { ArrowUpRight, MapPin } from "lucide-react";
 
 const locations = [
   {
@@ -9,16 +10,16 @@ const locations = [
     title: "Noida",
     path: "/noida",
     description:
-      `Chhabra Properties supplies an extensive Noida Map that illustrates an expanding and exciting city. The extensive map provides an understanding of the diversity of Noida's land use, while identifying the key commercial, residential, and industrial sectors of considerable interest to our customers who are seeking property options and are interested to learn more about Noida's complex city structure. Whether your search takes you to established sectors or emerging sectors, our Noida Map will quickly help you navigate the active real estate market in Noida. Increase your opportunities to secure advantageous locations with Chhabra Properties.`,
+      "Chhabra Properties supplies an extensive Noida Map that illustrates an expanding and exciting city. The extensive map provides an understanding of the diversity of Noida's land use, while identifying the key commercial, residential, and industrial sectors of considerable interest to our customers who are seeking property options and are interested to learn more about Noida's complex city structure. Whether your search takes you to established sectors or emerging sectors, our Noida Map will quickly help you navigate the active real estate market in Noida. Increase your opportunities to secure advantageous locations with Chhabra Properties.",
     image:
-      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890796/SURAJPUR-SITE-IV_y9axjx.png",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890507/SECTOR_-_49_eohwnd.png",
   },
   {
     id: "greater-noida",
     title: "Greater Noida",
     path: "/greater-noida",
     description:
-      `At Chhabra Properties, we provide a detailed map of Greater Noida to help you navigate this growing city. Our sector-wise layouts provide clear views of clear views of residential, commercial and industrial zones, making it easier to find the best property. Whether you are looking for new developments or established communities, our map guides you through Greater Noida real estate. Find important locations and unlock the full potential of Greater Noida with Chhabra Properties.`,
+      "At Chhabra Properties, we provide a detailed map of Greater Noida to help you navigate this growing city. Our sector-wise layouts provide clear views of residential, commercial and industrial zones, making it easier to find the best property. Whether you are looking for new developments or established communities, our map guides you through Greater Noida real estate. Find important locations and unlock the full potential of Greater Noida with Chhabra Properties.",
     image:
       "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890725/ALPHA-I_jytlco.png",
   },
@@ -27,7 +28,7 @@ const locations = [
     title: "Yamuna Expressway",
     path: "/yamuna-expressway",
     description:
-      `Chhabra Properties offers an in-depth map of the Yamuna Expressway Industrial Development Authority (YEIDA) to help you navigate this rapidly developing business area. Our maps show the area structure, highlighting commercial, residential, and industrial districts that will help you explore property opportunities. Whether you’re looking for new developments or established areas, our map can guide you through the YEIDA real estate landscape. Increase your investment opportunities by discovering promising locations with Chhabra Properties.`,
+      "Chhabra Properties offers an in-depth map of the Yamuna Expressway Industrial Development Authority (YEIDA) to help you navigate this rapidly developing business area. Our maps show the area structure, highlighting commercial, residential, and industrial districts that will help you explore property opportunities. Whether you’re looking for new developments or established areas, our map can guide you through the YEIDA real estate landscape. Increase your investment opportunities by discovering promising locations with Chhabra Properties.",
     image:
       "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231930/MP-_SECTOR-18-20_1_rrfu1g.png",
   },
@@ -37,62 +38,18 @@ export default function Maps() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-28">
 
       {/* =====================================================
-          PREMIUM BACKGROUND
+          BACKGROUND
       ===================================================== */}
 
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
 
-        {/* Soft red glow */}
-        <div
-          className="
-            absolute
-            -left-40
-            top-20
-            h-96
-            w-96
-            rounded-full
-            bg-red-500/10
-            blur-[120px]
-          "
-        />
-
-        {/* Orange glow */}
-        <div
-          className="
-            absolute
-            -right-40
-            top-40
-            h-96
-            w-96
-            rounded-full
-            bg-orange-500/10
-            blur-[120px]
-          "
-        />
-
-        {/* Center glow */}
-        <div
-          className="
-            absolute
-            left-1/2
-            top-1/3
-            h-[500px]
-            w-[500px]
-            -translate-x-1/2
-            rounded-full
-            bg-red-500/5
-            blur-[150px]
-          "
-        />
-
-        {/* Floating Crystal 1 */}
         <motion.div
           animate={{
-            y: [0, -20, 0],
-            rotate: [0, 8, 0],
+            scale: [1, 1.15, 1],
+            opacity: [0.08, 0.15, 0.08],
           }}
           transition={{
             duration: 7,
@@ -101,129 +58,68 @@ export default function Maps() {
           }}
           className="
             absolute
-            left-[5%]
-            top-[15%]
-            h-24
-            w-24
-            rotate-45
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            backdrop-blur-xl
+            left-1/2
+            top-0
+            h-[280px]
+            w-[280px]
+            -translate-x-1/2
+            rounded-full
+            bg-red-500
+            blur-[120px]
+            sm:h-[450px]
+            sm:w-[450px]
           "
         />
 
-        {/* Floating Crystal 2 */}
-        <motion.div
-          animate={{
-            y: [0, 25, 0],
-            rotate: [0, -10, 0],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <div
           className="
             absolute
-            right-[5%]
-            top-[35%]
-            h-32
-            w-32
-            rotate-45
-            rounded-[35px]
-            border
-            border-white/10
-            bg-white/5
-            backdrop-blur-xl
+            -right-40
+            top-1/3
+            h-[350px]
+            w-[350px]
+            rounded-full
+            bg-red-500/[0.04]
+            blur-[100px]
           "
         />
 
-        {/* Small Crystal 1 */}
-        <motion.div
-          animate={{
-            y: [0, -12, 0],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <div
           className="
             absolute
-            bottom-[20%]
-            left-[15%]
-            h-12
-            w-12
-            rotate-45
-            rounded-xl
-            border
-            border-red-500/10
-            bg-red-500/5
+            -left-40
+            bottom-0
+            h-[350px]
+            w-[350px]
+            rounded-full
+            bg-red-500/[0.04]
+            blur-[100px]
           "
         />
-
-        {/* Small Crystal 2 */}
-        <motion.div
-          animate={{
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="
-            absolute
-            bottom-[15%]
-            right-[15%]
-            h-16
-            w-16
-            rotate-45
-            rounded-2xl
-            border
-            border-orange-500/10
-            bg-orange-500/5
-          "
-        />
-
       </div>
 
       {/* =====================================================
           CONTENT
       ===================================================== */}
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        {/* =================================================
-            HEADING
-        ================================================= */}
+        {/* =====================================================
+            HEADER
+        ===================================================== */}
 
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 40,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
-          viewport={{
-            once: true,
-          }}
-          className="mb-16 text-center"
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto mb-12 max-w-3xl text-center sm:mb-16"
         >
 
           {/* Badge */}
 
           <motion.div
-            animate={{
-              y: [0, -4, 0],
-            }}
+            animate={{ y: [0, -4, 0] }}
             transition={{
               duration: 3,
               repeat: Infinity,
@@ -237,67 +133,77 @@ export default function Maps() {
               rounded-full
               border
               border-red-500/20
-              bg-white/10
-              px-5
-              py-2.5
-              text-red-500
-              shadow-lg
-              backdrop-blur-xl
+              bg-red-500/[0.06]
+              px-4
+              py-2
+              text-xs
+              font-bold
+              uppercase
+              tracking-[0.18em]
+              text-red-600
+              sm:px-5
+              sm:py-2.5
+              sm:text-sm
             "
           >
-            <MapPin size={18} />
-
-            <span className="font-semibold">
-              Our Locations
-            </span>
+            <MapPin size={16} />
+            Our Locations
           </motion.div>
 
           {/* Heading */}
 
           <h2
             className="
-              mt-7
-              text-4xl
+              mt-5
+              text-3xl
               font-black
+              leading-tight
               tracking-tight
-              text-white
+              text-black
+              sm:mt-7
               sm:text-5xl
               md:text-6xl
             "
           >
-            Explore Premium{" "}
-            <span className="text-red-600">
+            Explore Premium
+            <span className="block text-red-600">
               Property Maps
             </span>
           </h2>
 
-          {/* Description */}
-
           <p
             className="
               mx-auto
-              mt-6
-              max-w-3xl
-              text-base
-              leading-8
-              text-white/60
-              sm:text-lg
+              mt-4
+              max-w-2xl
+              text-sm
+              leading-7
+              text-black/60
+              sm:mt-6
+              sm:text-base
+              sm:leading-8
             "
           >
             Browse detailed sector maps across Noida,
             Greater Noida and Yamuna Expressway.
           </p>
 
-          {/* =================================================
-              3 LOCATION BUTTONS
-          ================================================= */}
+          {/* =====================================================
+              LOCATION PILLS
+          ===================================================== */}
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-7 flex flex-wrap justify-center gap-2.5 sm:mt-8 sm:gap-3">
 
-            {locations.map((item) => (
-
+            {locations.map((item, index) => (
               <motion.button
                 key={item.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.08,
+                  duration: 0.4,
+                }}
                 whileHover={{
                   y: -3,
                   scale: 1.03,
@@ -309,32 +215,33 @@ export default function Maps() {
                 className="
                   group
                   inline-flex
+                  min-h-[44px]
                   items-center
                   gap-2
                   rounded-full
                   border
-                  border-white/10
-                  bg-white/5
-                  px-6
-                  py-3
-                  text-sm
-                  font-semibold
-                  text-white/70
-                  backdrop-blur-xl
+                  border-black/10
+                  bg-white
+                  px-4
+                  py-2.5
+                  text-xs
+                  font-bold
+                  text-black
+                  shadow-sm
                   transition-all
                   duration-300
                   hover:border-red-500
                   hover:bg-red-600
                   hover:text-white
-                  hover:shadow-lg
-                  hover:shadow-red-500/20
+                  hover:shadow-[0_10px_30px_rgba(220,38,38,0.2)]
+                  sm:px-5
+                  sm:text-sm
                 "
               >
-
                 <MapPin
-                  size={16}
+                  size={15}
                   className="
-                    text-red-500
+                    text-red-600
                     transition-colors
                     duration-300
                     group-hover:text-white
@@ -342,28 +249,24 @@ export default function Maps() {
                 />
 
                 {item.title}
-
               </motion.button>
-
             ))}
 
           </div>
-
         </motion.div>
 
-        {/* =================================================
-            LOCATION IMAGES
-        ================================================= */}
+        {/* =====================================================
+            LOCATION SECTIONS
+        ===================================================== */}
 
-        <div className="space-y-16">
+        <div className="space-y-14 sm:space-y-20 lg:space-y-28">
 
           {locations.map((item, index) => (
-
-            <motion.div
+            <motion.article
               key={item.id}
               initial={{
                 opacity: 0,
-                y: 80,
+                y: 60,
               }}
               whileInView={{
                 opacity: 1,
@@ -371,167 +274,260 @@ export default function Maps() {
               }}
               viewport={{
                 once: true,
-                margin: "-100px",
+                amount: 0.12,
               }}
               transition={{
-                duration: 0.8,
-                delay: index * 0.12,
+                duration: 0.7,
+                delay: 0.05,
               }}
+              className="group"
             >
 
-              {/* Image Container */}
+              {/* =================================================
+                  LOCATION TITLE
+              ================================================= */}
 
-              <div
-                onClick={() => navigate(item.path)}
-                className="
-                  group/image
-                  relative
-                  flex
-                  min-h-[260px]
-                  w-full
-                  cursor-pointer
-                  items-center
-                  justify-center
-                  overflow-hidden
-                  
-                  
-                  
-                 
-                  sm:min-h-[380px]
-                  md:min-h-[500px]
-                "
-              >
+              <div className="mb-5 flex items-center justify-between px-1 sm:mb-6">
 
-                {/* Background Glow */}
+                <div className="flex items-center gap-3">
 
-                <div
-                  className="
-                    absolute
-                    inset-10
-                    rounded-[40px]
-                    bg-red-500/5
-                    blur-[80px]
-                  "
-                />
+                  <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-red-500/10 text-red-600">
+                    <MapPin size={17} />
+                  </span>
 
-                {/* Image */}
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-black/35">
+                      Location 0{index + 1}
+                    </p>
 
-                <motion.img
-                  src={item.image}
-                  alt={item.title}
-                  loading="lazy"
-                  initial={{
-                    scale: 1,
-                  }}
-                  whileHover={{
-                    scale: 1.05,
-                  }}
-                  transition={{
-                    duration: 0.8,
-                    ease: "easeOut",
-                  }}
-                  className="
-                    relative
-                    z-10
-                    max-h-[290px]
-                    max-w-[94%]
-                    object-contain
-                    transition-transform
-                    duration-700
-                    sm:max-h-[380px]
-                    md:max-h-[500px]
-                    lg:max-w-[92%]
-                  "
-                />
+                    <h3 className="text-xl font-black text-black sm:text-2xl">
+                      {item.title}
+                    </h3>
+                  </div>
 
-                {/* Hover Overlay */}
+                </div>
 
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    inset-0
-                    z-20
-                    bg-gradient-to-t
-                    from-white/5
-                    via-transparent
-                    to-transparent
-                    opacity-0
-                    transition-opacity
-                    duration-500
-                    group-hover/image:opacity-100
-                  "
-                />
-
-                {/* Location Badge */}
-
-                
-                  
+               
 
               </div>
 
               {/* =================================================
-                  ONLY DESCRIPTION BELOW IMAGE
+                  IMAGE CARD
               ================================================= */}
 
-              <p
+              <motion.div
+                onClick={() => navigate(item.path)}
+                whileHover={{ y: -5 }}
+                whileTap={{ scale: 0.995 }}
                 className="
-                  mx-auto
-                  mt-5
-                  rounded-full
-                  
-                  max-w-3xl
-                  text-center
-                  text-base
-                  leading-7
-                  text-white/60
-                  sm:text-sm
+                  relative
+                  cursor-pointer
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-black/10
+                  bg-white
+                  shadow-[0_15px_50px_rgba(0,0,0,0.08)]
+                  transition-shadow
+                  duration-500
+                  hover:shadow-[0_25px_70px_rgba(220,38,38,0.14)]
+                  sm:rounded-3xl
                 "
               >
-                {item.description}
-              </p>
-              <div className="mt-6 flex justify-center">
-  <motion.button
-    whileHover={{
-      scale: 1.05,
-      y: -2,
-    }}
-    whileTap={{
-      scale: 0.96,
-    }}
-    onClick={() => navigate(item.path)}
-    className="
-      inline-flex
-      items-center
-      gap-2
-      rounded-full
-      bg-red-600
-      px-7
-      py-3
-      text-sm
-      font-semibold
-      text-white
-      shadow-lg
-      shadow-red-600/30
-      transition-all
-      duration-300
-      hover:bg-red-700
-      hover:shadow-xl
-      hover:shadow-red-600/40
-    "
-  >
-    Explore
-  </motion.button>
-</div>
 
-            </motion.div>
+                {/* Image wrapper */}
 
+                <div
+                  className="
+                    relative
+                    flex
+                    min-h-[230px]
+                    items-center
+                    justify-center
+                    overflow-hidden
+                    bg-white
+                    p-3
+                    sm:min-h-[350px]
+                    sm:p-6
+                    md:min-h-[470px]
+                    lg:min-h-[550px]
+                  "
+                >
+
+                  {/* Red glow */}
+
+                  <div
+                    className="
+                      pointer-events-none
+                      absolute
+                      left-1/2
+                      top-1/2
+                      h-2/3
+                      w-2/3
+                      -translate-x-1/2
+                      -translate-y-1/2
+                      rounded-full
+                      bg-red-500/[0.05]
+                      blur-[70px]
+                    "
+                  />
+
+                  {/* Image */}
+
+                  <motion.img
+                    src={item.image}
+                    alt={`${item.title} property map`}
+                    loading="lazy"
+                    initial={{ scale: 1 }}
+                    whileHover={{ scale: 1.035 }}
+                    transition={{
+                      duration: 0.7,
+                      ease: "easeOut",
+                    }}
+                    className="
+                      relative
+                      z-10
+                      max-h-[230px]
+                      w-full
+                      object-contain
+                      sm:max-h-[350px]
+                      md:max-h-[470px]
+                      lg:max-h-[540px]
+                    "
+                  />
+
+                  {/* Hover overlay */}
+
+                  <div
+                    className="
+                      pointer-events-none
+                      absolute
+                      inset-0
+                      z-20
+                      bg-gradient-to-t
+                      from-black/10
+                      via-transparent
+                      to-transparent
+                      opacity-0
+                      transition-opacity
+                      duration-500
+                      group-hover:opacity-100
+                    "
+                  />
+
+                  {/* Explore floating button */}
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    whileHover={{ scale: 1.05 }}
+                    className="
+                      absolute
+                      bottom-4
+                      right-4
+                      z-30
+                      flex
+                      h-11
+                      items-center
+                      gap-2
+                      rounded-full
+                      bg-red-600
+                      px-4
+                      text-xs
+                      font-bold
+                      text-white
+                      opacity-0
+                      shadow-xl
+                      shadow-red-600/30
+                      transition-all
+                      duration-300
+                      group-hover:opacity-100
+                      sm:bottom-6
+                      sm:right-6
+                      sm:h-12
+                      sm:px-5
+                      sm:text-sm
+                    "
+                  >
+                    Explore
+                    <ArrowUpRight size={16} />
+                  </motion.div>
+
+                </div>
+              </motion.div>
+
+              {/* =================================================
+                  DESCRIPTION
+              ================================================= */}
+
+              <div className="mx-auto mt-5 max-w-4xl sm:mt-7">
+
+                <p
+                  className="
+                    text-center
+                    text-sm
+                    leading-7
+                    text-black/60
+                    sm:text-base
+                    sm:leading-8
+                  "
+                >
+                  {item.description}
+                </p>
+
+              </div>
+
+              {/* =================================================
+                  MOBILE/DESKTOP CTA
+              ================================================= */}
+
+              <div className="mt-5 flex justify-center sm:mt-6">
+
+                <motion.button
+                  whileHover={{
+                    scale: 1.04,
+                    y: -2,
+                  }}
+                  whileTap={{
+                    scale: 0.96,
+                  }}
+                  onClick={() => navigate(item.path)}
+                  className="
+                    inline-flex
+                    min-h-[46px]
+                    items-center
+                    gap-2
+                    rounded-full
+                    bg-red-600
+                    px-6
+                    py-3
+                    text-sm
+                    font-bold
+                    text-white
+                    shadow-[0_10px_30px_rgba(220,38,38,0.2)]
+                    transition-all
+                    duration-300
+                    hover:bg-red-700
+                    hover:shadow-[0_15px_40px_rgba(220,38,38,0.3)]
+                    sm:px-7
+                  "
+                >
+                  Explore {item.title}
+
+                  <ArrowUpRight
+                    size={17}
+                    className="transition-transform duration-300"
+                  />
+                </motion.button>
+
+              </div>
+
+            </motion.article>
           ))}
 
         </div>
 
       </div>
-
     </section>
   );
 }
+

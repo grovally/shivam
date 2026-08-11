@@ -131,8 +131,7 @@ export default function Contact() {
           -translate-x-1/2
           w-[500px]
           h-[300px]
-          bg-red-500/10
-          blur-[120px]
+          
           rounded-full
           pointer-events-none
         "
@@ -176,7 +175,7 @@ export default function Contact() {
           border
           border-red-200/40
 
-          bg-black/40
+         
 
           backdrop-blur-xl
 
@@ -219,7 +218,7 @@ export default function Contact() {
           <p
             className="
               mt-5
-              text-white/75
+              text-black/75
               text-lg
               leading-8
             "
@@ -279,7 +278,7 @@ export default function Contact() {
 
               <span
                 className="
-                  text-white/90
+                  text-black/90
                   font-semibold
                 "
               >
@@ -327,7 +326,7 @@ export default function Contact() {
 
               <span
                 className="
-                  text-white/90
+                  text-black/90
                   font-semibold
                 "
               >
@@ -376,7 +375,7 @@ export default function Contact() {
 
               <span
                 className="
-                  text-white/90
+                  text-black/90
                   font-semibold
                   leading-7
                 "
@@ -438,7 +437,7 @@ export default function Contact() {
                 border
                 border-red-200/30
 
-                bg-black/40
+                bg-black/20
 
                 px-5
                 py-4
@@ -478,7 +477,7 @@ export default function Contact() {
                 border
                 border-red-200/30
 
-                bg-black/40
+                bg-black/20
 
                 px-5
                 py-4
@@ -518,7 +517,7 @@ export default function Contact() {
                 border
                 border-red-200/30
 
-                bg-black/40
+                bg-black/20
 
                 px-5
                 py-4
@@ -558,7 +557,7 @@ export default function Contact() {
                 border
                 border-red-200/30
 
-                bg-black/40
+                bg-black/20
 
                 px-5
                 py-4
@@ -598,7 +597,7 @@ export default function Contact() {
                 border
                 border-red-200/30
 
-                bg-black/40
+                bg-black/20
 
                 px-5
                 py-4

@@ -145,51 +145,308 @@ export default function Location() {
   }, []);
 
   return (
-    <section className="relative mt-10 overflow-hidden bg-transparent px-4 py-16 text-white sm:px-6 lg:px-8">
-      
+   
+<section className="relative  overflow-hidden bg-white px-4 py-16 sm:px-6 lg:px-8">
 
-      {/* =========================================================
-          BACKGROUND
-      ========================================================= */}
+  {/* =========================================================
+      PREMIUM BACKGROUND
+  ========================================================= */}
 
-      {/* Soft red ambient glow */}
-      
+  {/* Soft red ambient glow */}
+  <div className="pointer-events-none absolute left-[-180px] top-[20%] h-[420px] w-[420px] rounded-full bg-red-500/10 blur-[120px]" />
 
-      {/* Soft orange glow */}
-      
+  {/* Soft orange glow */}
+  <div className="pointer-events-none absolute right-[-180px] top-[45%] h-[420px] w-[420px] rounded-full bg-orange-400/10 blur-[120px]" />
 
-      {/* =========================================================
-          FLOATING CRYSTAL 1
-      ========================================================= */}
+  {/* =========================================================
+      TOP RED WAVE
+  ========================================================= */}
 
-     
+  <div className="pointer-events-none absolute left-0 top-0 z-0 w-full overflow-hidden leading-none">
+    <svg
+      className="relative block h-20 w-full md:h-32"
+      viewBox="0 0 1200 160"
+      preserveAspectRatio="none"
+    >
+      <defs>
+        <linearGradient
+          id="officeRedWaveGradient"
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="0%"
+        >
+          <stop offset="0%" stopColor="#450000" />
+          <stop offset="35%" stopColor="#b91c1c" />
+          <stop offset="65%" stopColor="#ef4444" />
+          <stop offset="100%" stopColor="#991b1b" />
+        </linearGradient>
+      </defs>
 
-      {/* =========================================================
-          FLOATING CRYSTAL 2
-      ========================================================= */}
+      <path
+        d="
+          M0,0
+          C120,35 240,45 360,55
+          C500,65 620,75 760,90
+          C900,105 1040,125 1200,155
+          L1200,0
+          L0,0
+          Z
+        "
+        fill="url(#officeRedWaveGradient)"
+      />
+    </svg>
+  </div>
 
-     
+  {/* =========================================================
+      FLOATING CRYSTAL 1
+  ========================================================= */}
 
-      {/* =========================================================
-          SMALL FLOATING CRYSTALS
-      ========================================================= */}
+  <motion.div
+    animate={{
+      y: [0, -18, 0],
+      rotate: [45, 52, 45],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      pointer-events-none
+      absolute
+      left-[5%]
+      top-[22%]
+      z-0
+      hidden
+      h-20
+      w-20
+      rounded-2xl
+      border
+      border-red-200/40
+      bg-white/20
+      shadow-[0_15px_50px_rgba(220,38,38,0.12)]
+      backdrop-blur-xl
+      md:block
+    "
+  />
 
-      
+  {/* =========================================================
+      FLOATING CRYSTAL 2
+  ========================================================= */}
 
-     
+  <motion.div
+    animate={{
+      y: [0, 20, 0],
+      rotate: [12, 20, 12],
+    }}
+    transition={{
+      duration: 7,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      pointer-events-none
+      absolute
+      right-[5%]
+      top-[42%]
+      z-0
+      hidden
+      h-28
+      w-28
+      rounded-3xl
+      border
+      border-orange-200/40
+      bg-white/20
+      shadow-[0_20px_60px_rgba(249,115,22,0.12)]
+      backdrop-blur-xl
+      md:block
+    "
+  />
 
-      {/* =========================================================
-          CONTENT
-      ========================================================= */}
+  {/* =========================================================
+      SMALL FLOATING CRYSTALS
+  ========================================================= */}
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+  <motion.div
+    animate={{
+      y: [0, -12, 0],
+      rotate: [45, 55, 45],
+    }}
+    transition={{
+      duration: 5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      pointer-events-none
+      absolute
+      bottom-[15%]
+      left-[12%]
+      z-0
+      hidden
+      h-10
+      w-10
+      rotate-45
+      rounded-lg
+      border
+      border-red-200/30
+      bg-white/20
+      backdrop-blur-md
+      md:block
+    "
+  />
 
-        {/* HEADER */}
+  <motion.div
+    animate={{
+      y: [0, 15, 0],
+      rotate: [45, 35, 45],
+    }}
+    transition={{
+      duration: 6,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+    className="
+      pointer-events-none
+      absolute
+      bottom-[30%]
+      right-[15%]
+      z-0
+      hidden
+      h-8
+      w-8
+      rotate-45
+      rounded-md
+      border
+      border-orange-200/30
+      bg-white/20
+      backdrop-blur-md
+      md:block
+    "
+  />
+
+  {/* =========================================================
+      CONTENT
+  ========================================================= */}
+
+  <div className="relative z-10 mx-auto max-w-7xl">
+
+    {/* =========================================================
+        HEADER
+    ========================================================= */}
+
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+      }}
+      transition={{
+        duration: 0.8,
+      }}
+      className="mb-20 text-center"
+    >
+
+      {/* Office Badge */}
+
+      <motion.span
+        whileHover={{
+          scale: 1.05,
+        }}
+        className="
+          inline-flex
+          items-center
+          gap-2
+          rounded-full
+          border
+          border-red-200
+          bg-white/80
+          px-5
+          py-2.5
+          text-sm
+          font-semibold
+          tracking-wide
+          text-red-600
+          shadow-lg
+          shadow-red-100/50
+          backdrop-blur-xl
+        "
+      >
+        <MapPin size={17} />
+
+        OUR BRANCH OFFICES
+      </motion.span>
+
+      {/* Heading */}
+
+      <h1
+        className="
+          mt-7
+          text-4xl
+          font-black
+          tracking-tight
+          text-gray-900
+          sm:text-5xl
+          md:text-6xl
+        "
+      >
+        Visit{" "}
+
+        <span
+          className="
+            bg-gradient-to-r
+            from-red-600
+            via-red-500
+            to-orange-500
+            bg-clip-text
+            text-transparent
+          "
+        >
+          Chhabra
+        </span>{" "}
+
+        Properties
+      </h1>
+
+      {/* Description */}
+
+      <p
+        className="
+          mx-auto
+          mt-6
+          max-w-5xl
+          px-2
+          text-base
+          leading-8
+          text-gray-600
+          sm:text-lg
+        "
+      >
+        Connect with our property experts across multiple locations. Find your nearest office and get complete assistance.
+      </p>
+
+    </motion.div>
+
+    {/* =========================================================
+        OFFICES
+    ========================================================= */}
+
+    <div className="space-y-24">
+
+      {offices.map((office, index) => (
 
         <motion.div
+          key={office.id}
           initial={{
             opacity: 0,
-            y: 40,
+            y: 70,
           }}
           whileInView={{
             opacity: 1,
@@ -197,621 +454,530 @@ export default function Location() {
           }}
           viewport={{
             once: true,
+            amount: 0.15,
           }}
           transition={{
             duration: 0.8,
+            delay: index * 0.05,
           }}
-          className="mb-20 text-center"
+          className={`
+            grid
+            items-center
+            gap-10
+            lg:grid-cols-2
+            ${
+              index % 2 === 1
+                ? "lg:[&>*:first-child]:order-2"
+                : ""
+            }
+          `}
         >
 
-          <motion.span
-            whileHover={{
-              scale: 1.05,
-            }}
-            className="
-              inline-flex
-              items-center
-              gap-2
-              rounded-full
-              border
-              border-red-200
-              bg-white/70
-              px-5
-              py-2.5
-              text-sm
-              font-semibold
-              tracking-wide
-              text-red-600
-              shadow-lg
-              shadow-red-100/50
-              backdrop-blur-xl
-            "
-          >
-            <MapPin size={17} />
+          {/* =================================================
+              IMAGE
+          ================================================= */}
 
-            OUR BRANCH OFFICES
-          </motion.span>
+          <div className="group relative">
 
-          <h1
-            className="
-              mt-7
-              text-4xl
-              font-black
-              tracking-tight
-              text-white
-              sm:text-5xl
-              md:text-6xl
-            "
-          >
-            Visit{" "}
-            <span className="
-              bg-gradient-to-r
-              from-red-600
-              via-red-500
-              to-orange-500
-              bg-clip-text
-              text-transparent
-            ">
-              Chhabra
-            </span>{" "}
-            Properties
-          </h1>
+            {/* Outer Crystal Glow */}
 
-          <p
-            className="
-              mx-auto
-              mt-6
-              max-w-3xl
-              text-base
-              leading-8
-              text-white/75
-              sm:text-lg
-            "
-          >
-            Connect with our property experts across multiple
-            locations. Find your nearest office and get complete
-            assistance.
-          </p>
+            <div
+              className="
+                absolute
+                -inset-4
+                rounded-[45px]
+                bg-gradient-to-r
+                from-red-400/20
+                via-transparent
+                to-red-400/20
+                opacity-0
+                blur-2xl
+                transition
+                duration-700
+                group-hover:opacity-100
+              "
+            />
 
-        </motion.div>
+            {/* Image Card */}
 
-        {/* =========================================================
-            OFFICES
-        ========================================================= */}
-
-        <div className="space-y-24">
-
-          {offices.map((office, index) => (
-
-            <motion.div
-              key={office.id}
-              initial={{
-                opacity: 0,
-                y: 70,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.15,
-              }}
-              transition={{
-                duration: 0.8,
-                delay: index * 0.05,
-              }}
-              className={`
-                grid
-                items-center
-                gap-10
-                lg:grid-cols-2
-                ${index % 2 === 1
-                  ? "lg:[&>*:first-child]:order-2"
-                  : ""
-                }
-              `}
+            <div
+              className="
+                relative
+                overflow-hidden
+                rounded-[38px]
+                border
+                border-gray-200
+                bg-white/70
+                p-2
+                shadow-[0_25px_80px_rgba(0,0,0,0.12)]
+                backdrop-blur-xl
+              "
             >
 
-              {/* =================================================
-                  IMAGE
-              ================================================= */}
+              <div
+                className="
+                  relative
+                  overflow-hidden
+                  rounded-[32px]
+                "
+              >
 
-              <div className="group relative">
+                {/* Main Image */}
 
-                {/* Outer crystal glow */}
+                <motion.img
+                  key={
+                    office.images?.[
+                      currentIndexes[office.id] ?? 0
+                    ]
+                  }
+                  initial={{
+                    opacity: 0,
+                    scale: 1.08,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                  }}
+                  transition={{
+                    duration: 0.8,
+                  }}
+                  src={
+                    office.images?.[
+                      currentIndexes[office.id] ?? 0
+                    ]
+                  }
+                  alt={office.title}
+                  className="
+                    h-[330px]
+                    w-full
+                    object-cover
+                    transition
+                    duration-700
+                    group-hover:scale-105
+                    sm:h-[390px]
+                    md:h-[450px]
+                  "
+                />
+
+                {/* Image Gradient */}
+
+                <div
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-0
+                    bg-gradient-to-t
+                    from-black/40
+                    via-transparent
+                    to-white/10
+                  "
+                />
+
+                {/* Crystal Shine */}
+
+                <motion.div
+                  animate={{
+                    x: ["-120%", "120%"],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    repeatDelay: 3,
+                    ease: "easeInOut",
+                  }}
+                  className="
+                    pointer-events-none
+                    absolute
+                    inset-y-0
+                    left-0
+                    w-24
+                    skew-x-[-20deg]
+                    bg-gradient-to-r
+                    from-transparent
+                    via-white/25
+                    to-transparent
+                    blur-sm
+                  "
+                />
+
+                {/* Image Label */}
 
                 <div
                   className="
                     absolute
-                    -inset-4
-                    rounded-[45px]
+                    left-5
+                    top-5
+                    rounded-full
+                    border
+                    border-white/30
+                    bg-black/40
+                    px-4
+                    py-2
+                    text-xs
+                    font-bold
+                    uppercase
+                    tracking-wider
+                    text-white
+                    backdrop-blur-md
+                  "
+                >
+                  {office.title}
+                </div>
+
+                {/* Image Dots */}
+
+                <div
+                  className="
+                    absolute
+                    bottom-6
+                    right-5
+                    flex
+                    gap-1.5
+                  "
+                >
+
+                  {office.images.map((_, imageIndex) => (
+
+                    <span
+                      key={imageIndex}
+                      className={`
+                        h-1.5
+                        rounded-full
+                        transition-all
+                        duration-500
+                        ${
+                          imageIndex ===
+                          (currentIndexes[office.id] ?? 0)
+                            ? "w-6 bg-white"
+                            : "w-1.5 bg-white/40"
+                        }
+                      `}
+                    />
+
+                  ))}
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* =================================================
+              TEXT CONTENT
+          ================================================= */}
+
+          <div>
+
+            {/* Category */}
+
+            <span
+              className="
+                inline-flex
+                rounded-full
+                border
+                border-red-100
+                bg-red-50/80
+                px-4
+                py-2
+                text-xs
+                font-bold
+                tracking-[0.18em]
+                text-red-600
+              "
+            >
+              PROPERTY CONSULTATION
+            </span>
+
+            {/* Office Title */}
+
+            <h2
+              className="
+                mt-5
+                text-3xl
+                font-black
+                tracking-tight
+                text-gray-900
+                sm:text-4xl
+                md:text-5xl
+              "
+            >
+              {office.title}
+            </h2>
+
+            {/* Description */}
+
+            <p
+              className="
+                mt-5
+                max-w-xl
+                text-base
+                leading-8
+                text-gray-600
+                sm:text-lg
+              "
+            >
+              {office.description}
+            </p>
+
+            {/* =================================================
+                DETAILS
+            ================================================= */}
+
+            <div className="mt-8 space-y-4">
+
+              {/* ADDRESS */}
+
+              <motion.div
+                whileHover={{
+                  x: 5,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-gray-100
+                  bg-white/80
+                  p-4
+                  shadow-lg
+                  shadow-gray-200/40
+                  backdrop-blur-xl
+                  transition
+                "
+              >
+
+                <div
+                  className="
+                    absolute
+                    inset-0
                     bg-gradient-to-r
-                    from-red-400/20
-                    via--300/1red0
-                    to-red-400/20
+                    from-red-50/50
+                    to-transparent
                     opacity-0
-                    blur-2xl
                     transition
-                    duration-700
                     group-hover:opacity-100
                   "
                 />
 
-                {/* Image Card */}
+                <div className="relative flex gap-4">
 
-                <div
-                  className="
-                    relative
-                    overflow-hidden
-                    rounded-[38px]
-                    border
-                    border-white/80
-                    bg-white/60
-                    p-2
-                    shadow-[0_25px_80px_rgba(0,0,0,0.12)]
-                    backdrop-blur-xl
-                  "
-                >
-
-                  <div className="
-                    relative
-                    overflow-hidden
-                    rounded-[32px]
-                  ">
-
-                    <motion.img
-                      key={
-                        office.images?.[
-                          currentIndexes[office.id] ?? 0
-                        ]
-                      }
-                      initial={{
-                        opacity: 0,
-                        scale: 1.08,
-                      }}
-                      animate={{
-                        opacity: 1,
-                        scale: 1,
-                      }}
-                      transition={{
-                        duration: 0.8,
-                      }}
-                      src={
-                        office.images?.[
-                          currentIndexes[office.id] ?? 0
-                        ]
-                      }
-                      alt={office.title}
-                      className="
-                        h-[330px]
-                        w-full
-                        object-cover
-                        transition
-                        duration-700
-                        group-hover:scale-105
-                        sm:h-[390px]
-                        md:h-[450px]
-                      "
+                  <div
+                    className="
+                      flex
+                      h-12
+                      w-12
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-gradient-to-br
+                      from-red-500
+                      to-red-600
+                      shadow-lg
+                      shadow-red-200
+                    "
+                  >
+                    <MapPin
+                      size={21}
+                      className="text-white"
                     />
+                  </div>
 
-                    {/* Image gradient */}
+                  <div>
 
-                    <div
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-0
-                       
-                        
-                      "
-                    />
+                    <p className="text-xs font-medium uppercase tracking-wider text-red-400">
+                      Office Address
+                    </p>
 
-                    {/* Crystal shine */}
-
-                    <motion.div
-                      animate={{
-                        x: ["-120%", "120%"],
-                      }}
-                      transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        repeatDelay: 3,
-                        ease: "easeInOut",
-                      }}
-                      className="
-                        pointer-events-none
-                        absolute
-                        inset-y-0
-                        w-24
-                        
-                      "
-                    />
-
-                    {/* Image label */}
-
-                   
-
-                    {/* Image dots */}
-
-                    <div
-                      className="
-                        absolute
-                        bottom-6
-                        right-5
-                        flex
-                        gap-1.5
-                      "
-                    >
-
-                      {office.images.map((_, imageIndex) => (
-
-                        <span
-                          key={imageIndex}
-                          className={`
-                            h-1.5
-                            rounded-full
-                            transition-all
-                            duration-500
-                            ${
-                              imageIndex ===
-                              (currentIndexes[office.id] ?? 0)
-                                ? "w-6 bg-white"
-                                : "w-1.5 bg-white/5"
-                            }
-                          `}
-                        />
-
-                      ))}
-
-                    </div>
+                    <h4 className="mt-1 text-sm font-semibold leading-6 text-gray-800 sm:text-base">
+                      {office.address}
+                    </h4>
 
                   </div>
 
                 </div>
 
-              </div>
+              </motion.div>
 
-              {/* =================================================
-                  TEXT
-              ================================================= */}
+              {/* PHONE */}
 
-              <div>
+              <motion.div
+                whileHover={{
+                  x: 5,
+                }}
+                className="
+                  group
+                  relative
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-gray-100
+                  bg-white/80
+                  p-4
+                  shadow-lg
+                  shadow-gray-200/40
+                  backdrop-blur-xl
+                  transition
+                "
+              >
 
-                <span
+                <div
                   className="
-                    inline-flex
-                    rounded-full
-                    border
-                    border-red-100
-                    bg-red-50/80
-                    px-4
-                    py-2
-                    text-xs
-                    font-bold
-                    tracking-[0.18em]
-                    text-red-600
+                    absolute
+                    inset-0
+                    bg-gradient-to-r
+                    from-green-50
+                    to-transparent
+                    opacity-0
+                    transition
+                    group-hover:opacity-100
                   "
-                >
-                  PROPERTY CONSULTATION
-                </span>
+                />
 
-                <h2
-                  className="
-                    mt-5
-                    text-3xl
-                    font-black
-                    tracking-tight
-                    text-red-600
-                    sm:text-4xl
-                    md:text-5xl
-                  "
-                >
-                  {office.title}
-                </h2>
+                <div className="relative flex items-center gap-4">
 
-                <p
-                  className="
-                    mt-5
-                    max-w-xl
-                    text-base
-                    leading-8
-                    text-white/80
-                    sm:text-lg
-                  "
-                >
-                  {office.description}
-                </p>
-
-                {/* DETAILS */}
-
-                <div className="mt-8 space-y-4">
-
-                  {/* ADDRESS */}
-
-                  <motion.div
-                    whileHover={{
-                      x: 5,
-                    }}
+                  <div
                     className="
-                      group
-                      relative
-                      overflow-hidden
-                      rounded-2xl
-                      border
-                      border-gray-100
-                      bg-white/70
-                      p-4
+                      flex
+                      h-12
+                      w-12
+                      shrink-0
+                      items-center
+                      justify-center
+                      rounded-xl
+                      bg-gradient-to-br
+                      from-green-500
+                      to-emerald-600
                       shadow-lg
-                      shadow-gray-200/40
-                      backdrop-blur-xl
-                      transition
+                      shadow-green-200
                     "
                   >
-
-                    <div
-                      className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-r
-                        from-red-50/50
-                        to-transparent
-                        opacity-0
-                        transition
-                        group-hover:opacity-100
-                      "
+                    <Phone
+                      size={21}
+                      className="text-white"
                     />
+                  </div>
 
-                    <div className="relative flex gap-4">
+                  <div>
 
-                      <div
-                        className="
-                          flex
-                          h-12
-                          w-12
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-xl
-                          bg-gradient-to-br
-                          from-red-500
-                          to-red-600
-                          shadow-lg
-                          shadow-red-200
-                        "
-                      >
-                        <MapPin
-                          size={21}
-                          className="text-white"
-                        />
-                      </div>
+                    <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
+                      Contact Number
+                    </p>
 
-                      <div>
+                    <h4 className="mt-1 font-bold text-gray-800">
+                      {office.phone}
+                    </h4>
 
-                        <p className="text-xs font-medium uppercase tracking-wider text-red-400">
-                          Office Address
-                        </p>
-
-                        <h4 className="mt-1 text-sm font-semibold leading-6 text-red-800 sm:text-base">
-                          {office.address}
-                        </h4>
-
-                      </div>
-
-                    </div>
-
-                  </motion.div>
-
-                  {/* PHONE */}
-
-                  <motion.div
-                    whileHover={{
-                      x: 5,
-                    }}
-                    className="
-                      group
-                      relative
-                      overflow-hidden
-                      rounded-2xl
-                      border
-                      border-gray-100
-                      bg-white/70
-                      p-4
-                      shadow-lg
-                      shadow-gray-200/40
-                      backdrop-blur-xl
-                      transition
-                    "
-                  >
-
-                    <div
-                      className="
-                        absolute
-                        inset-0
-                        bg-gradient-to-r
-                        from-red-500
-                        to-transparent
-                        opacity-0
-                        transition
-                        group-hover:opacity-100
-                      "
-                    />
-
-                    <div className="relative flex items-center gap-4">
-
-                      <div
-                        className="
-                          flex
-                          h-12
-                          w-12
-                          shrink-0
-                          items-center
-                          justify-center
-                          rounded-xl
-                          bg-gradient-to-br
-                          from-green-500
-                          to-emerald-600
-                          shadow-lg
-                          shadow-green-200
-                        "
-                      >
-                        <Phone
-                          size={21}
-                          className="text-white"
-                        />
-                      </div>
-
-                      <div>
-
-                        <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
-                          Contact Number
-                        </p>
-
-                        <h4 className="mt-1 font-bold text-gray-800">
-                          {office.phone}
-                        </h4>
-
-                      </div>
-
-                    </div>
-
-                  </motion.div>
+                  </div>
 
                 </div>
 
-                {/* =================================================
-                    BUTTONS
-                ================================================= */}
+              </motion.div>
 
-                <div className="
-                  mt-8
-                  flex
-                  flex-col
-                  gap-3
-                  sm:flex-row
-                ">
+            </div>
 
-                  {/* CALL */}
+            {/* =================================================
+                BUTTONS
+            ================================================= */}
 
-                  <motion.a
-                    whileHover={{
-                      scale: 1.04,
-                      y: -2,
-                    }}
-                    whileTap={{
-                      scale: 0.97,
-                    }}
-                    href={`tel:${office.phone}`}
-                    className="
-                      inline-flex
-                      items-center
-                      justify-center
-                      gap-2
-                      rounded-xl
-                      bg-gradient-to-r
-                      from-red-600
-                      to-red-500
-                      px-6
-                      py-3.5
-                      font-bold
-                      text-white
-                      shadow-lg
-                      shadow-red-200
-                      transition
-                      hover:shadow-red-300
-                    "
-                  >
-                    <Phone size={18} />
+            <div
+              className="
+                mt-8
+                flex
+                flex-col
+                gap-3
+                sm:flex-row
+              "
+            >
 
-                    Call Now
-                  </motion.a>
+              {/* CALL */}
 
-                  {/* WHATSAPP */}
+              <motion.a
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                href={`tel:${office.phone}`}
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-xl
+                  bg-gradient-to-r
+                  from-red-600
+                  to-red-500
+                  px-6
+                  py-3.5
+                  font-bold
+                  text-white
+                  shadow-lg
+                  shadow-red-200
+                  transition
+                  hover:shadow-red-300
+                "
+              >
+                <Phone size={18} />
 
-                  <motion.a
-                    whileHover={{
-                      scale: 1.04,
-                      y: -2,
-                    }}
-                    whileTap={{
-                      scale: 0.97,
-                    }}
-                    href={`https://wa.me/${office.whatsapp}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="
-                      inline-flex
-                      items-center
-                      justify-center
-                      gap-2
-                      rounded-xl
-                      bg-[#25D366]
-                      px-6
-                      py-3.5
-                      font-bold
-                      text-white
-                      shadow-lg
-                      shadow-red-200
-                      transition
-                      hover:bg-[#20bd5a]
-                    "
-                  >
-                    <MessageCircle size={19} />
+                Call Now
+              </motion.a>
 
-                    WhatsApp
-                  </motion.a>
+              {/* WHATSAPP */}
 
-                  {/* MAP */}
+              <motion.a
+                whileHover={{
+                  scale: 1.04,
+                  y: -2,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                href={`https://wa.me/${office.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  gap-2
+                  rounded-xl
+                  bg-[#25D366]
+                  px-6
+                  py-3.5
+                  font-bold
+                  text-white
+                  shadow-lg
+                  shadow-green-200
+                  transition
+                  hover:bg-[#20bd5a]
+                "
+              >
+                <MessageCircle size={19} />
 
-                  
+                WhatsApp
+              </motion.a>
 
-                </div>
+            </div>
 
-              </div>
+          </div>
 
-            </motion.div>
+        </motion.div>
 
-          ))}
+      ))}
 
-        </div>
+    </div>
 
-      </div>
-      <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
-  <svg
-    className="relative block w-full h-20 md:h-32"
-    viewBox="0 0 1200 160"
-    preserveAspectRatio="none"
-  >
-    <defs>
-      <linearGradient
-        id="redWaveGradient"
-        x1="0%"
-        y1="0%"
-        x2="100%"
-        y2="0%"
-      >
-        <stop offset="0%" stopColor="#450000" />
-        <stop offset="35%" stopColor="#b91c1c" />
-        <stop offset="65%" stopColor="#ef4444" />
-        <stop offset="100%" stopColor="#991b1b" />
-      </linearGradient>
-    </defs>
+  </div>
+  
 
-    <path
-      d="
-        M0,0
-        C120,35 240,45 360,55
-        C500,65 620,75 760,90
-        C900,105 1040,125 1200,155
-        L1200,0
-        L0,0
-        Z
-      "
-      fill="url(#redWaveGradient)"
-    />
-  </svg>
-</div>
+</section>
 
-    </section>
+
   );
 }
