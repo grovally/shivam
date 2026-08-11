@@ -339,7 +339,7 @@ export default function GreateNoida() {
               h-12
               rounded-full
               bg-red-500/20
-              blur-3xl
+             
               opacity-0
               group-hover:opacity-100
               transition-opacity
@@ -358,7 +358,8 @@ export default function GreateNoida() {
               sm:text-base
               font-semibold
               leading-tight
-              text-white
+              text-black
+              
               group-hover:text-red-500
               transition-colors
               line-clamp-2

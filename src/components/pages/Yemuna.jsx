@@ -354,7 +354,7 @@ export default function Yamuna() {
               sm:text-base
               font-semibold
               leading-tight
-              text-white
+              text-black
               group-hover:text-red-500
               transition-colors
               line-clamp-2
