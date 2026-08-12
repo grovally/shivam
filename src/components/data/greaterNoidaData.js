@@ -31,9 +31,9 @@ Sector Alpha II's connectivity is a major advantage, with convenient access not 
     },
     {
       slug:"30 MTR FLATS AT BETA-I",
-      title: "30 MTR FLATS AT BETA-I",
+      title: "  BETA-I 30 MTR FLATS AT ",
       description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload /f_auto,q_auto,w_1200/v1784803240/30_MTR_FLATS_AT_BETA-I_tgdofy.jpg"
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803240/30_MTR_FLATS_AT_BETA-I_tgdofy.jpg"
 
     },
 
@@ -167,24 +167,19 @@ Transportation in Greater Noida, including Eta 1, is made easy by major roads an
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ETA-I_rm1sxl.png",
     },
     {
-      slug:"30 MTR. FLAT AT ZETA-I",
-      title:" 30 MTR. FLAT AT ZETA-I",
+      slug:" ZETA-I ",
+      title:"ZETA-I  ",
       description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784803248/30_MTR._FLAT_AT_ZETA-I_exlk2s.jpg"
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_600/v1784890802/ZETA_1_qnhy1d.png"
     },
 
     {
       slug:"ZETA-II",
       title:" ZETA-II",
       description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784804217/ZETA-II_vbrpmn.jpg"
+      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_600/v1784803338/ZETA-II_sy33s3.jpg"
     },
-    {
-      slug:"30 MTR. FLAT AT ZETA-I",
-      title:" 30 MTR. FLAT AT ZETA-I",
-      description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/f_auto,q_auto,w_1200/upload/v1784803248/30_MTR._FLAT_AT_ZETA-I_exlk2s.jpg"
-    },
+   
     
      {
       id: 10,
@@ -489,7 +484,7 @@ As seasoned Real Estate Agents In Greater Noida, Chhabra Properties provides unm
     {
       id: 29,
        slug: "SECTOR 1",
-      title:" SECTOR 1",
+      title:" SECTOR-1",
       description:  `
 About Sector 1, Greater Noida, Uttar Pradesh
 Sector 1, nestled in the heart of what many know as Noida Extension or Greater Noida West, is buzzing with potential as a top pick for both homeowners and investors. Its brilliant location ensures you're never far from the action in Sector 1 Noida Extension and the wider Delhi NCR, thanks to smooth connections via the Noida - Greater Noida Expressway and Yamuna Expressway – think easy commutes and weekend getaways. You can even get a good sense of the area's layout and connectivity by taking a look at the Greater Noida Map, which clearly highlights Sector 1's strategic positioning. You'll find a fantastic mix of modern apartments here, offering that sweet spot of affordability now with the promise of your investment growing as the area matures – something smart buyers in Sector 1 Greater Noida Uttar Pradesh are already clued into. The buzz around the upcoming metro only adds fuel to this fire. As Greater Noida continues its rapid climb, Sector 1 Greater Noida is a key player, drawing in serious interest and a wave of new developments.
@@ -544,8 +539,8 @@ For professional counsel on how to approach the real estate market of Greater No
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890787/SECTOR-3_guaacf.png",
     },
      {
-      slug:"30 MTR. FLAT AT SECTOR-03",
-      title:'30 MTR. FLAT AT SECTOR-03',
+      slug:" SECTOR-03 ,30 MTR. FLAT AT ",
+      title:' SECTOR-03, 30 MTR. FLAT AT ',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803243/30_MTR._FLAT_AT_SECTOR-03_lwjw6t.jpg"
 
@@ -593,7 +588,7 @@ As seasoned Property Dealers In Greater Noida, Chhabra Properties is dedicated t
      {
       id: 34,
        slug: "SECTOR 20",
-        title:"SECTOR 20",
+        title:"SECTOR-20",
          description: `
 About Sector 20, Noida
 ​Sector 20 Noida, a calm and organised area located in Noida, Uttar Pradesh. Although primarily a residential area, its convening location is one compelling feature, mechanically identified by the Noida Sector 20 pin code is 201301. We are established Greater Noida Property Dealer and Chhabra Properties feel Noida Sector 20 is tranquil and well connected option within the surrounding vast Noida urban settlement. For those interested in learning about its layout and discovering its pleasant characters, we at Chhabra Properties have prepared a comprehensive Layout Map of Sector 20, Noida, as your complete guide.
@@ -610,7 +605,7 @@ Sector 20 Noida provides a good and comfortable lifestyle with other amenities a
     {
       id: 35,
        slug: "SECTOR 36",
-      title:" SECTOR 36",
+      title:" SECTOR-36",
       description:`About Sector 36, Greater Noida, Uttar Pradesh
 Sector 36 Greater Noida, a well-placed sector famous for its connectivity and emerging infrastructure in the Greater Noida region, offers pleasing opportunities for residents and businesses alike. Your seasoned Greater Noida Property Dealers, we are happy to show you the potential this sector has, which is generally preferred for its connectivity and vicinity to major amenities.
 
@@ -626,7 +621,7 @@ Sector 36 has great road connectivity to other areas of Greater Noida and surrou
     {
       id: 36,
        slug: "SECTOR 37",
-      title:" SECTOR 37",
+      title:" SECTOR-37",
       description:`
 About Sector 37, Greater Noida, Uttar Pradesh
 Sector 37, Greater Noida, a notable and well-linked sector in the Greater Noida urban landscape. At times noted for being strategically located and accessible, Sector 37 Greater Noida provides a mix of residential and commercial ventures. Whereas at times it tends to be misunderstood with Sector 37 Noida (which is a separate locality), our concern remains with the exciting Sector 37 Greater Noida. At Chhabra Properties, your reliable and professional Greater Noida Property Dealers, we are your navigators to the properties within this important sector.
@@ -706,7 +701,7 @@ Sigma IV provides emerging road connectivity linking it to other prominent secto
     {
       id: 41,
        slug: "Sector XU1",
-      title:"SECTOR-XU1",
+      title:"SECTOR-XU-1",
       description:`
 About - Sector Xu I,  Greater Noida, Uttar Pradesh
 Sector Xu I Greater Noida, an emerging and developing sector within Greater Noida, is attracting attention for its future residential and commercial prospects. Often referred to as Sector Xu I Greater Noida Uttar Pradesh or simply Xu 1, this area is part of the larger Xu zone. You might also see it written as Xu 1 Greater Noida. At Chhabra Properties, your trusted and experienced Greater Noida Property Dealers, we are here to explore the opportunities this developing sector has to offer. The Pin Code for Sector Xu - I, Greater Noida is 201310.
@@ -737,7 +732,7 @@ Although the Yamuna Expressway offers wider regional connectivity (depicted on t
     {
       id: 43,
        slug: " Sector Xu3",
-      title:"SECTOR XU3",
+      title:"SECTOR XU-3",
       description:`About - Sector Xu 3, Greater Noida, Uttar Pradesh
 Sector Xu 3 Greater Noida, a rising sector in the Greater Noida area, is experiencing growing development activity. Frequently cited as Xu III Raipur Village Greater Noida Uttar Pradesh or Xu 3 Greater Noida, this sector is one of the wider Xu zones. At Chhabra Properties, your reliable and seasoned Greater Noida Property Dealers, we are here to offer information on the emerging opportunities in this sector.
  
@@ -751,7 +746,7 @@ Emerging road networks are developing improved connectivity with other areas of 
     {
       id: 44,
        slug: "SECTOR-127 ",
-        title:" Sector-127",
+        title:" SECTOR-127",
         description:"",
         image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR_-127_NOIDA_CHANGES_uinf0k.jpg"
     }
@@ -759,14 +754,14 @@ Emerging road networks are developing improved connectivity with other areas of 
     {
       id: 45,
        slug: "SECTOR-155 ",
-        title:" Sector 155",
+        title:" SECTOR 155",
         description:"",
         image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR-_155_y0fowy.jpg"
     },
     {
       id: 46,
-       slug: "Zeta-1 ",
-      title:" Zeta-1",
+       slug: "ZeTA-1 ",
+      title:" ZETA-1",
       description:  `Zeta I Greater Noida, a developed and strategically placed sector of the Greater Noida terrain, is a prime hub boasting an equanimous mix of residential, commercial, and institutional constructions. Chhabra Properties, your reliable and skilled Greater Noida Property Dealers, proudly introduces the varied property options in this dynamic sector, including renowned residential projects such as ATS Dolce and AVJ Heights. Also known as Zeta I or more precisely as AVJ Heights Zeta 1, this well-planned locality offers a premium lifestyle with excellent infrastructure and connectivity.
 
 For all postal requirements, the Zeta 1 Pin Code is 201310, an important detail for seamless deliveries and communication in Zeta-1, especially for those looking for properties in Sector Zeta 1 Greater Noida. To help you better understand the planning of this sector and available properties, Chhabra Properties, your trusted Real Estate Agents in Greater Noida, also provides an exclusive Layout Map of Zeta-1, Greater Noida. One of the prominent residential landmarks in this locality is Ace Platinum Zeta I Greater Noida, reflecting the high-quality lifestyle the area offers. Zeta-1 Greater Noida enjoys excellent road connectivity, as clearly shown on the Greater Noida Map, making it easily accessible from other key sectors. Its strategic location places it close to major commercial hubs, reputed educational institutions, and multi-specialty healthcare facilities, supported by a strong and well-developed social infrastructure.

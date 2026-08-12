@@ -36,14 +36,7 @@ Slash:"Sector-110 map",
     image:
       "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR_-110_k70rlt.jpg",
   },
-  {
-    id: 4,
-slug:"sector-164-map",
-    title: "SECTOR-164",
-    description:"",
-    image:
-      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805598/SECTOR-164_j4gjhm.jpg",
-  },
+ 
   {
     id: 5,
 slug:"sector-162-map",
@@ -82,23 +75,9 @@ slug:"sector-158-map",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805589/Sector-158_p4otx6.jpg",
     
   }
-  ,
-  { id: 9,
-slug:"sector-155-map",
-    title:" SECTOR- 155",
-    description:"",
-    image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805589/SECTOR-155_kualpa.jpg",
-    
-  }
-  ,
-  {
-    id: 10,
-slug:"sector-155-map",
-    title:" SECTOR-155 ",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805583/SECTOR-151_NEW_PLOTS_oihpxw.jpg",
-    
-  }
+ 
+  
+  
   
   
   ,
@@ -111,46 +90,25 @@ slug:"sector-91-map",
     
   }
   ,
-  {
-    id: 12,
-slug:"sector-153-map",
-    title:" SECTOR-153",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805582/SECTOR-_153_hrpbeh.jpg",
-    
-  }
+  
   ,
-  {
-    id: 13,
-slug:"sector-156-map",
-    title:"SECTOR-156",
-    description:"",
-    image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805579/SECTOR-_156_aofhnt.jpg",
-    
-  }
+  
   ,
   {
     id: 14,
-slug:"phase-2-map",
-    title:" Phase-2",
+slug:"PHASE-II",
+    title:" PHASE-II",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805575/PHASE-II_wydj5r.jpg",
     
   }
   ,
-  {
-    id: 15,
-slug:"sector-89-map",
-    title:" SECTOR-89",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805574/SECTOR_-_89_SECTOR_-_90_vfyoyw.jpg",
-    
-  }
+ 
   ,
   {
     id: 16,
-slug:"sector-75-map",
-    title:" SECTOR-75",
+slug:"sector-75,76-map",
+    title:" SECTOR-75,76",
     description:"",
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805570/SECTOR_-_75_SECTOR_-_76_u0iipe.jpg",
     
@@ -182,14 +140,7 @@ slug:"abadi at vall.sultanpur-map",
     
   }
   ,
-  {
-    id: 20,
-slug:"sector-71-map",
-    title:" SECTOR-71",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805560/5_ABADI_AT_SEC-71_OF_VILL._BASAI_KONDALI_ROHILAPUR_ho1d0q.jpg",
-    
-  }
+  
   ,
   { 
     id: 21,
@@ -220,17 +171,11 @@ slug:"sector-65-map",
     description:"",
     image :"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805540/5_ABADI_AT_SECTOR-132_VILL.ROHILAPUR_5_ABADI_AT_SECTOR-66_grv4h5.jpg ",
   },
-  {
-    id: 25,
-slug:"sector-132-map",
-    title:"SECTOR-132",
-    description:"",
-    image :" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805537/5_ABADI_AT_SECTOR-80_ggjmtg.jpg",
-  }
+  
   ,{
     id: 26,
 slug:"sector-80-map",
-    title:" SECTOR-80 5%",
+    title:" SECTOR-80",
     description:"",
     image :"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805537/5_ABADI_AT_SECTOR-80_ggjmtg.jpg ",
   },
@@ -302,8 +247,8 @@ slug:"sector-135-map",
   ,
   {
     id: 35,
-slug:"sector-132-map",
-    title:" SECTOR-132",
+slug:"sector-132 SECTOR-134",
+    title:" SECTOR-132,134",
     description:"",
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890556/SECTOR-132_SECTOR-134_zk6zaf.png",
   }
@@ -406,8 +351,8 @@ slug:"sector-63-map",
   },
   {
     id: 49,
-slug:"sector-93A-map",
-    title:"SECTOR- 93A",
+slug:"SECTOR-87,88",
+    title:"SECTOR-87,88",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890535/SECTOR_-_87_SECTOR_-_88_umkjsw.png"
   },
@@ -454,8 +399,8 @@ slug:"sector-77,78-map",
     image:" https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890529/SECTOR_-_77_SECTOR_-_78_ekffqv.png"
   },
   { id: 56,
-slug:"sector-73-map",
-    title:" SECTOR-73",
+slug:"sector-73,74-map",
+    title:" SECTOR-73,74",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890528/SECTOR_-_73_SECTOR_-_74_jmyflm.png"
   },
@@ -674,6 +619,47 @@ slug:"sector-122-map",
     description:"",
     image: "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR_-127_NOIDA_CHANGES_uinf0k.jpg"
   },
+  {
+    id:87,
+    slug:"SECTOR-151 LATEST",
+    title:"SECTOR-151 LATEST",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890559/SECTOR-151_LATEST_o5qsi1.png"
+  },
+   
+   {
+    id:89,
+    slug:"SECTOR-93-93A",
+    title:"SECTOR-93-93A",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890537/SECTOR_-_93-93A_qrmgmn.png"
+  },
+   {
+    id:90,
+    slug:" SECTOR-122 5% ABADI AT ",
+    title:"SECTOR-122 5% ABADI AT ",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890493/5_ABADI_AT_SECTOR-122._hhzyzx.png"
+  },
+  ,
+   {
+    id:90,
+    slug:"SECTOR-117 5 ABADI AT  ",
+    title:" SECTOR-117 5 ABADI AT  ",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805532/5_ABADI_AT_SECTOR-117_5_ABADI_AT_SECTOR-63_VILL_HAZRAT_WAZIDPUR_notf97.jpg"
+  },
+   {
+    id:90,
+    slug:"SECTOR-135 5 ABADI AT  ",
+    title:" SECTOR-135 5 ABADI AT  ",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805544/5_ABADI_AT_SECTOR-135_VILL._GULAWLI_5_ABADI_AT_VILL_WAZIDPUR_gz67hv.jpg"
+  }
+
+
+ 
+ 
  
 ];
  
