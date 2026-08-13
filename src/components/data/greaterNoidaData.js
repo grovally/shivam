@@ -348,7 +348,7 @@ Understand the Mu 2 Greater Noida Pin Code 201310 for easy transactions and cont
     },
     {
       slug:"OMICRON-III_A_BLOCK",
-      title:"OMICRON-III_A_BLOCK",
+      title:"OMICRON-III A BLOCK",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784804454/OMICRON-III_A_BLOCK_eqzmcu.jpg"
 
@@ -408,7 +408,7 @@ Ready to discover the promising opportunities of Omicron 3 Greater Noida? Get in
     {
       id: 23,
        slug: "Omicron-3 32 mtr",
-      title:"OMICRON-III 32MTR",
+      title:"OMICRON-III 32 MTR",
       description:  ``,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890775/OMICRON-III_32MTR_qfqg26.png",
     },
@@ -540,7 +540,7 @@ For professional counsel on how to approach the real estate market of Greater No
     },
      {
       slug:" SECTOR-03 ,30 MTR. FLAT AT ",
-      title:' SECTOR-03, 30 MTR. FLAT AT ',
+      title:' SECTOR 03, 30 MTR. FLAT AT ',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803243/30_MTR._FLAT_AT_SECTOR-03_lwjw6t.jpg"
 
@@ -773,7 +773,7 @@ With excellent connectivity to the Yamuna Expressway, Zeta-1 provides convenient
     {
       id: 47,
       slug: "toy city ",
-      title:"TOY City",
+      title:"TOY CITY",
       description:`
 Discover Toy City, Greater Noida, a visionary industrial hub specifically designed for the toy manufacturing sector. Use the Toy City Map to explore this meticulously planned area. Toy City Greater Noida features well-planned commercial plots with ample space for large-scale operations, modern facilities, and excellent road networks. This area is also known as Toy City Ecotech 3 Greater Noida.
  
@@ -1396,7 +1396,7 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
    {
     id:"",
     slug:"ABADI VILL. NATO KI MADHAYA",
-    title:"ABADI_VILL. NATO KI MADHAYA",
+    title:"ABADI VILL. NATO KI MADHAYA",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803304/ABADI_VILL._NATO_KI_MADHAYA_kry6qp.jpg"
    }
@@ -1494,6 +1494,13 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803313/ABADI_VILL._GHARBHARA_PART-I_vqxgfb.jpg"
 
+   },
+   {
+    id:"",
+    slug:"SECTOR-31_SWARN NAGRI",
+    title:"SECTOR-31 SWARN NAGRI",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/v1786607555/SECTOR-31_SWARN_NAGRI_vmvc9r.png"
    }
    
    

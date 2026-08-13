@@ -236,8 +236,7 @@ export default function GreateNoida() {
     "KP-IV",
     "KP-V",
     "K.P-II",
-    "MP GREATER NOIDA",
-    "MP NOIDA EXTENSION",
+   
   ];
 
   const classifyItem = (item) => {
