@@ -164,11 +164,11 @@ export default function Shivam() {
       </p>
 
       <h2 className="text-4xl font-black tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-        Explore{" "}
+        OUR{" "}
         <span className="bg-gradient-to-r from-red-600 via-red-500 to-red-500 bg-clip-text text-transparent">
-          Property
+          LAYOUT
         </span>{" "}
-        Locations
+        MAPS
       </h2>
 
       <p className="mx-auto mt-5 max-w-5xl px-2 text-base leading-8 text-gray-600 sm:text-lg">

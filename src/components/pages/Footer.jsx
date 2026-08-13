@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -30,9 +29,9 @@ export default function Footer() {
   ];
 
   const locations = [
-    "Greater Noida",
-    "Noida",
-    "Yamuna Expressway",
+    { name: "Greater Noida", path: "/greater-noida" },
+    { name: "Noida", path: "/noida" },
+    { name: "Yamuna Expressway", path: "/yamuna-expressway" },
   ];
 
   const socialLinks = [
@@ -132,14 +131,6 @@ export default function Footer() {
           
         "
       />
-
-      {/* =====================================================
-          LIGHT RED AMBIENT GLOW
-      ===================================================== */}
-
-     
-
-    
 
       {/* =====================================================
           TOP RED WAVE
@@ -338,14 +329,16 @@ export default function Footer() {
 
         {/* =====================================================
             CONTENT GRID
+            Mobile par ab 2 columns (grid-cols-2), pehle 1 column tha
         ===================================================== */}
 
         <div
           className="
             grid
-            grid-cols-1
-            gap-5
+            grid-cols-2
+            gap-3
             sm:grid-cols-2
+            sm:gap-5
             lg:grid-cols-4
             lg:gap-6
           "
@@ -357,13 +350,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="p-6 sm:p-7"
+            className="p-3 sm:p-7"
           >
-            <h3 className="mb-6 text-xl font-bold text-red-500">
+            <h3 className="mb-4 text-base font-bold text-red-500 sm:mb-6 sm:text-xl">
               Company
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-2.5 sm:space-y-4">
               {companyLinks.map((item) => (
                 <Link
                   key={item.name}
@@ -373,10 +366,11 @@ export default function Footer() {
                     flex
                     items-center
                     justify-between
-                    text-sm
+                    text-xs
                     text-white/70
                     transition
                     hover:text-red-400
+                    sm:text-sm
                   "
                 >
                   <span>{item.name}</span>
@@ -390,6 +384,8 @@ export default function Footer() {
                       duration-300
                       group-hover:translate-x-0
                       group-hover:opacity-100
+                      hidden
+                      sm:block
                     "
                   />
                 </Link>
@@ -404,13 +400,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="p-6"
+            className="p-3 sm:p-6"
           >
-            <h3 className="mb-6 text-xl font-bold text-red-500">
+            <h3 className="mb-4 text-base font-bold text-red-500 sm:mb-6 sm:text-xl">
               Property Deals
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-2.5 sm:space-y-4">
               {deals.map((item) => (
                 <motion.div
                   key={item}
@@ -420,10 +416,11 @@ export default function Footer() {
                     cursor-pointer
                     items-center
                     gap-2
-                    text-sm
+                    text-xs
                     text-white/70
                     transition
                     hover:text-red-400
+                    sm:text-sm
                   "
                 >
                   <span className="text-red-500">•</span>
@@ -440,35 +437,37 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="p-6"
+            className="p-3 sm:p-6"
           >
-            <h3 className="mb-6 text-xl font-bold text-red-500">
+            <h3 className="mb-4 text-base font-bold text-red-500 sm:mb-6 sm:text-xl">
               Locations
             </h3>
 
-            <div className="space-y-4">
+            <div className="space-y-2.5 sm:space-y-4">
               {locations.map((item) => (
-                <motion.div
-                  key={item}
-                  whileHover={{ x: 5 }}
+                <Link
+                  key={item.name}
+                  to={item.path}
                   className="
+                    group
                     flex
-                    cursor-pointer
                     items-center
-                    gap-3
-                    text-sm
+                    gap-2
+                    text-xs
                     text-white/70
                     transition
                     hover:text-red-400
+                    sm:gap-3
+                    sm:text-sm
                   "
                 >
                   <MapPin
-                    size={17}
-                    className="shrink-0 text-red-500"
+                    size={15}
+                    className="shrink-0 text-red-500 sm:size-[17px]"
                   />
 
-                  {item}
-                </motion.div>
+                  {item.name}
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -480,13 +479,13 @@ export default function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="p-6 sm:p-7"
+            className="col-span-2 p-3 sm:col-span-1 sm:p-7"
           >
-            <h3 className="mb-6 text-xl font-bold text-red-500">
+            <h3 className="mb-4 text-base font-bold text-red-500 sm:mb-6 sm:text-xl">
               Contact
             </h3>
 
-            <div className="space-y-5">
+            <div className="space-y-5 sm:space-y-5">
               {/* ADDRESS */}
 
               <a
@@ -570,11 +569,11 @@ export default function Footer() {
             {/* SOCIAL ICONS */}
 
             
-<div className="mt-5 flex flex-wrap gap-2">
+<div className="mt-5 flex flex-wrap gap-2 bg-black/15">
   {socialLinks.map(({ icon: Icon, url }, index) => {
     const iconColor =
       url.includes("wa.me")
-        ? "text-[#25D366] hover:border-[#25D366]/50 hover:bg-[#25D366]/10"
+        ? "text-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/10"
         : url.includes("facebook")
         ? "text-[#1877F2] hover:border-[#1877F2]/50 hover:bg-[#1877F2]/10"
         : url.includes("instagram")
@@ -602,8 +601,8 @@ export default function Footer() {
         }}
         className={`
           flex
-          h-10
-          w-10
+          h-8
+          w-8
           items-center
           justify-center
           rounded-xl
@@ -644,7 +643,7 @@ export default function Footer() {
           >
             {/* COPYRIGHT */}
 
-            <p className="text-xs text-black/60 sm:text-sm">
+            <p className="text-xs text-white sm:text-sm">
               © 2026 Chhabra Properties.
               <br className="sm:hidden" /> All Rights Reserved.
             </p>
@@ -660,28 +659,28 @@ export default function Footer() {
                 gap-x-5
                 gap-y-2
                 text-xs
-                text-white/60
+                text-white
                 sm:gap-6
                 sm:text-sm
               "
             >
               <Link
                 to="/privacy"
-                className="transition text-cyan-600"
+                className="transition text-white"
               >
                 Privacy Policy
               </Link>
 
               <Link
                 to="/terms"
-                className="transition text-cyan-600"
+                className="transition text-white"
               >
                 Terms
               </Link>
 
               <Link
                 to="/refund"
-                className="transition text-cyan-600"
+                className="transition text-white"
               >
                 Refund Policy
               </Link>
@@ -689,7 +688,7 @@ export default function Footer() {
 
             {/* DESIGNED BY */}
 
-            <p className="text-xs text-white/60 sm:text-sm">
+            <p className="text-xs text-white sm:text-sm">
               Designed by{" "}
               <a
                 href="https://grovally.com"
@@ -697,7 +696,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="
                   font-semibold
-                  text-cyan-600
+                  text-red-800
                   transition
                   hover:text-cyan-400
                 "
@@ -711,4 +710,3 @@ export default function Footer() {
     </motion.footer>
   );
 }
-

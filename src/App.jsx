@@ -30,6 +30,7 @@ import WOW from "./components/shivam/WOW";
 
 import ScrollToTop from "./components/pages/ScrollToTop";
 import Location from "./components/shivam/Location";
+import  KOMO from "./components/shivam/KOMO"
 
 
 
@@ -38,7 +39,7 @@ import "./App.css";
 
 function MainLayout() {
   return (
-    <main className="relative min-h-screen bg-white text-black">
+    <main className="relative min-h-screen bg-white ">
 
       {/* =====================================
           GLOBAL CRYSTAL BACKGROUND
@@ -72,6 +73,7 @@ function MainLayout() {
                 <Location />
                 <Chhabra />
                 <WOW />
+                <KOMO/>
                 <Chiose />
                 
                 <FAQ />

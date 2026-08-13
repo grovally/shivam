@@ -342,42 +342,7 @@ export default function Yamuna() {
           {/* ==========================
               CATEGORY
           ========================== */}
-          <div className="flex flex-wrap gap-3">
-
-            <button
-              type="button"
-              onClick={() =>
-                setCategory("residential")
-              }
-              className={`
-                px-5
-                py-2.5
-                rounded-xl
-                font-medium
-                transition-all
-
-                ${
-                  category === "residential"
-                    ? `
-                      bg-orange-500
-                      text-black
-                      shadow-lg
-                      shadow-red-500/30
-                    `
-                    : `
-                      bg-black
-                      text-gray-300
-                      border
-                      border-white/10
-                      hover:bg-white/10
-                    `
-                }
-              `}
-            >
-              Residential Map
-            </button>
-
-          </div>
+          
 
           {/* ==========================
               SORT

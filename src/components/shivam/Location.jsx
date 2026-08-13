@@ -672,29 +672,13 @@ export default function Location() {
 
             {/* Category */}
 
-            <span
-              className="
-                inline-flex
-                rounded-full
-                border
-                border-red-100
-                bg-red-50/80
-                px-4
-                py-2
-                text-xs
-                font-bold
-                tracking-[0.18em]
-                text-red-600
-              "
-            >
-              PROPERTY CONSULTATION
-            </span>
+           
 
             {/* Office Title */}
 
             <h2
               className="
-                mt-5
+                
                 text-3xl
                 font-black
                 tracking-tight

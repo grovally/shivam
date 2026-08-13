@@ -79,131 +79,10 @@ const compareTokens = (a, b, titleA, titleB) => {
   return 0;
 };
 
-export default function GreateNoida() {
-  const [category, setCategory] = useState("greater-noida");
-  const [sortBy, setSortBy] = useState("az");
-  const [searchQuery, setSearchQuery] = useState("");
-  const navigate = useNavigate();
-
-  const openDetail = (item) => {
-    const slug = item?.slug || getSlugFromTitle(item?.title);
-    navigate(`/greater-noida/${encodeURIComponent(slug)}`);
-  };
-
-  const safeData =
-    greaterNoida?.filter((item) => item && item.title && item.image) || [];
-
-  const sortedData = [...safeData].sort((a, b) => {
-    const titleA = a.title.trim().toLowerCase();
-    const titleB = b.title.trim().toLowerCase();
-
-    switch (sortBy) {
-      case "az":
-        return compareTokens(tokenize(titleA), tokenize(titleB), titleA, titleB);
-
-      case "za": {
-        // za mein bhi digit-starting titles hamesha last hi rahengi
-        const aIsNum = startsWithDigit(titleA);
-        const bIsNum = startsWithDigit(titleB);
-        if (aIsNum !== bIsNum) return aIsNum ? 1 : -1;
-        return compareTokens(tokenize(titleB), tokenize(titleA), titleB, titleA);
-      }
-
-      case "number-low": {
-        const numA = Number(titleA.match(/\d+/)?.[0] || 0);
-        const numB = Number(titleB.match(/\d+/)?.[0] || 0);
-        return numA - numB;
-      }
-
-      case "number-high": {
-        const numA = Number(titleA.match(/\d+/)?.[0] || 0);
-        const numB = Number(titleB.match(/\d+/)?.[0] || 0);
-        return numB - numA;
-      }
-
-      default:
-        return 0;
-    }
-  });
-
-  const filteredData = sortedData.filter((item) => {
-    const query = normalize(searchQuery);
-
-    const matchesSearch =
-      !query ||
-      normalize(item.title).includes(query) ||
-      normalize(item.slug).includes(query) ||
-      normalize(item.description).includes(query);
-
-    const matchesCategory =
-      category === "residential"
-        ? item.title?.toLowerCase().includes("residential") ||
-          item.description?.toLowerCase().includes("residential")
-        : true;
-
-    return matchesSearch && matchesCategory;
-  });
-
+function MapGrid({ items, onOpen }) {
   return (
-    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
-  <div className="relative z-10 max-w-7xl mx-auto">
-    {/* Heading */}
-    <h2 className="text-center text-4xl text-black sm:text-5xl lg:text-6xl font-bold tracking-tight mb-12">
-      Greater Noida <span className="text-red-500">Sector</span> Maps
-    </h2>
-
-    {/* FILTER AREA */}
-    <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-10">
-      {/* Search */}
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search Noida sectors..."
-        className="w-full md:w-1/4 rounded-xl border border-red-500/10 bg-red/[0.06] backdrop-blur-xl px-4 py-3 text-black placeholder:text-gray-400 outline-none transition border-red-500/50 focus:ring-2 ring-red-500/20"
-      />
-
-      {/* Category */}
-      <div className="flex flex-wrap gap-3">
-        <button
-          onClick={() => setCategory("residential")}
-          className={`px-5 py-2.5 rounded-xl font-medium transition-all ${
-            category === "residential"
-              ? "bg-orange-500 text-black shadow-lg shadow-red-500/30"
-              : "bg-black text-gray-300 border border-white/10 hover:bg-red-600/10"
-          }`}
-        >
-          Residential Map
-        </button>
-
-        <button
-          onClick={() => setCategory("greater-noida")}
-          className={`px-5 py-2.5 rounded-xl font-medium transition-all ${
-            category === "greater-noida"
-              ? "bg-red-500 text-black shadow-lg shadow-red-500/30"
-              : "bg-red-600 text-gray-300 border border-white/10 hover:bg-red-600/10"
-          }`}
-        >
-          Industrial Map
-        </button>
-      </div>
-
-      {/* Sort */}
-      <select
-        value={sortBy}
-        onChange={(e) => setSortBy(e.target.value)}
-        className="w-full md:w-auto rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white outline-none focus:border-orange-500/50"
-      >
-        <option value="az">A → Z</option>
-        <option value="za">Z → A</option>
-        <option value="number-low">Sector Low → High</option>
-        <option value="number-high">Sector High → Low</option>
-      </select>
-    </div>
-
-    {/* MAP CARDS */}
     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-5 sm:gap-7">
-      {filteredData.filter(Boolean).map((item, index) => (
+      {items.filter(Boolean).map((item, index) => (
         <motion.div
           key={item.slug ? `${item.slug}-${index}` : `noida-${index}`}
           initial={{ opacity: 0, y: 30 }}
@@ -211,7 +90,7 @@ export default function GreateNoida() {
           whileHover={{ y: -8 }}
           viewport={{ once: true }}
           transition={{ duration: 0.35, ease: "easeOut" }}
-          onClick={() => openDetail(item)}
+          onClick={() => onOpen(item)}
           className="
             group
             relative
@@ -279,7 +158,147 @@ export default function GreateNoida() {
         </motion.div>
       ))}
     </div>
-  </div>
-</section>
+  );
+}
+
+export default function GreateNoida() {
+  const [sortBy, setSortBy] = useState("az");
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  const openDetail = (item) => {
+    const slug = item?.slug || getSlugFromTitle(item?.title);
+    navigate(`/greater-noida/${encodeURIComponent(slug)}`);
+  };
+
+  const safeData =
+    greaterNoida?.filter((item) => item && item.title && item.image) || [];
+
+  const sortData = (data) =>
+    [...data].sort((a, b) => {
+      const titleA = a.title.trim().toLowerCase();
+      const titleB = b.title.trim().toLowerCase();
+
+      switch (sortBy) {
+        case "az":
+          return compareTokens(tokenize(titleA), tokenize(titleB), titleA, titleB);
+
+        case "za": {
+          const aIsNum = startsWithDigit(titleA);
+          const bIsNum = startsWithDigit(titleB);
+          if (aIsNum !== bIsNum) return aIsNum ? 1 : -1;
+          return compareTokens(tokenize(titleB), tokenize(titleA), titleB, titleA);
+        }
+
+        case "number-low": {
+          const numA = Number(titleA.match(/\d+/)?.[0] || 0);
+          const numB = Number(titleB.match(/\d+/)?.[0] || 0);
+          return numA - numB;
+        }
+
+        case "number-high": {
+          const numA = Number(titleA.match(/\d+/)?.[0] || 0);
+          const numB = Number(titleB.match(/\d+/)?.[0] || 0);
+          return numB - numA;
+        }
+
+        default:
+          return 0;
+      }
+    });
+
+  const matchesSearch = (item) => {
+    const query = normalize(searchQuery);
+    return (
+      !query ||
+      normalize(item.title).includes(query) ||
+      normalize(item.slug).includes(query) ||
+      normalize(item.description).includes(query)
+    );
+  };
+
+  const residentialData = sortData(
+    safeData.filter(
+      (item) =>
+        matchesSearch(item) &&
+        (item.title?.toLowerCase().includes("residential") ||
+          item.description?.toLowerCase().includes("residential"))
+    )
+  );
+
+  const industrialData = sortData(
+    safeData.filter(
+      (item) =>
+        matchesSearch(item) &&
+        !(
+          item.title?.toLowerCase().includes("residential") ||
+          item.description?.toLowerCase().includes("residential")
+        )
+    )
+  );
+
+  return (
+    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Heading */}
+        <h2 className="text-center text-4xl text-black sm:text-5xl lg:text-6xl font-bold tracking-tight mb-12">
+          Greater Noida <span className="text-red-500">Sector</span> Maps
+        </h2>
+
+        {/* FILTER AREA (shared search + sort, applies to both sections) */}
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-14">
+          {/* Search */}
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Noida sectors..."
+            className="w-full md:w-1/4 rounded-xl border border-red-500/10 bg-red/[0.06] backdrop-blur-xl px-4 py-3 text-black placeholder:text-gray-400 outline-none transition border-red-500/50 focus:ring-2 ring-red-500/20"
+          />
+
+          {/* Sort */}
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="w-full md:w-auto rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white outline-none focus:border-orange-500/50"
+          >
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+            <option value="number-low">Sector Low → High</option>
+            <option value="number-high">Sector High → Low</option>
+          </select>
+        </div>
+
+        {/* ============================
+            INDUSTRIAL MAP SECTION
+        ============================ */}
+        <div className="mb-16">
+          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
+            Industrial Map <span className="text-red-500">Greater Noida</span>
+          </h3>
+
+          {industrialData.length > 0 ? (
+            <MapGrid items={industrialData} onOpen={openDetail} />
+          ) : (
+            <p className="text-gray-400 text-sm">No industrial maps found.</p>
+          )}
+        </div>
+
+        {/* ============================
+            RESIDENTIAL MAP SECTION
+        ============================ */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
+            Residential Map <span className="text-red-500">Greater Noida</span>
+          </h3>
+
+          {residentialData.length > 0 ? (
+            <MapGrid items={residentialData} onOpen={openDetail} />
+          ) : (
+            <p className="text-gray-400 text-sm">No residential maps found.</p>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }
