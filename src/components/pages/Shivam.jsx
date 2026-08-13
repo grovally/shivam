@@ -11,7 +11,7 @@ export default function Shivam() {
       description:
         "Premium residential apartments, commercial spaces, villas, and investment opportunities across Noida.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890554/SECTOR-80_81_ty6ztm.png",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890507/SECTOR_-_49_eohwnd.png",
       path: "/noida",
     },
     {

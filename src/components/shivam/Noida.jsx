@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, X } from "lucide-react";
+import { ArrowUpDown, Search, X } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { noidaData } from "../data/noidaData";
@@ -41,8 +41,19 @@ const tokenize = (title) =>
       return { type: "str", val: tok.toLowerCase() };
     });
 
+// title digit se start ho raha hai ya letter se
+const startsWithDigit = (title) => /^\d/.test((title || "").trim());
+
 // pure A→Z comparison: name parts alphabetically, number/roman parts numerically
-const compareTokens = (a, b) => {
+// PLUS: titles starting with a digit always go to the bottom (consistent with other sector pages)
+const compareTokens = (a, b, titleA, titleB) => {
+  const aIsNum = startsWithDigit(titleA);
+  const bIsNum = startsWithDigit(titleB);
+
+  if (aIsNum !== bIsNum) {
+    return aIsNum ? 1 : -1;
+  }
+
   const len = Math.max(a.length, b.length);
   for (let i = 0; i < len; i++) {
     const ta = a[i];
@@ -84,9 +95,13 @@ export default function Noida() {
 
     switch (sortBy) {
       case "az":
-        return compareTokens(tokenize(titleA), tokenize(titleB));
-      case "za":
-        return compareTokens(tokenize(titleB), tokenize(titleA));
+        return compareTokens(tokenize(titleA), tokenize(titleB), titleA, titleB);
+      case "za": {
+        const aIsNum = startsWithDigit(titleA);
+        const bIsNum = startsWithDigit(titleB);
+        if (aIsNum !== bIsNum) return aIsNum ? 1 : -1;
+        return compareTokens(tokenize(titleB), tokenize(titleA), titleB, titleA);
+      }
       case "number-low":
         return (
           Number(titleA.match(/\d+/)?.[0] || 0) -
@@ -131,22 +146,31 @@ export default function Noida() {
           lg:text-6xl
           font-bold
           tracking-tight
-          mb-12
+          mb-4
         "
       >
         Noida <span className="text-red-500">Sector</span> Maps
       </h2>
+
+     
 
       {/* FILTER AREA */}
       <div
         className="
           flex
           flex-col
-          gap-4
+          gap-3
           md:flex-row
           md:items-center
           md:justify-between
           mb-10
+          rounded-2xl
+          border
+          border-black/10
+          bg-white/70
+          backdrop-blur-xl
+          p-3
+          shadow-sm
         "
       >
         <div className="relative w-full md:w-1/4">
@@ -164,19 +188,19 @@ export default function Noida() {
               w-full
               rounded-xl
               border
-              border-red-500/10
-              bg-black/[0.06]
-              backdrop-blur-xl
+              border-gray-200
+              bg-white
               pl-11
               pr-10
-              py-3
+              py-2.5
+              text-sm
               text-black
               placeholder:text-gray-400
               outline-none
               transition
-              focus:border-red-500/50
+              focus:border-red-500/60
               focus:ring-2
-              focus:ring-red-500/20
+              focus:ring-red-500/15
             "
           />
 
@@ -184,6 +208,7 @@ export default function Noida() {
             <button
               type="button"
               onClick={() => setSearchQuery("")}
+              aria-label="Clear search"
               className="
                 absolute
                 right-3
@@ -199,48 +224,42 @@ export default function Noida() {
           )}
         </div>
 
-        <div className="flex flex-wrap gap-3">
-          <button
-            onClick={() => setCategory("noida")}
-            className={`
-              px-5
-              py-2.5
-              rounded-xl
-              font-medium
-              transition-all
-              ${
-                category === "noida"
-                  ? "bg-red-500 text-black shadow-lg shadow-red-500/30"
-                  : "bg-black text-gray-300 border border-white/10 hover:bg-white/10"
-              }
-            `}
-          >
-            Residential Map
-          </button>
-        </div>
+       
+         
 
-        <select
-          value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
-          className="
-            w-full
-            md:w-auto
-            rounded-xl
-            border
-            border-white/10
-            bg-[#111111]
-            px-4
-            py-3
-            text-white
-            outline-none
-            focus:border-orange-500/50
-          "
-        >
-          <option value="az">A → Z</option>
-          <option value="za">Z → A</option>
-          <option value="number-low">Sector Low → High</option>
-          <option value="number-high">Sector High → Low</option>
-        </select>
+        <div className="relative w-full md:w-56">
+          <ArrowUpDown
+            size={16}
+            className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"
+          />
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="
+              w-full
+              appearance-none
+              rounded-xl
+              border
+              border-gray-200
+              bg-white
+              pl-10
+              pr-4
+              py-2.5
+              text-sm
+              text-black
+              outline-none
+              transition
+              focus:border-red-500/60
+              focus:ring-2
+              focus:ring-red-500/15
+            "
+          >
+            <option value="az">Sort: A → Z</option>
+            <option value="za">Sort: Z → A</option>
+            <option value="number-low">Sector No: Low → High</option>
+            <option value="number-high">Sector No: High → Low</option>
+          </select>
+        </div>
       </div>
 
       {/* MAP CARDS */}
@@ -255,119 +274,126 @@ export default function Noida() {
           sm:gap-7
         "
       >
-        {filteredData
-          .filter(Boolean)
-          .map((item, index) => (
-            <motion.div
-              key={`noida-${item.id ?? index}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              whileHover={{ y: -8 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
-              onClick={() => openDetail(item)}
-              className="
-                group
-                relative
-                w-full
-                cursor-pointer
-                rounded-2xl
-                overflow-hidden
-                bg-white
-                shadow-md
-                shadow-black/10
-                ring-1
-                ring-black/5
-                hover:shadow-2xl
-                hover:shadow-red-500/20
-                hover:ring-red-500/30
-                transition-all
-                duration-300
-              "
-            >
-              <div
+        {filteredData.length > 0 ? (
+          filteredData
+            .filter(Boolean)
+            .map((item, index) => (
+              <motion.div
+                key={`noida-${item.id ?? index}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                onClick={() => openDetail(item)}
                 className="
+                  group
                   relative
                   w-full
-                  aspect-[4/3]
+                  cursor-pointer
+                  rounded-2xl
                   overflow-hidden
+                  bg-white
+                  shadow-md
+                  shadow-black/10
+                  ring-1
+                  ring-black/5
+                  hover:shadow-2xl
+                  hover:shadow-red-500/20
+                  hover:ring-red-500/30
+                  transition-all
+                  duration-300
                 "
               >
-                {item?.image ? (
-                  <img
-                    src={item.image}
-                    alt={item?.title || "Noida Sector Map"}
-                    loading="lazy"
-                    className="
-                      w-full
-                      h-full
-                      object-contain
-                      p-2
-                      transition-transform
-                      duration-500
-                      ease-out
-                      group-hover:scale-[1.06]
-                    "
-                    onError={(e) => {
-                      e.currentTarget.style.display = "none";
-                    }}
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
-                    Image unavailable
-                  </div>
-                )}
-
-                {/* subtle border accent */}
-                <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none" />
-
-                {/* bottom gradient fade for depth */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
-              </div>
-
-              {/* Divider line */}
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
-
-              <div className="flex items-center justify-center min-h-[56px] px-3 py-3 bg-white">
-                <h3
+                <div
                   className="
+                    relative
                     w-full
-                    text-center
-                    text-sm
-                    sm:text-base
-                    font-semibold
-                    leading-tight
-                    text-gray-800
-                    group-hover:text-red-500
-                    transition-colors
-                    line-clamp-2
+                    aspect-[4/3]
+                    overflow-hidden
                   "
                 >
-                  {item?.title || "Untitled Sector"}
-                </h3>
-              </div>
+                  {item?.image ? (
+                    <img
+                      src={item.image}
+                      alt={item?.title || "Noida Sector Map"}
+                      loading="lazy"
+                      className="
+                        w-full
+                        h-full
+                        object-contain
+                        p-2
+                        transition-transform
+                        duration-500
+                        ease-out
+                        group-hover:scale-[1.06]
+                      "
+                      onError={(e) => {
+                        e.currentTarget.style.display = "none";
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
+                      Image unavailable
+                    </div>
+                  )}
 
-              {/* hover glow */}
-              <div
-                className="
-                  absolute
-                  -bottom-8
-                  left-1/2
-                  -translate-x-1/2
-                  w-28
-                  h-10
-                  rounded-full
-                  bg-red-500/25
-                  blur-2xl
-                  opacity-0
-                  group-hover:opacity-100
-                  transition-opacity
-                  duration-300
-                  pointer-events-none
-                "
-              />
-            </motion.div>
-          ))}
+                  {/* subtle border accent */}
+                  <div className="absolute inset-0 ring-1 ring-inset ring-black/5 pointer-events-none" />
+
+                  {/* bottom gradient fade for depth */}
+                  <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/10 to-transparent pointer-events-none" />
+                </div>
+
+                {/* Divider line */}
+                <div className="h-px w-full bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
+
+                <div className="flex items-center justify-center min-h-[56px] px-3 py-3 bg-white">
+                  <h3
+                    className="
+                      w-full
+                      text-center
+                      text-sm
+                      sm:text-base
+                      font-semibold
+                      leading-tight
+                      text-gray-800
+                      group-hover:text-red-500
+                      transition-colors
+                      line-clamp-2
+                    "
+                  >
+                    {item?.title || "Untitled Sector"}
+                  </h3>
+                </div>
+
+                {/* hover glow */}
+                <div
+                  className="
+                    absolute
+                    -bottom-8
+                    left-1/2
+                    -translate-x-1/2
+                    w-28
+                    h-10
+                    rounded-full
+                    bg-red-500/25
+                    blur-2xl
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-opacity
+                    duration-300
+                    pointer-events-none
+                  "
+                />
+              </motion.div>
+            ))
+        ) : (
+          <div className="col-span-full py-16 text-center text-gray-500">
+            <p className="text-lg font-medium">No Noida sectors found.</p>
+            <p className="mt-2 text-sm">Try another sector name or number.</p>
+          </div>
+        )}
       </div>
     </section>
   );

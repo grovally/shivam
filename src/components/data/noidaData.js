@@ -505,14 +505,7 @@ Our expert team of Real Estate Agents In Noida will guide you through available 
     image:
       "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890503/SECTOR_-_48._vtzyss.png",
   },
-  {
-    id: 63,
-    slug: "phase-ii-residential-map",
-    title: "PHASE-II RESIDENTIAL",
-    description: "",
-    image:
-      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890776/PHASE-II_RESIDENTIAL_btgdqu.png",
-  },
+  
   {
     id: 64,
     slug: "sector-47-map",

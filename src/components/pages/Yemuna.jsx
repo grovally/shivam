@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Search, X, ArrowUpDown } from "lucide-react";
 import { yemuna } from "../data/yemunaNoidaData";
 
 // ------------------------------------
@@ -93,10 +94,20 @@ const tokenize = (title) =>
       };
     });
 
+// title digit se start ho raha hai ya letter se
+const startsWithDigit = (title) => /^\d/.test((title || "").trim());
+
 // ------------------------------------
-// Compare tokens
+// Compare tokens (digit-starting titles always sort last, like Greater Noida page)
 // ------------------------------------
-const compareTokens = (a, b) => {
+const compareTokens = (a, b, titleA, titleB) => {
+  const aIsNum = startsWithDigit(titleA);
+  const bIsNum = startsWithDigit(titleB);
+
+  if (aIsNum !== bIsNum) {
+    return aIsNum ? 1 : -1;
+  }
+
   const len = Math.max(a.length, b.length);
 
   for (let i = 0; i < len; i++) {
@@ -177,15 +188,23 @@ export default function Yamuna() {
       case "az":
         return compareTokens(
           tokenize(titleA),
-          tokenize(titleB)
+          tokenize(titleB),
+          titleA,
+          titleB
         );
 
       // Z → A
-      case "za":
+      case "za": {
+        const aIsNum = startsWithDigit(titleA);
+        const bIsNum = startsWithDigit(titleB);
+        if (aIsNum !== bIsNum) return aIsNum ? 1 : -1;
         return compareTokens(
           tokenize(titleB),
-          tokenize(titleA)
+          tokenize(titleA),
+          titleB,
+          titleA
         );
+      }
 
       // Number low → high
       case "number-low": {
@@ -274,7 +293,7 @@ export default function Yamuna() {
             lg:text-6xl
             font-bold
             tracking-tight
-            mb-12
+            mb-4
           "
         >
           Yamuna{" "}
@@ -284,6 +303,7 @@ export default function Yamuna() {
           Maps
         </h2>
 
+        
         {/* ============================
             FILTER AREA
         ============================ */}
@@ -293,98 +313,126 @@ export default function Yamuna() {
             z-[99999]
             flex
             flex-col
-            gap-4
-            md:flex-row
-            md:items-center
-            md:justify-between
+            gap-3
+            sm:flex-row
+            sm:items-center
+            sm:justify-between
             mb-10
+            rounded-2xl
+            border
+            border-black/10
+            bg-white/70
+            backdrop-blur-xl
+            p-3
+            shadow-sm
           "
         >
 
           {/* ==========================
               SEARCH
           ========================== */}
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) =>
-              setSearchQuery(e.target.value)
-            }
-            onClick={(e) =>
-              e.stopPropagation()
-            }
-            onFocus={(e) =>
-              e.stopPropagation()
-            }
-            placeholder="Search Yamuna sectors..."
-            className="
-              pointer-events-auto
-              relative
-              z-[999999]
-              w-full
-              md:w-1/4
-              rounded-xl
-              border
-              border-gray-300
-              bg-white
-              px-4
-              py-3
-              text-black
-              placeholder:text-gray-400
-              outline-none
-              transition
-              focus:border-red-500
-              focus:ring-2
-              focus:ring-red-500/20
-            "
-          />
-
-          {/* ==========================
-              CATEGORY
-          ========================== */}
-          
+          <div className="relative w-full sm:w-1/3">
+            <Search className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) =>
+                setSearchQuery(e.target.value)
+              }
+              onClick={(e) =>
+                e.stopPropagation()
+              }
+              onFocus={(e) =>
+                e.stopPropagation()
+              }
+              placeholder="Search Yamuna sectors..."
+              className="
+                pointer-events-auto
+                relative
+                z-[999999]
+                w-full
+                rounded-xl
+                border
+                border-gray-200
+                bg-white
+                pl-10
+                pr-10
+                py-2.5
+                text-sm
+                text-black
+                placeholder:text-gray-400
+                outline-none
+                transition
+                focus:border-red-500/60
+                focus:ring-2
+                focus:ring-red-500/15
+              "
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSearchQuery("");
+                }}
+                aria-label="Clear search"
+                className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 z-[999999] text-gray-400 hover:text-red-500 transition-colors"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
 
           {/* ==========================
               SORT
           ========================== */}
-          <select
-            value={sortBy}
-            onChange={(e) =>
-              setSortBy(e.target.value)
-            }
-            className="
-              pointer-events-auto
-              relative
-              z-[999999]
-              w-full
-              md:w-auto
-              rounded-xl
-              border
-              border-white/10
-              bg-[#111111]
-              px-4
-              py-3
-              text-white
-              outline-none
-              focus:border-orange-500/50
-            "
-          >
-            <option value="az">
-              A → Z
-            </option>
+          <div className="relative w-full sm:w-auto">
+            <ArrowUpDown className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <select
+              value={sortBy}
+              onChange={(e) =>
+                setSortBy(e.target.value)
+              }
+              className="
+                pointer-events-auto
+                relative
+                z-[999999]
+                w-full
+                sm:w-56
+                appearance-none
+                rounded-xl
+                border
+                border-gray-200
+                bg-white
+                pl-10
+                pr-4
+                py-2.5
+                text-sm
+                text-black
+                outline-none
+                transition
+                focus:border-red-500/60
+                focus:ring-2
+                focus:ring-red-500/15
+              "
+            >
+              <option value="az">
+                Sort: A → Z
+              </option>
 
-            <option value="za">
-              Z → A
-            </option>
+              <option value="za">
+                Sort: Z → A
+              </option>
 
-            <option value="number-low">
-              Sector Low → High
-            </option>
+              <option value="number-low">
+                Sector No: Low → High
+              </option>
 
-            <option value="number-high">
-              Sector High → Low
-            </option>
-          </select>
+              <option value="number-high">
+                Sector No: High → Low
+              </option>
+            </select>
+          </div>
 
         </div>
 

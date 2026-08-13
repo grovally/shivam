@@ -363,6 +363,7 @@ export default function Location() {
         className="
           inline-flex
           items-center
+          mt-3
           gap-2
           rounded-full
           border

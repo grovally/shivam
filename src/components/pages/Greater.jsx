@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Search, X, ArrowUpDown } from "lucide-react";
 import { greaterNoida } from "../data/greaterNoidaData";
 
 const getSlugFromTitle = (title) =>
@@ -217,77 +218,115 @@ export default function GreateNoida() {
     );
   };
 
+  // Keywords that clearly indicate an INDUSTRIAL / commercial-industrial project.
+  // Anything not matching these (and not explicitly labeled residential) is treated as Residential,
+  // since most sector maps (Alpha, Beta, Gamma, Sigma, Omicron, ABADI villages, etc.)
+  // are residential/mixed sectors even though their titles don't contain the word "residential".
+  const INDUSTRIAL_KEYWORDS = [
+    "ECOTECH",
+    "SURAJPUR",
+    "TECH ZONE",
+    "TOY CITY",
+    "BZP",
+    "INDUSTRIAL AREA",
+    "EPIP",
+    "UDYOG",
+    "KP-II",
+    "KP-III",
+    "KP-IV",
+    "KP-V",
+    "K.P-II",
+    "MP GREATER NOIDA",
+    "MP NOIDA EXTENSION",
+  ];
+
+  const classifyItem = (item) => {
+    const t = `${item.title || ""} ${item.slug || ""}`.toUpperCase();
+    const desc = (item.description || "").toUpperCase();
+
+    // explicit tag in title always wins
+    if (t.includes("RESIDENTIAL")) return "residential";
+    if (t.includes("INDUSTRIAL")) return "industrial";
+
+    // known industrial project keywords
+    if (INDUSTRIAL_KEYWORDS.some((k) => t.includes(k))) return "industrial";
+
+    // description strongly indicates an industrial hub and doesn't mention residential
+    if (desc.includes("INDUSTRIAL") && !desc.includes("RESIDENTIAL")) {
+      return "industrial";
+    }
+
+    // default: sector/village/society maps are residential
+    return "residential";
+  };
+
   const residentialData = sortData(
     safeData.filter(
-      (item) =>
-        matchesSearch(item) &&
-        (item.title?.toLowerCase().includes("residential") ||
-          item.description?.toLowerCase().includes("residential"))
+      (item) => matchesSearch(item) && classifyItem(item) === "residential"
     )
   );
 
   const industrialData = sortData(
     safeData.filter(
-      (item) =>
-        matchesSearch(item) &&
-        !(
-          item.title?.toLowerCase().includes("residential") ||
-          item.description?.toLowerCase().includes("residential")
-        )
+      (item) => matchesSearch(item) && classifyItem(item) === "industrial"
     )
   );
+
+  const totalShown = residentialData.length + industrialData.length;
 
   return (
     <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
       <div className="relative z-10 max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center text-4xl text-black sm:text-5xl lg:text-6xl font-bold tracking-tight mb-12">
+        <h2 className="text-center text-4xl text-black sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4">
           Greater Noida <span className="text-red-500">Sector</span> Maps
         </h2>
+       
 
         {/* FILTER AREA (shared search + sort, applies to both sections) */}
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-14">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-14 rounded-2xl border border-black/10 bg-white/70 backdrop-blur-xl p-3 shadow-sm">
           {/* Search */}
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search Noida sectors..."
-            className="w-full md:w-1/4 rounded-xl border border-red-500/10 bg-red/[0.06] backdrop-blur-xl px-4 py-3 text-black placeholder:text-gray-400 outline-none transition border-red-500/50 focus:ring-2 ring-red-500/20"
-          />
+          <div className="relative w-full sm:w-1/3">
+            <Search className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search sector, society or area..."
+              className="w-full rounded-xl border border-gray-200 bg-white px-10 py-2.5 text-sm text-black placeholder:text-gray-400 outline-none transition focus:border-red-500/60 focus:ring-2 focus:ring-red-500/15"
+            />
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery("")}
+                aria-label="Clear search"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-red-500 transition-colors"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            )}
+          </div>
 
           {/* Sort */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="w-full md:w-auto rounded-xl border border-white/10 bg-[#111111] px-4 py-3 text-white outline-none focus:border-orange-500/50"
-          >
-            <option value="az">A → Z</option>
-            <option value="za">Z → A</option>
-            <option value="number-low">Sector Low → High</option>
-            <option value="number-high">Sector High → Low</option>
-          </select>
+          <div className="relative w-full sm:w-auto">
+            <ArrowUpDown className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="w-full sm:w-56 appearance-none rounded-xl border border-gray-200 bg-white pl-10 pr-4 py-2.5 text-sm text-black outline-none transition focus:border-red-500/60 focus:ring-2 focus:ring-red-500/15"
+            >
+              <option value="az">Sort: A → Z</option>
+              <option value="za">Sort: Z → A</option>
+              <option value="number-low">Sector No: Low → High</option>
+              <option value="number-high">Sector No: High → Low</option>
+            </select>
+          </div>
         </div>
 
         {/* ============================
-            INDUSTRIAL MAP SECTION
+            RESIDENTIAL MAP SECTION (shown first)
         ============================ */}
         <div className="mb-16">
-          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
-            Industrial Map <span className="text-red-500">Greater Noida</span>
-          </h3>
-
-          {industrialData.length > 0 ? (
-            <MapGrid items={industrialData} onOpen={openDetail} />
-          ) : (
-            <p className="text-gray-400 text-sm">No industrial maps found.</p>
-          )}
-        </div>
-
-        {/* ============================
-            RESIDENTIAL MAP SECTION
-        ============================ */}
-        <div>
           <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
             Residential Map <span className="text-red-500">Greater Noida</span>
           </h3>
@@ -296,6 +335,21 @@ export default function GreateNoida() {
             <MapGrid items={residentialData} onOpen={openDetail} />
           ) : (
             <p className="text-gray-400 text-sm">No residential maps found.</p>
+          )}
+        </div>
+
+        {/* ============================
+            INDUSTRIAL MAP SECTION (shown below)
+        ============================ */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
+            Industrial Map <span className="text-red-500">Greater Noida</span>
+          </h3>
+
+          {industrialData.length > 0 ? (
+            <MapGrid items={industrialData} onOpen={openDetail} />
+          ) : (
+            <p className="text-gray-400 text-sm">No industrial maps found.</p>
           )}
         </div>
       </div>

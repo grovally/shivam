@@ -12,7 +12,7 @@ const locations = [
     description:
       "Chhabra Properties supplies an extensive Noida Map that illustrates an expanding and exciting city. The extensive map provides an understanding of the diversity of Noida's land use, while identifying the key commercial, residential, and industrial sectors of considerable interest to our customers who are seeking property options and are interested to learn more about Noida's complex city structure. Whether your search takes you to established sectors or emerging sectors, our Noida Map will quickly help you navigate the active real estate market in Noida. Increase your opportunities to secure advantageous locations with Chhabra Properties.",
     image:
-      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890554/SECTOR-80_81_ty6ztm.png",
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890507/SECTOR_-_49_eohwnd.png",
   },
   {
     id: "greater-noida",
