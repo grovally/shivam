@@ -465,7 +465,7 @@ At Chhabra Properties | Property Dealer In Greater Noida, we provide detailed in
      {
       id: 28,
        slug: "SECTOR p-3",
-      title:"SECTOR P-3",
+      title:"POCKET P-3",
       description:`
 About Sector P 3, Greater Noida, Uttar Pradesh
 Uncover the emerging prospects in Sector P 3, Greater Noida! This strategically developing sector is all set to become an important residential and commercial hub in the growing terrain of Greater Noida. Although yet to develop, Sector P 3 presents optimistic prospects for upcoming residents and entrepreneurs alike, with such landmarks as Pari Chowk Greater Noida already making its mark. Adjoining regions, such as Pari Chowk Greater Noida, add to the increasing connectivity and infrastructure of the area.
@@ -636,7 +636,7 @@ Sector 37 provides direct connectivity to the nearest Sector 37 Metro Station is
     {
       id: 37,
        slug: "Sigha-1",
-      title:"SIGMA-1",
+      title:"SIGMA-1 SECTOR-42",
       description:`About Sigma 1, Greater Noida, Uttar Pradesh
 Sigma 1 Greater Noida, a well-established and carefully planned sector in the vast Greater Noida area, is famous for its broad avenues, parks, and a mature residential setup. At Chhabra Properties, your reliable and seasoned Greater Noida Property Dealers, we are happy to introduce the various property choices available in this popular sector, commonly referred to as Sigma.
 
@@ -773,7 +773,7 @@ With excellent connectivity to the Yamuna Expressway, Zeta-1 provides convenient
     {
       id: 47,
       slug: "toy city ",
-      title:"Toy City",
+      title:"TOY City",
       description:`
 Discover Toy City, Greater Noida, a visionary industrial hub specifically designed for the toy manufacturing sector. Use the Toy City Map to explore this meticulously planned area. Toy City Greater Noida features well-planned commercial plots with ample space for large-scale operations, modern facilities, and excellent road networks. This area is also known as Toy City Ecotech 3 Greater Noida.
  
@@ -937,9 +937,9 @@ Chhabra Properties, being the leading Property Dealers In Greater Noida, allows 
     },
     {
       id: 63,
-        slug: "GREATER 30 MTR. FLAT AT CHI-PH",
+        slug: "GREATER 30 MTR. FLAT AT CHI-PHI",
       
-      title:"GREATER 30 MTR. FLAT AT CHI-PH",
+      title:"GREATER 30 MTR. FLAT AT CHI-PHI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890758/GREATER30_MTR._FLAT_AT_CHI-PHI_epr5zs.png",
     },
@@ -1150,7 +1150,7 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
       id: 88,
       
        slug:"ABADI AT VILL. Pali ",
-      title:"ABADI AT VILL. Pali",
+      title:"ABADI AT VILL. PALI",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890709/ABADI_AT_VILL._PALI.jpg_bv67a2.png"
     },
@@ -1215,18 +1215,11 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
       id: 96,
     
        slug:"ABADI AT VILL. GHARBHARA ",
-    title:"ABADI AT VILL. GHARBHARA",
+    title:"ABADI AT VILL. GHARBHARA NIT",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890697/ABADI_AT_VILL._GHARBHARA_NIT_edcppu.png"
    },
-   {
-      id: 97,
-    
-       slug:"ABADI AT VILL. GAMMA-I ",
-    title:"ABADI AT VILL. GAMMA-I",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890697/ABADI_AT_VILL._GAMMA-I_cdygmx.png"
-   },
+   
    {
       id: 98,
     
@@ -1255,9 +1248,256 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
       id: 101,
     
        slug:"ABADI AT VILL.  SAINI ",
-    title:"ABADI AT VILL SAINI",
+    title:"ABADI AT VILL 6% SAINI",
       description:"",
     
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890693/6_ABADI_AT_VILL._SAINI_ullrdf.png"
+   },
+   {
+    id:"",
+    slug:"SECTOR-10 & 12",
+    title:"SECTOR-10 & 12",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890785/SECTOR-10_12_wqb56a.png"
+   },
+   {
+    id:"",
+    slug:"PHASE-II RESIDENTIAL",
+    title:"PHASE-II RESIDENTIAL",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890776/PHASE-II_RESIDENTIAL_btgdqu.png"
    }
+   ,
+   {
+    id:"",
+    slug:"OMICRON-III 32MTR",
+    title:"OMICRON-III 32MTR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890775/OMICRON-III_32MTR_qfqg26.png"
+   },
+   {
+    id:"",
+    slug:"EPIP EXPORT ZONE",
+    title:"EPIP EXPORT ZONE",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890750/EPIP_EXPORT_ZONE._c2l9vk.png"
+   },
+   {
+    id:"",
+    slug:"EKANKI ENCLAVE",
+    title:"EKANKI ENCLAVE",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890750/EKANKI_ENCLAVE_ujfnbc.png"
+   },
+   {
+    id:"",
+    slug:"",
+    title:"",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890706/ABADI_AT_VILL._KHANPUR_asutv3.png"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. KHANPUR",
+    title:"ABADI AT VILL. KHANPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890706/ABADI_AT_VILL._KHANPUR_asutv3.png"
+   },
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. KASNA POCKET-A B C D E",
+    title:"ABADI AT VILL. KASNA POCKET-A B C D E",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890703/ABADI_AT_VILL._KASNA_POCKET-A_B_C_D_E_dcgv6p.png"
+   },
+   ,
+   {
+    id:"",
+    slug:"K.P-II",
+    title:"K.P-II",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890763/K.P-II._qjof4r.png"
+   }
+   ,
+   {
+    id:"",
+    slug:"30 MTR.FLAT AT ZETA-I",
+    title:"30 MTR.FLAT AT ZETA-I",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803248/30_MTR._FLAT_AT_ZETA-I_exlk2s.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. KAYAMPUR",
+    title:"ABADI AT VILL. KAYAMPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803275/ABADI_AT_VILL._KAYAMPUR_h1vqwo.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. ITHERA",
+    title:"ABADI AT VILL. ITHERA",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803286/ABADI_AT_VILL._ITHERA_bc2k2n.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. NAMOLI ROHILAPUR",
+    title:"ABADI AT VILL. NAMOLI ROHILAPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803279/ABADI_AT_VILL._NAMOLI_ROHILAPUR_GUJARPUR_x5sgtt.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. DUNGARPUR REELKA",
+    title:"ABADI AT VILL. DUNGARPUR REELKA",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803253/ABADI_AT_VILL._DUNGARPUR_REELKA_bfuelo.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ETA-II ZETA-II",
+    title:"ETA-II ZETA-II",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890750/ETA-II_ZETA-II_p7qaui.png"
+   }
+   ,
+   {
+    id:"",
+    slug:"SECTOR-04",
+    title:"SECTOR-04",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803337/SECTOR-04_tkt3gh.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI VILL. AJYAPUR",
+    title:"ABADI VILL. AJYAPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803307/ABADI_VILL._AJYAPUR_n1ns40.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI VILL. AICHER",
+    title:"ABADI VILL. AICHER",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803306/ABADI_VILL._AICHER_pdnad2.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI VILL. NATO KI MADHAYA",
+    title:"ABADI_VILL. NATO KI MADHAYA",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803304/ABADI_VILL._NATO_KI_MADHAYA_kry6qp.jpg"
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI VILL. GHARBHARA IN KASNA PART-II",
+    title:"ABADI VILL. GHARBHARA IN KASNA PART-II",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803298/ABADI_VILL._GHARBHARA_IN_KASNA_PART-II_vauwv4.jpg"
+   }
+   
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. SUTIYANA",
+    title:"ABADI AT VILL. SUTIYANA",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803295/ABADI_AT_VILL._SUTIYANA_vq8yc0.jpg"
+   }
+   
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. MUBARAKPUR",
+    title:"ABADI AT VILL. MUBARAKPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803292/ABADI_AT_VILL._MUBARAKPUR_rcabgb.jpg"
+   }
+   
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. SAKIPUR-47 POCKET-C",
+    title:"ABADI AT VILL. SAKIPUR-47 POCKET-C",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803292/ABADI_AT_VILL._SAKIPUR-47_POCKET-C_hlpjqg.jpg"
+   },
+   {
+    id:"",
+    slug:"ABADI AT VILL. MALAKPUR",
+    title:"ABADI AT VILL. MALAKPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803292/ABADI_AT_VILL._MALAKPUR_clo5ol.jpg"
+
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. KASNA BLOCK-F",
+    title:"ABADI AT VILL. KASNA BLOCK-F",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803291/ABADI_AT_VILL._KASNA_BLOCK-F_ka1vzn.jpg"
+
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL.RAMPUR_SADAR",
+    title:"ABADI AT VILL.RAMPUR SADAR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803290/ABADI_AT_VILL._RAMPUR_SADAR_tutjip.jpg"
+
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL.RAIPUR BANGER",
+    title:"ABADI AT VILL. RAIPUR BANGER",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803287/ABADI_AT_VILL._RAIPUR_BANGER_st3e4s.jpg"
+
+   }
+   ,
+   {
+    id:"",
+    slug:"ABADI AT VILL. NAMOLI ROHILAPUR GUJARPUR",
+    title:"ABADI AT VILL. NAMOLI ROHILAPUR GUJARPUR",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803279/ABADI_AT_VILL._NAMOLI_ROHILAPUR_GUJARPUR_x5sgtt.jpg"
+
+   },
+   {
+    id:"",
+    slug:" XU-1 30 MTR. FLAT",
+    title:" XU-1 30 MTR.FLAT  ",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803252/30_MTR._FLAT_AT_XU-1_frhiug.jpg"
+
+   },
+   {
+    id:"",
+    slug:"ABADI VILL. GHARBHARA PART-I",
+    title:"ABADI VILL. GHARBHARA PART-I",
+    description:"",
+    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784803313/ABADI_VILL._GHARBHARA_PART-I_vqxgfb.jpg"
+
+   }
+   
+   
+ 
+ 
+ 
  ]

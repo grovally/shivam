@@ -11,7 +11,7 @@ export default function Shivam() {
       description:
         "Premium residential apartments, commercial spaces, villas, and investment opportunities across Noida.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890507/SECTOR_-_49_eohwnd.png",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890554/SECTOR-80_81_ty6ztm.png",
       path: "/noida",
     },
     {
@@ -19,7 +19,8 @@ export default function Shivam() {
       description:
         "Discover modern townships, luxury homes, commercial projects, and high-growth investment locations.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784805601/SECTOR_-127_NOIDA_CHANGES_uinf0k.jpg",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890765/MP_GREATER_NOIDA_na15fy.png",
+  
       path: "/greater-noida",
     },
     {
@@ -27,7 +28,7 @@ export default function Shivam() {
       description:
         "Industrial plots, premium residential projects, and investment options near the upcoming Jewar Airport.",
       image:
-        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784806936/SECTOR-20_POCKET-A_k6rxaz.jpg",
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231930/MP-_SECTOR-18-20_1_rrfu1g.png",
       path: "/yamuna-expressway",
     },
   ];
