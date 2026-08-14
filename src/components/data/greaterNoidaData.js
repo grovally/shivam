@@ -166,12 +166,7 @@ Though Eta II is an independent and also growing sector in Greater Noida, both E
 Transportation in Greater Noida, including Eta 1, is made easy by major roads and its accessibility to the Yamuna Expressway. You can see the connectivity through Greater Noida Map and Yamuna Expressway Map. They point out how easily Eta 1 connects to other prominent areas and broader NCR. As one of the experienced Property Dealers In Greater Noida, Chhabra Properties provides you with guidance on the area's real estate market. We can give advice regarding options available and assist you with how to enter the property market within this busy sector of Greater Noida, Uttar Pradesh, India.`,
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890749/ETA-I_rm1sxl.png",
     },
-    {
-      slug:" ZETA-I ",
-      title:"ZETA-I  ",
-      description:"",
-      image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_600/v1784890802/ZETA_1_qnhy1d.png"
-    },
+    
 
     {
       slug:"ZETA-II",

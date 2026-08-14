@@ -279,7 +279,7 @@ export default function Yamuna() {
         text-white
       "
     >
-      <div className="relative z-[9999] max-w-7xl mx-auto">
+      <div className="relative  max-w-7xl mx-auto">
 
         {/* ============================
             HEADING
@@ -310,7 +310,7 @@ export default function Yamuna() {
         <div
           className="
             relative
-            z-[99999]
+            
             flex
             flex-col
             gap-3
@@ -349,7 +349,7 @@ export default function Yamuna() {
               className="
                 pointer-events-auto
                 relative
-                z-[999999]
+                
                 w-full
                 rounded-xl
                 border
@@ -376,7 +376,7 @@ export default function Yamuna() {
                   setSearchQuery("");
                 }}
                 aria-label="Clear search"
-                className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2 z-[999999] text-gray-400 hover:text-red-500 transition-colors"
+                className="pointer-events-auto absolute right-3 top-1/2 -translate-y-1/2  text-gray-400 hover:text-red-500 transition-colors"
               >
                 <X className="h-4 w-4" />
               </button>
@@ -396,7 +396,7 @@ export default function Yamuna() {
               className="
                 pointer-events-auto
                 relative
-                z-[999999]
+                
                 w-full
                 sm:w-56
                 appearance-none

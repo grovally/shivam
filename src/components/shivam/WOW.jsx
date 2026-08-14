@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 
 
@@ -82,7 +81,7 @@ export default function WOW() {
       className="
         relative
         overflow-hidden
-        py-20
+        py-14
         sm:py-24
         bg-transparent
       "
@@ -169,31 +168,6 @@ export default function WOW() {
 
 
       {/* =========================================
-          CRYSTAL 1
-      ========================================= */}
-
-      
-
-
-      {/* =========================================
-          CRYSTAL 2
-      ========================================= */}
-
-
-
-      {/* =========================================
-          CRYSTAL 3
-      ========================================= */}
-
-
-
-      {/* SMALL CRYSTALS */}
-
-
-
-
-
-      {/* =========================================
           MAIN CONTENT
       ========================================= */}
 
@@ -203,7 +177,7 @@ export default function WOW() {
           z-10
           max-w-7xl
           mx-auto
-          px-4
+          px-3
           sm:px-6
           lg:px-8
         "
@@ -214,16 +188,19 @@ export default function WOW() {
             HEADING
         ========================================= */}
 
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 sm:mb-12">
 
           <p
             className="
-              text-sm
+              text-[10px]
+              sm:text-sm
               uppercase
-              tracking-[0.3em]
+              tracking-[0.2em]
+              sm:tracking-[0.3em]
               font-semibold
               text-red-500
-              mb-3
+              mb-2
+              sm:mb-3
             "
           >
             Our Trusted Network
@@ -232,11 +209,12 @@ export default function WOW() {
 
           <h2
             className="
-              text-3xl
+              text-xl
               sm:text-4xl
               lg:text-5xl
               font-bold
               text-black
+              leading-snug
             "
           >
             Working With The{" "}
@@ -251,13 +229,15 @@ export default function WOW() {
 
          <p
   className="
-    mt-4
+    mt-3
+    sm:mt-4
     mx-auto
+    max-w-3xl
     text-black/60
-    text-sm
+    text-xs
     sm:text-base
-    leading-7
-    whitespace-nowrap
+    leading-6
+    sm:leading-7
   "
 >
   We collaborate with leading developers and development authorities to bring trusted real estate opportunities.
@@ -274,10 +254,9 @@ export default function WOW() {
         <div
           className="
             grid
-            grid-cols-2
-            sm:grid-cols-3
-            lg:grid-cols-5
-            gap-5
+            grid-cols-5
+            gap-1.5
+            sm:gap-5
             items-center
           "
         >
@@ -292,28 +271,28 @@ export default function WOW() {
                   group
                   relative
 
-                  h-36
+                  h-14
+                  sm:h-36
 
-                  rounded-2xl
+                  rounded-md
+                  sm:rounded-2xl
 
                   bg-white/[0.04]
 
                   backdrop-blur-xl
 
                   border
-                  border-red-200/20
-
-                 
-
                   border-red-400/60
 
-                  shadow-[0_0_30px_rgba(239,68,68,0.12)]
+                  shadow-[0_0_10px_rgba(239,68,68,0.10)]
+                  sm:shadow-[0_0_30px_rgba(239,68,68,0.12)]
 
                   flex
                   items-center
                   justify-center
 
-                  p-6
+                  p-1.5
+                  sm:p-6
 
                   overflow-hidden
 
@@ -385,18 +364,13 @@ export default function WOW() {
                     z-10
 
                     max-w-full
-                    max-h-32
+                    max-h-10
+                    sm:max-h-32
 
                     w-auto
                     h-auto
 
                     object-contain
-
-                    grayscale
-
-                    opacity-60
-
-                    grayscale-0
 
                     opacity-100
 
@@ -425,8 +399,10 @@ export default function WOW() {
             flex
             items-center
             justify-center
-            gap-3
-            mt-10
+            gap-2
+            sm:gap-3
+            mt-6
+            sm:mt-10
           "
         >
 
@@ -437,15 +413,16 @@ export default function WOW() {
                 key={index}
 
                 className={`
-                  h-2
+                  h-1.5
+                  sm:h-2
                   rounded-full
                   transition-all
                   duration-500
 
                   ${
                     index === startIndex
-                      ? "w-8 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]"
-                      : "w-2 bg-white/20"
+                      ? "w-6 sm:w-8 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]"
+                      : "w-1.5 sm:w-2 bg-white/20"
                   }
                 `}
               />
@@ -496,4 +473,3 @@ export default function WOW() {
     </section>
   );
 }
-

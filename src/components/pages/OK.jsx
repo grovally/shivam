@@ -71,7 +71,7 @@ export default function Maps() {
   transition={{ duration: 0.8 }}
   className="text-center mb-16"
 >
-  <p className="uppercase tracking-[4px] md:tracking-[8px] text-black font-semibold text-xs md:text-base mb-4">
+  <p className="uppercase mt-4 tracking-[4px] md:tracking-[8px] text-black font-semibold text-xs md:text-base mb-4">
     Premium Real Estate
   </p>
 

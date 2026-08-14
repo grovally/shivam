@@ -190,14 +190,13 @@ export default function YamunaDetail() {
         {optimizedImage ? (
           <img
             src={optimizedImage}
-            alt={`${map.title} Yamuna Expressway Map`}
+            alt={`${map.title} noida Expressway Map`}
             title={map.title}
-            width="1200"
-            height="800"
+            
             
             loading="lazy"
             decoding="async"
-            fetchPriority="high"
+          
             className="
               w-full
               max-w-6xl

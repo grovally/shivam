@@ -323,7 +323,7 @@ export default function Footer() {
             className="col-span-2 p-3 sm:col-span-1 sm:p-6"
           >
             <h3 className="mb-4 text-base font-bold text-red-500 sm:mb-6 sm:text-xl">
-              Office Branch
+              Offices Branch
             </h3>
 
             <div className="flex flex-col gap-3">
