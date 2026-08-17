@@ -79,66 +79,16 @@ export default function Shivam() {
           PREMIUM SOFT GLOWS
       ===================================================== */}
 
-      <div className="pointer-events-none absolute left-[-120px] top-40 h-72 w-72 rounded-full bg-red-500/10 blur-[100px]" />
-
-      <div className="pointer-events-none absolute right-[-120px] top-72 h-72 w-72 rounded-full bg-blue-500/10 blur-[100px]" />
+      
 
       {/* =====================================================
           CRYSTAL GLASS ELEMENTS
       ===================================================== */}
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-[8%]
-          top-[30%]
-          h-20
-          w-20
-          rotate-45
-          rounded-2xl
-          border
-          border-white/40
-          bg-white/20
-          backdrop-blur-md
-          shadow-[0_10px_40px_rgba(255,255,255,0.15)]
-        "
-      />
+      
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          right-[8%]
-          top-[48%]
-          h-28
-          w-28
-          rotate-12
-          rounded-3xl
-          border
-          border-white/30
-          bg-white/10
-          backdrop-blur-lg
-          shadow-[0_15px_50px_rgba(255,255,255,0.12)]
-        "
-      />
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          bottom-[12%]
-          left-[45%]
-          h-12
-          w-12
-          rotate-45
-          rounded-xl
-          border
-          border-white/30
-          bg-white/10
-          backdrop-blur-md
-        "
-      />
+      
 
       {/* =====================================================
           MAIN CONTENT

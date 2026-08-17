@@ -7,7 +7,7 @@ const authorities = [
     description:
       "Greater Noida ke planned urban development, infrastructure aur real estate growth ko manage karne wali authority.",
     image:
-      "https://www.constructionworld.in/assets/uploads/s_d2da1e5e2d0414ad71f40700f0b63f68.jpg",
+      "https://www.livelaw.in/h-upload/2023/06/26/478329-greater-noida-industrial-development-authority.jpg",
   },
   {
     name: "Noida Authority",

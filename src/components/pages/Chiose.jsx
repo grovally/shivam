@@ -274,9 +274,9 @@ export default function WhyChooseUs() {
                     absolute
                     inset-0
                     bg-gradient-to-br
-                    from-black
+                    from-white
                     via-transparent
-                    to-red-50/40
+                    to-red-600
                     opacity-70
                   "
                 />
@@ -295,7 +295,7 @@ export default function WhyChooseUs() {
                     h-px
                     bg-gradient-to-r
                     from-transparent
-                    via-red-400
+                    via-red-500/50
                     to-transparent
                     opacity-0
                     group-hover:opacity-100
@@ -316,7 +316,7 @@ export default function WhyChooseUs() {
                     text-xs
                     font-bold
                     tracking-widest
-                    text-black/20
+                    text-black
                     group-hover:text-red-200
                     transition-colors
                   "

@@ -76,36 +76,8 @@ export default function ProcessSection() {
           BACKGROUND GLOW
       ================================= */}
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          
-          left-1/2
-          h-72
-          w-72
-          -translate-x-1/2
-          rounded-full
-          bg-red-600/10
-          blur-[100px]
-          sm:h-96
-          sm:w-96
-        "
-      />
+      
 
-      <div
-        className="
-          pointer-events-none
-          absolute
-          -bottom-32
-          right-[-100px]
-          h-72
-          w-72
-          rounded-full
-          bg-red-500/5
-          blur-[100px]
-        "
-      />
 
       {/* ================================
           MAIN CONTAINER
@@ -334,9 +306,9 @@ export default function ProcessSection() {
                           className="
                             mt-1
                             text-3xl
-                            font-black
+                            font-bold
                             tracking-tight
-                            text-red-500
+                            text-red-600
                             sm:text-4xl
                           "
                         >

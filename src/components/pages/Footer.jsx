@@ -36,7 +36,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: FaWhatsapp, url: "https://wa.me/916200072000" },
-    { icon: FaFacebookF, url: "https://facebook.com" },
+    { icon: FaFacebookF, url: "https://www.facebook.com/chhabrapropertiesofficial/?ref=PROFILE_EDIT_xav_ig_profile_page_web#" },
     { icon: FaInstagram, url: "https://www.instagram.com/chhabrapropertiesofficial/" },
     { icon: FaYoutube, url: "https://youtube.com/@chhabrapropertiesofficial" },
     { icon: FaPhone, url: "tel:+916262626462" },
@@ -58,29 +58,7 @@ export default function Footer() {
       className="relative overflow-hidden bg-black text-white"
     >
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <picture>
-          <source
-            media="(max-width: 640px)"
-            srcSet="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_300/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png"
-          />
-          <source
-            media="(max-width: 1024px)"
-            srcSet="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto:eco,w_640/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png"
-          />
-          <source
-            srcSet="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto:eco,w_1600/v1786428802/Untitled_design_3_okqcwe_ck8wr3.png"
-          />
-          <img
-            src="https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_300/v1786431926/Untitled_design_4_mqtk9s_1_jz36u4.png"
-            alt="Chhabra Properties"
-            loading="lazy"
-            decoding="async"
-            fetchPriority="low"
-            className="h-full w-full object-cover object-[center_35%] sm:object-center"
-          />
-        </picture>
-      </div>
+      
 
       <div className="pointer-events-none absolute inset-0 z-[1]" />
 

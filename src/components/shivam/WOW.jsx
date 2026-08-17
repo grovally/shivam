@@ -92,44 +92,10 @@ export default function WOW() {
           BACKGROUND RED GLOW
       ========================================= */}
 
-      <div
-        className="
-          absolute
-          top-[-120px]
-          left-[10%]
-
-          w-[450px]
-          h-[450px]
-
-          rounded-full
-
-          bg-red-600/10
-
-          blur-[150px]
-
-          pointer-events-none
-        "
-      />
+     
 
 
-      <div
-        className="
-          absolute
-          bottom-[-150px]
-          right-[5%]
-
-          w-[500px]
-          h-[500px]
-
-          rounded-full
-
-          bg-white/5
-
-          blur-[160px]
-
-          pointer-events-none
-        "
-      />
+      
            <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
   <svg
     className="relative block w-full h-20 md:h-32"

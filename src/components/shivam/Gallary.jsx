@@ -20,7 +20,7 @@ export default function Gallery() {
             Chhabra <span className="text-red-600">Property</span>  Gallery
           </h2>
 
-          <p className="mt-4 text-sm sm:text-base lg:text-lg text-black/80 max-w-3xl mx-auto">
+          <p className="mt-4 text-sm sm:text-base lg:text-lg text-black/80 max-w-5xl mx-auto">
             Explore our premium collection of apartments, villas, commercial
             spaces, and investment properties.
           </p>
@@ -46,15 +46,7 @@ export default function Gallery() {
         {/* Empty State */}
         {images.length === 0 && (
           <div className="rounded-2xl border-2 border-dashed border-gray-300 bg-white py-20 text-center">
-            <p className="text-lg font-semibold text-black/40">
-              Gallery images will appear here.
-            </p>
-
-            <p className="mt-2 text-gray-500">
-              Upload your property photos by adding image URLs to the
-              <code className="mx-1 rounded bg-gray-100 px-2 py-1">images</code>
-              array.
-            </p>
+            
           </div>
         )}
       </div>

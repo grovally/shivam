@@ -1,204 +1,214 @@
-import React from "react";
+import React, { useEffect } from "react";
+
+// =====================================================
+// INSTAGRAM REELS
+// =====================================================
+const shivam = [
+  {
+    image:
+      "https://www.instagram.com/reel/DbnLojmp7In/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    image:
+      "https://www.instagram.com/reel/DbK4xdxJsKt/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==",
+  },
+  {
+    image:
+      "https://www.instagram.com/reel/DbkZd5CJrz3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==",
+  },
+];
+
+// =====================================================
+// LOAD INSTAGRAM EMBED SCRIPT
+// =====================================================
+function loadInstagramEmbedScript(callback) {
+  const existing = document.getElementById("instagram-embed-script");
+
+  if (existing) {
+    if (window.instgrm) {
+      callback();
+    } else {
+      existing.addEventListener("load", callback);
+    }
+    return;
+  }
+
+  const script = document.createElement("script");
+  script.id = "instagram-embed-script";
+  script.src = "https://www.instagram.com/embed.js";
+  script.async = true;
+  script.onload = callback;
+
+  document.body.appendChild(script);
+}
+
+
+function ReelEmbed({ url }) {
+  useEffect(() => {
+    loadInstagramEmbedScript(() => {
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    });
+  }, [url]);
+
+  return (
+    <div className="flex w-full justify-center overflow-hidden">
+      <blockquote
+        className="instagram-media"
+        data-instgrm-permalink={url}
+        data-instgrm-version="14"
+        style={{
+          background: "#fff",
+          border: 0,
+          borderRadius: "10px",
+          margin: "0 auto",
+          width: "50%",
+          maxWidth: "320px",
+          minWidth: "220px",
+        }}
+      >
+        <a href={url} target="_blank" rel="noopener noreferrer">
+          View this Reel on Instagram
+        </a>
+      </blockquote>
+    </div>
+  );
+}
+
 
 export default function Reels() {
   return (
-    <section className="relative mt-10 overflow-hidden bg-transparent py-16 px-4 sm:px-6 lg:px-8 text-white">
-
-      {/* =====================================================
-          CRYSTAL BACKGROUND
-      ===================================================== */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-
-        {/* Soft background glow */}
-        <div className="
-          absolute
-          top-[10%]
-          left-[10%]
-          w-[350px]
-          h-[350px]
-          rounded-full
-          bg-gray-200/40
-          blur-[120px]
-        " />
-
-        <div className="
-          absolute
-          bottom-[10%]
-          right-[10%]
-          w-[400px]
-          h-[400px]
-          rounded-full
-          bg-red-100/40
-          blur-[130px]
-        " />
-
-
-        {/* =================================================
-            CRYSTAL 1
-        ================================================= */}
-        <div className="reel-crystal reel-crystal-one">
-
-          <div className="reel-crystal-face reel-face-left" />
-          <div className="reel-crystal-face reel-face-right" />
-          <div className="reel-crystal-face reel-face-bottom" />
-
-          <div className="reel-crystal-shine" />
-
-        </div>
-
-
-        {/* =================================================
-            CRYSTAL 2
-        ================================================= */}
-        <div className="reel-crystal reel-crystal-two">
-
-          <div className="reel-crystal-face reel-face-left" />
-          <div className="reel-crystal-face reel-face-right" />
-          <div className="reel-crystal-face reel-face-bottom" />
-
-          <div className="reel-crystal-shine" />
-
-        </div>
-
-
-        {/* =================================================
-            CRYSTAL 3
-        ================================================= */}
-        <div className="reel-crystal reel-crystal-three">
-
-          <div className="reel-crystal-face reel-face-left" />
-          <div className="reel-crystal-face reel-face-right" />
-          <div className="reel-crystal-face reel-face-bottom" />
-
-          <div className="reel-crystal-shine" />
-
-        </div>
-
-
-        {/* Small crystals */}
-        <div className="reel-mini-crystal reel-mini-one" />
-        <div className="reel-mini-crystal reel-mini-two" />
-        <div className="reel-mini-crystal reel-mini-three" />
-
-      </div>
-
-
-      {/* =====================================================
-          CONTENT
-      ===================================================== */}
-      <div className="relative z-10 max-w-7xl mx-auto">
-
-        <h2 className="
-          text-4xl
-          sm:text-5xl
-          font-bold
-          text-center
-          mb-3
-          text-gray-900
-        ">
-          Latest{" "}
-          <span className="text-red-600">
-            Instagram
-          </span>{" "}
-          Reels
+    <section
+      className="
+        relative
+        mt-3
+        w-full
+        overflow-hidden
+        bg-transparent
+        px-3
+        py-8
+        sm:px-6
+        sm:py-10
+        lg:px-8
+      "
+    >
+      {/* CONTAINER */}
+      <div className="relative z-10 mx-auto w-full max-w-6xl">
+        {/* HEADING */}
+        <h2
+          className="
+            text-center
+            text-xl
+            font-bold
+            leading-tight
+            tracking-tight
+            text-black
+            sm:text-2xl
+            md:text-3xl
+          "
+        >
+          Latest <span className="text-red-600">Instagram</span> Reels
         </h2>
 
-
-        <p className="
-          text-gray-600
-          text-center
-          mb-10
-        ">
+        {/* DESCRIPTION */}
+        <p
+          className="
+            mx-auto
+            mt-2
+            max-w-xl
+            px-3
+            text-center
+            text-xs
+            leading-6
+            text-gray-600
+            sm:text-sm
+          "
+        >
           Watch our latest updates directly from Instagram.
         </p>
 
-
-        {/* =================================================
-            REELS GRID
-        ================================================= */}
-        <div className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-        ">
-
-          {/* Reel Card */}
-          <div className="
-            group
-            rounded-2xl
-            overflow-hidden
-            bg-white/80
-            backdrop-blur-xl
-            border
-            border-gray-200/70
-            shadow-xl
-            hover:shadow-2xl
-            transition-all
-            duration-500
-          ">
-
-            {/* Instagram Reel */}
-            
-
-
-            {/* Card Content */}
-            <div className="p-5">
-
-              <h3 className="
-                font-semibold
-                text-lg
-                text-gray-900
-              ">
-                Latest Reel
-              </h3>
-
-
-              <p className="
-                text-sm
-                text-gray-500
-                mt-1
-              ">
-                Follow us for latest property updates.
-              </p>
-
-
-              <a
-                href="https://www.instagram.com/chhabrapropertiesofficial/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="
-                  inline-flex
-                  items-center
-                  mt-4
-                  px-5
-                  py-2.5
-                  bg-gradient-to-r
-                  from-pink-600
-                  via-red-500
-                  to-orange-500
-                  text-white
-                  rounded-lg
-                  font-medium
-                  hover:scale-105
-                  transition-all
-                  duration-300
-                  shadow-lg
-                  shadow-pink-500/20
-                "
-              >
-                Watch on Instagram
-              </a>
-
+        {/* REELS GRID */}
+        <div
+          className="
+            mt-6
+            grid
+            grid-cols-1
+            place-items-center
+            gap-5
+            sm:mt-8
+            sm:grid-cols-2
+            lg:grid-cols-3
+            lg:gap-6
+          "
+        >
+          {shivam.map((reel, index) => (
+            <div
+              key={index}
+              className="
+                group
+                w-full
+                max-w-[320px]
+                sm:max-w-[320px]
+                overflow-hidden
+                rounded-xl
+                border
+                border-gray-200/70
+                bg-white
+                text-center
+                shadow-md
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-xl
+              "
+            >
+              <div className="flex w-full justify-center p-1.5">
+                <ReelEmbed url={reel.image} />
+              </div>
             </div>
-
-          </div>
-
+          ))}
         </div>
 
+        {/* MORE REELS BUTTON */}
+        <div className="mt-6 flex justify-center px-2 sm:mt-8">
+          <a
+          
+            href="https://www.instagram.com/chhabrapropertiesofficial/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-flex
+              w-full
+              max-w-xs
+              items-center
+              justify-center
+              rounded-lg
+              bg-gradient-to-r
+              from-pink-600
+              via-red-500
+              to-orange-500
+              px-4
+              py-2.5
+              text-sm
+              font-semibold
+              text-white
+              shadow-md
+              shadow-pink-500/20
+              transition-all
+              duration-300
+              hover:scale-[1.02]
+              sm:w-auto
+              sm:max-w-none
+              sm:px-5
+              sm:hover:scale-105
+            "
+          >
+            More Reels on Instagram
+          </a>
+          
+        </div>
       </div>
-
     </section>
   );
 }

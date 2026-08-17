@@ -1,5 +1,8 @@
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 import Navbar from "./components/Navber";
 import Footer from "./components/pages/Footer";
@@ -26,43 +29,43 @@ import GreaterNoidaDetail from "./components/pages/GreaterNoidaDetail";
 import Yemuna from "./components/pages/Yemuna";
 import YemunaDetels from "./components/pages/YemunaDetail";
 
+import Reels from "./components/shivam/Reels";
 import WOW from "./components/shivam/WOW";
 
 import ScrollToTop from "./components/pages/ScrollToTop";
 import Location from "./components/shivam/Location";
-import  KOMO from "./components/shivam/KOMO"
+
+import KOMO from "./components/shivam/KOMO";
+
+// BLOG
+import Blog from "./components/shivam/Blog";
 
 
+// ADMIN
+import AdminLogin from "./components/admin/AdminLogin";
+import AdminDashboard from "./components/admin/AdminDashboard";
+import BlogForm from "./components/admin/BlogForm";
+import BlogManager from "./components/admin/BlogManger";
 
 import "./App.css";
 
 
 function MainLayout() {
+
   return (
-    <main className="relative min-h-screen bg-white ">
 
-      {/* =====================================
-          GLOBAL CRYSTAL BACKGROUND
-      ====================================== */}
-     
+    <main className="relative min-h-screen bg-white">
 
-
-      {/* =====================================
-          WEBSITE CONTENT
-          50% BLACK TRANSPARENT OVERLAY
-      ====================================== */}
       <div className="website-content">
 
-        {/* NAVBAR */}
         <Navbar />
 
-
-        {/* =====================================
-            ROUTES
-        ====================================== */}
         <Routes>
 
-          {/* HOME */}
+          {/* =========================
+              HOME
+          ========================= */}
+
           <Route
             path="/"
             element={
@@ -73,44 +76,78 @@ function MainLayout() {
                 <Location />
                 <Chhabra />
                 <WOW />
-                <KOMO/>
+                <KOMO />
+
+                <Reels />
                 <Chiose />
-                
                 <FAQ />
               </>
             }
           />
 
 
-          {/* CONTACT */}
+          {/* =========================
+              CONTACT
+          ========================= */}
+
           <Route
             path="/contact"
             element={<Contact />}
           />
 
 
-          {/* SERVICES */}
+          {/* =========================
+              SERVICES
+          ========================= */}
+
           <Route
             path="/services"
             element={<Services />}
           />
 
 
-          {/* MAPS */}
+          {/* =========================
+              MAPS
+          ========================= */}
+
           <Route
             path="/maps"
             element={<Maps />}
           />
 
 
-          {/* ABOUT */}
+          {/* =========================
+              BLOG LIST
+          ========================= */}
+
+          <Route
+            path="/blog"
+            element={<Blog />}
+          />
+
+
+          {/* =========================
+              BLOG DETAILS
+          ========================= */}
+
+          
+          
+
+
+          {/* =========================
+              ABOUT
+          ========================= */}
+
           <Route
             path="/about"
             element={<About />}
           />
 
 
-          {/* NOIDA */}
+          {/* =========================
+              NOIDA
+          ========================= */}
+
           <Route
             path="/noida"
             element={<Noida />}
@@ -122,14 +159,20 @@ function MainLayout() {
           />
 
 
-          {/* GALLERY */}
+          {/* =========================
+              GALLERY
+          ========================= */}
+
           <Route
             path="/gallery"
             element={<Gallery />}
           />
 
 
-          {/* GREATER NOIDA */}
+          {/* =========================
+              GREATER NOIDA
+          ========================= */}
+
           <Route
             path="/greater-noida"
             element={<Greater />}
@@ -141,7 +184,10 @@ function MainLayout() {
           />
 
 
-          {/* YAMUNA EXPRESSWAY */}
+          {/* =========================
+              YAMUNA EXPRESSWAY
+          ========================= */}
+
           <Route
             path="/yamuna-expressway"
             element={<Yemuna />}
@@ -155,25 +201,80 @@ function MainLayout() {
         </Routes>
 
 
-        {/* FOOTER */}
         <Footer />
 
       </div>
 
     </main>
+
   );
+
 }
 
 
 export default function App() {
+
   return (
+
     <BrowserRouter>
 
-      {/* SCROLL TO TOP ON ROUTE CHANGE */}
       <ScrollToTop />
 
-
       <Routes>
+
+        {/* =========================
+            ADMIN LOGIN
+        ========================= */}
+
+        <Route
+          path="/admin/login"
+          element={<AdminLogin />}
+        />
+
+
+        {/* =========================
+            ADMIN DASHBOARD
+        ========================= */}
+
+        <Route
+          path="/admin/dashboard"
+          element={<AdminDashboard />}
+        />
+
+
+        {/* =========================
+            BLOG MANAGER
+        ========================= */}
+
+        <Route
+          path="/admin/blogs"
+          element={<BlogManager />}
+        />
+
+
+        {/* =========================
+            CREATE BLOG
+        ========================= */}
+
+        <Route
+          path="/admin/blogs/create"
+          element={<BlogForm />}
+        />
+
+
+        {/* =========================
+            EDIT BLOG
+        ========================= */}
+
+        <Route
+          path="/admin/blogs/edit/:id"
+          element={<BlogForm />}
+        />
+
+
+        {/* =========================
+            MAIN WEBSITE
+        ========================= */}
 
         <Route
           path="/*"
@@ -183,5 +284,7 @@ export default function App() {
       </Routes>
 
     </BrowserRouter>
+
   );
+
 }

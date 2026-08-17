@@ -315,7 +315,7 @@ export default function YamunaDetail() {
               text-white
             "
           >
-            📍 Yamuna Expressway
+            📍  Noida
           </span>
         </div>
 
@@ -366,7 +366,7 @@ export default function YamunaDetail() {
                 <span className="font-semibold">
                   Location :
                 </span>{" "}
-                Yamuna Expressway
+                Noida
               </li>
 
               <li>
