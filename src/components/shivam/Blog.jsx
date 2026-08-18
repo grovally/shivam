@@ -223,7 +223,7 @@ export default function Blog() {
                         alt={blog.title}
                         className="
                           w-full
-                          h-60
+                          h-54
                           object-cover
                           group-hover:scale-105
                           transition

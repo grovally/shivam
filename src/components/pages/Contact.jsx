@@ -48,7 +48,7 @@ export default function Contact() {
     try {
 
       const res = await fetch(
-        "http://127.0.0.1:8000/api/contact",
+        "https://chhhabra-2.onrender.com/api/contact",
         {
           method: "POST",
 
