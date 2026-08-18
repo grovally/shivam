@@ -1,61 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://chhabra-properties.com/</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://chhabra-properties.com/about</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chhabra-properties.com/services</loc>
+  </url>
+
+  <url>
+    <loc>https://chhabra-properties.com/maps</loc>
   </url>
 
   <url>
     <loc>https://chhabra-properties.com/contact</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://chhabra-properties.com/noida</loc>
   </url>
 
   <url>
     <loc>https://chhabra-properties.com/greater-noida</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://chhabra-properties.com/greater-noida/Alpha-1</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890725/ALPHA-I_jytlco.png</image:loc>
-      <image:title>Alpha 1 Sector Map Greater Noida</image:title>
-      <image:caption>Layout map of Alpha 1, Greater Noida with plots and roads</image:caption>
-    </image:image>
-  </url>
-
-  <!-- har sector ke liye is pattern mein entry -->
-
-  <url>
-    <loc>https://chhabra-properties.com/noida</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://chhabra-properties.com/yamuna-expressway</loc>
-    <lastmod>2026-08-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://chhabra-properties.com/yemunaexpress</loc>
   </url>
 
 </urlset>
