@@ -344,17 +344,7 @@ export default function Footer() {
               </Link>
             </div>
 
-            <p className="text-sm text-white sm:text-sm">
-              Powered by{" "}
-              <a
-                href="https://grovally.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className=" text-red-800 transition hover:text-cyan-400"
-              >
-                Grovally Business Solutions
-              </a>
-            </p>
+            
           </div>
         </div>
       </div>
