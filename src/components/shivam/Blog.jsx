@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "https://chhhabra-2.onrender.com/api/blogs";
+const API = "https://chhhabra-1.onrender.com/api/blogs";
 
 export default function Blog() {
 
