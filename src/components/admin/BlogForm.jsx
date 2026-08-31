@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const API = "https://chhhabra-2.onrender.com";
+const API = "https://chhhabra-1.onrender.com";
 
 export default function BlogForm() {
   const navigate = useNavigate();
