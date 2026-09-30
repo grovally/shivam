@@ -17,6 +17,12 @@ export default function BlogForm() {
     author: "chhabra",
     image: "",
     published: true,
+    slug: "",
+    meta_title: "",
+    meta_description: "",
+    focus_keyword: "",
+    image_alt_text: "",
+    canonical_url: "",
   });
 
   const [loading, setLoading] = useState(false);
@@ -101,6 +107,12 @@ export default function BlogForm() {
           blog.published !== undefined
             ? blog.published
             : true,
+        slug: blog.slug || "",
+        meta_title: blog.meta_title || "",
+        meta_description: blog.meta_description || "",
+        focus_keyword: blog.focus_keyword || "",
+        image_alt_text: blog.image_alt_text || "",
+        canonical_url: blog.canonical_url || "",
       });
     } catch (error) {
       console.error(
@@ -480,6 +492,79 @@ export default function BlogForm() {
               className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black resize-y"
               required
             />
+          </div>
+
+          {/* SEO SECTION */}
+          <div className="border border-gray-200 rounded-2xl p-5 bg-gray-50">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">SEO Details</h2>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <div>
+                <label className="block font-semibold text-gray-800 mb-2">URL Slug</label>
+                <input
+                  type="text"
+                  value={form.slug}
+                  onChange={(e) => updateField("slug", e.target.value)}
+                  placeholder="my-property-blog"
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-800 mb-2">Meta Title</label>
+                <input
+                  type="text"
+                  value={form.meta_title}
+                  onChange={(e) => updateField("meta_title", e.target.value)}
+                  placeholder="Blog title for search results"
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block font-semibold text-gray-800 mb-2">Meta Description</label>
+                <textarea
+                  value={form.meta_description}
+                  onChange={(e) => updateField("meta_description", e.target.value)}
+                  placeholder="Short summary shown in search results"
+                  rows={3}
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black resize-none"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-800 mb-2">Focus Keyword</label>
+                <input
+                  type="text"
+                  value={form.focus_keyword}
+                  onChange={(e) => updateField("focus_keyword", e.target.value)}
+                  placeholder="e.g. luxury flats in Noida"
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div>
+                <label className="block font-semibold text-gray-800 mb-2">Image Alt Text</label>
+                <input
+                  type="text"
+                  value={form.image_alt_text}
+                  onChange={(e) => updateField("image_alt_text", e.target.value)}
+                  placeholder="Describe the blog image"
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+
+              <div className="md:col-span-2">
+                <label className="block font-semibold text-gray-800 mb-2">Canonical URL (optional)</label>
+                <input
+                  type="url"
+                  value={form.canonical_url}
+                  onChange={(e) => updateField("canonical_url", e.target.value)}
+                  placeholder="https://example.com/blog/your-slug"
+                  className="w-full border border-gray-200 p-4 rounded-xl outline-none focus:ring-2 focus:ring-black"
+                />
+              </div>
+            </div>
           </div>
 
           {/* PUBLISHED */}

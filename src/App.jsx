@@ -39,6 +39,7 @@ import KOMO from "./components/shivam/KOMO";
 
 // BLOG
 import Blog from "./components/shivam/Blog";
+import BlogDetail from "./components/pages/BlogDetail";
 
 
 // ADMIN
@@ -46,6 +47,7 @@ import AdminLogin from "./components/admin/AdminLogin";
 import AdminDashboard from "./components/admin/AdminDashboard";
 import BlogForm from "./components/admin/BlogForm";
 import BlogManager from "./components/admin/BlogManger";
+import SEOManagement from "./components/admin/SEOManagement";
 
 import "./App.css";
 
@@ -130,8 +132,10 @@ function MainLayout() {
               BLOG DETAILS
           ========================= */}
 
-          
-          
+          <Route
+            path="/blog/:slug"
+            element={<BlogDetail />}
+          />
 
 
           {/* =========================
@@ -269,6 +273,11 @@ export default function App() {
         <Route
           path="/admin/blogs/edit/:id"
           element={<BlogForm />}
+        />
+
+        <Route
+          path="/admin/seo"
+          element={<SEOManagement />}
         />
 
 

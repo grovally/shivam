@@ -110,13 +110,20 @@ export default function AdminDashboard() {
           </div>
 
 
-          <div className="flex gap-3">
+          <div className="flex flex-wrap gap-3">
 
             <Link
               to="/admin/blogs/create"
               className="bg-black text-white px-5 py-3 rounded-xl"
             >
               + Add Blog
+            </Link>
+
+            <Link
+              to="/admin/seo"
+              className="border border-gray-200 bg-white px-5 py-3 rounded-xl"
+            >
+              SEO Management
             </Link>
 
             <button
