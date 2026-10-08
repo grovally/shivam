@@ -43,7 +43,7 @@ import BlogDetail from "./components/pages/BlogDetail";
 
 
 // ADMIN
-import AdminLogin from "./components/admin/AdminLogin";
+
 import AdminDashboard from "./components/admin/AdminDashboard";
 import BlogForm from "./components/admin/BlogForm";
 import BlogManager from "./components/admin/BlogManger";
@@ -230,10 +230,7 @@ export default function App() {
             ADMIN LOGIN
         ========================= */}
 
-        <Route
-          path="/admin/login"
-          element={<AdminLogin />}
-        />
+      
 
 
         {/* =========================
