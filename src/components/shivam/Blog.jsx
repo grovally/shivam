@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import BlogDetailModal from "./BlogDetailModal";
 
 const API = "https://chhhabra-1.onrender.com/api/blogs";
 
@@ -288,7 +289,7 @@ export default function Blog() {
 
                     {/* DESCRIPTION */}
 
-                    <p className="text-gray-600 mt-3 line-clamp-3" dangerouslySetInnerHTML={{ __html: blog.description }} />
+                    <div className="text-gray-600 mt-3 line-clamp-3 text-sm" dangerouslySetInnerHTML={{ __html: blog.description }} />
 
 
                     {/* AUTHOR */}
@@ -333,278 +334,15 @@ export default function Blog() {
 
       </div>
 
-
       {/* =====================================================
           BLOG FULL CONTENT POPUP
       ===================================================== */}
 
       {selectedBlog && (
-
-        <div
-          className="
-            fixed
-            inset-0
-            z-[9999]
-            bg-black/70
-            backdrop-blur-sm
-            flex
-            items-center
-            justify-center
-            p-4
-            md:p-8
-          "
-          onClick={closeBlog}
-        >
-
-
-          {/* =====================================
-              POPUP CONTAINER
-          ===================================== */}
-
-          <div
-            className="
-              relative
-              w-full
-              max-w-6xl
-              max-h-[95vh]
-              overflow-y-auto
-              bg-white
-              rounded-3xl
-              shadow-2xl
-            "
-            onClick={(e) => e.stopPropagation()}
-          >
-
-
-            {/* =====================================
-                CLOSE BUTTON
-            ===================================== */}
-
-            <button
-              onClick={closeBlog}
-              className="
-                fixed
-                md:absolute
-                top-5
-                right-5
-                z-50
-                w-11
-                h-11
-                rounded-full
-                bg-black/70
-                text-white
-                text-2xl
-                flex
-                items-center
-                justify-center
-                hover:bg-red-600
-                transition
-              "
-            >
-
-              ×
-
-            </button>
-
-
-            {/* =====================================
-                FULL IMAGE
-            ===================================== */}
-
-            {selectedBlog.image && (
-
-              <div className="w-full bg-black">
-
-                <img
-                  src={selectedBlog.image}
-                  alt={selectedBlog.title}
-                  className="
-                    w-full
-                    max-h-[600px]
-                    object-contain
-                    mx-auto
-                  "
-                />
-
-              </div>
-
-            )}
-
-
-            {/* =====================================
-                BLOG CONTENT
-            ===================================== */}
-
-            <div className="max-w-4xl mx-auto px-6 md:px-10 py-10">
-
-
-              {/* CATEGORY */}
-
-              {selectedBlog.category && (
-
-                <span
-                  className="
-                    inline-block
-                    text-sm
-                    font-bold
-                    tracking-wider
-                    uppercase
-                    text-red-600
-                  "
-                >
-
-                  {selectedBlog.category}
-
-                </span>
-
-              )}
-
-
-              {/* TITLE */}
-
-              <h1
-                className="
-                  text-3xl
-                  md:text-5xl
-                  font-bold
-                  text-gray-900
-                  mt-4
-                  leading-tight
-                "
-              >
-
-                {selectedBlog.title}
-
-              </h1>
-
-
-              {/* AUTHOR + DATE */}
-
-              <div
-                className="
-                  flex
-                  flex-wrap
-                  gap-3
-                  items-center
-                  text-gray-500
-                  mt-5
-                "
-              >
-
-                {selectedBlog.author && (
-
-                  <span>
-                    By {selectedBlog.author}
-                  </span>
-
-                )}
-
-
-                {selectedBlog.author &&
-                  selectedBlog.createdAt && (
-
-                    <span>•</span>
-
-                  )}
-
-
-                {selectedBlog.createdAt && (
-
-                  <span>
-
-                    {new Date(
-                      selectedBlog.createdAt
-                    ).toLocaleDateString(
-                      "en-IN",
-                      {
-                        day: "numeric",
-                        month: "long",
-                        year: "numeric",
-                      }
-                    )}
-
-                  </span>
-
-                )}
-
-              </div>
-
-
-              {/* =====================================
-                  FULL DESCRIPTION
-              ===================================== */}
-
-              {selectedBlog.description && (
-
-                <p
-                  className="
-                    text-xl
-                    md:text-2xl
-                    text-gray-600
-                    leading-relaxed
-                    mt-8
-                    font-medium
-                  "
-                  dangerouslySetInnerHTML={{ __html: selectedBlog.description }}
-                />
-
-              )}
-
-
-              {/* =====================================
-                  FULL BLOG CONTENT
-              ===================================== */}
-
-              {selectedBlog.content && (
-
-                <div
-                  className="
-                    mt-10
-                    text-lg
-                    md:text-xl
-                    text-gray-700
-                    leading-8
-                    whitespace-pre-line
-                  "
-                  dangerouslySetInnerHTML={{ __html: selectedBlog.content }}
-                />
-
-              )}
-
-
-              {/* =====================================
-                  BOTTOM CLOSE BUTTON
-              ===================================== */}
-
-              <div className="mt-12 pt-8 border-t">
-
-                <button
-                  onClick={closeBlog}
-                  className="
-                    px-7
-                    py-3
-                    bg-red-600
-                    text-white
-                    rounded-xl
-                    font-semibold
-                    hover:bg-red-700
-                    transition
-                  "
-                >
-
-                  Close Blog
-
-                </button>
-
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
+        <BlogDetailModal
+          blog={selectedBlog}
+          onClose={closeBlog}
+        />
       )}
 
     </section>
