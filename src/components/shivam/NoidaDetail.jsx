@@ -1,0 +1,459 @@
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { Download, MapPin, ExternalLink } from "lucide-react";
+import { noidaData } from "../data/noidaData";
+import {
+  removeSpacesWithHyphen,
+  getSlugFromTitle,
+  getItemSlug,
+} from "../../utils/slugUtils";
+
+// =====================================================
+// CLOUDINARY IMAGE OPTIMIZER
+// =====================================================
+const optimizeCloudinaryImage = (url, width = 1200) => {
+  if (!url) return "";
+
+  const cleanUrl = url.trim();
+
+  // Cloudinary image nahi hai
+  if (!cleanUrl.includes("res.cloudinary.com")) {
+    return cleanUrl;
+  }
+
+  const uploadPath = "/image/upload/";
+
+  if (!cleanUrl.includes(uploadPath)) {
+    return cleanUrl;
+  }
+
+  const [beforeUpload, afterUpload] = cleanUrl.split(uploadPath);
+
+  if (!afterUpload) {
+    return cleanUrl;
+  }
+
+  const parts = afterUpload.split("/");
+
+  // Existing Cloudinary transformations remove karo
+  const firstPart = parts[0];
+
+  const looksLikeTransformation =
+    firstPart.includes("f_auto") ||
+    firstPart.includes("q_auto") ||
+    firstPart.includes("w_") ||
+    firstPart.includes("c_") ||
+    firstPart.includes("fit") ||
+    firstPart.includes("auto");
+
+  if (looksLikeTransformation) {
+    parts.shift();
+  }
+
+  const publicPath = parts.join("/");
+
+  return `${beforeUpload}${uploadPath}f_auto,q_auto:good,w_${width}/${publicPath}`;
+};
+
+// =====================================================
+// COMPONENT
+// =====================================================
+export default function YamunaDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+
+  const normalizedId = id ? decodeURIComponent(id) : "";
+
+  const parsedId = Number(normalizedId);
+
+  // =====================================================
+  // FIND MAP
+  // =====================================================
+  const map =
+    Number.isInteger(parsedId) &&
+    parsedId >= 0 &&
+    parsedId < noidaData.length
+      ? noidaData[parsedId]
+      : noidaData.find((item) => {
+          if (!item) return false;
+          const rawSlug = item?.slug || getSlugFromTitle(item?.title);
+          const formattedSlug = removeSpacesWithHyphen(rawSlug);
+          return (
+            formattedSlug.toLowerCase() === normalizedId.toLowerCase() ||
+            rawSlug.toLowerCase() === normalizedId.toLowerCase() ||
+            getSlugFromTitle(item?.title) === normalizedId.toLowerCase()
+          );
+        });
+
+  // =====================================================
+  // OPTIMIZED IMAGE
+  // =====================================================
+  const optimizedImage = optimizeCloudinaryImage(
+    map?.image,
+    1200
+  );
+
+  // =====================================================
+  // SEO
+  // =====================================================
+  useEffect(() => {
+    if (!map) return;
+
+    document.title = `${map.title} | Chhabra Properties`;
+
+    const description =
+      map.description ||
+      `Download the latest ${map.title} map with complete location, planning and connectivity details.`;
+
+    let meta = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.name = "description";
+      document.head.appendChild(meta);
+    }
+
+    meta.setAttribute("content", description);
+
+    return () => {
+      document.title = "Chhabra Properties";
+    };
+  }, [map]);
+
+  // =====================================================
+  // DOWNLOAD IMAGE
+  // =====================================================
+  const downloadImage = async () => {
+    if (!optimizedImage) return;
+
+    try {
+      const response = await fetch(optimizedImage);
+
+      if (!response.ok) {
+        throw new Error("Image download failed");
+      }
+
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+
+      a.href = url;
+      a.download = `${map.title}.jpg`;
+
+      document.body.appendChild(a);
+
+      a.click();
+
+      document.body.removeChild(a);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+
+      // Fallback
+      window.open(
+        optimizedImage,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+  };
+
+  // =====================================================
+  // MAP NOT FOUND
+  // =====================================================
+  if (!map) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white text-3xl font-bold">
+        Map Not Found
+      </div>
+    );
+  }
+
+  // =====================================================
+  // UI
+  // =====================================================
+  return (
+    <div className="min-h-screen mt-10 bg-white text-black pt-20">
+
+      {/* =====================================================
+          IMAGE
+      ===================================================== */}
+
+      <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+
+        {optimizedImage ? (
+          <img
+            src={optimizedImage}
+            alt={`${map.title} noida Expressway Map`}
+            title={map.title}
+            loading="lazy"
+            decoding="async"
+            className="
+              w-full
+              max-w-6xl
+              h-auto
+              max-h-[75vh]
+              object-contain
+              rounded-2xl
+            "
+            onError={(e) => {
+              console.warn(
+                "Image failed to load:",
+                optimizedImage
+              );
+
+              e.currentTarget.style.display = "none";
+            }}
+          />
+        ) : (
+          <div
+            className="
+              w-full
+              max-w-6xl
+              h-[50vh]
+              flex
+              items-center
+              justify-center
+              bg-gray-100
+              rounded-2xl
+              text-gray-400
+            "
+          >
+            Image unavailable
+          </div>
+        )}
+
+      </div>
+
+      {/* =====================================================
+          CONTENT
+      ===================================================== */}
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        {/* =====================================================
+            BUTTONS
+        ===================================================== */}
+
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-between">
+
+          {/* BACK */}
+          <button
+            onClick={() => navigate(-1)}
+            className="
+              w-full
+              sm:w-auto
+              rounded-xl
+              bg-gray-900
+              px-6
+              py-3
+              text-white
+              font-semibold
+              hover:bg-black
+              transition
+            "
+          >
+            ← Back
+          </button>
+
+          {/* DOWNLOAD */}
+          <button
+            onClick={downloadImage}
+            className="
+              w-full
+              sm:w-auto
+              flex
+              items-center
+              justify-center
+              gap-2
+              rounded-xl
+              bg-red-600
+              px-6
+              py-3
+              text-white
+              font-semibold
+              hover:bg-red-700
+              transition
+            "
+          >
+            <Download size={18} />
+            Download Map
+          </button>
+
+        </div>
+
+        {/* =====================================================
+            TITLE
+        ===================================================== */}
+
+        <h1
+          className="
+            mt-8
+            text-3xl
+            sm:text-4xl
+            lg:text-5xl
+            font-bold
+            leading-tight
+          "
+        >
+          {map.title}
+        </h1>
+
+        {/* =====================================================
+            BADGE
+        ===================================================== */}
+
+        <div className="mt-5">
+
+          <span
+            className="
+              inline-flex
+              rounded-full
+              bg-red-600
+              px-5
+              py-2
+              text-sm
+              sm:text-base
+              font-medium
+              text-white
+            "
+          >
+            📍 Noida
+          </span>
+
+        </div>
+
+        {/* =====================================================
+            DESCRIPTION
+        ===================================================== */}
+
+        <p
+          className="
+            mt-4
+            text-base
+            sm:text-lg
+            leading-8
+            text-gray-700
+            whitespace-pre-line
+          "
+        >
+          {map.description ||
+            `Explore detailed map information of ${map.title}.
+
+This location map provides complete sector planning, connectivity details and area overview.`}
+        </p>
+
+        {/* =====================================================
+            MAP DETAILS
+        ===================================================== */}
+
+        <div className="mt-12">
+
+          <h2
+            className="
+              text-2xl
+              sm:text-3xl
+              font-bold
+            "
+          >
+            Map Details
+          </h2>
+
+          <div
+            className="
+              mt-6
+              rounded-2xl
+              border
+              border-gray-200
+              bg-gray-50
+              p-6
+              shadow-sm
+            "
+          >
+
+            <ul className="space-y-4 text-base sm:text-lg text-gray-800">
+
+              <li>
+                ✅{" "}
+                <span className="font-semibold">
+                  Location :
+                </span>{" "}
+                Noida
+              </li>
+
+              <li>
+                ✅{" "}
+                <span className="font-semibold">
+                  Authority :
+                </span>{" "}
+                Noida Authority
+              </li>
+
+              <li>
+                ✅{" "}
+                <span className="font-semibold">
+                  Category :
+                </span>{" "}
+                Residential / Commercial Map
+              </li>
+
+              <li>
+                ✅{" "}
+                <span className="font-semibold">
+                  Status :
+                </span>{" "}
+                Updated Planning Map
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        {/* Location Map */}
+        <div className="mt-12">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold flex items-center gap-2">
+                <MapPin className="text-red-600" size={28} />
+                Location Map
+              </h2>
+              <p className="mt-1 text-sm sm:text-base text-gray-600">
+                Explore the exact live location and surrounding road network of {map.title} on Google Maps.
+              </p>
+            </div>
+
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${map.title}, Noida, Uttar Pradesh`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 self-start rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-sm hover:border-red-500 hover:text-red-600 hover:bg-red-50/40 transition"
+            >
+              <ExternalLink size={15} />
+              Open in Google Maps
+            </a>
+          </div>
+
+          <div className="relative w-full rounded-2xl border border-gray-200 overflow-hidden bg-gray-100 shadow-md">
+            <iframe
+              title={`${map.title} Location Map`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(`${map.title}, Noida, Uttar Pradesh`)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
+              className="w-full h-[380px] sm:h-[450px] lg:h-[480px] border-0"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  );
+}

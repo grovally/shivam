@@ -1,0 +1,16 @@
+.reel-embed-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.reel-embed-wrap iframe {
+  max-width: 100% !important;
+}
+
+.instagram-media {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
