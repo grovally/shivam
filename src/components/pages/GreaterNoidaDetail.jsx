@@ -93,6 +93,27 @@ export default function GreaterNoidaDetail() {
     };
   }, [map]);
 
+
+  const downloadImage = async () => {
+    try {
+      const response = await fetch(map.image);
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${map.title}.jpg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
   if (!map) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white text-3xl font-bold">
