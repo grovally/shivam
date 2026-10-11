@@ -1,0 +1,216 @@
+import { useNavigate, useParams } from "react-router-dom";
+import { Download } from "lucide-react";
+import { useEffect } from "react";
+import { greaterNoida } from "../data/greaterNoidaData";
+import {
+  removeSpacesWithHyphen,
+  getSlugFromTitle,
+  getItemSlug,
+} from "../../utils/slugUtils";
+
+export default function GreaterNoidaDetail() {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const normalizedId = id ? decodeURIComponent(id) : "";
+  const parsedId = Number(normalizedId);
+
+  const map =
+    Number.isInteger(parsedId) && parsedId >= 0 && parsedId < greaterNoida.length
+      ? greaterNoida[parsedId]
+      : greaterNoida.find((item) => {
+        if (!item) return false;
+        const rawSlug = item?.slug || getSlugFromTitle(item?.title);
+        const formattedSlug = removeSpacesWithHyphen(rawSlug);
+        return (
+          formattedSlug.toLowerCase() === normalizedId.toLowerCase() ||
+          rawSlug.toLowerCase() === normalizedId.toLowerCase() ||
+          getSlugFromTitle(item?.title) === normalizedId.toLowerCase()
+        );
+      });
+
+  useEffect(() => {
+    if (!map) return;
+
+    const pageTitle = `${map.title} | Chhabra Properties`;
+    const pageUrl = window.location.href;
+    const description =
+      map.description ||
+      `Download the latest ${map.title} map with complete location, planning and connectivity details.`;
+    const image = map?.image || "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
+
+    const setMeta = (selector, attr, value) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        const [attrName, attrVal] = attr.split("=");
+        el.setAttribute(attrName, attrVal);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", value);
+      return el;
+    };
+
+    document.title = pageTitle;
+
+    setMeta('meta[name="description"]', "name=description", description);
+    setMeta('meta[property="og:title"]', "property=og:title", pageTitle);
+    setMeta('meta[property="og:description"]', "property=og:description", description);
+    setMeta('meta[property="og:image"]', "property=og:image", image);
+    setMeta('meta[property="og:image:alt"]', "property=og:image:alt", `${map.title} - Greater Noida Map`);
+    setMeta('meta[property="og:url"]', "property=og:url", pageUrl);
+    setMeta('meta[property="og:type"]', "property=og:type", "article");
+    setMeta('meta[name="twitter:title"]', "name=twitter:title", pageTitle);
+    setMeta('meta[name="twitter:description"]', "name=twitter:description", description);
+    setMeta('meta[name="twitter:image"]', "name=twitter:image", image);
+    setMeta('meta[name="twitter:image:alt"]', "name=twitter:image:alt", `${map.title} - Greater Noida Map`);
+
+    return () => {
+      const defaultTitle = "Chhabra Properties | Property Dealer in Noida & Greater Noida";
+      const defaultDesc = "Chhabra Properties is a trusted property dealer and real estate consultant in Noida, Greater Noida and Yamuna Expressway.";
+      const defaultImg = "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
+      const defaultUrl = "https://chhabra-properties.com/";
+
+      document.title = defaultTitle;
+
+      const restore = (selector, value) => {
+        const el = document.querySelector(selector);
+        if (el) el.setAttribute("content", value);
+      };
+
+      restore('meta[name="description"]', defaultDesc);
+      restore('meta[property="og:title"]', defaultTitle);
+      restore('meta[property="og:description"]', defaultDesc);
+      restore('meta[property="og:image"]', defaultImg);
+      restore('meta[property="og:image:alt"]', "Chhabra Properties - Real Estate");
+      restore('meta[property="og:url"]', defaultUrl);
+      restore('meta[property="og:type"]', "website");
+      restore('meta[name="twitter:title"]', defaultTitle);
+      restore('meta[name="twitter:description"]', defaultDesc);
+      restore('meta[name="twitter:image"]', defaultImg);
+      restore('meta[name="twitter:image:alt"]', "Chhabra Properties - Real Estate");
+    };
+  }, [map]);
+
+  const downloadImage = async () => {
+    try {
+      const response = await fetch(map.image);
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${map.title}.jpg`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
+
+  if (!map) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white text-3xl font-bold">
+        Map Not Found
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen mt-10 bg-white text-black pt-20">
+
+      {/* IMAGE */}
+      <div className="flex justify-center px-4 sm:px-6 lg:px-8">
+        <img
+          src={map.image}
+          alt={map.title}
+          title={map.title}
+          loading="lazy"
+          className="w-full max-w-6xl h-auto max-h-[75vh] object-contain rounded-2xl"
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:justify-between">
+
+          <button
+            onClick={() => navigate(-1)}
+            className="w-full sm:w-auto rounded-xl bg-gray-900 px-6 py-3 text-white font-semibold hover:bg-black transition"
+          >
+            ← Back
+          </button>
+
+          <button
+            onClick={downloadImage}
+            className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-white font-semibold hover:bg-red-700 transition"
+          >
+            <Download size={18} />
+            Download Map
+          </button>
+
+        </div>
+
+        {/* Title */}
+        <h1 className="mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          {map.title}
+        </h1>
+
+        {/* Badge */}
+        <div className="mt-5">
+          <span className="inline-flex rounded-full bg-red-600 px-5 py-2 text-sm sm:text-base font-medium text-white">
+            📍 Greater Noida
+          </span>
+        </div>
+
+        {/* Description */}
+        <p className="mt-4 text-base sm:text-lg leading-8 text-gray-700 whitespace-pre-line">
+          {map.description ||
+            `Explore detailed map information of ${map.title}.
+
+This location map provides complete sector planning, connectivity details and area overview.`}
+        </p>
+
+        {/* Map Details */}
+        <div className="mt-12">
+
+          <h2 className="text-2xl sm:text-3xl font-bold">
+            Map Details
+          </h2>
+
+          <div className="mt-6 rounded-2xl border border-gray-200 bg-gray-50 p-6 shadow-sm">
+
+            <ul className="space-y-4 text-base sm:text-lg text-gray-800">
+
+              <li>
+                ✅ <span className="font-semibold">Location :</span> Greater Noida
+              </li>
+
+              <li>
+                ✅ <span className="font-semibold">Authority :</span> Greater Noida Industrial Development Authority (GNIDA)
+              </li>
+
+              <li>
+                ✅ <span className="font-semibold">Category :</span> Residential / Commercial Map
+              </li>
+
+              <li>
+                ✅ <span className="font-semibold">Status :</span> Updated Planning Map
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  );
+}

@@ -1,0 +1,441 @@
+import React, { useEffect, useState } from "react";
+
+
+const shivam = [
+  {
+    image:
+      "https://media.licdn.com/dms/image/v2/C4E0BAQEvBdQ27KwROA/company-logo_200_200/company-logo_200_200/0/1631300638292?e=2147483647&v=beta&t=w67Fwk0oNJLFaZnCZJZ32fVEUKsa81zPRkxctgy_KoA",
+  },
+
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/d/d5/ATS_Infrastructure.svg",
+  },
+
+  {
+    image:
+      "https://www.asite.com/hubfs/resources/images/newsroom/Resized/M3M.jpg",
+  },
+
+  {
+    image:
+      "https://yt3.googleusercontent.com/Fa1WcgP6NSyZRExROzL6JXG2z766ZMpIgCAw3wtqO9dOgoE8ZWTyah8svV7ra4XAdhPudtDs=s900-c-k-c0x00ffffff-no-rj",
+  },
+
+  {
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpBi-yDvPkg0Zan6EQ_Is-9-MU58wihulJ7ivktrJOmppal8S0LeVqLCJc&s=1024",
+  },
+
+  {
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/b/bd/Gaursons_India.svg",
+  },
+
+  {
+    image:
+      "https://mma.prnewswire.com/media/1308693/GPL_Logo.jpg?p=facebook",
+  },
+];
+
+
+export default function WOW() {
+
+  const [startIndex, setStartIndex] = useState(0);
+
+
+  /* =========================================
+     AUTO SLIDER
+  ========================================= */
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setStartIndex(
+        (prev) =>
+          (prev + 1) % shivam.length
+      );
+
+    }, 3000);
+
+
+    return () => clearInterval(interval);
+
+  }, []);
+
+
+  /* =========================================
+     VISIBLE PARTNERS
+  ========================================= */
+
+  const visiblePartners = [
+    ...shivam.slice(startIndex),
+    ...shivam.slice(0, startIndex),
+  ].slice(0, 5);
+
+
+  return (
+
+    <section
+      className="
+        relative
+        overflow-hidden
+        py-14
+        sm:py-24
+        bg-transparent
+      "
+    >
+
+
+      {/* =========================================
+          BACKGROUND RED GLOW
+      ========================================= */}
+
+     
+
+
+      
+           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
+
+
+      {/* =========================================
+          MAIN CONTENT
+      ========================================= */}
+
+      <div
+        className="
+          relative
+          z-10
+          max-w-7xl
+          mx-auto
+          px-3
+          sm:px-6
+          lg:px-8
+        "
+      >
+
+
+        {/* =========================================
+            HEADING
+        ========================================= */}
+
+        <div className="text-center mb-8 sm:mb-12">
+
+          <p
+            className="
+              text-[10px]
+              sm:text-sm
+              uppercase
+              tracking-[0.2em]
+              sm:tracking-[0.3em]
+              font-semibold
+              text-red-500
+              mb-2
+              sm:mb-3
+            "
+          >
+            Our Trusted Network
+          </p>
+
+
+          <h2
+            className="
+              text-xl
+              sm:text-4xl
+              lg:text-5xl
+              font-bold
+              text-black
+              leading-snug
+            "
+          >
+            Working With The{" "}
+
+            <span className="text-red-500">
+              Top Development
+            </span>{" "}
+
+            Real Estate Developer
+          </h2>
+
+
+         <p
+  className="
+    mt-3
+    sm:mt-4
+    mx-auto
+    max-w-3xl
+    text-black/60
+    text-xs
+    sm:text-base
+    leading-6
+    sm:leading-7
+  "
+>
+  We collaborate with leading developers and development authorities to bring trusted real estate opportunities.
+</p>
+
+        </div>
+
+
+
+        {/* =========================================
+            PARTNER LOGOS
+        ========================================= */}
+
+        <div
+          className="
+            grid
+            grid-cols-5
+            gap-1.5
+            sm:gap-5
+            items-center
+          "
+        >
+
+          {visiblePartners.map(
+            (partner, index) => (
+
+              <div
+                key={`${startIndex}-${index}`}
+
+                className="
+                  group
+                  relative
+
+                  h-14
+                  sm:h-36
+
+                  rounded-md
+                  sm:rounded-2xl
+
+                  bg-white/[0.04]
+
+                  backdrop-blur-xl
+
+                  border
+                  border-red-400/60
+
+                  shadow-[0_0_10px_rgba(239,68,68,0.10)]
+                  sm:shadow-[0_0_30px_rgba(239,68,68,0.12)]
+
+                  flex
+                  items-center
+                  justify-center
+
+                  p-1.5
+                  sm:p-6
+
+                  overflow-hidden
+
+                  transition-all
+                  duration-500
+                "
+              >
+
+
+                {/* =================================
+                    GLASS SHINE
+                ================================= */}
+
+                <div
+                  className="
+                    absolute
+                    inset-0
+
+                    bg-gradient-to-br
+                    from-white/[0.08]
+                    via-transparent
+                    to-red-500/[0.03]
+
+                    pointer-events-none
+                  "
+                />
+
+
+                {/* =================================
+                    RED TOP LINE
+                ================================= */}
+
+                <div
+                  className="
+                    absolute
+                    inset-x-0
+                    top-0
+
+                    h-px
+
+                    bg-gradient-to-r
+                    from-transparent
+                    via-red-500
+                    to-transparent
+
+                    opacity-0
+
+                    group-hover:opacity-100
+
+                    transition
+                    duration-500
+                  "
+                />
+
+
+                {/* =================================
+                    LOGO
+                ================================= */}
+
+                <img
+                  src={partner.image}
+
+                  alt={`Development partner ${index + 1}`}
+
+                  loading="lazy"
+
+                  className="
+                    relative
+                    z-10
+
+                    max-w-full
+                    max-h-10
+                    sm:max-h-32
+
+                    w-auto
+                    h-auto
+
+                    object-contain
+
+                    opacity-100
+
+                    scale-105
+
+                    transition-all
+                    duration-500
+                  "
+                />
+
+              </div>
+
+            )
+          )}
+
+        </div>
+
+
+
+        {/* =========================================
+            SLIDER INDICATOR
+        ========================================= */}
+
+        <div
+          className="
+            flex
+            items-center
+            justify-center
+            gap-2
+            sm:gap-3
+            mt-6
+            sm:mt-10
+          "
+        >
+
+          {shivam.map(
+            (_, index) => (
+
+              <span
+                key={index}
+
+                className={`
+                  h-1.5
+                  sm:h-2
+                  rounded-full
+                  transition-all
+                  duration-500
+
+                  ${
+                    index === startIndex
+                      ? "w-6 sm:w-8 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.6)]"
+                      : "w-1.5 sm:w-2 bg-white/20"
+                  }
+                `}
+              />
+
+            )
+          )}
+
+        </div>
+
+
+      </div>
+           <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
+  <svg
+    className="relative block w-full h-20 md:h-32"
+    viewBox="0 0 1200 160"
+    preserveAspectRatio="none"
+  >
+    <defs>
+      <linearGradient
+        id="redWaveGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="0%"
+      >
+        <stop offset="0%" stopColor="#450000" />
+        <stop offset="35%" stopColor="#b91c1c" />
+        <stop offset="65%" stopColor="#ef4444" />
+        <stop offset="100%" stopColor="#991b1b" />
+      </linearGradient>
+    </defs>
+
+    <path
+      d="
+        M0,0
+        C120,35 240,45 360,55
+        C500,65 620,75 760,90
+        C900,105 1040,125 1200,155
+        L1200,0
+        L0,0
+        Z
+      "
+      fill="url(#redWaveGradient)"
+    />
+  </svg>
+</div>
+
+    </section>
+  );
+}
