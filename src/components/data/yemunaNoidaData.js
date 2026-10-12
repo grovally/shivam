@@ -73,12 +73,12 @@ Sector 20 Part B & C (Part-II), Yamuna Expressway, stands out as one of the best
     },
     {
       id:3,
-      slug:"SECTOR-20-map",
+      slug:"sector-20-pocket-bcpart-1-map",
       title:"SECTOR-20 POCKET-BCPART-I",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231989/SECTOR-20_POCKET-B_C_PART-I_prgbdm.png"
     },{
-      slug:"SECTOR-20-map",
+      slug:"sector-20-pocket-t-map",
       title:"SECTOR-20 POCKET-T",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231989/SECTOR-20_POCKET-_T_zatwtu.png"
@@ -154,7 +154,7 @@ Whether you’re a homebuyer or an investor, Sector 20 offers a golden opportuni
     
     {
       id:9,
-      slug:"SECTOR-20 pocket-map",
+      slug:"sector-20-pocket-r-and-s-map",
       title:"SECTOR-20 POCKET-R&S",
        description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231986/SECTOR-20_POCKET-_R_S._fuchnu.png"
@@ -196,9 +196,7 @@ Whether you’re a homebuyer or an investor, Sector 20 offers a golden opportuni
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231996/SECTOR-20_POCKET-_K_L_qbkgzi.png",
     },
-    
-    
-    ,{
+    {
       slug:"sector-33-map",
       title:"SECTOR-33",
        description:`
@@ -1631,7 +1629,7 @@ For genuine guidance and verified properties in Yamuna Expressway Sector 22D, tr
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231945/SECTOR-_22D_A_B_BLOCK_bw6jdr.png"
     },{
-      slug:"sector-17-map",
+      slug:"sector-17-zoomed-map",
       title:"SECTOR-17 ZOMMED",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231942/SECTOR-_17_ZOMMED_dmzm8w.png"
@@ -1716,17 +1714,17 @@ For genuine guidance and verified properties in Yamuna Expressway Sector 22D, tr
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231921/GYC_AEROCITY_PLOTS_hmaky2.png"
     },{
-       slug:"Vill. Ronija block-A-map",
+       slug:"gyc-2nd-parkview-gyc-1st-b-map",
       title:'GYC 2ND PARKVIEW GYC 1ST-B ',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/GYC_2ND_PARKVIEW_GYC_1ST-B_PARKVIEW_bbshpy.png"
     },{
-       slug:"Vill. Ronija block-A-map",
+       slug:"village-parsaul-block-w-map",
       title:"VILLAGE-PARSAUL BLOCK-W",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/7_VILLAGE-_PARSAULBLOCK-W_bbxmdw.png"
     },{
-      slug:"Vill. Ronija block-A-map",
+      slug:"village-ronija-block-a-shahpur-map",
       title:'VILLAGE-RONIJA BLOCK-A SHAHPUR',
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1785231919/7_VILLAGE-_RONIJA_BLOCK-A_SHAHPUR_BLOCK-B_y2fb5o.png"

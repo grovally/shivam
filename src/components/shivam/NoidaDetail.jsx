@@ -3,9 +3,10 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Download, MapPin, ExternalLink } from "lucide-react";
 import { noidaData } from "../data/noidaData";
 import {
-  removeSpacesWithHyphen,
   getSlugFromTitle,
   getItemSlug,
+  sanitizeSlug,
+  normalizeForMatch,
 } from "../../utils/slugUtils";
 
 // =====================================================
@@ -58,32 +59,41 @@ const optimizeCloudinaryImage = (url, width = 1200) => {
 // =====================================================
 // COMPONENT
 // =====================================================
-export default function YamunaDetail() {
+export default function NoidaDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
 
   const normalizedId = id ? decodeURIComponent(id) : "";
-
+  const cleanId = sanitizeSlug(normalizedId);
+  const matchKey = normalizeForMatch(normalizedId);
   const parsedId = Number(normalizedId);
 
   // =====================================================
   // FIND MAP
   // =====================================================
   const map =
-    Number.isInteger(parsedId) &&
-      parsedId >= 0 &&
-      parsedId < noidaData.length
+    noidaData.find((item) => {
+      if (!item) return false;
+      const cleanSlug = getItemSlug(item);
+      const rawSlug = sanitizeSlug(item?.slug);
+      const titleSlug = getSlugFromTitle(item?.title);
+
+      if (cleanSlug === cleanId || rawSlug === cleanId || titleSlug === cleanId) {
+        return true;
+      }
+      if (
+        matchKey &&
+        (normalizeForMatch(cleanSlug) === matchKey ||
+          normalizeForMatch(item?.slug) === matchKey ||
+          normalizeForMatch(item?.title) === matchKey)
+      ) {
+        return true;
+      }
+      return false;
+    }) ||
+    (Number.isInteger(parsedId) && parsedId >= 0 && parsedId < noidaData.length
       ? noidaData[parsedId]
-      : noidaData.find((item) => {
-        if (!item) return false;
-        const rawSlug = item?.slug || getSlugFromTitle(item?.title);
-        const formattedSlug = removeSpacesWithHyphen(rawSlug);
-        return (
-          formattedSlug.toLowerCase() === normalizedId.toLowerCase() ||
-          rawSlug.toLowerCase() === normalizedId.toLowerCase() ||
-          getSlugFromTitle(item?.title) === normalizedId.toLowerCase()
-        );
-      });
+      : null);
 
   // =====================================================
   // OPTIMIZED IMAGE
@@ -94,17 +104,33 @@ export default function YamunaDetail() {
   );
 
   // =====================================================
-  // SEO
+  // SEO & OPEN GRAPH
   // =====================================================
   useEffect(() => {
     if (!map) return;
 
-    const pageTitle = `${map.title} | Chhabra Properties`;
-    const pageUrl = window.location.href;
+    const cleanTitle = (map.title || "").trim();
+    const pageTitle = `${cleanTitle} | Chhabra Properties`;
+    const canonicalSlug = getItemSlug(map);
+    const canonicalUrl = `https://chhabra-properties.com/noida/${canonicalSlug}`;
+
+    const rawDesc = (map.description || "")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/[\u200B-\u200D\uFEFF]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+
     const description =
-      map.description ||
-      `Download the latest ${map.title} map with complete location, planning and connectivity details.`;
-    const image = map?.image || "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
+      rawDesc.length >= 20
+        ? rawDesc.slice(0, 200).trim()
+        : `Download the latest ${cleanTitle} map with complete location, planning and connectivity details from Chhabra Properties.`;
+
+    const image =
+      (map?.image || "").trim() ||
+      "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
+
+    // Page title
+    document.title = pageTitle;
 
     // Helper: get-or-create a <meta> tag
     const setMeta = (selector, attr, value) => {
@@ -119,8 +145,20 @@ export default function YamunaDetail() {
       return el;
     };
 
-    // Page title
-    document.title = pageTitle;
+    // Helper: get-or-create <link rel="...">
+    const setLink = (rel, href) => {
+      let el = document.querySelector(`link[rel="${rel}"]`);
+      if (!el) {
+        el = document.createElement("link");
+        el.setAttribute("rel", rel);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("href", href);
+      return el;
+    };
+
+    // Canonical link
+    setLink("canonical", canonicalUrl);
 
     // Basic description
     setMeta('meta[name="description"]', "name=description", description);
@@ -129,21 +167,23 @@ export default function YamunaDetail() {
     setMeta('meta[property="og:title"]', "property=og:title", pageTitle);
     setMeta('meta[property="og:description"]', "property=og:description", description);
     setMeta('meta[property="og:image"]', "property=og:image", image);
-    setMeta('meta[property="og:image:alt"]', "property=og:image:alt", `${map.title} - Noida Map`);
-    setMeta('meta[property="og:url"]', "property=og:url", pageUrl);
+    setMeta('meta[property="og:image:alt"]', "property=og:image:alt", `${cleanTitle} - Noida Map`);
+    setMeta('meta[property="og:url"]', "property=og:url", canonicalUrl);
     setMeta('meta[property="og:type"]', "property=og:type", "article");
 
     // Twitter / X
     setMeta('meta[name="twitter:title"]', "name=twitter:title", pageTitle);
     setMeta('meta[name="twitter:description"]', "name=twitter:description", description);
     setMeta('meta[name="twitter:image"]', "name=twitter:image", image);
-    setMeta('meta[name="twitter:image:alt"]', "name=twitter:image:alt", `${map.title} - Noida Map`);
+    setMeta('meta[name="twitter:image:alt"]', "name=twitter:image:alt", `${cleanTitle} - Noida Map`);
 
     return () => {
       // Restore defaults on unmount
       const defaultTitle = "Chhabra Properties | Property Dealer in Noida & Greater Noida";
-      const defaultDesc = "Chhabra Properties is a trusted property dealer and real estate consultant in Noida, Greater Noida and Yamuna Expressway.";
-      const defaultImg = "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
+      const defaultDesc =
+        "Chhabra Properties is a trusted property dealer and real estate consultant in Noida, Greater Noida and Yamuna Expressway. Explore residential flats, commercial properties, villas and plots with expert guidance.";
+      const defaultImg =
+        "https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890737/DELTA-II_ajsre2.png";
       const defaultUrl = "https://chhabra-properties.com/";
 
       document.title = defaultTitle;
@@ -153,6 +193,7 @@ export default function YamunaDetail() {
         if (el) el.setAttribute("content", value);
       };
 
+      setLink("canonical", defaultUrl);
       restore('meta[name="description"]', defaultDesc);
       restore('meta[property="og:title"]', defaultTitle);
       restore('meta[property="og:description"]', defaultDesc);
@@ -164,28 +205,7 @@ export default function YamunaDetail() {
       restore('meta[name="twitter:description"]', defaultDesc);
       restore('meta[name="twitter:image"]', defaultImg);
       restore('meta[name="twitter:image:alt"]', "Chhabra Properties - Real Estate");
-      document.title = `${map.title} | Chhabra Properties`;
-
-      const description =
-        map.description ||
-        `Download the latest ${map.title} map with complete location, planning and connectivity details.`;
-
-      let meta = document.querySelector(
-        'meta[name="description"]'
-      );
-
-      if (!meta) {
-        meta = document.createElement("meta");
-        meta.name = "description";
-        document.head.appendChild(meta);
-      }
-
-      meta.setAttribute("content", description);
-
-      return () => {
-        document.title = "Chhabra Properties";
-      };
-    }
+    };
   }, [map]);
 
   // =====================================================

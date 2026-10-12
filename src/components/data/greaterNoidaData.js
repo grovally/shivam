@@ -1084,8 +1084,8 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
     },
     {
       id: 80,
-       slug:"ABADI AT VILL. SIRSA",
-      title:"ABADI AT VILL. SIRSA",
+      slug:"abadi-at-vill-sirsa-part-2",
+      title:"ABADI AT VILL. SIRSA PART-2",
       description:"",
       image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890717/ABADI_AT_VILL._SIRSA...jpg_tzrfxf.png"
     },
@@ -1242,7 +1242,7 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
    {
       id: 101,
     
-       slug:"ABADI AT VILL.  SAINI ",
+       slug:"abadi-at-vill-6-percent-saini",
     title:"ABADI AT VILL 6% SAINI",
       description:"",
     
@@ -1286,20 +1286,11 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
    },
    {
     id:"",
-    slug:"",
-    title:"",
-    description:"",
-    image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890706/ABADI_AT_VILL._KHANPUR_asutv3.png"
-   }
-   ,
-   {
-    id:"",
     slug:"ABADI AT VILL. KHANPUR",
     title:"ABADI AT VILL. KHANPUR",
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890706/ABADI_AT_VILL._KHANPUR_asutv3.png"
    },
-   ,
    {
     id:"",
     slug:"ABADI AT VILL. KASNA POCKET-A B C D E",
@@ -1307,7 +1298,6 @@ Ecotech III benefits from excellent road connectivity to other major industrial 
     description:"",
     image:"https://res.cloudinary.com/bzbcmzrn/image/upload/f_auto,q_auto,w_1200/v1784890703/ABADI_AT_VILL._KASNA_POCKET-A_B_C_D_E_dcgv6p.png"
    },
-   ,
    {
     id:"",
     slug:"K.P-II",
