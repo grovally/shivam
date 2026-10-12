@@ -36,7 +36,7 @@ function escapeHtml(s) {
     .replace(/>/g, "&gt;");
 }
 
-function cleanDescription(desc, title) {
+function cleanDescription(desc, title, isBlog = false) {
   const cleaned = (desc || "")
     .replace(/<[^>]*>/g, " ")
     .replace(/[\u200B-\u200D\uFEFF]/g, "")
@@ -45,6 +45,10 @@ function cleanDescription(desc, title) {
 
   if (cleaned.length >= 20) {
     return cleaned.slice(0, 200).trim();
+  }
+
+  if (isBlog) {
+    return `Read ${title.trim()} on Chhabra Properties. Real estate trends, sector developments, and property market insights.`;
   }
 
   return `Download the latest ${title.trim()} map with complete location, planning and connectivity details from Chhabra Properties.`;
@@ -64,10 +68,12 @@ function replaceOrAddMeta(html, property, attr, value) {
 }
 
 function buildHtml(title, description, image, url) {
+  const isBlog = url.includes("/blog");
   const cleanTitle = (title || "").trim();
   const pageTitle = `${cleanTitle} | Chhabra Properties`;
-  const desc = cleanDescription(description, cleanTitle);
+  const desc = cleanDescription(description, cleanTitle, isBlog);
   const img = (image || "").trim() || DEFAULT_IMG;
+  const altText = isBlog ? `${cleanTitle} - Chhabra Properties` : `${cleanTitle} - Map`;
 
   let html = baseHtml;
 
@@ -90,7 +96,7 @@ function buildHtml(title, description, image, url) {
   html = replaceOrAddMeta(html, "og:title", "property", pageTitle);
   html = replaceOrAddMeta(html, "og:description", "property", desc);
   html = replaceOrAddMeta(html, "og:image", "property", img);
-  html = replaceOrAddMeta(html, "og:image:alt", "property", `${cleanTitle} - Map`);
+  html = replaceOrAddMeta(html, "og:image:alt", "property", altText);
   html = replaceOrAddMeta(html, "og:url", "property", url);
   html = replaceOrAddMeta(html, "og:type", "property", "article");
 
@@ -98,7 +104,7 @@ function buildHtml(title, description, image, url) {
   html = replaceOrAddMeta(html, "twitter:title", "name", pageTitle);
   html = replaceOrAddMeta(html, "twitter:description", "name", desc);
   html = replaceOrAddMeta(html, "twitter:image", "name", img);
-  html = replaceOrAddMeta(html, "twitter:image:alt", "name", `${cleanTitle} - Map`);
+  html = replaceOrAddMeta(html, "twitter:image:alt", "name", altText);
 
   return html;
 }
@@ -175,4 +181,37 @@ processSection("/greater-noida", greaterNoida);
 console.log("\nGenerating Yamuna Expressway map routes...");
 processSection("/yamuna-expressway", yemuna);
 
-console.log(`\n🎉 Successfully prerendered ${count} map detail routes (${generatedPaths.size} total static paths).`);
+console.log("\nGenerating Blog routes...");
+writeRoute(
+  "/blog",
+  "Real Estate Blogs & Market Insights",
+  "Read the latest property news, sector development updates, and real estate investment insights in Noida, Greater Noida, and Yamuna Expressway.",
+  DEFAULT_IMG
+);
+
+try {
+  const blogsRes = await fetch("https://chhhabra-1.onrender.com/api/blogs/", {
+    signal: AbortSignal.timeout(8000),
+  });
+  if (blogsRes.ok) {
+    const blogs = await blogsRes.json();
+    if (Array.isArray(blogs)) {
+      for (const b of blogs) {
+        if (!b || !b.title) continue;
+        const slug = b.slug || b.id;
+        if (slug) {
+          writeRoute(
+            `/blog/${slug}`,
+            b.title,
+            b.description || b.content || "",
+            b.image || DEFAULT_IMG
+          );
+        }
+      }
+    }
+  }
+} catch (e) {
+  console.log("Note: Remote blogs fetch skipped during prerender:", e.message);
+}
+
+console.log(`\n🎉 Successfully prerendered ${count} map detail routes and blog routes (${generatedPaths.size} total static paths).`);

@@ -39,6 +39,7 @@ import KOMO from "./components/shivam/KOMO";
 
 // BLOG
 import Blog from "./components/shivam/Blog";
+import BlogDetail from "./components/pages/BlogDetail";
 
 
 // ADMIN
@@ -130,8 +131,10 @@ function MainLayout() {
               BLOG DETAILS
           ========================= */}
 
-          
-          
+          <Route
+            path="/blog/:slug"
+            element={<BlogDetail />}
+          />
 
 
           {/* =========================
