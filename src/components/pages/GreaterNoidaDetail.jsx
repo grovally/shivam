@@ -52,6 +52,7 @@ export default function GreaterNoidaDetail() {
     if (!map) return;
 
     const cleanTitle = (map.title || "").trim();
+    const ogTitle = (map.ogTitle || "").trim();
     const pageTitle = `${cleanTitle} | Chhabra Properties`;
     const canonicalSlug = getItemSlug(map);
     const canonicalUrl = `https://chhabra-properties.com/greater-noida/${canonicalSlug}`;
@@ -98,13 +99,13 @@ export default function GreaterNoidaDetail() {
 
     setLink("canonical", canonicalUrl);
     setMeta('meta[name="description"]', "name=description", description);
-    setMeta('meta[property="og:title"]', "property=og:title", pageTitle);
+    setMeta('meta[property="og:title"]', "property=og:title", ogTitle);
     setMeta('meta[property="og:description"]', "property=og:description", description);
     setMeta('meta[property="og:image"]', "property=og:image", image);
     setMeta('meta[property="og:image:alt"]', "property=og:image:alt", `${cleanTitle} - Greater Noida Map`);
     setMeta('meta[property="og:url"]', "property=og:url", canonicalUrl);
     setMeta('meta[property="og:type"]', "property=og:type", "article");
-    setMeta('meta[name="twitter:title"]', "name=twitter:title", pageTitle);
+    setMeta('meta[name="twitter:title"]', "name=twitter:title", ogTitle);
     setMeta('meta[name="twitter:description"]', "name=twitter:description", description);
     setMeta('meta[name="twitter:image"]', "name=twitter:image", image);
     setMeta('meta[name="twitter:image:alt"]', "name=twitter:image:alt", `${cleanTitle} - Greater Noida Map`);

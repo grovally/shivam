@@ -110,6 +110,7 @@ export default function NoidaDetail() {
     if (!map) return;
 
     const cleanTitle = (map.title || "").trim();
+    const ogTitle = (map.ogTitle || "").trim();
     const pageTitle = `${cleanTitle} | Chhabra Properties`;
     const canonicalSlug = getItemSlug(map);
     const canonicalUrl = `https://chhabra-properties.com/noida/${canonicalSlug}`;
@@ -164,7 +165,7 @@ export default function NoidaDetail() {
     setMeta('meta[name="description"]', "name=description", description);
 
     // Open Graph
-    setMeta('meta[property="og:title"]', "property=og:title", pageTitle);
+    setMeta('meta[property="og:title"]', "property=og:title", ogTitle);
     setMeta('meta[property="og:description"]', "property=og:description", description);
     setMeta('meta[property="og:image"]', "property=og:image", image);
     setMeta('meta[property="og:image:alt"]', "property=og:image:alt", `${cleanTitle} - Noida Map`);
@@ -172,7 +173,7 @@ export default function NoidaDetail() {
     setMeta('meta[property="og:type"]', "property=og:type", "article");
 
     // Twitter / X
-    setMeta('meta[name="twitter:title"]', "name=twitter:title", pageTitle);
+    setMeta('meta[name="twitter:title"]', "name=twitter:title", ogTitle);
     setMeta('meta[name="twitter:description"]', "name=twitter:description", description);
     setMeta('meta[name="twitter:image"]', "name=twitter:image", image);
     setMeta('meta[name="twitter:image:alt"]', "name=twitter:image:alt", `${cleanTitle} - Noida Map`);
