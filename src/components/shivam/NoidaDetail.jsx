@@ -110,8 +110,8 @@ export default function NoidaDetail() {
     if (!map) return;
 
     const cleanTitle = (map.title || "").trim();
-    const ogTitle = (map.ogTitle || "").trim();
-    const pageTitle = `${cleanTitle}, Noida HD Map`;
+    const ogTitle = (map.ogTitle || `${cleanTitle}, Noida HD Map`).trim();
+    const pageTitle = ogTitle;
     const canonicalSlug = getItemSlug(map);
     const canonicalUrl = `https://chhabra-properties.com/noida/${canonicalSlug}`;
 

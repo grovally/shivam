@@ -52,8 +52,8 @@ export default function YamunaDetail() {
     if (!map) return;
 
     const cleanTitle = (map.title || "").trim();
-    const ogTitle = (map.ogTitle || "").trim();
-    const pageTitle = `${cleanTitle}, Yamuna Expressway HD Map`;
+    const ogTitle = (map.ogTitle || `${cleanTitle}, Yamuna Expressway HD Map`).trim();
+    const pageTitle = ogTitle;
     const canonicalSlug = getItemSlug(map);
     const canonicalUrl = `https://chhabra-properties.com/yamuna-expressway/${canonicalSlug}`;
 

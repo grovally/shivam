@@ -52,8 +52,8 @@ export default function GreaterNoidaDetail() {
     if (!map) return;
 
     const cleanTitle = (map.title || "").trim();
-    const ogTitle = (map.ogTitle || "").trim();
-    const pageTitle = `${cleanTitle}, Greater Noida HD Map`;
+    const ogTitle = (map.ogTitle || `${cleanTitle}, Greater Noida HD Map`).trim();
+    const pageTitle = ogTitle;
     const canonicalSlug = getItemSlug(map);
     const canonicalUrl = `https://chhabra-properties.com/greater-noida/${canonicalSlug}`;
 

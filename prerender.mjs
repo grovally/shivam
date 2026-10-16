@@ -67,13 +67,36 @@ function replaceOrAddMeta(html, property, attr, value) {
   return html.replace(/<\/head>/i, `  ${newTag}\n</head>`);
 }
 
-function buildHtml(title, description, image, url) {
+function buildHtml(title, description, image, url, ogTitle) {
   const isBlog = url.includes("/blog");
   const cleanTitle = (title || "").trim();
-  const pageTitle = `${cleanTitle} | Chhabra Properties`;
+
+  let pageTitle = (ogTitle || "").trim();
+  if (!pageTitle) {
+    if (url.includes("/greater-noida")) {
+      pageTitle = `${cleanTitle}, Greater Noida HD Map`;
+    } else if (url.includes("/noida")) {
+      pageTitle = `${cleanTitle}, Noida HD Map`;
+    } else if (url.includes("/yamuna-expressway")) {
+      pageTitle = `${cleanTitle}, Yamuna Expressway HD Map`;
+    } else {
+      pageTitle = `${cleanTitle} | Chhabra Properties`;
+    }
+  }
+
   const desc = cleanDescription(description, cleanTitle, isBlog);
   const img = (image || "").trim() || DEFAULT_IMG;
-  const altText = isBlog ? `${cleanTitle} - Chhabra Properties` : `${cleanTitle} - Map`;
+
+  let altText = `${cleanTitle} - Map`;
+  if (isBlog) {
+    altText = `${cleanTitle} - Chhabra Properties`;
+  } else if (url.includes("/greater-noida")) {
+    altText = `${cleanTitle} - Greater Noida Map`;
+  } else if (url.includes("/noida")) {
+    altText = `${cleanTitle} - Noida Map`;
+  } else if (url.includes("/yamuna-expressway")) {
+    altText = `${cleanTitle} - Yamuna Expressway Map`;
+  }
 
   let html = baseHtml;
 
@@ -112,7 +135,7 @@ function buildHtml(title, description, image, url) {
 // ── write a route ─────────────────────────────────────────────────
 const generatedPaths = new Set();
 
-function writeRoute(routePath, title, description, image) {
+function writeRoute(routePath, title, description, image, ogTitle) {
   // Normalize route path to prevent invalid filesystem characters/trailing spaces
   const normalizedPath = routePath
     .trim()
@@ -125,7 +148,7 @@ function writeRoute(routePath, title, description, image) {
   generatedPaths.add(normalizedPath);
 
   const url = `${BASE_URL}${normalizedPath}`;
-  const html = buildHtml(title, description, image, url);
+  const html = buildHtml(title, description, image, url, ogTitle);
 
   const relativeDir = normalizedPath.replace(/^\//, "");
   const outDir = path.join(distDir, relativeDir);
@@ -144,15 +167,18 @@ function writeRoute(routePath, title, description, image) {
 // ── generate routes ───────────────────────────────────────────────
 let count = 0;
 
-function processSection(prefix, dataset) {
+function processSection(prefix, dataset, defaultRegion) {
   for (const item of dataset) {
     if (!item || !item.title) continue;
 
     const cleanSlug = getItemSlug(item);
     if (!cleanSlug) continue;
 
+    const cleanTitle = item.title.trim();
+    const itemOgTitle = (item.ogTitle || `${cleanTitle}, ${defaultRegion}`).trim();
+
     // Canonical clean route
-    writeRoute(`${prefix}/${cleanSlug}`, item.title, item.description, item.image);
+    writeRoute(`${prefix}/${cleanSlug}`, item.title, item.description, item.image, itemOgTitle);
     count++;
 
     // If item had a legacy/different raw slug with spaces, dots, or symbols,
@@ -160,33 +186,55 @@ function processSection(prefix, dataset) {
     if (item.slug) {
       const sanitizedRaw = sanitizeSlug(item.slug);
       if (sanitizedRaw && sanitizedRaw !== cleanSlug) {
-        writeRoute(`${prefix}/${sanitizedRaw}`, item.title, item.description, item.image);
+        writeRoute(`${prefix}/${sanitizedRaw}`, item.title, item.description, item.image, itemOgTitle);
       }
 
       // Check title slug as fallback
       const titleSlug = getSlugFromTitle(item.title);
       if (titleSlug && titleSlug !== cleanSlug) {
-        writeRoute(`${prefix}/${titleSlug}`, item.title, item.description, item.image);
+        writeRoute(`${prefix}/${titleSlug}`, item.title, item.description, item.image, itemOgTitle);
       }
     }
   }
 }
 
 console.log("Generating Noida map routes...");
-processSection("/noida", noidaData);
+writeRoute(
+  "/noida",
+  "Noida Sector Maps HD",
+  "Explore and download high definition sector layout maps of Noida with complete sector details from Chhabra Properties.",
+  DEFAULT_IMG,
+  "Noida Sector Maps HD | Chhabra Properties"
+);
+processSection("/noida", noidaData, "Noida HD Map");
 
 console.log("\nGenerating Greater Noida map routes...");
-processSection("/greater-noida", greaterNoida);
+writeRoute(
+  "/greater-noida",
+  "Greater Noida Sector Maps HD",
+  "Explore and download high definition sector layout maps of Greater Noida with complete sector details from Chhabra Properties.",
+  DEFAULT_IMG,
+  "Greater Noida Sector Maps HD | Chhabra Properties"
+);
+processSection("/greater-noida", greaterNoida, "Greater Noida HD Map");
 
 console.log("\nGenerating Yamuna Expressway map routes...");
-processSection("/yamuna-expressway", yemuna);
+writeRoute(
+  "/yamuna-expressway",
+  "Yamuna Expressway Sector Maps HD",
+  "Explore and download high definition sector layout maps of Yamuna Expressway with complete sector details from Chhabra Properties.",
+  DEFAULT_IMG,
+  "Yamuna Expressway Sector Maps HD | Chhabra Properties"
+);
+processSection("/yamuna-expressway", yemuna, "Yamuna Expressway HD Map");
 
 console.log("\nGenerating Blog routes...");
 writeRoute(
   "/blog",
   "Real Estate Blogs & Market Insights",
   "Read the latest property news, sector development updates, and real estate investment insights in Noida, Greater Noida, and Yamuna Expressway.",
-  DEFAULT_IMG
+  DEFAULT_IMG,
+  "Real Estate Blogs & Market Insights | Chhabra Properties"
 );
 
 try {
@@ -204,7 +252,8 @@ try {
             `/blog/${slug}`,
             b.title,
             b.description || b.content || "",
-            b.image || DEFAULT_IMG
+            b.image || DEFAULT_IMG,
+            `${b.title.trim()} | Chhabra Properties`
           );
         }
       }
